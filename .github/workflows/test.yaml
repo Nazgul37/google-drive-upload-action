@@ -9,15 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: ./
+    - name: Upload test.txt
+      uses: ./
       with:
         credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS_BASE64 }}
         target: test/test.txt
         parent_folder_id: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
         overwrite: true
-    - uses: ./
+    - name: Upload spreadsheet.xlsx
+      uses: ./
       with:
         credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS_BASE64 }}
-        target: test/test.txt
+        target: test/spreadsheet.xlsx
+        name: spreadsheet
         parent_folder_id: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
-        overwrite: false
+        overwrite: true
+        mime_type: application/vnd.google-apps.spreadsheet

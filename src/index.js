@@ -10,6 +10,7 @@ const target = actions.getInput('target', { required: true });
 const owner = actions.getInput('owner', { required: false });
 const childFolder = actions.getInput('child_folder', { required: false });
 const overwrite = actions.getInput('overwrite', { required: false }) === 'true';
+const mimeType = actions.getInput('mime_type', { required: false });
 let filename = actions.getInput('name', { required: false });
 
 const credentialsJSON = JSON.parse(Buffer.from(credentials, 'base64').toString());
@@ -91,6 +92,7 @@ async function main() {
         const fileMetadata = {
             name: filename,
             parents: [uploadFolderId],
+            mimeType,
         };
 
         drive.files.create({

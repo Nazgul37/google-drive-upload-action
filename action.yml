@@ -26,6 +26,9 @@ inputs:
     description: 'Whether to overwrite an existing file with the same name.'
     required: false
     default: false
+  mime_type:
+    description:
+    default:
 runs:
   using: 'node12'
   main: 'dist/index.js'
