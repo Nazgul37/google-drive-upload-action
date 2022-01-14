@@ -64,9 +64,12 @@ async function getFileId(filename, folderId) {
 }
 
 async function main() {
+    console.log('console.log: test');
+    actions.info('actions.info: test');
+
     const uploadFolderId = await getUploadFolderId();
-    console.log('console.log: ${uploadFolderId}')
-    actions.info('actions.info: ${uploadFolderId}')
+    console.log('console.log: ${uploadFolderId}');
+    actions.info('actions.info: ${uploadFolderId}');
 
     if (!filename) {
         filename = target.split('/').pop();
