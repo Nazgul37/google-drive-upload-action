@@ -48,14 +48,34 @@ async function getUploadFolderId() {
     return childFolderId;
 }
 
+async function getFileId(filename, folderId) {
+    const { data: { files } } = await drive.files.list({
+        q: `name='${filename}' and '${folderId}' in parents`,
+        fields: 'files(id)',
+    });
+
+    actions.info(files);
+    if (files.length > 1) {
+        throw new Error('More than one entry match the file name');
+    }
+    if (files.length === 1) {
+        return files[0].id;
+    }
+}
+
 async function main() {
     const uploadFolderId = await getUploadFolderId();
+    console.log('console.log: ${uploadFolderId}')
+    actions.info('actions.info: ${uploadFolderId}')
 
     if (!filename) {
         filename = target.split('/').pop();
     }
 
+    const fileId = await getFileId(filaname, uploadFolderId);
+
     const fileMetadata = {
+        id: fileId,
         name: filename,
         parents: [uploadFolderId],
     };
