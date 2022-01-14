@@ -92,12 +92,9 @@ async function main() {
         const fileMetadata = {
             name: filename,
             parents: [uploadFolderId],
+            mimeType
         };
-
-        if (mimeType !== '') {
-            fileMetadata.mimeType = mimeType;
-            actions.info(`${fileMetadata}.`);
-        }
+        actions.info(`${fileMetadata.mimeType}`);
 
         drive.files.create({
             resource: fileMetadata,
