@@ -95,6 +95,10 @@ async function main() {
             mimeType,
         };
 
+        if (mimeType !== '') {
+            fileMetadata.mimeType = mimeType;
+        }
+
         drive.files.create({
             resource: fileMetadata,
             media: fileData,
