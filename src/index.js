@@ -65,17 +65,17 @@ async function getFileId(targetFilename, folderId) {
 }
 
 async function main() {
-    actions.info('actions.info: test');
-
     const uploadFolderId = await getUploadFolderId();
 
-    actions.info(`actions.info: ${uploadFolderId}`);
+    actions.info(`folderId: ${uploadFolderId}`);
 
     if (!filename) {
         filename = target.split('/').pop();
     }
 
     const fileId = await getFileId(filename, uploadFolderId);
+
+    actions.info(`fileId: ${fileId}`);
 
     const fileMetadata = {
         id: fileId,
