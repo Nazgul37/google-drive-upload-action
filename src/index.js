@@ -9,6 +9,7 @@ const parentFolderId = actions.getInput('parent_folder_id', { required: true });
 const target = actions.getInput('target', { required: true });
 const owner = actions.getInput('owner', { required: false });
 const childFolder = actions.getInput('child_folder', { required: false });
+const overwrite = actions.getInput('overwrite', { required: false });
 let filename = actions.getInput('name', { required: false });
 
 const credentialsJSON = JSON.parse(Buffer.from(credentials, 'base64').toString());
@@ -67,23 +68,33 @@ async function getFileId(targetFilename, folderId) {
 async function main() {
     const uploadFolderId = await getUploadFolderId();
 
-    actions.info(`folderId: ${uploadFolderId}`);
-
     if (!filename) {
         filename = target.split('/').pop();
     }
 
-    const fileId = await getFileId(filename, uploadFolderId);
+    const overwriteIsTrue = overwrite == 'true';
+
+    actions.info(`overwrite is the string "true": ${overwriteIsTrue}.`);
+
+    if (overwrite) {
+        const fileId = await getFileId(filename, uploadFolderId);
+    } else {
+        const fileId = null;
+    }
+
+    const fileData = {
+        body: fs.createReadStream(target),
+    };
 
     if (fileId === null) {
-        actions.info(`File ${filename} does not exist yet. Creating it.`);
+        if (overwrite) {
+            actions.info(`File ${filename} does not exist yet. Creating it.`);
+        } else {
+            actions.info(`Creating file ${filename}.`);
+        }
         const fileMetadata = {
-            id: fileId,
             name: filename,
             parents: [uploadFolderId],
-        };
-        const fileData = {
-            body: fs.createReadStream(target),
         };
 
         drive.files.create({
@@ -94,6 +105,10 @@ async function main() {
         });
     } else {
         actions.info(`File ${filename} already exists. Updating it.`);
+        drive.files.update({
+            fileId: fileId,
+            media: fileData,
+        });
     }
 
 }

@@ -14,3 +14,10 @@ jobs:
         credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS_BASE64 }}
         target: test/test.txt
         parent_folder_id: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+        overwrite: true
+    - uses: ./
+      with:
+        credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS_BASE64 }}
+        target: test/test.txt
+        parent_folder_id: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+        overwrite: false
