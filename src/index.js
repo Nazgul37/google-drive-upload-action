@@ -104,7 +104,7 @@ async function main() {
             media: fileData,
             uploadType: 'multipart',
             fields: 'id',
-        });
+        }).catch((error) => actions.setFailed(error));
     } else {
         actions.info(`File ${filename} already exists. Updating it.`);
         drive.files.update({
