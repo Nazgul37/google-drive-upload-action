@@ -9,7 +9,7 @@ const parentFolderId = actions.getInput('parent_folder_id', { required: true });
 const target = actions.getInput('target', { required: true });
 const owner = actions.getInput('owner', { required: false });
 const childFolder = actions.getInput('child_folder', { required: false });
-const overwrite = actions.getInput('overwrite', { required: false });
+const overwrite = actions.getInput('overwrite', { required: false }) === 'true';
 let filename = actions.getInput('name', { required: false });
 
 const credentialsJSON = JSON.parse(Buffer.from(credentials, 'base64').toString());
@@ -72,14 +72,10 @@ async function main() {
         filename = target.split('/').pop();
     }
 
-    const overwriteIsTrue = overwrite == 'true';
-
-    actions.info(`overwrite is the string "true": ${overwriteIsTrue}.`);
+    let fileId = null;
 
     if (overwrite) {
-        const fileId = await getFileId(filename, uploadFolderId);
-    } else {
-        const fileId = null;
+        fileId = await getFileId(filename, uploadFolderId);
     }
 
     const fileData = {
@@ -106,11 +102,10 @@ async function main() {
     } else {
         actions.info(`File ${filename} already exists. Updating it.`);
         drive.files.update({
-            fileId: fileId,
+            fileId,
             media: fileData,
         });
     }
-
 }
 
 main().catch((error) => actions.setFailed(error));
