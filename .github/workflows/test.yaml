@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Upload test.txt
-      uses: csala/google-drive-upload-action@main
+      uses: csala/google-drive-upload-action@master
       with:
         credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS_BASE64 }}
         target: test/test.txt
