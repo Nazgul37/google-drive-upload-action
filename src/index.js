@@ -75,23 +75,27 @@ async function main() {
 
     const fileId = await getFileId(filename, uploadFolderId);
 
-    actions.info(`fileId: ${fileId}`);
+    if (fileId === null) {
+        actions.info(`File ${filename} does not exist yet. Creating it.`);
+        const fileMetadata = {
+            id: fileId,
+            name: filename,
+            parents: [uploadFolderId],
+        };
+        const fileData = {
+            body: fs.createReadStream(target),
+        };
 
-    const fileMetadata = {
-        id: fileId,
-        name: filename,
-        parents: [uploadFolderId],
-    };
-    const fileData = {
-        body: fs.createReadStream(target),
-    };
+        drive.files.create({
+            resource: fileMetadata,
+            media: fileData,
+            uploadType: 'multipart',
+            fields: 'id',
+        });
+    } else {
+        actions.info(`File ${filename} already exists. Updating it.`);
+    }
 
-    return drive.files.create({
-        resource: fileMetadata,
-        media: fileData,
-        uploadType: 'multipart',
-        fields: 'id',
-    });
 }
 
 main().catch((error) => actions.setFailed(error));
