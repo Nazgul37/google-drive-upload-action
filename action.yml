@@ -27,8 +27,9 @@ inputs:
     required: false
     default: false
   mime_type:
-    description:
-    default:
+    description: 'Mime type to use when uploading the file'
+    required: false
+    default: null
 runs:
   using: 'node12'
   main: 'dist/index.js'

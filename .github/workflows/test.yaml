@@ -24,4 +24,4 @@ jobs:
         name: spreadsheet
         parent_folder_id: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
         overwrite: true
-        mime_type: application/vnd.google-apps.spreadsheet
+        mime_type: 'application/vnd.google-apps.spreadsheet'
