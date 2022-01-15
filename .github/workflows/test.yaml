@@ -16,6 +16,14 @@ jobs:
         target: test/test.txt
         parent_folder_id: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
         overwrite: true
+    - name: Upload csv.csv
+      uses: ./
+      with:
+        credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS_BASE64 }}
+        target: test/csv.csv
+        parent_folder_id: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+        overwrite: true
+        convert: true
     - name: Upload spreadsheet.xlsx
       uses: ./
       with:

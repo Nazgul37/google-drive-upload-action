@@ -72,15 +72,24 @@ async function main() {
     let localMimeType;
     let remoteMimeType;
 
-    if (convert && target.endsWith('xlsx')) {
-        localMimeType = 'text/xlsx';
-        remoteMimeType = 'application/vnd.google-apps.spreadsheet';
+    if (convert) {
+      if target.endsWith('xlsx')) {
+          localMimeType = 'text/xlsx';
+          remoteMimeType = 'application/vnd.google-apps.spreadsheet';
+      } else if (target.endsWith('csv')) {
+          localMimeType = 'text/csv';
+          remoteMimeType = 'application/vnd.google-apps.spreadsheet';
+      }
     }
 
     if (!filename) {
         filename = target.split('/').pop();
-        if (convert && filename.endsWith('xlsx')) {
-            filename = filename.slice(0, -5);
+        if (convert) {
+            if filename.endsWith('xlsx')) {
+                filename = filename.slice(0, -5);
+            } else if (target.endsWith('csv')) {
+                filename = filename.slice(0, -4);
+            }
         }
     }
 
@@ -112,7 +121,7 @@ async function main() {
             media: fileData,
             uploadType: 'multipart',
             fields: 'id',
-        }).catch((error) => actions.setFailed(error));
+        });
     } else {
         actions.info(`File ${filename} already exists. Updating it.`);
         drive.files.update({
