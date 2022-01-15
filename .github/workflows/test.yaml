@@ -21,7 +21,6 @@ jobs:
       with:
         credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS_BASE64 }}
         target: test/spreadsheet.xlsx
-        name: spreadsheet
         parent_folder_id: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
         overwrite: true
-        mime_type: 'application/vnd.google-apps.spreadsheet'
+        convert: true
