@@ -10,7 +10,7 @@ const target = actions.getInput('target', { required: true });
 const owner = actions.getInput('owner', { required: false });
 const childFolder = actions.getInput('child_folder', { required: false });
 const overwrite = actions.getInput('overwrite', { required: false }) === 'true';
-const mimeType = actions.getInput('mime_type', { required: false });
+const convert = actions.getInput('convert', { required: false }) === 'true';
 let filename = actions.getInput('name', { required: false });
 
 const credentialsJSON = JSON.parse(Buffer.from(credentials, 'base64').toString());
@@ -69,8 +69,19 @@ async function getFileId(targetFilename, folderId) {
 async function main() {
     const uploadFolderId = await getUploadFolderId();
 
+    let localMimeType;
+    let remoteMimeType;
+
+    if (convert && target.endsWith('xlsx')) {
+        localMimeType = 'text/xlsx';
+        remoteMimeType = 'application/vnd.google-apps.spreadsheet';
+    }
+
     if (!filename) {
         filename = target.split('/').pop();
+        if (convert && filename.endsWith('xlsx')) {
+            filename = filename.slice(0, -5);
+        }
     }
 
     let fileId = null;
@@ -80,6 +91,7 @@ async function main() {
     }
 
     const fileData = {
+        mimeType: localMimeType,
         body: fs.createReadStream(target),
     };
 
@@ -92,9 +104,8 @@ async function main() {
         const fileMetadata = {
             name: filename,
             parents: [uploadFolderId],
-            mimeType
+            mimeType: remoteMimeType,
         };
-        actions.info(`${fileMetadata.mimeType}`);
 
         drive.files.create({
             resource: fileMetadata,

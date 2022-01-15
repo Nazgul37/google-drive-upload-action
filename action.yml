@@ -26,8 +26,8 @@ inputs:
     description: 'Whether to overwrite an existing file with the same name.'
     required: false
     default: false
-  mime_type:
-    description: 'Mime type to use when uploading the file'
+  convert:
+    description: 'Whether to attempt to convert XLSX files to Google Spreadsheets.'
     required: false
     default: null
 runs:
