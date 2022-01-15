@@ -74,7 +74,7 @@ async function main() {
 
     if (convert) {
         if (target.endsWith('xlsx')) {
-            localMimeType = 'text/xlsx';
+            localMimeType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
             remoteMimeType = 'application/vnd.google-apps.spreadsheet';
         } else if (target.endsWith('csv')) {
             localMimeType = 'text/csv';
