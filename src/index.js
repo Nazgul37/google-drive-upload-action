@@ -73,19 +73,19 @@ async function main() {
     let remoteMimeType;
 
     if (convert) {
-      if target.endsWith('xlsx')) {
-          localMimeType = 'text/xlsx';
-          remoteMimeType = 'application/vnd.google-apps.spreadsheet';
-      } else if (target.endsWith('csv')) {
-          localMimeType = 'text/csv';
-          remoteMimeType = 'application/vnd.google-apps.spreadsheet';
-      }
+        if (target.endsWith('xlsx')) {
+            localMimeType = 'text/xlsx';
+            remoteMimeType = 'application/vnd.google-apps.spreadsheet';
+        } else if (target.endsWith('csv')) {
+            localMimeType = 'text/csv';
+            remoteMimeType = 'application/vnd.google-apps.spreadsheet';
+        }
     }
 
     if (!filename) {
         filename = target.split('/').pop();
         if (convert) {
-            if filename.endsWith('xlsx')) {
+            if (filename.endsWith('xlsx')) {
                 filename = filename.slice(0, -5);
             } else if (target.endsWith('csv')) {
                 filename = filename.slice(0, -4);
