@@ -19,13 +19,11 @@ inputs:
     required: false
     default: null
   child_folder:
-    description: 'Optional sub-folder to upload the file to (Will be created if non-existent)'
-    required: false
-    default: null
+    description: 'Required sub-folder to upload the file to (Will be created if non-existent)'
+    required: true
   child_folder2:
-    description: 'Optional sub-sub-folder to upload the file to (Will be created if non-existent)'
-    required: false
-    default: null
+    description: 'Required sub-sub-folder to upload the file to (Will be created if non-existent)'
+    required: true
   overwrite:
     description: 'Whether to overwrite an existing file with the same name.'
     required: false
