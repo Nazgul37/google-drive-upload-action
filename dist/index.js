@@ -1,8 +1,7 @@
-module.exports =
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 87351:
+/***/ 44914:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -15,8 +14,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const os = __importStar(__nccwpck_require__(12087));
-const utils_1 = __nccwpck_require__(5278);
+const os = __importStar(__nccwpck_require__(70857));
+const utils_1 = __nccwpck_require__(30302);
 /**
  * Commands
  *
@@ -88,7 +87,7 @@ function escapeProperty(s) {
 
 /***/ }),
 
-/***/ 42186:
+/***/ 37484:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -110,11 +109,11 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const command_1 = __nccwpck_require__(87351);
-const file_command_1 = __nccwpck_require__(717);
-const utils_1 = __nccwpck_require__(5278);
-const os = __importStar(__nccwpck_require__(12087));
-const path = __importStar(__nccwpck_require__(85622));
+const command_1 = __nccwpck_require__(44914);
+const file_command_1 = __nccwpck_require__(24753);
+const utils_1 = __nccwpck_require__(30302);
+const os = __importStar(__nccwpck_require__(70857));
+const path = __importStar(__nccwpck_require__(16928));
 /**
  * The code to exit an action
  */
@@ -333,7 +332,7 @@ exports.getState = getState;
 
 /***/ }),
 
-/***/ 717:
+/***/ 24753:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -349,9 +348,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 // We use any as a valid input type
 /* eslint-disable @typescript-eslint/no-explicit-any */
-const fs = __importStar(__nccwpck_require__(35747));
-const os = __importStar(__nccwpck_require__(12087));
-const utils_1 = __nccwpck_require__(5278);
+const fs = __importStar(__nccwpck_require__(79896));
+const os = __importStar(__nccwpck_require__(70857));
+const utils_1 = __nccwpck_require__(30302);
 function issueCommand(command, message) {
     const filePath = process.env[`GITHUB_${command}`];
     if (!filePath) {
@@ -369,7 +368,7 @@ exports.issueCommand = issueCommand;
 
 /***/ }),
 
-/***/ 5278:
+/***/ 30302:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -395,7 +394,7 @@ exports.toCommandValue = toCommandValue;
 
 /***/ }),
 
-/***/ 49690:
+/***/ 8207:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 "use strict";
@@ -403,9 +402,9 @@ exports.toCommandValue = toCommandValue;
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-const events_1 = __nccwpck_require__(28614);
-const debug_1 = __importDefault(__nccwpck_require__(38237));
-const promisify_1 = __importDefault(__nccwpck_require__(66570));
+const events_1 = __nccwpck_require__(24434);
+const debug_1 = __importDefault(__nccwpck_require__(2830));
+const promisify_1 = __importDefault(__nccwpck_require__(98067));
 const debug = debug_1.default('agent-base');
 function isAgent(v) {
     return Boolean(v) && typeof v.addRequest === 'function';
@@ -605,7 +604,7 @@ module.exports = createAgent;
 
 /***/ }),
 
-/***/ 66570:
+/***/ 98067:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -625,12 +624,12 @@ function promisify(fn) {
         });
     };
 }
-exports.default = promisify;
+exports["default"] = promisify;
 //# sourceMappingURL=promisify.js.map
 
 /***/ }),
 
-/***/ 61546:
+/***/ 26251:
 /***/ ((module) => {
 
 "use strict";
@@ -661,7 +660,7 @@ module.exports = arrify;
 
 /***/ }),
 
-/***/ 26463:
+/***/ 38793:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -819,7 +818,7 @@ function fromByteArray (uint8) {
 
 /***/ }),
 
-/***/ 87558:
+/***/ 51259:
 /***/ (function(module) {
 
 ;(function (globalObject) {
@@ -3728,14 +3727,14 @@ function fromByteArray (uint8) {
 
 /***/ }),
 
-/***/ 9239:
+/***/ 39732:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 /*jshint node:true */
 
-var Buffer = __nccwpck_require__(64293).Buffer; // browserify
-var SlowBuffer = __nccwpck_require__(64293).SlowBuffer;
+var Buffer = (__nccwpck_require__(20181).Buffer); // browserify
+var SlowBuffer = (__nccwpck_require__(20181).SlowBuffer);
 
 module.exports = bufferEq;
 
@@ -3777,7 +3776,7 @@ bufferEq.restore = function() {
 
 /***/ }),
 
-/***/ 28222:
+/***/ 6110:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 /* eslint-env browser */
@@ -4034,7 +4033,7 @@ function localstorage() {
 	}
 }
 
-module.exports = __nccwpck_require__(46243)(exports);
+module.exports = __nccwpck_require__(40897)(exports);
 
 const {formatters} = module.exports;
 
@@ -4053,7 +4052,7 @@ formatters.j = function (v) {
 
 /***/ }),
 
-/***/ 46243:
+/***/ 40897:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 
@@ -4069,7 +4068,7 @@ function setup(env) {
 	createDebug.disable = disable;
 	createDebug.enable = enable;
 	createDebug.enabled = enabled;
-	createDebug.humanize = __nccwpck_require__(80900);
+	createDebug.humanize = __nccwpck_require__(70744);
 	createDebug.destroy = destroy;
 
 	Object.keys(env).forEach(key => {
@@ -4321,7 +4320,7 @@ module.exports = setup;
 
 /***/ }),
 
-/***/ 38237:
+/***/ 2830:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -4330,23 +4329,23 @@ module.exports = setup;
  */
 
 if (typeof process === 'undefined' || process.type === 'renderer' || process.browser === true || process.__nwjs) {
-	module.exports = __nccwpck_require__(28222);
+	module.exports = __nccwpck_require__(6110);
 } else {
-	module.exports = __nccwpck_require__(35332);
+	module.exports = __nccwpck_require__(95108);
 }
 
 
 /***/ }),
 
-/***/ 35332:
+/***/ 95108:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 /**
  * Module dependencies.
  */
 
-const tty = __nccwpck_require__(33867);
-const util = __nccwpck_require__(31669);
+const tty = __nccwpck_require__(52018);
+const util = __nccwpck_require__(39023);
 
 /**
  * This is the Node.js implementation of `debug()`.
@@ -4372,7 +4371,7 @@ exports.colors = [6, 2, 3, 4, 5, 1];
 try {
 	// Optional dependency (as in, doesn't need to be installed, NOT like optionalDependencies in package.json)
 	// eslint-disable-next-line import/no-extraneous-dependencies
-	const supportsColor = __nccwpck_require__(59318);
+	const supportsColor = __nccwpck_require__(21450);
 
 	if (supportsColor && (supportsColor.stderr || supportsColor).level >= 2) {
 		exports.colors = [
@@ -4580,7 +4579,7 @@ function init(debug) {
 	}
 }
 
-module.exports = __nccwpck_require__(46243)(exports);
+module.exports = __nccwpck_require__(40897)(exports);
 
 const {formatters} = module.exports;
 
@@ -4608,15 +4607,15 @@ formatters.O = function (v) {
 
 /***/ }),
 
-/***/ 11728:
+/***/ 325:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var Buffer = __nccwpck_require__(21867).Buffer;
+var Buffer = (__nccwpck_require__(93058).Buffer);
 
-var getParamBytesForAlg = __nccwpck_require__(30528);
+var getParamBytesForAlg = __nccwpck_require__(5028);
 
 var MAX_OCTET = 0x80,
 	CLASS_UNIVERSAL = 0,
@@ -4803,7 +4802,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 30528:
+/***/ 5028:
 /***/ ((module) => {
 
 "use strict";
@@ -4834,7 +4833,7 @@ module.exports = getParamBytesForAlg;
 
 /***/ }),
 
-/***/ 38171:
+/***/ 23860:
 /***/ ((module) => {
 
 "use strict";
@@ -4959,7 +4958,7 @@ module.exports = function extend() {
 
 /***/ }),
 
-/***/ 21917:
+/***/ 79463:
 /***/ (function() {
 
 (function(l){function m(){}function k(a,c){a=void 0===a?"utf-8":a;c=void 0===c?{fatal:!1}:c;if(-1===r.indexOf(a.toLowerCase()))throw new RangeError("Failed to construct 'TextDecoder': The encoding label provided ('"+a+"') is invalid.");if(c.fatal)throw Error("Failed to construct 'TextDecoder': the 'fatal' option is unsupported.");}function t(a){return Buffer.from(a.buffer,a.byteOffset,a.byteLength).toString("utf-8")}function u(a){var c=URL.createObjectURL(new Blob([a],{type:"text/plain;charset=UTF-8"}));
@@ -4972,7 +4971,7 @@ a=a instanceof Uint8Array?a:a.buffer instanceof ArrayBuffer?new Uint8Array(a.buf
 
 /***/ }),
 
-/***/ 66129:
+/***/ 47506:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -5005,7 +5004,7 @@ exports.GaxiosError = GaxiosError;
 
 /***/ }),
 
-/***/ 28133:
+/***/ 6010:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -5027,12 +5026,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Gaxios = void 0;
-const extend_1 = __importDefault(__nccwpck_require__(38171));
-const node_fetch_1 = __importDefault(__nccwpck_require__(80467));
-const querystring_1 = __importDefault(__nccwpck_require__(71191));
-const is_stream_1 = __importDefault(__nccwpck_require__(41554));
-const common_1 = __nccwpck_require__(66129);
-const retry_1 = __nccwpck_require__(31052);
+const extend_1 = __importDefault(__nccwpck_require__(23860));
+const node_fetch_1 = __importDefault(__nccwpck_require__(26705));
+const querystring_1 = __importDefault(__nccwpck_require__(83480));
+const is_stream_1 = __importDefault(__nccwpck_require__(96543));
+const common_1 = __nccwpck_require__(47506);
+const retry_1 = __nccwpck_require__(32789);
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const fetch = hasFetch() ? window.fetch : node_fetch_1.default;
 function hasWindow() {
@@ -5048,7 +5047,7 @@ function loadProxy() {
         process.env.HTTP_PROXY ||
         process.env.http_proxy;
     if (proxy) {
-        HttpsProxyAgent = __nccwpck_require__(77219);
+        HttpsProxyAgent = __nccwpck_require__(3669);
     }
     return proxy;
 }
@@ -5266,7 +5265,7 @@ exports.Gaxios = Gaxios;
 
 /***/ }),
 
-/***/ 59555:
+/***/ 97003:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5285,9 +5284,9 @@ exports.Gaxios = Gaxios;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.request = exports.instance = exports.Gaxios = void 0;
-const gaxios_1 = __nccwpck_require__(28133);
+const gaxios_1 = __nccwpck_require__(6010);
 Object.defineProperty(exports, "Gaxios", ({ enumerable: true, get: function () { return gaxios_1.Gaxios; } }));
-var common_1 = __nccwpck_require__(66129);
+var common_1 = __nccwpck_require__(47506);
 Object.defineProperty(exports, "GaxiosError", ({ enumerable: true, get: function () { return common_1.GaxiosError; } }));
 /**
  * The default instance used when the `request` method is directly
@@ -5306,7 +5305,7 @@ exports.request = request;
 
 /***/ }),
 
-/***/ 31052:
+/***/ 32789:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -5449,7 +5448,7 @@ function getConfig(err) {
 
 /***/ }),
 
-/***/ 3563:
+/***/ 23046:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5462,8 +5461,8 @@ function getConfig(err) {
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.requestTimeout = exports.resetIsAvailableCache = exports.isAvailable = exports.project = exports.instance = exports.HEADERS = exports.HEADER_VALUE = exports.HEADER_NAME = exports.SECONDARY_HOST_ADDRESS = exports.HOST_ADDRESS = exports.BASE_PATH = void 0;
-const gaxios_1 = __nccwpck_require__(59555);
-const jsonBigint = __nccwpck_require__(55031); // eslint-disable-line
+const gaxios_1 = __nccwpck_require__(97003);
+const jsonBigint = __nccwpck_require__(14826); // eslint-disable-line
 exports.BASE_PATH = '/computeMetadata/v1';
 exports.HOST_ADDRESS = 'http://169.254.169.254';
 exports.SECONDARY_HOST_ADDRESS = 'http://metadata.google.internal.';
@@ -5702,7 +5701,7 @@ exports.requestTimeout = requestTimeout;
 
 /***/ }),
 
-/***/ 44627:
+/***/ 34810:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5722,8 +5721,8 @@ exports.requestTimeout = requestTimeout;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AuthClient = void 0;
-const events_1 = __nccwpck_require__(28614);
-const transporters_1 = __nccwpck_require__(72649);
+const events_1 = __nccwpck_require__(24434);
+const transporters_1 = __nccwpck_require__(67633);
 class AuthClient extends events_1.EventEmitter {
     constructor() {
         super(...arguments);
@@ -5762,7 +5761,7 @@ exports.AuthClient = AuthClient;
 
 /***/ }),
 
-/***/ 71569:
+/***/ 81261:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5782,8 +5781,8 @@ exports.AuthClient = AuthClient;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AwsClient = void 0;
-const awsrequestsigner_1 = __nccwpck_require__(1754);
-const baseexternalclient_1 = __nccwpck_require__(40810);
+const awsrequestsigner_1 = __nccwpck_require__(27647);
+const baseexternalclient_1 = __nccwpck_require__(142);
 /**
  * AWS external account client. This is used for AWS workloads, where
  * AWS STS GetCallerIdentity serialized signed requests are exchanged for
@@ -5970,7 +5969,7 @@ exports.AwsClient = AwsClient;
 
 /***/ }),
 
-/***/ 1754:
+/***/ 27647:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5990,7 +5989,7 @@ exports.AwsClient = AwsClient;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AwsRequestSigner = void 0;
-const crypto_1 = __nccwpck_require__(78043);
+const crypto_1 = __nccwpck_require__(88851);
 /** AWS Signature Version 4 signing algorithm identifier.  */
 const AWS_ALGORITHM = 'AWS4-HMAC-SHA256';
 /**
@@ -6187,7 +6186,7 @@ async function generateAuthenticationHeaderMap(options) {
 
 /***/ }),
 
-/***/ 40810:
+/***/ 142:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6207,9 +6206,9 @@ async function generateAuthenticationHeaderMap(options) {
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BaseExternalAccountClient = exports.CLOUD_RESOURCE_MANAGER = exports.EXTERNAL_ACCOUNT_TYPE = exports.EXPIRATION_TIME_OFFSET = void 0;
-const stream = __nccwpck_require__(92413);
-const authclient_1 = __nccwpck_require__(44627);
-const sts = __nccwpck_require__(86308);
+const stream = __nccwpck_require__(2203);
+const authclient_1 = __nccwpck_require__(34810);
+const sts = __nccwpck_require__(121);
 /**
  * The required token exchange grant_type: rfc8693#section-2.1
  */
@@ -6555,7 +6554,7 @@ exports.BaseExternalAccountClient = BaseExternalAccountClient;
 
 /***/ }),
 
-/***/ 96875:
+/***/ 20977:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6575,9 +6574,9 @@ exports.BaseExternalAccountClient = BaseExternalAccountClient;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Compute = void 0;
-const arrify = __nccwpck_require__(61546);
-const gcpMetadata = __nccwpck_require__(3563);
-const oauth2client_1 = __nccwpck_require__(3936);
+const arrify = __nccwpck_require__(26251);
+const gcpMetadata = __nccwpck_require__(23046);
+const oauth2client_1 = __nccwpck_require__(10091);
 class Compute extends oauth2client_1.OAuth2Client {
     /**
      * Google Compute Engine service account credentials.
@@ -6672,7 +6671,7 @@ exports.Compute = Compute;
 
 /***/ }),
 
-/***/ 21380:
+/***/ 60963:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6692,7 +6691,7 @@ exports.Compute = Compute;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getEnv = exports.clear = exports.GCPEnv = void 0;
-const gcpMetadata = __nccwpck_require__(3563);
+const gcpMetadata = __nccwpck_require__(23046);
 var GCPEnv;
 (function (GCPEnv) {
     GCPEnv["APP_ENGINE"] = "APP_ENGINE";
@@ -6757,7 +6756,7 @@ async function isComputeEngine() {
 
 /***/ }),
 
-/***/ 94381:
+/***/ 88323:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6777,9 +6776,9 @@ async function isComputeEngine() {
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ExternalAccountClient = void 0;
-const baseexternalclient_1 = __nccwpck_require__(40810);
-const identitypoolclient_1 = __nccwpck_require__(20117);
-const awsclient_1 = __nccwpck_require__(71569);
+const baseexternalclient_1 = __nccwpck_require__(142);
+const identitypoolclient_1 = __nccwpck_require__(29960);
+const awsclient_1 = __nccwpck_require__(81261);
 /**
  * Dummy class with no constructor. Developers are expected to use fromJSON.
  */
@@ -6823,7 +6822,7 @@ exports.ExternalAccountClient = ExternalAccountClient;
 
 /***/ }),
 
-/***/ 20695:
+/***/ 95934:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6843,20 +6842,20 @@ exports.ExternalAccountClient = ExternalAccountClient;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GoogleAuth = exports.CLOUD_SDK_CLIENT_ID = void 0;
-const child_process_1 = __nccwpck_require__(63129);
-const fs = __nccwpck_require__(35747);
-const gcpMetadata = __nccwpck_require__(3563);
-const os = __nccwpck_require__(12087);
-const path = __nccwpck_require__(85622);
-const crypto_1 = __nccwpck_require__(78043);
-const transporters_1 = __nccwpck_require__(72649);
-const computeclient_1 = __nccwpck_require__(96875);
-const idtokenclient_1 = __nccwpck_require__(80298);
-const envDetect_1 = __nccwpck_require__(21380);
-const jwtclient_1 = __nccwpck_require__(13959);
-const refreshclient_1 = __nccwpck_require__(98790);
-const externalclient_1 = __nccwpck_require__(94381);
-const baseexternalclient_1 = __nccwpck_require__(40810);
+const child_process_1 = __nccwpck_require__(35317);
+const fs = __nccwpck_require__(79896);
+const gcpMetadata = __nccwpck_require__(23046);
+const os = __nccwpck_require__(70857);
+const path = __nccwpck_require__(16928);
+const crypto_1 = __nccwpck_require__(88851);
+const transporters_1 = __nccwpck_require__(67633);
+const computeclient_1 = __nccwpck_require__(20977);
+const idtokenclient_1 = __nccwpck_require__(12718);
+const envDetect_1 = __nccwpck_require__(60963);
+const jwtclient_1 = __nccwpck_require__(75277);
+const refreshclient_1 = __nccwpck_require__(99807);
+const externalclient_1 = __nccwpck_require__(88323);
+const baseexternalclient_1 = __nccwpck_require__(142);
 exports.CLOUD_SDK_CLIENT_ID = '764086051850-6qr4p6gpi6hn506pt8ejuq83di341hur.apps.googleusercontent.com';
 class GoogleAuth {
     constructor(opts) {
@@ -7473,7 +7472,7 @@ GoogleAuth.DefaultTransporter = transporters_1.DefaultTransporter;
 
 /***/ }),
 
-/***/ 39735:
+/***/ 89390:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -7522,7 +7521,7 @@ exports.IAMAuth = IAMAuth;
 
 /***/ }),
 
-/***/ 20117:
+/***/ 29960:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7543,9 +7542,9 @@ exports.IAMAuth = IAMAuth;
 var _a, _b, _c;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.IdentityPoolClient = void 0;
-const fs = __nccwpck_require__(35747);
-const util_1 = __nccwpck_require__(31669);
-const baseexternalclient_1 = __nccwpck_require__(40810);
+const fs = __nccwpck_require__(79896);
+const util_1 = __nccwpck_require__(39023);
+const baseexternalclient_1 = __nccwpck_require__(142);
 // fs.readfile is undefined in browser karma tests causing
 // `npm run browser-test` to fail as test.oauth2.ts imports this file via
 // src/index.ts.
@@ -7683,7 +7682,7 @@ exports.IdentityPoolClient = IdentityPoolClient;
 
 /***/ }),
 
-/***/ 80298:
+/***/ 12718:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7703,7 +7702,7 @@ exports.IdentityPoolClient = IdentityPoolClient;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.IdTokenClient = void 0;
-const oauth2client_1 = __nccwpck_require__(3936);
+const oauth2client_1 = __nccwpck_require__(10091);
 class IdTokenClient extends oauth2client_1.OAuth2Client {
     /**
      * Google ID Token client
@@ -7745,7 +7744,7 @@ exports.IdTokenClient = IdTokenClient;
 
 /***/ }),
 
-/***/ 68740:
+/***/ 27060:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7765,8 +7764,8 @@ exports.IdTokenClient = IdTokenClient;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.JWTAccess = void 0;
-const jws = __nccwpck_require__(4636);
-const LRU = __nccwpck_require__(7129);
+const jws = __nccwpck_require__(33324);
+const LRU = __nccwpck_require__(42762);
 const DEFAULT_HEADER = {
     alg: 'RS256',
     typ: 'JWT',
@@ -7909,7 +7908,7 @@ exports.JWTAccess = JWTAccess;
 
 /***/ }),
 
-/***/ 13959:
+/***/ 75277:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7929,9 +7928,9 @@ exports.JWTAccess = JWTAccess;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.JWT = void 0;
-const gtoken_1 = __nccwpck_require__(76031);
-const jwtaccess_1 = __nccwpck_require__(68740);
-const oauth2client_1 = __nccwpck_require__(3936);
+const gtoken_1 = __nccwpck_require__(28568);
+const jwtaccess_1 = __nccwpck_require__(27060);
+const oauth2client_1 = __nccwpck_require__(10091);
 class JWT extends oauth2client_1.OAuth2Client {
     constructor(optionsOrEmail, keyFile, key, scopes, subject, keyId) {
         const opts = optionsOrEmail && typeof optionsOrEmail === 'object'
@@ -8180,7 +8179,7 @@ exports.JWT = JWT;
 
 /***/ }),
 
-/***/ 74524:
+/***/ 53882:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -8245,7 +8244,7 @@ exports.LoginTicket = LoginTicket;
 
 /***/ }),
 
-/***/ 3936:
+/***/ 10091:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8265,12 +8264,12 @@ exports.LoginTicket = LoginTicket;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.OAuth2Client = exports.CertificateFormat = exports.CodeChallengeMethod = void 0;
-const querystring = __nccwpck_require__(71191);
-const stream = __nccwpck_require__(92413);
-const formatEcdsa = __nccwpck_require__(11728);
-const crypto_1 = __nccwpck_require__(78043);
-const authclient_1 = __nccwpck_require__(44627);
-const loginticket_1 = __nccwpck_require__(74524);
+const querystring = __nccwpck_require__(83480);
+const stream = __nccwpck_require__(2203);
+const formatEcdsa = __nccwpck_require__(325);
+const crypto_1 = __nccwpck_require__(88851);
+const authclient_1 = __nccwpck_require__(34810);
+const loginticket_1 = __nccwpck_require__(53882);
 var CodeChallengeMethod;
 (function (CodeChallengeMethod) {
     CodeChallengeMethod["Plain"] = "plain";
@@ -8931,7 +8930,7 @@ OAuth2Client.ISSUERS_ = [
 
 /***/ }),
 
-/***/ 19510:
+/***/ 6653:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8951,8 +8950,8 @@ OAuth2Client.ISSUERS_ = [
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getErrorFromOAuthErrorResponse = exports.OAuthClientAuthHandler = void 0;
-const querystring = __nccwpck_require__(71191);
-const crypto_1 = __nccwpck_require__(78043);
+const querystring = __nccwpck_require__(83480);
+const crypto_1 = __nccwpck_require__(88851);
 /** List of HTTP methods that accept request bodies. */
 const METHODS_SUPPORTING_REQUEST_BODY = ['PUT', 'POST', 'PATCH'];
 /**
@@ -9114,7 +9113,7 @@ exports.getErrorFromOAuthErrorResponse = getErrorFromOAuthErrorResponse;
 
 /***/ }),
 
-/***/ 98790:
+/***/ 99807:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9134,7 +9133,7 @@ exports.getErrorFromOAuthErrorResponse = getErrorFromOAuthErrorResponse;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UserRefreshClient = void 0;
-const oauth2client_1 = __nccwpck_require__(3936);
+const oauth2client_1 = __nccwpck_require__(10091);
 class UserRefreshClient extends oauth2client_1.OAuth2Client {
     constructor(optionsOrClientId, clientSecret, refreshToken, eagerRefreshThresholdMillis, forceRefreshOnFailure) {
         const opts = optionsOrClientId && typeof optionsOrClientId === 'object'
@@ -9228,7 +9227,7 @@ exports.UserRefreshClient = UserRefreshClient;
 
 /***/ }),
 
-/***/ 86308:
+/***/ 121:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9248,9 +9247,9 @@ exports.UserRefreshClient = UserRefreshClient;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StsCredentials = void 0;
-const querystring = __nccwpck_require__(71191);
-const transporters_1 = __nccwpck_require__(72649);
-const oauth2common_1 = __nccwpck_require__(19510);
+const querystring = __nccwpck_require__(83480);
+const transporters_1 = __nccwpck_require__(67633);
+const oauth2common_1 = __nccwpck_require__(6653);
 /**
  * Implements the OAuth 2.0 token exchange based on
  * https://tools.ietf.org/html/rfc8693
@@ -9343,7 +9342,7 @@ exports.StsCredentials = StsCredentials;
 
 /***/ }),
 
-/***/ 14693:
+/***/ 93438:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9366,15 +9365,15 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BrowserCrypto = void 0;
 // This file implements crypto functions we need using in-browser
 // SubtleCrypto interface `window.crypto.subtle`.
-const base64js = __nccwpck_require__(26463);
+const base64js = __nccwpck_require__(38793);
 // Not all browsers support `TextEncoder`. The following `require` will
 // provide a fast UTF8-only replacement for those browsers that don't support
 // text encoding natively.
 // eslint-disable-next-line node/no-unsupported-features/node-builtins
 if (typeof process === 'undefined' && typeof TextEncoder === 'undefined') {
-    __nccwpck_require__(21917);
+    __nccwpck_require__(79463);
 }
-const crypto_1 = __nccwpck_require__(78043);
+const crypto_1 = __nccwpck_require__(88851);
 class BrowserCrypto {
     constructor() {
         if (typeof window === 'undefined' ||
@@ -9491,7 +9490,7 @@ exports.BrowserCrypto = BrowserCrypto;
 
 /***/ }),
 
-/***/ 78043:
+/***/ 88851:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9512,8 +9511,8 @@ exports.BrowserCrypto = BrowserCrypto;
 /* global window */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromArrayBufferToHex = exports.hasBrowserCrypto = exports.createCrypto = void 0;
-const crypto_1 = __nccwpck_require__(14693);
-const crypto_2 = __nccwpck_require__(30757);
+const crypto_1 = __nccwpck_require__(93438);
+const crypto_2 = __nccwpck_require__(27388);
 function createCrypto() {
     if (hasBrowserCrypto()) {
         return new crypto_1.BrowserCrypto();
@@ -9547,7 +9546,7 @@ exports.fromArrayBufferToHex = fromArrayBufferToHex;
 
 /***/ }),
 
-/***/ 30757:
+/***/ 27388:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9567,7 +9566,7 @@ exports.fromArrayBufferToHex = fromArrayBufferToHex;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.NodeCrypto = void 0;
-const crypto = __nccwpck_require__(76417);
+const crypto = __nccwpck_require__(76982);
 class NodeCrypto {
     async sha256DigestBase64(str) {
         return crypto.createHash('sha256').update(str).digest('base64');
@@ -9637,7 +9636,7 @@ function toBuffer(arrayBuffer) {
 
 /***/ }),
 
-/***/ 20810:
+/***/ 492:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9657,36 +9656,36 @@ exports.GoogleAuth = exports.auth = void 0;
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-const googleauth_1 = __nccwpck_require__(20695);
+const googleauth_1 = __nccwpck_require__(95934);
 Object.defineProperty(exports, "GoogleAuth", ({ enumerable: true, get: function () { return googleauth_1.GoogleAuth; } }));
-var computeclient_1 = __nccwpck_require__(96875);
+var computeclient_1 = __nccwpck_require__(20977);
 Object.defineProperty(exports, "Compute", ({ enumerable: true, get: function () { return computeclient_1.Compute; } }));
-var envDetect_1 = __nccwpck_require__(21380);
+var envDetect_1 = __nccwpck_require__(60963);
 Object.defineProperty(exports, "GCPEnv", ({ enumerable: true, get: function () { return envDetect_1.GCPEnv; } }));
-var iam_1 = __nccwpck_require__(39735);
+var iam_1 = __nccwpck_require__(89390);
 Object.defineProperty(exports, "IAMAuth", ({ enumerable: true, get: function () { return iam_1.IAMAuth; } }));
-var idtokenclient_1 = __nccwpck_require__(80298);
+var idtokenclient_1 = __nccwpck_require__(12718);
 Object.defineProperty(exports, "IdTokenClient", ({ enumerable: true, get: function () { return idtokenclient_1.IdTokenClient; } }));
-var jwtaccess_1 = __nccwpck_require__(68740);
+var jwtaccess_1 = __nccwpck_require__(27060);
 Object.defineProperty(exports, "JWTAccess", ({ enumerable: true, get: function () { return jwtaccess_1.JWTAccess; } }));
-var jwtclient_1 = __nccwpck_require__(13959);
+var jwtclient_1 = __nccwpck_require__(75277);
 Object.defineProperty(exports, "JWT", ({ enumerable: true, get: function () { return jwtclient_1.JWT; } }));
-var oauth2client_1 = __nccwpck_require__(3936);
+var oauth2client_1 = __nccwpck_require__(10091);
 Object.defineProperty(exports, "CodeChallengeMethod", ({ enumerable: true, get: function () { return oauth2client_1.CodeChallengeMethod; } }));
 Object.defineProperty(exports, "OAuth2Client", ({ enumerable: true, get: function () { return oauth2client_1.OAuth2Client; } }));
-var loginticket_1 = __nccwpck_require__(74524);
+var loginticket_1 = __nccwpck_require__(53882);
 Object.defineProperty(exports, "LoginTicket", ({ enumerable: true, get: function () { return loginticket_1.LoginTicket; } }));
-var refreshclient_1 = __nccwpck_require__(98790);
+var refreshclient_1 = __nccwpck_require__(99807);
 Object.defineProperty(exports, "UserRefreshClient", ({ enumerable: true, get: function () { return refreshclient_1.UserRefreshClient; } }));
-var awsclient_1 = __nccwpck_require__(71569);
+var awsclient_1 = __nccwpck_require__(81261);
 Object.defineProperty(exports, "AwsClient", ({ enumerable: true, get: function () { return awsclient_1.AwsClient; } }));
-var identitypoolclient_1 = __nccwpck_require__(20117);
+var identitypoolclient_1 = __nccwpck_require__(29960);
 Object.defineProperty(exports, "IdentityPoolClient", ({ enumerable: true, get: function () { return identitypoolclient_1.IdentityPoolClient; } }));
-var externalclient_1 = __nccwpck_require__(94381);
+var externalclient_1 = __nccwpck_require__(88323);
 Object.defineProperty(exports, "ExternalAccountClient", ({ enumerable: true, get: function () { return externalclient_1.ExternalAccountClient; } }));
-var baseexternalclient_1 = __nccwpck_require__(40810);
+var baseexternalclient_1 = __nccwpck_require__(142);
 Object.defineProperty(exports, "BaseExternalAccountClient", ({ enumerable: true, get: function () { return baseexternalclient_1.BaseExternalAccountClient; } }));
-var transporters_1 = __nccwpck_require__(72649);
+var transporters_1 = __nccwpck_require__(67633);
 Object.defineProperty(exports, "DefaultTransporter", ({ enumerable: true, get: function () { return transporters_1.DefaultTransporter; } }));
 const auth = new googleauth_1.GoogleAuth();
 exports.auth = auth;
@@ -9694,7 +9693,7 @@ exports.auth = auth;
 
 /***/ }),
 
-/***/ 16608:
+/***/ 78290:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -9737,7 +9736,7 @@ exports.validate = validate;
 
 /***/ }),
 
-/***/ 72649:
+/***/ 67633:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9757,10 +9756,10 @@ exports.validate = validate;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DefaultTransporter = void 0;
-const gaxios_1 = __nccwpck_require__(59555);
-const options_1 = __nccwpck_require__(16608);
+const gaxios_1 = __nccwpck_require__(97003);
+const options_1 = __nccwpck_require__(78290);
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const pkg = __nccwpck_require__(85477);
+const pkg = __nccwpck_require__(96066);
 const PRODUCT_NAME = 'google-api-nodejs-client';
 class DefaultTransporter {
     /**
@@ -9860,7 +9859,7 @@ DefaultTransporter.USER_AGENT = `${PRODUCT_NAME}/${pkg.version}`;
 
 /***/ }),
 
-/***/ 92098:
+/***/ 3064:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9873,9 +9872,9 @@ DefaultTransporter.USER_AGENT = `${PRODUCT_NAME}/${pkg.version}`;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getPem = void 0;
-const fs = __nccwpck_require__(35747);
-const forge = __nccwpck_require__(57655);
-const util_1 = __nccwpck_require__(31669);
+const fs = __nccwpck_require__(79896);
+const forge = __nccwpck_require__(8542);
+const util_1 = __nccwpck_require__(39023);
 const readFile = util_1.promisify(fs.readFile);
 function getPem(filename, callback) {
     if (callback) {
@@ -9916,7 +9915,7 @@ function convertToPem(p12base64) {
 
 /***/ }),
 
-/***/ 12036:
+/***/ 63808:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -9964,7 +9963,7 @@ exports.getAPI = getAPI;
 
 /***/ }),
 
-/***/ 58971:
+/***/ 92653:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9983,16 +9982,16 @@ exports.getAPI = getAPI;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createAPIRequest = void 0;
-const google_auth_library_1 = __nccwpck_require__(20810);
-const qs = __nccwpck_require__(22760);
-const stream = __nccwpck_require__(92413);
-const urlTemplate = __nccwpck_require__(30464);
-const uuid = __nccwpck_require__(4552);
-const extend = __nccwpck_require__(38171);
-const isbrowser_1 = __nccwpck_require__(78322);
-const h2 = __nccwpck_require__(55421);
+const google_auth_library_1 = __nccwpck_require__(492);
+const qs = __nccwpck_require__(40240);
+const stream = __nccwpck_require__(2203);
+const urlTemplate = __nccwpck_require__(94058);
+const uuid = __nccwpck_require__(12048);
+const extend = __nccwpck_require__(23860);
+const isbrowser_1 = __nccwpck_require__(7994);
+const h2 = __nccwpck_require__(53668);
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const pkg = __nccwpck_require__(86370);
+const pkg = __nccwpck_require__(11540);
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function isReadableStream(obj) {
     return (obj !== null &&
@@ -10276,7 +10275,7 @@ function populateAPIHeader(headers) {
 
 /***/ }),
 
-/***/ 565:
+/***/ 98010:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10295,7 +10294,7 @@ function populateAPIHeader(headers) {
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AuthPlus = void 0;
-const google_auth_library_1 = __nccwpck_require__(20810);
+const google_auth_library_1 = __nccwpck_require__(492);
 class AuthPlus extends google_auth_library_1.GoogleAuth {
     constructor() {
         super(...arguments);
@@ -10333,7 +10332,7 @@ exports.AuthPlus = AuthPlus;
 
 /***/ }),
 
-/***/ 87258:
+/***/ 5436:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10352,12 +10351,12 @@ exports.AuthPlus = AuthPlus;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Discovery = void 0;
-const fs = __nccwpck_require__(35747);
-const google_auth_library_1 = __nccwpck_require__(20810);
-const resolve = __nccwpck_require__(78835);
-const util = __nccwpck_require__(31669);
-const apirequest_1 = __nccwpck_require__(58971);
-const endpoint_1 = __nccwpck_require__(84025);
+const fs = __nccwpck_require__(79896);
+const google_auth_library_1 = __nccwpck_require__(492);
+const resolve = __nccwpck_require__(87016);
+const util = __nccwpck_require__(39023);
+const apirequest_1 = __nccwpck_require__(92653);
+const endpoint_1 = __nccwpck_require__(72557);
 const readFile = util.promisify(fs.readFile);
 class Discovery {
     /**
@@ -10484,7 +10483,7 @@ exports.Discovery = Discovery;
 
 /***/ }),
 
-/***/ 84025:
+/***/ 72557:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10503,7 +10502,7 @@ exports.Discovery = Discovery;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Endpoint = void 0;
-const apirequest_1 = __nccwpck_require__(58971);
+const apirequest_1 = __nccwpck_require__(92653);
 class Endpoint {
     constructor(options) {
         this._options = options || {};
@@ -10619,7 +10618,7 @@ function buildurl(input) {
 
 /***/ }),
 
-/***/ 55421:
+/***/ 53668:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10638,15 +10637,15 @@ function buildurl(input) {
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.closeSession = exports.request = exports.sessions = void 0;
-const http2 = __nccwpck_require__(97565);
-const zlib = __nccwpck_require__(78761);
-const url_1 = __nccwpck_require__(78835);
-const qs = __nccwpck_require__(22760);
-const extend = __nccwpck_require__(38171);
-const stream_1 = __nccwpck_require__(92413);
-const util = __nccwpck_require__(31669);
-const process = __nccwpck_require__(61765);
-const common_1 = __nccwpck_require__(66129);
+const http2 = __nccwpck_require__(85675);
+const zlib = __nccwpck_require__(43106);
+const url_1 = __nccwpck_require__(87016);
+const qs = __nccwpck_require__(40240);
+const extend = __nccwpck_require__(23860);
+const stream_1 = __nccwpck_require__(2203);
+const util = __nccwpck_require__(39023);
+const process = __nccwpck_require__(932);
+const common_1 = __nccwpck_require__(47506);
 const { HTTP2_HEADER_CONTENT_ENCODING, HTTP2_HEADER_CONTENT_TYPE, HTTP2_HEADER_METHOD, HTTP2_HEADER_PATH, HTTP2_HEADER_STATUS, } = http2.constants;
 const DEBUG = !!process.env.HTTP2_DEBUG;
 /**
@@ -10876,7 +10875,7 @@ exports.closeSession = closeSession;
 
 /***/ }),
 
-/***/ 40524:
+/***/ 16782:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10894,7 +10893,7 @@ exports.closeSession = closeSession;
 // See the License for the specific language governing permissions and
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var google_auth_library_1 = __nccwpck_require__(20810);
+var google_auth_library_1 = __nccwpck_require__(492);
 Object.defineProperty(exports, "OAuth2Client", ({ enumerable: true, get: function () { return google_auth_library_1.OAuth2Client; } }));
 Object.defineProperty(exports, "JWT", ({ enumerable: true, get: function () { return google_auth_library_1.JWT; } }));
 Object.defineProperty(exports, "Compute", ({ enumerable: true, get: function () { return google_auth_library_1.Compute; } }));
@@ -10905,21 +10904,21 @@ Object.defineProperty(exports, "ExternalAccountClient", ({ enumerable: true, get
 Object.defineProperty(exports, "BaseExternalAccountClient", ({ enumerable: true, get: function () { return google_auth_library_1.BaseExternalAccountClient; } }));
 Object.defineProperty(exports, "IdentityPoolClient", ({ enumerable: true, get: function () { return google_auth_library_1.IdentityPoolClient; } }));
 Object.defineProperty(exports, "AwsClient", ({ enumerable: true, get: function () { return google_auth_library_1.AwsClient; } }));
-var apiIndex_1 = __nccwpck_require__(12036);
+var apiIndex_1 = __nccwpck_require__(63808);
 Object.defineProperty(exports, "getAPI", ({ enumerable: true, get: function () { return apiIndex_1.getAPI; } }));
-var apirequest_1 = __nccwpck_require__(58971);
+var apirequest_1 = __nccwpck_require__(92653);
 Object.defineProperty(exports, "createAPIRequest", ({ enumerable: true, get: function () { return apirequest_1.createAPIRequest; } }));
-var authplus_1 = __nccwpck_require__(565);
+var authplus_1 = __nccwpck_require__(98010);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return authplus_1.AuthPlus; } }));
-var discovery_1 = __nccwpck_require__(87258);
+var discovery_1 = __nccwpck_require__(5436);
 Object.defineProperty(exports, "Discovery", ({ enumerable: true, get: function () { return discovery_1.Discovery; } }));
-var endpoint_1 = __nccwpck_require__(84025);
+var endpoint_1 = __nccwpck_require__(72557);
 Object.defineProperty(exports, "Endpoint", ({ enumerable: true, get: function () { return endpoint_1.Endpoint; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 78322:
+/***/ 7994:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -10946,7 +10945,7 @@ exports.isBrowser = isBrowser;
 
 /***/ }),
 
-/***/ 97913:
+/***/ 70846:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10966,8 +10965,8 @@ exports.isBrowser = isBrowser;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.abusiveexperiencereport_v1 = exports.auth = exports.abusiveexperiencereport = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(52957);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(44649);
 Object.defineProperty(exports, "abusiveexperiencereport_v1", ({ enumerable: true, get: function () { return v1_1.abusiveexperiencereport_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.abusiveexperiencereport_v1.Abusiveexperiencereport,
@@ -10978,13 +10977,13 @@ function abusiveexperiencereport(versionOrOptions) {
 exports.abusiveexperiencereport = abusiveexperiencereport;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 52957:
+/***/ 44649:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -11009,7 +11008,7 @@ exports.abusiveexperiencereport_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var abusiveexperiencereport_v1;
 (function (abusiveexperiencereport_v1) {
     /**
@@ -11112,7 +11111,7 @@ var abusiveexperiencereport_v1;
 
 /***/ }),
 
-/***/ 57234:
+/***/ 65454:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -11132,8 +11131,8 @@ var abusiveexperiencereport_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.acceleratedmobilepageurl_v1 = exports.auth = exports.acceleratedmobilepageurl = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(16214);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(61369);
 Object.defineProperty(exports, "acceleratedmobilepageurl_v1", ({ enumerable: true, get: function () { return v1_1.acceleratedmobilepageurl_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.acceleratedmobilepageurl_v1.Acceleratedmobilepageurl,
@@ -11144,13 +11143,13 @@ function acceleratedmobilepageurl(versionOrOptions) {
 exports.acceleratedmobilepageurl = acceleratedmobilepageurl;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 16214:
+/***/ 61369:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -11175,7 +11174,7 @@ exports.acceleratedmobilepageurl_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var acceleratedmobilepageurl_v1;
 (function (acceleratedmobilepageurl_v1) {
     /**
@@ -11240,7 +11239,7 @@ var acceleratedmobilepageurl_v1;
 
 /***/ }),
 
-/***/ 11959:
+/***/ 63884:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -11260,10 +11259,10 @@ var acceleratedmobilepageurl_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.accessapproval_v1beta1 = exports.accessapproval_v1 = exports.auth = exports.accessapproval = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(10167);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(35779);
 Object.defineProperty(exports, "accessapproval_v1", ({ enumerable: true, get: function () { return v1_1.accessapproval_v1; } }));
-const v1beta1_1 = __nccwpck_require__(28967);
+const v1beta1_1 = __nccwpck_require__(13606);
 Object.defineProperty(exports, "accessapproval_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.accessapproval_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.accessapproval_v1.Accessapproval,
@@ -11275,13 +11274,13 @@ function accessapproval(versionOrOptions) {
 exports.accessapproval = accessapproval;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 10167:
+/***/ 35779:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -11306,7 +11305,7 @@ exports.accessapproval_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var accessapproval_v1;
 (function (accessapproval_v1) {
     /**
@@ -12027,7 +12026,7 @@ var accessapproval_v1;
 
 /***/ }),
 
-/***/ 28967:
+/***/ 13606:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -12052,7 +12051,7 @@ exports.accessapproval_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var accessapproval_v1beta1;
 (function (accessapproval_v1beta1) {
     /**
@@ -12777,7 +12776,7 @@ var accessapproval_v1beta1;
 
 /***/ }),
 
-/***/ 1747:
+/***/ 41829:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -12797,10 +12796,10 @@ var accessapproval_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.accesscontextmanager_v1beta = exports.accesscontextmanager_v1 = exports.auth = exports.accesscontextmanager = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(94531);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(27576);
 Object.defineProperty(exports, "accesscontextmanager_v1", ({ enumerable: true, get: function () { return v1_1.accesscontextmanager_v1; } }));
-const v1beta_1 = __nccwpck_require__(68224);
+const v1beta_1 = __nccwpck_require__(63378);
 Object.defineProperty(exports, "accesscontextmanager_v1beta", ({ enumerable: true, get: function () { return v1beta_1.accesscontextmanager_v1beta; } }));
 exports.VERSIONS = {
     v1: v1_1.accesscontextmanager_v1.Accesscontextmanager,
@@ -12812,13 +12811,13 @@ function accesscontextmanager(versionOrOptions) {
 exports.accesscontextmanager = accesscontextmanager;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 94531:
+/***/ 27576:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -12843,7 +12842,7 @@ exports.accesscontextmanager_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var accesscontextmanager_v1;
 (function (accesscontextmanager_v1) {
     /**
@@ -13748,7 +13747,7 @@ var accesscontextmanager_v1;
 
 /***/ }),
 
-/***/ 68224:
+/***/ 63378:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13773,7 +13772,7 @@ exports.accesscontextmanager_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var accesscontextmanager_v1beta;
 (function (accesscontextmanager_v1beta) {
     /**
@@ -14324,2390 +14323,7 @@ var accesscontextmanager_v1beta;
 
 /***/ }),
 
-/***/ 67972:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-// Copyright 2020 Google LLC
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//    http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.adexchangebuyer_v1_4 = exports.adexchangebuyer_v1_3 = exports.adexchangebuyer_v1_2 = exports.auth = exports.adexchangebuyer = exports.VERSIONS = void 0;
-/*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_2_1 = __nccwpck_require__(73080);
-Object.defineProperty(exports, "adexchangebuyer_v1_2", ({ enumerable: true, get: function () { return v1_2_1.adexchangebuyer_v1_2; } }));
-const v1_3_1 = __nccwpck_require__(57099);
-Object.defineProperty(exports, "adexchangebuyer_v1_3", ({ enumerable: true, get: function () { return v1_3_1.adexchangebuyer_v1_3; } }));
-const v1_4_1 = __nccwpck_require__(46288);
-Object.defineProperty(exports, "adexchangebuyer_v1_4", ({ enumerable: true, get: function () { return v1_4_1.adexchangebuyer_v1_4; } }));
-exports.VERSIONS = {
-    'v1.2': v1_2_1.adexchangebuyer_v1_2.Adexchangebuyer,
-    'v1.3': v1_3_1.adexchangebuyer_v1_3.Adexchangebuyer,
-    'v1.4': v1_4_1.adexchangebuyer_v1_4.Adexchangebuyer,
-};
-function adexchangebuyer(versionOrOptions) {
-    return googleapis_common_1.getAPI('adexchangebuyer', versionOrOptions, exports.VERSIONS, this);
-}
-exports.adexchangebuyer = adexchangebuyer;
-const auth = new googleapis_common_1.AuthPlus();
-exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
-Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ 73080:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-// Copyright 2020 Google LLC
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//    http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.adexchangebuyer_v1_2 = void 0;
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/class-name-casing */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-empty-interface */
-/* eslint-disable @typescript-eslint/no-namespace */
-/* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
-var adexchangebuyer_v1_2;
-(function (adexchangebuyer_v1_2) {
-    /**
-     * Ad Exchange Buyer API
-     *
-     * Accesses your bidding-account information, submits creatives for validation, finds available direct deals, and retrieves performance reports.
-     *
-     * @example
-     * ```js
-     * const {google} = require('googleapis');
-     * const adexchangebuyer = google.adexchangebuyer('v1.2');
-     * ```
-     */
-    class Adexchangebuyer {
-        constructor(options, google) {
-            this.context = {
-                _options: options || {},
-                google,
-            };
-            this.accounts = new Resource$Accounts(this.context);
-            this.creatives = new Resource$Creatives(this.context);
-        }
-    }
-    adexchangebuyer_v1_2.Adexchangebuyer = Adexchangebuyer;
-    class Resource$Accounts {
-        constructor(context) {
-            this.context = context;
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.2/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['id'],
-                pathParams: ['id'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.2/accounts').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        patch(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.2/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PATCH',
-                }, options),
-                params,
-                requiredParams: ['id'],
-                pathParams: ['id'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        update(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.2/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PUT',
-                }, options),
-                params,
-                requiredParams: ['id'],
-                pathParams: ['id'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_2.Resource$Accounts = Resource$Accounts;
-    class Resource$Creatives {
-        constructor(context) {
-            this.context = context;
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.2/creatives/{accountId}/{buyerCreativeId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'buyerCreativeId'],
-                pathParams: ['accountId', 'buyerCreativeId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        insert(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.2/creatives').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.2/creatives').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_2.Resource$Creatives = Resource$Creatives;
-})(adexchangebuyer_v1_2 = exports.adexchangebuyer_v1_2 || (exports.adexchangebuyer_v1_2 = {}));
-//# sourceMappingURL=v1.2.js.map
-
-/***/ }),
-
-/***/ 57099:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-// Copyright 2020 Google LLC
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//    http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.adexchangebuyer_v1_3 = void 0;
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/class-name-casing */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-empty-interface */
-/* eslint-disable @typescript-eslint/no-namespace */
-/* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
-var adexchangebuyer_v1_3;
-(function (adexchangebuyer_v1_3) {
-    /**
-     * Ad Exchange Buyer API
-     *
-     * Accesses your bidding-account information, submits creatives for validation, finds available direct deals, and retrieves performance reports.
-     *
-     * @example
-     * ```js
-     * const {google} = require('googleapis');
-     * const adexchangebuyer = google.adexchangebuyer('v1.3');
-     * ```
-     */
-    class Adexchangebuyer {
-        constructor(options, google) {
-            this.context = {
-                _options: options || {},
-                google,
-            };
-            this.accounts = new Resource$Accounts(this.context);
-            this.billingInfo = new Resource$Billinginfo(this.context);
-            this.budget = new Resource$Budget(this.context);
-            this.creatives = new Resource$Creatives(this.context);
-            this.directDeals = new Resource$Directdeals(this.context);
-            this.performanceReport = new Resource$Performancereport(this.context);
-            this.pretargetingConfig = new Resource$Pretargetingconfig(this.context);
-        }
-    }
-    adexchangebuyer_v1_3.Adexchangebuyer = Adexchangebuyer;
-    class Resource$Accounts {
-        constructor(context) {
-            this.context = context;
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.3/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['id'],
-                pathParams: ['id'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.3/accounts').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        patch(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.3/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PATCH',
-                }, options),
-                params,
-                requiredParams: ['id'],
-                pathParams: ['id'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        update(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.3/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PUT',
-                }, options),
-                params,
-                requiredParams: ['id'],
-                pathParams: ['id'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_3.Resource$Accounts = Resource$Accounts;
-    class Resource$Billinginfo {
-        constructor(context) {
-            this.context = context;
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.3/billinginfo/{accountId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId'],
-                pathParams: ['accountId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.3/billinginfo').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_3.Resource$Billinginfo = Resource$Billinginfo;
-    class Resource$Budget {
-        constructor(context) {
-            this.context = context;
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.3/billinginfo/{accountId}/{billingId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'billingId'],
-                pathParams: ['accountId', 'billingId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        patch(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.3/billinginfo/{accountId}/{billingId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PATCH',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'billingId'],
-                pathParams: ['accountId', 'billingId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        update(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.3/billinginfo/{accountId}/{billingId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PUT',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'billingId'],
-                pathParams: ['accountId', 'billingId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_3.Resource$Budget = Resource$Budget;
-    class Resource$Creatives {
-        constructor(context) {
-            this.context = context;
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.3/creatives/{accountId}/{buyerCreativeId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'buyerCreativeId'],
-                pathParams: ['accountId', 'buyerCreativeId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        insert(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.3/creatives').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.3/creatives').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_3.Resource$Creatives = Resource$Creatives;
-    class Resource$Directdeals {
-        constructor(context) {
-            this.context = context;
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.3/directdeals/{id}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['id'],
-                pathParams: ['id'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.3/directdeals').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_3.Resource$Directdeals = Resource$Directdeals;
-    class Resource$Performancereport {
-        constructor(context) {
-            this.context = context;
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.3/performancereport').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'endDateTime', 'startDateTime'],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_3.Resource$Performancereport = Resource$Performancereport;
-    class Resource$Pretargetingconfig {
-        constructor(context) {
-            this.context = context;
-        }
-        delete(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.3/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'DELETE',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'configId'],
-                pathParams: ['accountId', 'configId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.3/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'configId'],
-                pathParams: ['accountId', 'configId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        insert(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.3/pretargetingconfigs/{accountId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['accountId'],
-                pathParams: ['accountId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.3/pretargetingconfigs/{accountId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId'],
-                pathParams: ['accountId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        patch(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.3/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PATCH',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'configId'],
-                pathParams: ['accountId', 'configId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        update(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.3/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PUT',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'configId'],
-                pathParams: ['accountId', 'configId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_3.Resource$Pretargetingconfig = Resource$Pretargetingconfig;
-})(adexchangebuyer_v1_3 = exports.adexchangebuyer_v1_3 || (exports.adexchangebuyer_v1_3 = {}));
-//# sourceMappingURL=v1.3.js.map
-
-/***/ }),
-
-/***/ 46288:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-// Copyright 2020 Google LLC
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//    http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.adexchangebuyer_v1_4 = void 0;
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/class-name-casing */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-empty-interface */
-/* eslint-disable @typescript-eslint/no-namespace */
-/* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
-var adexchangebuyer_v1_4;
-(function (adexchangebuyer_v1_4) {
-    /**
-     * Ad Exchange Buyer API
-     *
-     * Accesses your bidding-account information, submits creatives for validation, finds available direct deals, and retrieves performance reports.
-     *
-     * @example
-     * ```js
-     * const {google} = require('googleapis');
-     * const adexchangebuyer = google.adexchangebuyer('v1.4');
-     * ```
-     */
-    class Adexchangebuyer {
-        constructor(options, google) {
-            this.context = {
-                _options: options || {},
-                google,
-            };
-            this.accounts = new Resource$Accounts(this.context);
-            this.billingInfo = new Resource$Billinginfo(this.context);
-            this.budget = new Resource$Budget(this.context);
-            this.creatives = new Resource$Creatives(this.context);
-            this.marketplacedeals = new Resource$Marketplacedeals(this.context);
-            this.marketplacenotes = new Resource$Marketplacenotes(this.context);
-            this.marketplaceprivateauction = new Resource$Marketplaceprivateauction(this.context);
-            this.performanceReport = new Resource$Performancereport(this.context);
-            this.pretargetingConfig = new Resource$Pretargetingconfig(this.context);
-            this.products = new Resource$Products(this.context);
-            this.proposals = new Resource$Proposals(this.context);
-            this.pubprofiles = new Resource$Pubprofiles(this.context);
-        }
-    }
-    adexchangebuyer_v1_4.Adexchangebuyer = Adexchangebuyer;
-    class Resource$Accounts {
-        constructor(context) {
-            this.context = context;
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['id'],
-                pathParams: ['id'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/accounts').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        patch(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PATCH',
-                }, options),
-                params,
-                requiredParams: ['id'],
-                pathParams: ['id'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        update(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PUT',
-                }, options),
-                params,
-                requiredParams: ['id'],
-                pathParams: ['id'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_4.Resource$Accounts = Resource$Accounts;
-    class Resource$Billinginfo {
-        constructor(context) {
-            this.context = context;
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/billinginfo/{accountId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId'],
-                pathParams: ['accountId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/billinginfo').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_4.Resource$Billinginfo = Resource$Billinginfo;
-    class Resource$Budget {
-        constructor(context) {
-            this.context = context;
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/billinginfo/{accountId}/{billingId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'billingId'],
-                pathParams: ['accountId', 'billingId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        patch(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/billinginfo/{accountId}/{billingId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PATCH',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'billingId'],
-                pathParams: ['accountId', 'billingId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        update(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/billinginfo/{accountId}/{billingId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PUT',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'billingId'],
-                pathParams: ['accountId', 'billingId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_4.Resource$Budget = Resource$Budget;
-    class Resource$Creatives {
-        constructor(context) {
-            this.context = context;
-        }
-        addDeal(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/creatives/{accountId}/{buyerCreativeId}/addDeal/{dealId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'buyerCreativeId', 'dealId'],
-                pathParams: ['accountId', 'buyerCreativeId', 'dealId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/creatives/{accountId}/{buyerCreativeId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'buyerCreativeId'],
-                pathParams: ['accountId', 'buyerCreativeId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        insert(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/creatives').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/creatives').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        listDeals(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/creatives/{accountId}/{buyerCreativeId}/listDeals').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'buyerCreativeId'],
-                pathParams: ['accountId', 'buyerCreativeId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        removeDeal(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/creatives/{accountId}/{buyerCreativeId}/removeDeal/{dealId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'buyerCreativeId', 'dealId'],
-                pathParams: ['accountId', 'buyerCreativeId', 'dealId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_4.Resource$Creatives = Resource$Creatives;
-    class Resource$Marketplacedeals {
-        constructor(context) {
-            this.context = context;
-        }
-        delete(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/proposals/{proposalId}/deals/delete').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['proposalId'],
-                pathParams: ['proposalId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        insert(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/proposals/{proposalId}/deals/insert').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['proposalId'],
-                pathParams: ['proposalId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/proposals/{proposalId}/deals').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['proposalId'],
-                pathParams: ['proposalId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        update(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/proposals/{proposalId}/deals/update').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['proposalId'],
-                pathParams: ['proposalId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_4.Resource$Marketplacedeals = Resource$Marketplacedeals;
-    class Resource$Marketplacenotes {
-        constructor(context) {
-            this.context = context;
-        }
-        insert(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/proposals/{proposalId}/notes/insert').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['proposalId'],
-                pathParams: ['proposalId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/proposals/{proposalId}/notes').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['proposalId'],
-                pathParams: ['proposalId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_4.Resource$Marketplacenotes = Resource$Marketplacenotes;
-    class Resource$Marketplaceprivateauction {
-        constructor(context) {
-            this.context = context;
-        }
-        updateproposal(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/privateauction/{privateAuctionId}/updateproposal').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['privateAuctionId'],
-                pathParams: ['privateAuctionId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_4.Resource$Marketplaceprivateauction = Resource$Marketplaceprivateauction;
-    class Resource$Performancereport {
-        constructor(context) {
-            this.context = context;
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/performancereport').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'endDateTime', 'startDateTime'],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_4.Resource$Performancereport = Resource$Performancereport;
-    class Resource$Pretargetingconfig {
-        constructor(context) {
-            this.context = context;
-        }
-        delete(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'DELETE',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'configId'],
-                pathParams: ['accountId', 'configId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'configId'],
-                pathParams: ['accountId', 'configId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        insert(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/pretargetingconfigs/{accountId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['accountId'],
-                pathParams: ['accountId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/pretargetingconfigs/{accountId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId'],
-                pathParams: ['accountId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        patch(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PATCH',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'configId'],
-                pathParams: ['accountId', 'configId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        update(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PUT',
-                }, options),
-                params,
-                requiredParams: ['accountId', 'configId'],
-                pathParams: ['accountId', 'configId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_4.Resource$Pretargetingconfig = Resource$Pretargetingconfig;
-    class Resource$Products {
-        constructor(context) {
-            this.context = context;
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/products/{productId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['productId'],
-                pathParams: ['productId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        search(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/products/search').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_4.Resource$Products = Resource$Products;
-    class Resource$Proposals {
-        constructor(context) {
-            this.context = context;
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/proposals/{proposalId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['proposalId'],
-                pathParams: ['proposalId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        insert(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/proposals/insert').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        patch(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/proposals/{proposalId}/{revisionNumber}/{updateAction}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PATCH',
-                }, options),
-                params,
-                requiredParams: ['proposalId', 'revisionNumber', 'updateAction'],
-                pathParams: ['proposalId', 'revisionNumber', 'updateAction'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        search(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/proposals/search').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        setupcomplete(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/proposals/{proposalId}/setupcomplete').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['proposalId'],
-                pathParams: ['proposalId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        update(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/adexchangebuyer/v1.4/proposals/{proposalId}/{revisionNumber}/{updateAction}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PUT',
-                }, options),
-                params,
-                requiredParams: ['proposalId', 'revisionNumber', 'updateAction'],
-                pathParams: ['proposalId', 'revisionNumber', 'updateAction'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_4.Resource$Proposals = Resource$Proposals;
-    class Resource$Pubprofiles {
-        constructor(context) {
-            this.context = context;
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/adexchangebuyer/v1.4/publisher/{accountId}/profiles').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['accountId'],
-                pathParams: ['accountId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    adexchangebuyer_v1_4.Resource$Pubprofiles = Resource$Pubprofiles;
-})(adexchangebuyer_v1_4 = exports.adexchangebuyer_v1_4 || (exports.adexchangebuyer_v1_4 = {}));
-//# sourceMappingURL=v1.4.js.map
-
-/***/ }),
-
-/***/ 78913:
+/***/ 31974:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -16727,8 +14343,8 @@ var adexchangebuyer_v1_4;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.adexchangebuyer2_v2beta1 = exports.auth = exports.adexchangebuyer2 = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2beta1_1 = __nccwpck_require__(49104);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2beta1_1 = __nccwpck_require__(97327);
 Object.defineProperty(exports, "adexchangebuyer2_v2beta1", ({ enumerable: true, get: function () { return v2beta1_1.adexchangebuyer2_v2beta1; } }));
 exports.VERSIONS = {
     v2beta1: v2beta1_1.adexchangebuyer2_v2beta1.Adexchangebuyer2,
@@ -16739,13 +14355,13 @@ function adexchangebuyer2(versionOrOptions) {
 exports.adexchangebuyer2 = adexchangebuyer2;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 49104:
+/***/ 97327:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -16770,7 +14386,7 @@ exports.adexchangebuyer2_v2beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var adexchangebuyer2_v2beta1;
 (function (adexchangebuyer2_v2beta1) {
     /**
@@ -18982,7 +16598,2390 @@ var adexchangebuyer2_v2beta1;
 
 /***/ }),
 
-/***/ 83156:
+/***/ 8564:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+// Copyright 2020 Google LLC
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.adexchangebuyer_v1_4 = exports.adexchangebuyer_v1_3 = exports.adexchangebuyer_v1_2 = exports.auth = exports.adexchangebuyer = exports.VERSIONS = void 0;
+/*! THIS FILE IS AUTO-GENERATED */
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_2_1 = __nccwpck_require__(39987);
+Object.defineProperty(exports, "adexchangebuyer_v1_2", ({ enumerable: true, get: function () { return v1_2_1.adexchangebuyer_v1_2; } }));
+const v1_3_1 = __nccwpck_require__(39724);
+Object.defineProperty(exports, "adexchangebuyer_v1_3", ({ enumerable: true, get: function () { return v1_3_1.adexchangebuyer_v1_3; } }));
+const v1_4_1 = __nccwpck_require__(75257);
+Object.defineProperty(exports, "adexchangebuyer_v1_4", ({ enumerable: true, get: function () { return v1_4_1.adexchangebuyer_v1_4; } }));
+exports.VERSIONS = {
+    'v1.2': v1_2_1.adexchangebuyer_v1_2.Adexchangebuyer,
+    'v1.3': v1_3_1.adexchangebuyer_v1_3.Adexchangebuyer,
+    'v1.4': v1_4_1.adexchangebuyer_v1_4.Adexchangebuyer,
+};
+function adexchangebuyer(versionOrOptions) {
+    return googleapis_common_1.getAPI('adexchangebuyer', versionOrOptions, exports.VERSIONS, this);
+}
+exports.adexchangebuyer = adexchangebuyer;
+const auth = new googleapis_common_1.AuthPlus();
+exports.auth = auth;
+var googleapis_common_2 = __nccwpck_require__(16782);
+Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 39987:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+// Copyright 2020 Google LLC
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.adexchangebuyer_v1_2 = void 0;
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/class-name-casing */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-empty-interface */
+/* eslint-disable @typescript-eslint/no-namespace */
+/* eslint-disable no-irregular-whitespace */
+const googleapis_common_1 = __nccwpck_require__(16782);
+var adexchangebuyer_v1_2;
+(function (adexchangebuyer_v1_2) {
+    /**
+     * Ad Exchange Buyer API
+     *
+     * Accesses your bidding-account information, submits creatives for validation, finds available direct deals, and retrieves performance reports.
+     *
+     * @example
+     * ```js
+     * const {google} = require('googleapis');
+     * const adexchangebuyer = google.adexchangebuyer('v1.2');
+     * ```
+     */
+    class Adexchangebuyer {
+        constructor(options, google) {
+            this.context = {
+                _options: options || {},
+                google,
+            };
+            this.accounts = new Resource$Accounts(this.context);
+            this.creatives = new Resource$Creatives(this.context);
+        }
+    }
+    adexchangebuyer_v1_2.Adexchangebuyer = Adexchangebuyer;
+    class Resource$Accounts {
+        constructor(context) {
+            this.context = context;
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.2/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['id'],
+                pathParams: ['id'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.2/accounts').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        patch(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.2/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PATCH',
+                }, options),
+                params,
+                requiredParams: ['id'],
+                pathParams: ['id'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        update(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.2/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PUT',
+                }, options),
+                params,
+                requiredParams: ['id'],
+                pathParams: ['id'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_2.Resource$Accounts = Resource$Accounts;
+    class Resource$Creatives {
+        constructor(context) {
+            this.context = context;
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.2/creatives/{accountId}/{buyerCreativeId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'buyerCreativeId'],
+                pathParams: ['accountId', 'buyerCreativeId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        insert(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.2/creatives').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.2/creatives').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_2.Resource$Creatives = Resource$Creatives;
+})(adexchangebuyer_v1_2 = exports.adexchangebuyer_v1_2 || (exports.adexchangebuyer_v1_2 = {}));
+//# sourceMappingURL=v1.2.js.map
+
+/***/ }),
+
+/***/ 39724:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+// Copyright 2020 Google LLC
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.adexchangebuyer_v1_3 = void 0;
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/class-name-casing */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-empty-interface */
+/* eslint-disable @typescript-eslint/no-namespace */
+/* eslint-disable no-irregular-whitespace */
+const googleapis_common_1 = __nccwpck_require__(16782);
+var adexchangebuyer_v1_3;
+(function (adexchangebuyer_v1_3) {
+    /**
+     * Ad Exchange Buyer API
+     *
+     * Accesses your bidding-account information, submits creatives for validation, finds available direct deals, and retrieves performance reports.
+     *
+     * @example
+     * ```js
+     * const {google} = require('googleapis');
+     * const adexchangebuyer = google.adexchangebuyer('v1.3');
+     * ```
+     */
+    class Adexchangebuyer {
+        constructor(options, google) {
+            this.context = {
+                _options: options || {},
+                google,
+            };
+            this.accounts = new Resource$Accounts(this.context);
+            this.billingInfo = new Resource$Billinginfo(this.context);
+            this.budget = new Resource$Budget(this.context);
+            this.creatives = new Resource$Creatives(this.context);
+            this.directDeals = new Resource$Directdeals(this.context);
+            this.performanceReport = new Resource$Performancereport(this.context);
+            this.pretargetingConfig = new Resource$Pretargetingconfig(this.context);
+        }
+    }
+    adexchangebuyer_v1_3.Adexchangebuyer = Adexchangebuyer;
+    class Resource$Accounts {
+        constructor(context) {
+            this.context = context;
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.3/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['id'],
+                pathParams: ['id'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.3/accounts').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        patch(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.3/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PATCH',
+                }, options),
+                params,
+                requiredParams: ['id'],
+                pathParams: ['id'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        update(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.3/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PUT',
+                }, options),
+                params,
+                requiredParams: ['id'],
+                pathParams: ['id'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_3.Resource$Accounts = Resource$Accounts;
+    class Resource$Billinginfo {
+        constructor(context) {
+            this.context = context;
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.3/billinginfo/{accountId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId'],
+                pathParams: ['accountId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.3/billinginfo').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_3.Resource$Billinginfo = Resource$Billinginfo;
+    class Resource$Budget {
+        constructor(context) {
+            this.context = context;
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.3/billinginfo/{accountId}/{billingId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'billingId'],
+                pathParams: ['accountId', 'billingId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        patch(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.3/billinginfo/{accountId}/{billingId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PATCH',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'billingId'],
+                pathParams: ['accountId', 'billingId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        update(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.3/billinginfo/{accountId}/{billingId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PUT',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'billingId'],
+                pathParams: ['accountId', 'billingId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_3.Resource$Budget = Resource$Budget;
+    class Resource$Creatives {
+        constructor(context) {
+            this.context = context;
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.3/creatives/{accountId}/{buyerCreativeId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'buyerCreativeId'],
+                pathParams: ['accountId', 'buyerCreativeId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        insert(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.3/creatives').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.3/creatives').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_3.Resource$Creatives = Resource$Creatives;
+    class Resource$Directdeals {
+        constructor(context) {
+            this.context = context;
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.3/directdeals/{id}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['id'],
+                pathParams: ['id'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.3/directdeals').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_3.Resource$Directdeals = Resource$Directdeals;
+    class Resource$Performancereport {
+        constructor(context) {
+            this.context = context;
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.3/performancereport').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'endDateTime', 'startDateTime'],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_3.Resource$Performancereport = Resource$Performancereport;
+    class Resource$Pretargetingconfig {
+        constructor(context) {
+            this.context = context;
+        }
+        delete(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.3/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'DELETE',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'configId'],
+                pathParams: ['accountId', 'configId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.3/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'configId'],
+                pathParams: ['accountId', 'configId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        insert(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.3/pretargetingconfigs/{accountId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['accountId'],
+                pathParams: ['accountId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.3/pretargetingconfigs/{accountId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId'],
+                pathParams: ['accountId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        patch(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.3/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PATCH',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'configId'],
+                pathParams: ['accountId', 'configId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        update(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.3/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PUT',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'configId'],
+                pathParams: ['accountId', 'configId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_3.Resource$Pretargetingconfig = Resource$Pretargetingconfig;
+})(adexchangebuyer_v1_3 = exports.adexchangebuyer_v1_3 || (exports.adexchangebuyer_v1_3 = {}));
+//# sourceMappingURL=v1.3.js.map
+
+/***/ }),
+
+/***/ 75257:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+// Copyright 2020 Google LLC
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.adexchangebuyer_v1_4 = void 0;
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/class-name-casing */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-empty-interface */
+/* eslint-disable @typescript-eslint/no-namespace */
+/* eslint-disable no-irregular-whitespace */
+const googleapis_common_1 = __nccwpck_require__(16782);
+var adexchangebuyer_v1_4;
+(function (adexchangebuyer_v1_4) {
+    /**
+     * Ad Exchange Buyer API
+     *
+     * Accesses your bidding-account information, submits creatives for validation, finds available direct deals, and retrieves performance reports.
+     *
+     * @example
+     * ```js
+     * const {google} = require('googleapis');
+     * const adexchangebuyer = google.adexchangebuyer('v1.4');
+     * ```
+     */
+    class Adexchangebuyer {
+        constructor(options, google) {
+            this.context = {
+                _options: options || {},
+                google,
+            };
+            this.accounts = new Resource$Accounts(this.context);
+            this.billingInfo = new Resource$Billinginfo(this.context);
+            this.budget = new Resource$Budget(this.context);
+            this.creatives = new Resource$Creatives(this.context);
+            this.marketplacedeals = new Resource$Marketplacedeals(this.context);
+            this.marketplacenotes = new Resource$Marketplacenotes(this.context);
+            this.marketplaceprivateauction = new Resource$Marketplaceprivateauction(this.context);
+            this.performanceReport = new Resource$Performancereport(this.context);
+            this.pretargetingConfig = new Resource$Pretargetingconfig(this.context);
+            this.products = new Resource$Products(this.context);
+            this.proposals = new Resource$Proposals(this.context);
+            this.pubprofiles = new Resource$Pubprofiles(this.context);
+        }
+    }
+    adexchangebuyer_v1_4.Adexchangebuyer = Adexchangebuyer;
+    class Resource$Accounts {
+        constructor(context) {
+            this.context = context;
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['id'],
+                pathParams: ['id'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/accounts').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        patch(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PATCH',
+                }, options),
+                params,
+                requiredParams: ['id'],
+                pathParams: ['id'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        update(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/accounts/{id}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PUT',
+                }, options),
+                params,
+                requiredParams: ['id'],
+                pathParams: ['id'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_4.Resource$Accounts = Resource$Accounts;
+    class Resource$Billinginfo {
+        constructor(context) {
+            this.context = context;
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/billinginfo/{accountId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId'],
+                pathParams: ['accountId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/billinginfo').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_4.Resource$Billinginfo = Resource$Billinginfo;
+    class Resource$Budget {
+        constructor(context) {
+            this.context = context;
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/billinginfo/{accountId}/{billingId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'billingId'],
+                pathParams: ['accountId', 'billingId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        patch(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/billinginfo/{accountId}/{billingId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PATCH',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'billingId'],
+                pathParams: ['accountId', 'billingId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        update(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/billinginfo/{accountId}/{billingId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PUT',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'billingId'],
+                pathParams: ['accountId', 'billingId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_4.Resource$Budget = Resource$Budget;
+    class Resource$Creatives {
+        constructor(context) {
+            this.context = context;
+        }
+        addDeal(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/creatives/{accountId}/{buyerCreativeId}/addDeal/{dealId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'buyerCreativeId', 'dealId'],
+                pathParams: ['accountId', 'buyerCreativeId', 'dealId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/creatives/{accountId}/{buyerCreativeId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'buyerCreativeId'],
+                pathParams: ['accountId', 'buyerCreativeId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        insert(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/creatives').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/creatives').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        listDeals(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/creatives/{accountId}/{buyerCreativeId}/listDeals').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'buyerCreativeId'],
+                pathParams: ['accountId', 'buyerCreativeId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        removeDeal(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/creatives/{accountId}/{buyerCreativeId}/removeDeal/{dealId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'buyerCreativeId', 'dealId'],
+                pathParams: ['accountId', 'buyerCreativeId', 'dealId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_4.Resource$Creatives = Resource$Creatives;
+    class Resource$Marketplacedeals {
+        constructor(context) {
+            this.context = context;
+        }
+        delete(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/proposals/{proposalId}/deals/delete').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['proposalId'],
+                pathParams: ['proposalId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        insert(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/proposals/{proposalId}/deals/insert').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['proposalId'],
+                pathParams: ['proposalId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/proposals/{proposalId}/deals').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['proposalId'],
+                pathParams: ['proposalId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        update(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/proposals/{proposalId}/deals/update').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['proposalId'],
+                pathParams: ['proposalId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_4.Resource$Marketplacedeals = Resource$Marketplacedeals;
+    class Resource$Marketplacenotes {
+        constructor(context) {
+            this.context = context;
+        }
+        insert(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/proposals/{proposalId}/notes/insert').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['proposalId'],
+                pathParams: ['proposalId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/proposals/{proposalId}/notes').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['proposalId'],
+                pathParams: ['proposalId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_4.Resource$Marketplacenotes = Resource$Marketplacenotes;
+    class Resource$Marketplaceprivateauction {
+        constructor(context) {
+            this.context = context;
+        }
+        updateproposal(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/privateauction/{privateAuctionId}/updateproposal').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['privateAuctionId'],
+                pathParams: ['privateAuctionId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_4.Resource$Marketplaceprivateauction = Resource$Marketplaceprivateauction;
+    class Resource$Performancereport {
+        constructor(context) {
+            this.context = context;
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/performancereport').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'endDateTime', 'startDateTime'],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_4.Resource$Performancereport = Resource$Performancereport;
+    class Resource$Pretargetingconfig {
+        constructor(context) {
+            this.context = context;
+        }
+        delete(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'DELETE',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'configId'],
+                pathParams: ['accountId', 'configId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'configId'],
+                pathParams: ['accountId', 'configId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        insert(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/pretargetingconfigs/{accountId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['accountId'],
+                pathParams: ['accountId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/pretargetingconfigs/{accountId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId'],
+                pathParams: ['accountId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        patch(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PATCH',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'configId'],
+                pathParams: ['accountId', 'configId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        update(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/pretargetingconfigs/{accountId}/{configId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PUT',
+                }, options),
+                params,
+                requiredParams: ['accountId', 'configId'],
+                pathParams: ['accountId', 'configId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_4.Resource$Pretargetingconfig = Resource$Pretargetingconfig;
+    class Resource$Products {
+        constructor(context) {
+            this.context = context;
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/products/{productId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['productId'],
+                pathParams: ['productId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        search(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/products/search').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_4.Resource$Products = Resource$Products;
+    class Resource$Proposals {
+        constructor(context) {
+            this.context = context;
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/proposals/{proposalId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['proposalId'],
+                pathParams: ['proposalId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        insert(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/proposals/insert').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        patch(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/proposals/{proposalId}/{revisionNumber}/{updateAction}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PATCH',
+                }, options),
+                params,
+                requiredParams: ['proposalId', 'revisionNumber', 'updateAction'],
+                pathParams: ['proposalId', 'revisionNumber', 'updateAction'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        search(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/proposals/search').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        setupcomplete(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/proposals/{proposalId}/setupcomplete').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['proposalId'],
+                pathParams: ['proposalId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        update(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/adexchangebuyer/v1.4/proposals/{proposalId}/{revisionNumber}/{updateAction}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PUT',
+                }, options),
+                params,
+                requiredParams: ['proposalId', 'revisionNumber', 'updateAction'],
+                pathParams: ['proposalId', 'revisionNumber', 'updateAction'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_4.Resource$Proposals = Resource$Proposals;
+    class Resource$Pubprofiles {
+        constructor(context) {
+            this.context = context;
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://www.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/adexchangebuyer/v1.4/publisher/{accountId}/profiles').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['accountId'],
+                pathParams: ['accountId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    adexchangebuyer_v1_4.Resource$Pubprofiles = Resource$Pubprofiles;
+})(adexchangebuyer_v1_4 = exports.adexchangebuyer_v1_4 || (exports.adexchangebuyer_v1_4 = {}));
+//# sourceMappingURL=v1.4.js.map
+
+/***/ }),
+
+/***/ 71966:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -19002,8 +19001,8 @@ var adexchangebuyer2_v2beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.adexperiencereport_v1 = exports.auth = exports.adexperiencereport = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(34181);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(8777);
 Object.defineProperty(exports, "adexperiencereport_v1", ({ enumerable: true, get: function () { return v1_1.adexperiencereport_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.adexperiencereport_v1.Adexperiencereport,
@@ -19014,13 +19013,13 @@ function adexperiencereport(versionOrOptions) {
 exports.adexperiencereport = adexperiencereport;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 34181:
+/***/ 8777:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -19045,7 +19044,7 @@ exports.adexperiencereport_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var adexperiencereport_v1;
 (function (adexperiencereport_v1) {
     /**
@@ -19148,7 +19147,7 @@ var adexperiencereport_v1;
 
 /***/ }),
 
-/***/ 42718:
+/***/ 20565:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -19173,7 +19172,7 @@ exports.admin_datatransfer_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var admin_datatransfer_v1;
 (function (admin_datatransfer_v1) {
     /**
@@ -19366,7 +19365,7 @@ var admin_datatransfer_v1;
 
 /***/ }),
 
-/***/ 63505:
+/***/ 16975:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -19391,7 +19390,7 @@ exports.admin_directory_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var admin_directory_v1;
 (function (admin_directory_v1) {
     /**
@@ -23032,7 +23031,7 @@ var admin_directory_v1;
 
 /***/ }),
 
-/***/ 40964:
+/***/ 38712:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -23052,12 +23051,12 @@ var admin_directory_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.admin_reports_v1 = exports.admin_directory_v1 = exports.admin_datatransfer_v1 = exports.auth = exports.admin = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const datatransfer_v1_1 = __nccwpck_require__(42718);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const datatransfer_v1_1 = __nccwpck_require__(20565);
 Object.defineProperty(exports, "admin_datatransfer_v1", ({ enumerable: true, get: function () { return datatransfer_v1_1.admin_datatransfer_v1; } }));
-const directory_v1_1 = __nccwpck_require__(63505);
+const directory_v1_1 = __nccwpck_require__(16975);
 Object.defineProperty(exports, "admin_directory_v1", ({ enumerable: true, get: function () { return directory_v1_1.admin_directory_v1; } }));
-const reports_v1_1 = __nccwpck_require__(83699);
+const reports_v1_1 = __nccwpck_require__(49959);
 Object.defineProperty(exports, "admin_reports_v1", ({ enumerable: true, get: function () { return reports_v1_1.admin_reports_v1; } }));
 exports.VERSIONS = {
     datatransfer_v1: datatransfer_v1_1.admin_datatransfer_v1.Admin,
@@ -23070,13 +23069,13 @@ function admin(versionOrOptions) {
 exports.admin = admin;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 83699:
+/***/ 49959:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -23101,7 +23100,7 @@ exports.admin_reports_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var admin_reports_v1;
 (function (admin_reports_v1) {
     /**
@@ -23350,7 +23349,7 @@ var admin_reports_v1;
 
 /***/ }),
 
-/***/ 59074:
+/***/ 87630:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -23370,10 +23369,10 @@ var admin_reports_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.admob_v1beta = exports.admob_v1 = exports.auth = exports.admob = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(72134);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(79321);
 Object.defineProperty(exports, "admob_v1", ({ enumerable: true, get: function () { return v1_1.admob_v1; } }));
-const v1beta_1 = __nccwpck_require__(74789);
+const v1beta_1 = __nccwpck_require__(84051);
 Object.defineProperty(exports, "admob_v1beta", ({ enumerable: true, get: function () { return v1beta_1.admob_v1beta; } }));
 exports.VERSIONS = {
     v1: v1_1.admob_v1.Admob,
@@ -23385,13 +23384,13 @@ function admob(versionOrOptions) {
 exports.admob = admob;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 72134:
+/***/ 79321:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -23416,7 +23415,7 @@ exports.admob_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var admob_v1;
 (function (admob_v1) {
     /**
@@ -23587,7 +23586,7 @@ var admob_v1;
 
 /***/ }),
 
-/***/ 74789:
+/***/ 84051:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -23612,7 +23611,7 @@ exports.admob_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var admob_v1beta;
 (function (admob_v1beta) {
     /**
@@ -23859,7 +23858,7 @@ var admob_v1beta;
 
 /***/ }),
 
-/***/ 50185:
+/***/ 14438:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -23879,8 +23878,8 @@ var admob_v1beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.adsense_v1_4 = exports.auth = exports.adsense = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_4_1 = __nccwpck_require__(18750);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_4_1 = __nccwpck_require__(80203);
 Object.defineProperty(exports, "adsense_v1_4", ({ enumerable: true, get: function () { return v1_4_1.adsense_v1_4; } }));
 exports.VERSIONS = {
     'v1.4': v1_4_1.adsense_v1_4.Adsense,
@@ -23891,13 +23890,13 @@ function adsense(versionOrOptions) {
 exports.adsense = adsense;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 18750:
+/***/ 80203:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -23922,7 +23921,7 @@ exports.adsense_v1_4 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var adsense_v1_4;
 (function (adsense_v1_4) {
     /**
@@ -25347,7 +25346,7 @@ var adsense_v1_4;
 
 /***/ }),
 
-/***/ 82048:
+/***/ 49492:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25367,8 +25366,8 @@ var adsense_v1_4;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.adsensehost_v4_1 = exports.auth = exports.adsensehost = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v4_1_1 = __nccwpck_require__(33691);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v4_1_1 = __nccwpck_require__(47741);
 Object.defineProperty(exports, "adsensehost_v4_1", ({ enumerable: true, get: function () { return v4_1_1.adsensehost_v4_1; } }));
 exports.VERSIONS = {
     'v4.1': v4_1_1.adsensehost_v4_1.Adsensehost,
@@ -25379,13 +25378,13 @@ function adsensehost(versionOrOptions) {
 exports.adsensehost = adsensehost;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 33691:
+/***/ 47741:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25410,7 +25409,7 @@ exports.adsensehost_v4_1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var adsensehost_v4_1;
 (function (adsensehost_v4_1) {
     /**
@@ -26316,7 +26315,7 @@ var adsensehost_v4_1;
 
 /***/ }),
 
-/***/ 87901:
+/***/ 84740:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26336,8 +26335,8 @@ var adsensehost_v4_1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.alertcenter_v1beta1 = exports.auth = exports.alertcenter = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(25151);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(80718);
 Object.defineProperty(exports, "alertcenter_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.alertcenter_v1beta1; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.alertcenter_v1beta1.Alertcenter,
@@ -26348,13 +26347,13 @@ function alertcenter(versionOrOptions) {
 exports.alertcenter = alertcenter;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 25151:
+/***/ 80718:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26379,7 +26378,7 @@ exports.alertcenter_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var alertcenter_v1beta1;
 (function (alertcenter_v1beta1) {
     /**
@@ -26765,7 +26764,7 @@ var alertcenter_v1beta1;
 
 /***/ }),
 
-/***/ 252:
+/***/ 11883:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26785,8 +26784,8 @@ var alertcenter_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.analytics_v3 = exports.auth = exports.analytics = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v3_1 = __nccwpck_require__(8074);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v3_1 = __nccwpck_require__(52536);
 Object.defineProperty(exports, "analytics_v3", ({ enumerable: true, get: function () { return v3_1.analytics_v3; } }));
 exports.VERSIONS = {
     v3: v3_1.analytics_v3.Analytics,
@@ -26797,13 +26796,13 @@ function analytics(versionOrOptions) {
 exports.analytics = analytics;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 8074:
+/***/ 52536:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26828,7 +26827,7 @@ exports.analytics_v3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var analytics_v3;
 (function (analytics_v3) {
     /**
@@ -29935,7 +29934,7 @@ var analytics_v3;
 
 /***/ }),
 
-/***/ 91218:
+/***/ 8682:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -29955,8 +29954,8 @@ var analytics_v3;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.analyticsadmin_v1alpha = exports.auth = exports.analyticsadmin = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1alpha_1 = __nccwpck_require__(25791);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1alpha_1 = __nccwpck_require__(16693);
 Object.defineProperty(exports, "analyticsadmin_v1alpha", ({ enumerable: true, get: function () { return v1alpha_1.analyticsadmin_v1alpha; } }));
 exports.VERSIONS = {
     v1alpha: v1alpha_1.analyticsadmin_v1alpha.Analyticsadmin,
@@ -29967,13 +29966,13 @@ function analyticsadmin(versionOrOptions) {
 exports.analyticsadmin = analyticsadmin;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 25791:
+/***/ 16693:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -29998,7 +29997,7 @@ exports.analyticsadmin_v1alpha = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var analyticsadmin_v1alpha;
 (function (analyticsadmin_v1alpha) {
     /**
@@ -31887,7 +31886,7 @@ var analyticsadmin_v1alpha;
 
 /***/ }),
 
-/***/ 12423:
+/***/ 71699:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -31907,8 +31906,8 @@ var analyticsadmin_v1alpha;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.analyticsdata_v1alpha = exports.auth = exports.analyticsdata = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1alpha_1 = __nccwpck_require__(82093);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1alpha_1 = __nccwpck_require__(33524);
 Object.defineProperty(exports, "analyticsdata_v1alpha", ({ enumerable: true, get: function () { return v1alpha_1.analyticsdata_v1alpha; } }));
 exports.VERSIONS = {
     v1alpha: v1alpha_1.analyticsdata_v1alpha.Analyticsdata,
@@ -31919,13 +31918,13 @@ function analyticsdata(versionOrOptions) {
 exports.analyticsdata = analyticsdata;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 82093:
+/***/ 33524:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -31950,7 +31949,7 @@ exports.analyticsdata_v1alpha = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var analyticsdata_v1alpha;
 (function (analyticsdata_v1alpha) {
     /**
@@ -32178,7 +32177,7 @@ var analyticsdata_v1alpha;
 
 /***/ }),
 
-/***/ 35568:
+/***/ 1579:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -32198,8 +32197,8 @@ var analyticsdata_v1alpha;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.analyticsreporting_v4 = exports.auth = exports.analyticsreporting = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v4_1 = __nccwpck_require__(82755);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v4_1 = __nccwpck_require__(30669);
 Object.defineProperty(exports, "analyticsreporting_v4", ({ enumerable: true, get: function () { return v4_1.analyticsreporting_v4; } }));
 exports.VERSIONS = {
     v4: v4_1.analyticsreporting_v4.Analyticsreporting,
@@ -32210,13 +32209,13 @@ function analyticsreporting(versionOrOptions) {
 exports.analyticsreporting = analyticsreporting;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 82755:
+/***/ 30669:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -32241,7 +32240,7 @@ exports.analyticsreporting_v4 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var analyticsreporting_v4;
 (function (analyticsreporting_v4) {
     /**
@@ -32344,7 +32343,7 @@ var analyticsreporting_v4;
 
 /***/ }),
 
-/***/ 30205:
+/***/ 55047:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -32364,8 +32363,8 @@ var analyticsreporting_v4;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.androiddeviceprovisioning_v1 = exports.auth = exports.androiddeviceprovisioning = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(94747);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(66950);
 Object.defineProperty(exports, "androiddeviceprovisioning_v1", ({ enumerable: true, get: function () { return v1_1.androiddeviceprovisioning_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.androiddeviceprovisioning_v1.Androiddeviceprovisioning,
@@ -32376,13 +32375,13 @@ function androiddeviceprovisioning(versionOrOptions) {
 exports.androiddeviceprovisioning = androiddeviceprovisioning;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 94747:
+/***/ 66950:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -32407,7 +32406,7 @@ exports.androiddeviceprovisioning_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var androiddeviceprovisioning_v1;
 (function (androiddeviceprovisioning_v1) {
     /**
@@ -33310,7 +33309,7 @@ var androiddeviceprovisioning_v1;
 
 /***/ }),
 
-/***/ 1792:
+/***/ 26827:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -33330,8 +33329,8 @@ var androiddeviceprovisioning_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.androidenterprise_v1 = exports.auth = exports.androidenterprise = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(57455);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(61410);
 Object.defineProperty(exports, "androidenterprise_v1", ({ enumerable: true, get: function () { return v1_1.androidenterprise_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.androidenterprise_v1.Androidenterprise,
@@ -33342,13 +33341,13 @@ function androidenterprise(versionOrOptions) {
 exports.androidenterprise = androidenterprise;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 57455:
+/***/ 61410:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -33373,7 +33372,7 @@ exports.androidenterprise_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var androidenterprise_v1;
 (function (androidenterprise_v1) {
     /**
@@ -35920,7 +35919,7 @@ var androidenterprise_v1;
 
 /***/ }),
 
-/***/ 27951:
+/***/ 8655:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -35940,8 +35939,8 @@ var androidenterprise_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.androidmanagement_v1 = exports.auth = exports.androidmanagement = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(3849);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(38062);
 Object.defineProperty(exports, "androidmanagement_v1", ({ enumerable: true, get: function () { return v1_1.androidmanagement_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.androidmanagement_v1.Androidmanagement,
@@ -35952,13 +35951,13 @@ function androidmanagement(versionOrOptions) {
 exports.androidmanagement = androidmanagement;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 3849:
+/***/ 38062:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -35983,7 +35982,7 @@ exports.androidmanagement_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var androidmanagement_v1;
 (function (androidmanagement_v1) {
     /**
@@ -36879,7 +36878,7 @@ var androidmanagement_v1;
 
 /***/ }),
 
-/***/ 64731:
+/***/ 28200:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -36899,14 +36898,14 @@ var androidmanagement_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.androidpublisher_v3 = exports.androidpublisher_v2 = exports.androidpublisher_v1 = exports.androidpublisher_v1_1 = exports.auth = exports.androidpublisher = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1_1 = __nccwpck_require__(81885);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1_1 = __nccwpck_require__(84506);
 Object.defineProperty(exports, "androidpublisher_v1_1", ({ enumerable: true, get: function () { return v1_1_1.androidpublisher_v1_1; } }));
-const v1_1 = __nccwpck_require__(28172);
+const v1_1 = __nccwpck_require__(24903);
 Object.defineProperty(exports, "androidpublisher_v1", ({ enumerable: true, get: function () { return v1_1.androidpublisher_v1; } }));
-const v2_1 = __nccwpck_require__(66988);
+const v2_1 = __nccwpck_require__(21178);
 Object.defineProperty(exports, "androidpublisher_v2", ({ enumerable: true, get: function () { return v2_1.androidpublisher_v2; } }));
-const v3_1 = __nccwpck_require__(12460);
+const v3_1 = __nccwpck_require__(33705);
 Object.defineProperty(exports, "androidpublisher_v3", ({ enumerable: true, get: function () { return v3_1.androidpublisher_v3; } }));
 exports.VERSIONS = {
     'v1.1': v1_1_1.androidpublisher_v1_1.Androidpublisher,
@@ -36920,13 +36919,13 @@ function androidpublisher(versionOrOptions) {
 exports.androidpublisher = androidpublisher;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 81885:
+/***/ 84506:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -36951,7 +36950,7 @@ exports.androidpublisher_v1_1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var androidpublisher_v1_1;
 (function (androidpublisher_v1_1) {
     /**
@@ -37022,7 +37021,7 @@ var androidpublisher_v1_1;
 
 /***/ }),
 
-/***/ 28172:
+/***/ 24903:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -37072,7 +37071,7 @@ var androidpublisher_v1;
 
 /***/ }),
 
-/***/ 66988:
+/***/ 21178:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -37097,7 +37096,7 @@ exports.androidpublisher_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var androidpublisher_v2;
 (function (androidpublisher_v2) {
     /**
@@ -37214,7 +37213,7 @@ var androidpublisher_v2;
 
 /***/ }),
 
-/***/ 12460:
+/***/ 33705:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -37239,7 +37238,7 @@ exports.androidpublisher_v3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var androidpublisher_v3;
 (function (androidpublisher_v3) {
     /**
@@ -39391,7 +39390,7 @@ var androidpublisher_v3;
 
 /***/ }),
 
-/***/ 70842:
+/***/ 48887:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -39411,8 +39410,8 @@ var androidpublisher_v3;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.apigateway_v1beta = exports.auth = exports.apigateway = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta_1 = __nccwpck_require__(91791);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta_1 = __nccwpck_require__(24644);
 Object.defineProperty(exports, "apigateway_v1beta", ({ enumerable: true, get: function () { return v1beta_1.apigateway_v1beta; } }));
 exports.VERSIONS = {
     v1beta: v1beta_1.apigateway_v1beta.Apigateway,
@@ -39423,13 +39422,13 @@ function apigateway(versionOrOptions) {
 exports.apigateway = apigateway;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 91791:
+/***/ 24644:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -39454,7 +39453,7 @@ exports.apigateway_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var apigateway_v1beta;
 (function (apigateway_v1beta) {
     /**
@@ -40454,7 +40453,7 @@ var apigateway_v1beta;
 
 /***/ }),
 
-/***/ 54467:
+/***/ 4158:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40474,12 +40473,12 @@ var apigateway_v1beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.appengine_v1beta = exports.appengine_v1alpha = exports.appengine_v1 = exports.auth = exports.appengine = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(86030);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(45257);
 Object.defineProperty(exports, "appengine_v1", ({ enumerable: true, get: function () { return v1_1.appengine_v1; } }));
-const v1alpha_1 = __nccwpck_require__(80039);
+const v1alpha_1 = __nccwpck_require__(29361);
 Object.defineProperty(exports, "appengine_v1alpha", ({ enumerable: true, get: function () { return v1alpha_1.appengine_v1alpha; } }));
-const v1beta_1 = __nccwpck_require__(23506);
+const v1beta_1 = __nccwpck_require__(44259);
 Object.defineProperty(exports, "appengine_v1beta", ({ enumerable: true, get: function () { return v1beta_1.appengine_v1beta; } }));
 exports.VERSIONS = {
     v1: v1_1.appengine_v1.Appengine,
@@ -40492,13 +40491,13 @@ function appengine(versionOrOptions) {
 exports.appengine = appengine;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 86030:
+/***/ 45257:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40523,7 +40522,7 @@ exports.appengine_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var appengine_v1;
 (function (appengine_v1) {
     /**
@@ -41815,7 +41814,7 @@ var appengine_v1;
 
 /***/ }),
 
-/***/ 80039:
+/***/ 29361:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -41840,7 +41839,7 @@ exports.appengine_v1alpha = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var appengine_v1alpha;
 (function (appengine_v1alpha) {
     /**
@@ -42381,7 +42380,7 @@ var appengine_v1alpha;
 
 /***/ }),
 
-/***/ 23506:
+/***/ 44259:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -42406,7 +42405,7 @@ exports.appengine_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var appengine_v1beta;
 (function (appengine_v1beta) {
     /**
@@ -43702,7 +43701,7 @@ var appengine_v1beta;
 
 /***/ }),
 
-/***/ 21791:
+/***/ 12760:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -43722,8 +43721,8 @@ var appengine_v1beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.appsactivity_v1 = exports.auth = exports.appsactivity = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(65455);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(86903);
 Object.defineProperty(exports, "appsactivity_v1", ({ enumerable: true, get: function () { return v1_1.appsactivity_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.appsactivity_v1.Appsactivity,
@@ -43734,13 +43733,13 @@ function appsactivity(versionOrOptions) {
 exports.appsactivity = appsactivity;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 65455:
+/***/ 86903:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -43765,7 +43764,7 @@ exports.appsactivity_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var appsactivity_v1;
 (function (appsactivity_v1) {
     /**
@@ -43834,7 +43833,7 @@ var appsactivity_v1;
 
 /***/ }),
 
-/***/ 20374:
+/***/ 83096:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -43854,8 +43853,8 @@ var appsactivity_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.area120tables_v1alpha1 = exports.auth = exports.area120tables = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1alpha1_1 = __nccwpck_require__(74414);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1alpha1_1 = __nccwpck_require__(83180);
 Object.defineProperty(exports, "area120tables_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_1.area120tables_v1alpha1; } }));
 exports.VERSIONS = {
     v1alpha1: v1alpha1_1.area120tables_v1alpha1.Area120tables,
@@ -43866,13 +43865,13 @@ function area120tables(versionOrOptions) {
 exports.area120tables = area120tables;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 74414:
+/***/ 83180:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -43897,7 +43896,7 @@ exports.area120tables_v1alpha1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var area120tables_v1alpha1;
 (function (area120tables_v1alpha1) {
     /**
@@ -44281,7 +44280,7 @@ var area120tables_v1alpha1;
 
 /***/ }),
 
-/***/ 68916:
+/***/ 18808:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -44301,10 +44300,10 @@ var area120tables_v1alpha1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.artifactregistry_v1beta2 = exports.artifactregistry_v1beta1 = exports.auth = exports.artifactregistry = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(52896);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(24946);
 Object.defineProperty(exports, "artifactregistry_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.artifactregistry_v1beta1; } }));
-const v1beta2_1 = __nccwpck_require__(46839);
+const v1beta2_1 = __nccwpck_require__(83327);
 Object.defineProperty(exports, "artifactregistry_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.artifactregistry_v1beta2; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.artifactregistry_v1beta1.Artifactregistry,
@@ -44316,13 +44315,13 @@ function artifactregistry(versionOrOptions) {
 exports.artifactregistry = artifactregistry;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 52896:
+/***/ 24946:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -44347,7 +44346,7 @@ exports.artifactregistry_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var artifactregistry_v1beta1;
 (function (artifactregistry_v1beta1) {
     /**
@@ -45206,7 +45205,7 @@ var artifactregistry_v1beta1;
 
 /***/ }),
 
-/***/ 46839:
+/***/ 83327:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -45231,7 +45230,7 @@ exports.artifactregistry_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var artifactregistry_v1beta2;
 (function (artifactregistry_v1beta2) {
     /**
@@ -46090,7 +46089,7 @@ var artifactregistry_v1beta2;
 
 /***/ }),
 
-/***/ 78437:
+/***/ 48410:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -46110,10 +46109,10 @@ var artifactregistry_v1beta2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.assuredworkloads_v1beta1 = exports.assuredworkloads_v1 = exports.auth = exports.assuredworkloads = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(26913);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(43213);
 Object.defineProperty(exports, "assuredworkloads_v1", ({ enumerable: true, get: function () { return v1_1.assuredworkloads_v1; } }));
-const v1beta1_1 = __nccwpck_require__(61883);
+const v1beta1_1 = __nccwpck_require__(5928);
 Object.defineProperty(exports, "assuredworkloads_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.assuredworkloads_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.assuredworkloads_v1.Assuredworkloads,
@@ -46125,13 +46124,13 @@ function assuredworkloads(versionOrOptions) {
 exports.assuredworkloads = assuredworkloads;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 26913:
+/***/ 43213:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -46156,7 +46155,7 @@ exports.assuredworkloads_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var assuredworkloads_v1;
 (function (assuredworkloads_v1) {
     /**
@@ -46429,7 +46428,7 @@ var assuredworkloads_v1;
 
 /***/ }),
 
-/***/ 61883:
+/***/ 5928:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -46454,7 +46453,7 @@ exports.assuredworkloads_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var assuredworkloads_v1beta1;
 (function (assuredworkloads_v1beta1) {
     /**
@@ -46727,7 +46726,7 @@ var assuredworkloads_v1beta1;
 
 /***/ }),
 
-/***/ 52358:
+/***/ 89927:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -46747,8 +46746,8 @@ var assuredworkloads_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.bigquery_v2 = exports.auth = exports.bigquery = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(39349);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(57763);
 Object.defineProperty(exports, "bigquery_v2", ({ enumerable: true, get: function () { return v2_1.bigquery_v2; } }));
 exports.VERSIONS = {
     v2: v2_1.bigquery_v2.Bigquery,
@@ -46759,13 +46758,13 @@ function bigquery(versionOrOptions) {
 exports.bigquery = bigquery;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 39349:
+/***/ 57763:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -46790,7 +46789,7 @@ exports.bigquery_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var bigquery_v2;
 (function (bigquery_v2) {
     /**
@@ -47950,7 +47949,7 @@ var bigquery_v2;
 
 /***/ }),
 
-/***/ 4879:
+/***/ 22188:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -47970,8 +47969,8 @@ var bigquery_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.bigqueryconnection_v1beta1 = exports.auth = exports.bigqueryconnection = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(97250);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(21765);
 Object.defineProperty(exports, "bigqueryconnection_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.bigqueryconnection_v1beta1; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.bigqueryconnection_v1beta1.Bigqueryconnection,
@@ -47982,13 +47981,13 @@ function bigqueryconnection(versionOrOptions) {
 exports.bigqueryconnection = bigqueryconnection;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 97250:
+/***/ 21765:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -48013,7 +48012,7 @@ exports.bigqueryconnection_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var bigqueryconnection_v1beta1;
 (function (bigqueryconnection_v1beta1) {
     /**
@@ -48341,7 +48340,7 @@ var bigqueryconnection_v1beta1;
 
 /***/ }),
 
-/***/ 86653:
+/***/ 91872:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -48361,8 +48360,8 @@ var bigqueryconnection_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.bigquerydatatransfer_v1 = exports.auth = exports.bigquerydatatransfer = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(73515);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(11679);
 Object.defineProperty(exports, "bigquerydatatransfer_v1", ({ enumerable: true, get: function () { return v1_1.bigquerydatatransfer_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.bigquerydatatransfer_v1.Bigquerydatatransfer,
@@ -48373,13 +48372,13 @@ function bigquerydatatransfer(versionOrOptions) {
 exports.bigquerydatatransfer = bigquerydatatransfer;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 73515:
+/***/ 11679:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -48404,7 +48403,7 @@ exports.bigquerydatatransfer_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var bigquerydatatransfer_v1;
 (function (bigquerydatatransfer_v1) {
     /**
@@ -49432,7 +49431,7 @@ var bigquerydatatransfer_v1;
 
 /***/ }),
 
-/***/ 76594:
+/***/ 25279:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -49452,12 +49451,12 @@ var bigquerydatatransfer_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.bigqueryreservation_v1beta1 = exports.bigqueryreservation_v1alpha2 = exports.bigqueryreservation_v1 = exports.auth = exports.bigqueryreservation = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(91307);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(6654);
 Object.defineProperty(exports, "bigqueryreservation_v1", ({ enumerable: true, get: function () { return v1_1.bigqueryreservation_v1; } }));
-const v1alpha2_1 = __nccwpck_require__(74332);
+const v1alpha2_1 = __nccwpck_require__(71440);
 Object.defineProperty(exports, "bigqueryreservation_v1alpha2", ({ enumerable: true, get: function () { return v1alpha2_1.bigqueryreservation_v1alpha2; } }));
-const v1beta1_1 = __nccwpck_require__(65051);
+const v1beta1_1 = __nccwpck_require__(26917);
 Object.defineProperty(exports, "bigqueryreservation_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.bigqueryreservation_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.bigqueryreservation_v1.Bigqueryreservation,
@@ -49470,13 +49469,13 @@ function bigqueryreservation(versionOrOptions) {
 exports.bigqueryreservation = bigqueryreservation;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 91307:
+/***/ 6654:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -49501,7 +49500,7 @@ exports.bigqueryreservation_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var bigqueryreservation_v1;
 (function (bigqueryreservation_v1) {
     /**
@@ -50252,7 +50251,7 @@ var bigqueryreservation_v1;
 
 /***/ }),
 
-/***/ 74332:
+/***/ 71440:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -50277,7 +50276,7 @@ exports.bigqueryreservation_v1alpha2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var bigqueryreservation_v1alpha2;
 (function (bigqueryreservation_v1alpha2) {
     /**
@@ -50812,7 +50811,7 @@ var bigqueryreservation_v1alpha2;
 
 /***/ }),
 
-/***/ 65051:
+/***/ 26917:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -50837,7 +50836,7 @@ exports.bigqueryreservation_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var bigqueryreservation_v1beta1;
 (function (bigqueryreservation_v1beta1) {
     /**
@@ -51489,7 +51488,7 @@ var bigqueryreservation_v1beta1;
 
 /***/ }),
 
-/***/ 46604:
+/***/ 82402:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -51509,10 +51508,10 @@ var bigqueryreservation_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.bigtableadmin_v2 = exports.bigtableadmin_v1 = exports.auth = exports.bigtableadmin = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(12678);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(54869);
 Object.defineProperty(exports, "bigtableadmin_v1", ({ enumerable: true, get: function () { return v1_1.bigtableadmin_v1; } }));
-const v2_1 = __nccwpck_require__(27248);
+const v2_1 = __nccwpck_require__(67404);
 Object.defineProperty(exports, "bigtableadmin_v2", ({ enumerable: true, get: function () { return v2_1.bigtableadmin_v2; } }));
 exports.VERSIONS = {
     v1: v1_1.bigtableadmin_v1.Bigtableadmin,
@@ -51524,13 +51523,13 @@ function bigtableadmin(versionOrOptions) {
 exports.bigtableadmin = bigtableadmin;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 12678:
+/***/ 54869:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -51576,7 +51575,7 @@ var bigtableadmin_v1;
 
 /***/ }),
 
-/***/ 27248:
+/***/ 67404:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -51601,7 +51600,7 @@ exports.bigtableadmin_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var bigtableadmin_v2;
 (function (bigtableadmin_v2) {
     /**
@@ -53093,7 +53092,7 @@ var bigtableadmin_v2;
 
 /***/ }),
 
-/***/ 81089:
+/***/ 74050:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -53113,10 +53112,10 @@ var bigtableadmin_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.billingbudgets_v1beta1 = exports.billingbudgets_v1 = exports.auth = exports.billingbudgets = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(39284);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(33141);
 Object.defineProperty(exports, "billingbudgets_v1", ({ enumerable: true, get: function () { return v1_1.billingbudgets_v1; } }));
-const v1beta1_1 = __nccwpck_require__(32169);
+const v1beta1_1 = __nccwpck_require__(16704);
 Object.defineProperty(exports, "billingbudgets_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.billingbudgets_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.billingbudgets_v1.Billingbudgets,
@@ -53128,13 +53127,13 @@ function billingbudgets(versionOrOptions) {
 exports.billingbudgets = billingbudgets;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 39284:
+/***/ 33141:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -53159,7 +53158,7 @@ exports.billingbudgets_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var billingbudgets_v1;
 (function (billingbudgets_v1) {
     /**
@@ -53356,7 +53355,7 @@ var billingbudgets_v1;
 
 /***/ }),
 
-/***/ 32169:
+/***/ 16704:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -53381,7 +53380,7 @@ exports.billingbudgets_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var billingbudgets_v1beta1;
 (function (billingbudgets_v1beta1) {
     /**
@@ -53578,7 +53577,7 @@ var billingbudgets_v1beta1;
 
 /***/ }),
 
-/***/ 37245:
+/***/ 32865:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -53598,10 +53597,10 @@ var billingbudgets_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.binaryauthorization_v1beta1 = exports.binaryauthorization_v1 = exports.auth = exports.binaryauthorization = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(15425);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(61148);
 Object.defineProperty(exports, "binaryauthorization_v1", ({ enumerable: true, get: function () { return v1_1.binaryauthorization_v1; } }));
-const v1beta1_1 = __nccwpck_require__(99826);
+const v1beta1_1 = __nccwpck_require__(42203);
 Object.defineProperty(exports, "binaryauthorization_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.binaryauthorization_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.binaryauthorization_v1.Binaryauthorization,
@@ -53613,13 +53612,13 @@ function binaryauthorization(versionOrOptions) {
 exports.binaryauthorization = binaryauthorization;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 15425:
+/***/ 61148:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -53644,7 +53643,7 @@ exports.binaryauthorization_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var binaryauthorization_v1;
 (function (binaryauthorization_v1) {
     /**
@@ -54127,7 +54126,7 @@ var binaryauthorization_v1;
 
 /***/ }),
 
-/***/ 99826:
+/***/ 42203:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -54152,7 +54151,7 @@ exports.binaryauthorization_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var binaryauthorization_v1beta1;
 (function (binaryauthorization_v1beta1) {
     /**
@@ -54635,7 +54634,7 @@ var binaryauthorization_v1beta1;
 
 /***/ }),
 
-/***/ 43430:
+/***/ 68809:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -54655,10 +54654,10 @@ var binaryauthorization_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.blogger_v3 = exports.blogger_v2 = exports.auth = exports.blogger = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(79743);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(89837);
 Object.defineProperty(exports, "blogger_v2", ({ enumerable: true, get: function () { return v2_1.blogger_v2; } }));
-const v3_1 = __nccwpck_require__(38264);
+const v3_1 = __nccwpck_require__(80174);
 Object.defineProperty(exports, "blogger_v3", ({ enumerable: true, get: function () { return v3_1.blogger_v3; } }));
 exports.VERSIONS = {
     v2: v2_1.blogger_v2.Blogger,
@@ -54670,13 +54669,13 @@ function blogger(versionOrOptions) {
 exports.blogger = blogger;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 79743:
+/***/ 89837:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -54701,7 +54700,7 @@ exports.blogger_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var blogger_v2;
 (function (blogger_v2) {
     /**
@@ -55034,7 +55033,7 @@ var blogger_v2;
 
 /***/ }),
 
-/***/ 38264:
+/***/ 80174:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -55059,7 +55058,7 @@ exports.blogger_v3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var blogger_v3;
 (function (blogger_v3) {
     /**
@@ -56142,7 +56141,7 @@ var blogger_v3;
 
 /***/ }),
 
-/***/ 27911:
+/***/ 25565:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -56162,8 +56161,8 @@ var blogger_v3;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.books_v1 = exports.auth = exports.books = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(14836);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(59152);
 Object.defineProperty(exports, "books_v1", ({ enumerable: true, get: function () { return v1_1.books_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.books_v1.Books,
@@ -56174,13 +56173,13 @@ function books(versionOrOptions) {
 exports.books = books;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 14836:
+/***/ 59152:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -56205,7 +56204,7 @@ exports.books_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var books_v1;
 (function (books_v1) {
     /**
@@ -57988,7 +57987,7 @@ var books_v1;
 
 /***/ }),
 
-/***/ 2285:
+/***/ 14935:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -58008,8 +58007,8 @@ var books_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.calendar_v3 = exports.auth = exports.calendar = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v3_1 = __nccwpck_require__(19829);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v3_1 = __nccwpck_require__(21708);
 Object.defineProperty(exports, "calendar_v3", ({ enumerable: true, get: function () { return v3_1.calendar_v3; } }));
 exports.VERSIONS = {
     v3: v3_1.calendar_v3.Calendar,
@@ -58020,13 +58019,13 @@ function calendar(versionOrOptions) {
 exports.calendar = calendar;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 19829:
+/***/ 21708:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -58051,7 +58050,7 @@ exports.calendar_v3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var calendar_v3;
 (function (calendar_v3) {
     /**
@@ -59253,7 +59252,7 @@ var calendar_v3;
 
 /***/ }),
 
-/***/ 32290:
+/***/ 16619:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -59273,8 +59272,8 @@ var calendar_v3;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.chat_v1 = exports.auth = exports.chat = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(57677);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(69826);
 Object.defineProperty(exports, "chat_v1", ({ enumerable: true, get: function () { return v1_1.chat_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.chat_v1.Chat,
@@ -59285,13 +59284,13 @@ function chat(versionOrOptions) {
 exports.chat = chat;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 57677:
+/***/ 69826:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -59316,7 +59315,7 @@ exports.chat_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var chat_v1;
 (function (chat_v1) {
     /**
@@ -59836,7 +59835,7 @@ var chat_v1;
 
 /***/ }),
 
-/***/ 86553:
+/***/ 56192:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -59856,8 +59855,8 @@ var chat_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.chromeuxreport_v1 = exports.auth = exports.chromeuxreport = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(2880);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(99327);
 Object.defineProperty(exports, "chromeuxreport_v1", ({ enumerable: true, get: function () { return v1_1.chromeuxreport_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.chromeuxreport_v1.Chromeuxreport,
@@ -59868,13 +59867,13 @@ function chromeuxreport(versionOrOptions) {
 exports.chromeuxreport = chromeuxreport;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 2880:
+/***/ 99327:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -59899,7 +59898,7 @@ exports.chromeuxreport_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var chromeuxreport_v1;
 (function (chromeuxreport_v1) {
     /**
@@ -59965,7 +59964,7 @@ var chromeuxreport_v1;
 
 /***/ }),
 
-/***/ 14729:
+/***/ 98553:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -59985,8 +59984,8 @@ var chromeuxreport_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.civicinfo_v2 = exports.auth = exports.civicinfo = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(57955);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(80093);
 Object.defineProperty(exports, "civicinfo_v2", ({ enumerable: true, get: function () { return v2_1.civicinfo_v2; } }));
 exports.VERSIONS = {
     v2: v2_1.civicinfo_v2.Civicinfo,
@@ -59997,13 +59996,13 @@ function civicinfo(versionOrOptions) {
 exports.civicinfo = civicinfo;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 57955:
+/***/ 80093:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -60028,7 +60027,7 @@ exports.civicinfo_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var civicinfo_v2;
 (function (civicinfo_v2) {
     /**
@@ -60231,7 +60230,7 @@ var civicinfo_v2;
 
 /***/ }),
 
-/***/ 75054:
+/***/ 7524:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -60251,8 +60250,8 @@ var civicinfo_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.classroom_v1 = exports.auth = exports.classroom = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(52619);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(23579);
 Object.defineProperty(exports, "classroom_v1", ({ enumerable: true, get: function () { return v1_1.classroom_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.classroom_v1.Classroom,
@@ -60263,13 +60262,13 @@ function classroom(versionOrOptions) {
 exports.classroom = classroom;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 52619:
+/***/ 23579:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -60294,7 +60293,7 @@ exports.classroom_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var classroom_v1;
 (function (classroom_v1) {
     /**
@@ -62312,7 +62311,7 @@ var classroom_v1;
 
 /***/ }),
 
-/***/ 35333:
+/***/ 30458:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -62332,16 +62331,16 @@ var classroom_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudasset_v1p5beta1 = exports.cloudasset_v1p4beta1 = exports.cloudasset_v1p1beta1 = exports.cloudasset_v1beta1 = exports.cloudasset_v1 = exports.auth = exports.cloudasset = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(97135);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(58573);
 Object.defineProperty(exports, "cloudasset_v1", ({ enumerable: true, get: function () { return v1_1.cloudasset_v1; } }));
-const v1beta1_1 = __nccwpck_require__(171);
+const v1beta1_1 = __nccwpck_require__(79432);
 Object.defineProperty(exports, "cloudasset_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.cloudasset_v1beta1; } }));
-const v1p1beta1_1 = __nccwpck_require__(26486);
+const v1p1beta1_1 = __nccwpck_require__(97797);
 Object.defineProperty(exports, "cloudasset_v1p1beta1", ({ enumerable: true, get: function () { return v1p1beta1_1.cloudasset_v1p1beta1; } }));
-const v1p4beta1_1 = __nccwpck_require__(96369);
+const v1p4beta1_1 = __nccwpck_require__(50692);
 Object.defineProperty(exports, "cloudasset_v1p4beta1", ({ enumerable: true, get: function () { return v1p4beta1_1.cloudasset_v1p4beta1; } }));
-const v1p5beta1_1 = __nccwpck_require__(7685);
+const v1p5beta1_1 = __nccwpck_require__(72273);
 Object.defineProperty(exports, "cloudasset_v1p5beta1", ({ enumerable: true, get: function () { return v1p5beta1_1.cloudasset_v1p5beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.cloudasset_v1.Cloudasset,
@@ -62356,13 +62355,13 @@ function cloudasset(versionOrOptions) {
 exports.cloudasset = cloudasset;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 97135:
+/***/ 58573:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -62387,7 +62386,7 @@ exports.cloudasset_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudasset_v1;
 (function (cloudasset_v1) {
     /**
@@ -62801,7 +62800,7 @@ var cloudasset_v1;
 
 /***/ }),
 
-/***/ 171:
+/***/ 79432:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -62826,7 +62825,7 @@ exports.cloudasset_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudasset_v1beta1;
 (function (cloudasset_v1beta1) {
     /**
@@ -63144,7 +63143,7 @@ var cloudasset_v1beta1;
 
 /***/ }),
 
-/***/ 26486:
+/***/ 97797:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -63169,7 +63168,7 @@ exports.cloudasset_v1p1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudasset_v1p1beta1;
 (function (cloudasset_v1p1beta1) {
     /**
@@ -63273,7 +63272,7 @@ var cloudasset_v1p1beta1;
 
 /***/ }),
 
-/***/ 96369:
+/***/ 50692:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -63298,7 +63297,7 @@ exports.cloudasset_v1p4beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudasset_v1p4beta1;
 (function (cloudasset_v1p4beta1) {
     /**
@@ -63395,7 +63394,7 @@ var cloudasset_v1p4beta1;
 
 /***/ }),
 
-/***/ 7685:
+/***/ 72273:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -63420,7 +63419,7 @@ exports.cloudasset_v1p5beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudasset_v1p5beta1;
 (function (cloudasset_v1p5beta1) {
     /**
@@ -63485,7 +63484,7 @@ var cloudasset_v1p5beta1;
 
 /***/ }),
 
-/***/ 12897:
+/***/ 27213:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -63505,8 +63504,8 @@ var cloudasset_v1p5beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudbilling_v1 = exports.auth = exports.cloudbilling = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(72384);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(38720);
 Object.defineProperty(exports, "cloudbilling_v1", ({ enumerable: true, get: function () { return v1_1.cloudbilling_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.cloudbilling_v1.Cloudbilling,
@@ -63517,13 +63516,13 @@ function cloudbilling(versionOrOptions) {
 exports.cloudbilling = cloudbilling;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 72384:
+/***/ 38720:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -63548,7 +63547,7 @@ exports.cloudbilling_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudbilling_v1;
 (function (cloudbilling_v1) {
     /**
@@ -63982,7 +63981,7 @@ var cloudbilling_v1;
 
 /***/ }),
 
-/***/ 69302:
+/***/ 85246:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -64002,12 +64001,12 @@ var cloudbilling_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudbuild_v1alpha2 = exports.cloudbuild_v1alpha1 = exports.cloudbuild_v1 = exports.auth = exports.cloudbuild = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(88354);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(68489);
 Object.defineProperty(exports, "cloudbuild_v1", ({ enumerable: true, get: function () { return v1_1.cloudbuild_v1; } }));
-const v1alpha1_1 = __nccwpck_require__(88904);
+const v1alpha1_1 = __nccwpck_require__(78062);
 Object.defineProperty(exports, "cloudbuild_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_1.cloudbuild_v1alpha1; } }));
-const v1alpha2_1 = __nccwpck_require__(88105);
+const v1alpha2_1 = __nccwpck_require__(62923);
 Object.defineProperty(exports, "cloudbuild_v1alpha2", ({ enumerable: true, get: function () { return v1alpha2_1.cloudbuild_v1alpha2; } }));
 exports.VERSIONS = {
     v1: v1_1.cloudbuild_v1.Cloudbuild,
@@ -64020,13 +64019,13 @@ function cloudbuild(versionOrOptions) {
 exports.cloudbuild = cloudbuild;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 88354:
+/***/ 68489:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -64051,7 +64050,7 @@ exports.cloudbuild_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudbuild_v1;
 (function (cloudbuild_v1) {
     /**
@@ -64747,7 +64746,7 @@ var cloudbuild_v1;
 
 /***/ }),
 
-/***/ 88904:
+/***/ 78062:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -64772,7 +64771,7 @@ exports.cloudbuild_v1alpha1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudbuild_v1alpha1;
 (function (cloudbuild_v1alpha1) {
     /**
@@ -65045,7 +65044,7 @@ var cloudbuild_v1alpha1;
 
 /***/ }),
 
-/***/ 88105:
+/***/ 62923:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -65070,7 +65069,7 @@ exports.cloudbuild_v1alpha2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudbuild_v1alpha2;
 (function (cloudbuild_v1alpha2) {
     /**
@@ -65343,7 +65342,7 @@ var cloudbuild_v1alpha2;
 
 /***/ }),
 
-/***/ 70259:
+/***/ 34193:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -65363,8 +65362,8 @@ var cloudbuild_v1alpha2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.clouddebugger_v2 = exports.auth = exports.clouddebugger = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(15660);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(79637);
 Object.defineProperty(exports, "clouddebugger_v2", ({ enumerable: true, get: function () { return v2_1.clouddebugger_v2; } }));
 exports.VERSIONS = {
     v2: v2_1.clouddebugger_v2.Clouddebugger,
@@ -65375,13 +65374,13 @@ function clouddebugger(versionOrOptions) {
 exports.clouddebugger = clouddebugger;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 15660:
+/***/ 79637:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -65406,7 +65405,7 @@ exports.clouddebugger_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var clouddebugger_v2;
 (function (clouddebugger_v2) {
     /**
@@ -65726,7 +65725,7 @@ var clouddebugger_v2;
 
 /***/ }),
 
-/***/ 32510:
+/***/ 33974:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -65746,8 +65745,8 @@ var clouddebugger_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.clouderrorreporting_v1beta1 = exports.auth = exports.clouderrorreporting = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(37343);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(86788);
 Object.defineProperty(exports, "clouderrorreporting_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.clouderrorreporting_v1beta1; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.clouderrorreporting_v1beta1.Clouderrorreporting,
@@ -65758,13 +65757,13 @@ function clouderrorreporting(versionOrOptions) {
 exports.clouderrorreporting = clouderrorreporting;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 37343:
+/***/ 86788:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -65789,7 +65788,7 @@ exports.clouderrorreporting_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var clouderrorreporting_v1beta1;
 (function (clouderrorreporting_v1beta1) {
     /**
@@ -66031,7 +66030,7 @@ var clouderrorreporting_v1beta1;
 
 /***/ }),
 
-/***/ 82277:
+/***/ 16995:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -66051,10 +66050,10 @@ var clouderrorreporting_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudfunctions_v1beta2 = exports.cloudfunctions_v1 = exports.auth = exports.cloudfunctions = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(34746);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(56794);
 Object.defineProperty(exports, "cloudfunctions_v1", ({ enumerable: true, get: function () { return v1_1.cloudfunctions_v1; } }));
-const v1beta2_1 = __nccwpck_require__(81442);
+const v1beta2_1 = __nccwpck_require__(11344);
 Object.defineProperty(exports, "cloudfunctions_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.cloudfunctions_v1beta2; } }));
 exports.VERSIONS = {
     v1: v1_1.cloudfunctions_v1.Cloudfunctions,
@@ -66066,13 +66065,13 @@ function cloudfunctions(versionOrOptions) {
 exports.cloudfunctions = cloudfunctions;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 34746:
+/***/ 56794:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -66097,7 +66096,7 @@ exports.cloudfunctions_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudfunctions_v1;
 (function (cloudfunctions_v1) {
     /**
@@ -66585,7 +66584,7 @@ var cloudfunctions_v1;
 
 /***/ }),
 
-/***/ 81442:
+/***/ 11344:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -66610,7 +66609,7 @@ exports.cloudfunctions_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudfunctions_v1beta2;
 (function (cloudfunctions_v1beta2) {
     /**
@@ -67009,7 +67008,7 @@ var cloudfunctions_v1beta2;
 
 /***/ }),
 
-/***/ 33523:
+/***/ 9392:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -67029,10 +67028,10 @@ var cloudfunctions_v1beta2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudidentity_v1beta1 = exports.cloudidentity_v1 = exports.auth = exports.cloudidentity = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(89044);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(64463);
 Object.defineProperty(exports, "cloudidentity_v1", ({ enumerable: true, get: function () { return v1_1.cloudidentity_v1; } }));
-const v1beta1_1 = __nccwpck_require__(36269);
+const v1beta1_1 = __nccwpck_require__(27994);
 Object.defineProperty(exports, "cloudidentity_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.cloudidentity_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.cloudidentity_v1.Cloudidentity,
@@ -67044,13 +67043,13 @@ function cloudidentity(versionOrOptions) {
 exports.cloudidentity = cloudidentity;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 89044:
+/***/ 64463:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -67075,7 +67074,7 @@ exports.cloudidentity_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudidentity_v1;
 (function (cloudidentity_v1) {
     /**
@@ -68056,7 +68055,7 @@ var cloudidentity_v1;
 
 /***/ }),
 
-/***/ 36269:
+/***/ 27994:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -68081,7 +68080,7 @@ exports.cloudidentity_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudidentity_v1beta1;
 (function (cloudidentity_v1beta1) {
     /**
@@ -69157,7 +69156,7 @@ var cloudidentity_v1beta1;
 
 /***/ }),
 
-/***/ 78613:
+/***/ 50022:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -69177,8 +69176,8 @@ var cloudidentity_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudiot_v1 = exports.auth = exports.cloudiot = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(64753);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(13105);
 Object.defineProperty(exports, "cloudiot_v1", ({ enumerable: true, get: function () { return v1_1.cloudiot_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.cloudiot_v1.Cloudiot,
@@ -69189,13 +69188,13 @@ function cloudiot(versionOrOptions) {
 exports.cloudiot = cloudiot;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 64753:
+/***/ 13105:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -69220,7 +69219,7 @@ exports.cloudiot_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudiot_v1;
 (function (cloudiot_v1) {
     /**
@@ -70017,7 +70016,7 @@ var cloudiot_v1;
 
 /***/ }),
 
-/***/ 72034:
+/***/ 34247:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -70037,8 +70036,8 @@ var cloudiot_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudkms_v1 = exports.auth = exports.cloudkms = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(37661);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(75622);
 Object.defineProperty(exports, "cloudkms_v1", ({ enumerable: true, get: function () { return v1_1.cloudkms_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.cloudkms_v1.Cloudkms,
@@ -70049,13 +70048,13 @@ function cloudkms(versionOrOptions) {
 exports.cloudkms = cloudkms;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 37661:
+/***/ 75622:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -70080,7 +70079,7 @@ exports.cloudkms_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudkms_v1;
 (function (cloudkms_v1) {
     /**
@@ -71204,7 +71203,7 @@ var cloudkms_v1;
 
 /***/ }),
 
-/***/ 35191:
+/***/ 25299:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -71224,8 +71223,8 @@ var cloudkms_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudprofiler_v2 = exports.auth = exports.cloudprofiler = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(31415);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(20023);
 Object.defineProperty(exports, "cloudprofiler_v2", ({ enumerable: true, get: function () { return v2_1.cloudprofiler_v2; } }));
 exports.VERSIONS = {
     v2: v2_1.cloudprofiler_v2.Cloudprofiler,
@@ -71236,13 +71235,13 @@ function cloudprofiler(versionOrOptions) {
 exports.cloudprofiler = cloudprofiler;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 31415:
+/***/ 20023:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -71267,7 +71266,7 @@ exports.cloudprofiler_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudprofiler_v2;
 (function (cloudprofiler_v2) {
     /**
@@ -71402,7 +71401,7 @@ var cloudprofiler_v2;
 
 /***/ }),
 
-/***/ 14621:
+/***/ 17241:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -71422,14 +71421,14 @@ var cloudprofiler_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudresourcemanager_v2beta1 = exports.cloudresourcemanager_v2 = exports.cloudresourcemanager_v1beta1 = exports.cloudresourcemanager_v1 = exports.auth = exports.cloudresourcemanager = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(70958);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(96564);
 Object.defineProperty(exports, "cloudresourcemanager_v1", ({ enumerable: true, get: function () { return v1_1.cloudresourcemanager_v1; } }));
-const v1beta1_1 = __nccwpck_require__(14478);
+const v1beta1_1 = __nccwpck_require__(77123);
 Object.defineProperty(exports, "cloudresourcemanager_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.cloudresourcemanager_v1beta1; } }));
-const v2_1 = __nccwpck_require__(24355);
+const v2_1 = __nccwpck_require__(11037);
 Object.defineProperty(exports, "cloudresourcemanager_v2", ({ enumerable: true, get: function () { return v2_1.cloudresourcemanager_v2; } }));
-const v2beta1_1 = __nccwpck_require__(33945);
+const v2beta1_1 = __nccwpck_require__(55672);
 Object.defineProperty(exports, "cloudresourcemanager_v2beta1", ({ enumerable: true, get: function () { return v2beta1_1.cloudresourcemanager_v2beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.cloudresourcemanager_v1.Cloudresourcemanager,
@@ -71443,13 +71442,13 @@ function cloudresourcemanager(versionOrOptions) {
 exports.cloudresourcemanager = cloudresourcemanager;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 70958:
+/***/ 96564:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -71474,7 +71473,7 @@ exports.cloudresourcemanager_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudresourcemanager_v1;
 (function (cloudresourcemanager_v1) {
     /**
@@ -72705,7 +72704,7 @@ var cloudresourcemanager_v1;
 
 /***/ }),
 
-/***/ 14478:
+/***/ 77123:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -72730,7 +72729,7 @@ exports.cloudresourcemanager_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudresourcemanager_v1beta1;
 (function (cloudresourcemanager_v1beta1) {
     /**
@@ -73263,7 +73262,7 @@ var cloudresourcemanager_v1beta1;
 
 /***/ }),
 
-/***/ 24355:
+/***/ 11037:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -73288,7 +73287,7 @@ exports.cloudresourcemanager_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudresourcemanager_v2;
 (function (cloudresourcemanager_v2) {
     /**
@@ -73693,7 +73692,7 @@ var cloudresourcemanager_v2;
 
 /***/ }),
 
-/***/ 33945:
+/***/ 55672:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -73718,7 +73717,7 @@ exports.cloudresourcemanager_v2beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudresourcemanager_v2beta1;
 (function (cloudresourcemanager_v2beta1) {
     /**
@@ -74123,7 +74122,7 @@ var cloudresourcemanager_v2beta1;
 
 /***/ }),
 
-/***/ 69532:
+/***/ 24651:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -74143,10 +74142,10 @@ var cloudresourcemanager_v2beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudscheduler_v1beta1 = exports.cloudscheduler_v1 = exports.auth = exports.cloudscheduler = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(89994);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(45026);
 Object.defineProperty(exports, "cloudscheduler_v1", ({ enumerable: true, get: function () { return v1_1.cloudscheduler_v1; } }));
-const v1beta1_1 = __nccwpck_require__(63522);
+const v1beta1_1 = __nccwpck_require__(82657);
 Object.defineProperty(exports, "cloudscheduler_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.cloudscheduler_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.cloudscheduler_v1.Cloudscheduler,
@@ -74158,13 +74157,13 @@ function cloudscheduler(versionOrOptions) {
 exports.cloudscheduler = cloudscheduler;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 89994:
+/***/ 45026:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -74189,7 +74188,7 @@ exports.cloudscheduler_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudscheduler_v1;
 (function (cloudscheduler_v1) {
     /**
@@ -74548,7 +74547,7 @@ var cloudscheduler_v1;
 
 /***/ }),
 
-/***/ 63522:
+/***/ 82657:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -74573,7 +74572,7 @@ exports.cloudscheduler_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudscheduler_v1beta1;
 (function (cloudscheduler_v1beta1) {
     /**
@@ -74932,7 +74931,7 @@ var cloudscheduler_v1beta1;
 
 /***/ }),
 
-/***/ 56916:
+/***/ 45030:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -74952,8 +74951,8 @@ var cloudscheduler_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudsearch_v1 = exports.auth = exports.cloudsearch = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(85314);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(93969);
 Object.defineProperty(exports, "cloudsearch_v1", ({ enumerable: true, get: function () { return v1_1.cloudsearch_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.cloudsearch_v1.Cloudsearch,
@@ -74964,13 +74963,13 @@ function cloudsearch(versionOrOptions) {
 exports.cloudsearch = cloudsearch;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 85314:
+/***/ 93969:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -74995,7 +74994,7 @@ exports.cloudsearch_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudsearch_v1;
 (function (cloudsearch_v1) {
     /**
@@ -76507,7 +76506,7 @@ var cloudsearch_v1;
 
 /***/ }),
 
-/***/ 85465:
+/***/ 55452:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -76527,10 +76526,10 @@ var cloudsearch_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudshell_v1alpha1 = exports.cloudshell_v1 = exports.auth = exports.cloudshell = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(5748);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(56691);
 Object.defineProperty(exports, "cloudshell_v1", ({ enumerable: true, get: function () { return v1_1.cloudshell_v1; } }));
-const v1alpha1_1 = __nccwpck_require__(70457);
+const v1alpha1_1 = __nccwpck_require__(17952);
 Object.defineProperty(exports, "cloudshell_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_1.cloudshell_v1alpha1; } }));
 exports.VERSIONS = {
     v1: v1_1.cloudshell_v1.Cloudshell,
@@ -76542,13 +76541,13 @@ function cloudshell(versionOrOptions) {
 exports.cloudshell = cloudshell;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 5748:
+/***/ 56691:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -76573,7 +76572,7 @@ exports.cloudshell_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudshell_v1;
 (function (cloudshell_v1) {
     /**
@@ -76899,7 +76898,7 @@ var cloudshell_v1;
 
 /***/ }),
 
-/***/ 70457:
+/***/ 17952:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -76924,7 +76923,7 @@ exports.cloudshell_v1alpha1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudshell_v1alpha1;
 (function (cloudshell_v1alpha1) {
     /**
@@ -77159,7 +77158,7 @@ var cloudshell_v1alpha1;
 
 /***/ }),
 
-/***/ 95235:
+/***/ 16924:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -77179,12 +77178,12 @@ var cloudshell_v1alpha1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudtasks_v2beta3 = exports.cloudtasks_v2beta2 = exports.cloudtasks_v2 = exports.auth = exports.cloudtasks = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(21294);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(24822);
 Object.defineProperty(exports, "cloudtasks_v2", ({ enumerable: true, get: function () { return v2_1.cloudtasks_v2; } }));
-const v2beta2_1 = __nccwpck_require__(19041);
+const v2beta2_1 = __nccwpck_require__(42564);
 Object.defineProperty(exports, "cloudtasks_v2beta2", ({ enumerable: true, get: function () { return v2beta2_1.cloudtasks_v2beta2; } }));
-const v2beta3_1 = __nccwpck_require__(61800);
+const v2beta3_1 = __nccwpck_require__(24011);
 Object.defineProperty(exports, "cloudtasks_v2beta3", ({ enumerable: true, get: function () { return v2beta3_1.cloudtasks_v2beta3; } }));
 exports.VERSIONS = {
     v2: v2_1.cloudtasks_v2.Cloudtasks,
@@ -77197,13 +77196,13 @@ function cloudtasks(versionOrOptions) {
 exports.cloudtasks = cloudtasks;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 21294:
+/***/ 24822:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -77228,7 +77227,7 @@ exports.cloudtasks_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudtasks_v2;
 (function (cloudtasks_v2) {
     /**
@@ -77842,7 +77841,7 @@ var cloudtasks_v2;
 
 /***/ }),
 
-/***/ 19041:
+/***/ 42564:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -77867,7 +77866,7 @@ exports.cloudtasks_v2beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudtasks_v2beta2;
 (function (cloudtasks_v2beta2) {
     /**
@@ -78605,7 +78604,7 @@ var cloudtasks_v2beta2;
 
 /***/ }),
 
-/***/ 61800:
+/***/ 24011:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -78630,7 +78629,7 @@ exports.cloudtasks_v2beta3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudtasks_v2beta3;
 (function (cloudtasks_v2beta3) {
     /**
@@ -79244,7 +79243,7 @@ var cloudtasks_v2beta3;
 
 /***/ }),
 
-/***/ 15559:
+/***/ 47123:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -79264,12 +79263,12 @@ var cloudtasks_v2beta3;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.cloudtrace_v2beta1 = exports.cloudtrace_v2 = exports.cloudtrace_v1 = exports.auth = exports.cloudtrace = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(26029);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(10);
 Object.defineProperty(exports, "cloudtrace_v1", ({ enumerable: true, get: function () { return v1_1.cloudtrace_v1; } }));
-const v2_1 = __nccwpck_require__(86349);
+const v2_1 = __nccwpck_require__(58935);
 Object.defineProperty(exports, "cloudtrace_v2", ({ enumerable: true, get: function () { return v2_1.cloudtrace_v2; } }));
-const v2beta1_1 = __nccwpck_require__(4268);
+const v2beta1_1 = __nccwpck_require__(6450);
 Object.defineProperty(exports, "cloudtrace_v2beta1", ({ enumerable: true, get: function () { return v2beta1_1.cloudtrace_v2beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.cloudtrace_v1.Cloudtrace,
@@ -79282,13 +79281,13 @@ function cloudtrace(versionOrOptions) {
 exports.cloudtrace = cloudtrace;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 26029:
+/***/ 10:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -79313,7 +79312,7 @@ exports.cloudtrace_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudtrace_v1;
 (function (cloudtrace_v1) {
     /**
@@ -79448,7 +79447,7 @@ var cloudtrace_v1;
 
 /***/ }),
 
-/***/ 86349:
+/***/ 58935:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -79473,7 +79472,7 @@ exports.cloudtrace_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudtrace_v2;
 (function (cloudtrace_v2) {
     /**
@@ -79584,7 +79583,7 @@ var cloudtrace_v2;
 
 /***/ }),
 
-/***/ 4268:
+/***/ 6450:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -79609,7 +79608,7 @@ exports.cloudtrace_v2beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var cloudtrace_v2beta1;
 (function (cloudtrace_v2beta1) {
     /**
@@ -79806,7 +79805,7 @@ var cloudtrace_v2beta1;
 
 /***/ }),
 
-/***/ 34999:
+/***/ 14995:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -79826,10 +79825,10 @@ var cloudtrace_v2beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.composer_v1beta1 = exports.composer_v1 = exports.auth = exports.composer = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(29383);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(65034);
 Object.defineProperty(exports, "composer_v1", ({ enumerable: true, get: function () { return v1_1.composer_v1; } }));
-const v1beta1_1 = __nccwpck_require__(47216);
+const v1beta1_1 = __nccwpck_require__(82841);
 Object.defineProperty(exports, "composer_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.composer_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.composer_v1.Composer,
@@ -79841,13 +79840,13 @@ function composer(versionOrOptions) {
 exports.composer = composer;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 29383:
+/***/ 65034:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -79872,7 +79871,7 @@ exports.composer_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var composer_v1;
 (function (composer_v1) {
     /**
@@ -80214,7 +80213,7 @@ var composer_v1;
 
 /***/ }),
 
-/***/ 47216:
+/***/ 82841:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -80239,7 +80238,7 @@ exports.composer_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var composer_v1beta1;
 (function (composer_v1beta1) {
     /**
@@ -80612,7 +80611,7 @@ var composer_v1beta1;
 
 /***/ }),
 
-/***/ 88951:
+/***/ 26382:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -80637,7 +80636,7 @@ exports.compute_alpha = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var compute_alpha;
 (function (compute_alpha) {
     /**
@@ -104466,7 +104465,7 @@ var compute_alpha;
 
 /***/ }),
 
-/***/ 66624:
+/***/ 43418:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -104491,7 +104490,7 @@ exports.compute_beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var compute_beta;
 (function (compute_beta) {
     /**
@@ -124784,7 +124783,7 @@ var compute_beta;
 
 /***/ }),
 
-/***/ 885:
+/***/ 77898:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -124804,12 +124803,12 @@ var compute_beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.compute_v1 = exports.compute_beta = exports.compute_alpha = exports.auth = exports.compute = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const alpha_1 = __nccwpck_require__(88951);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const alpha_1 = __nccwpck_require__(26382);
 Object.defineProperty(exports, "compute_alpha", ({ enumerable: true, get: function () { return alpha_1.compute_alpha; } }));
-const beta_1 = __nccwpck_require__(66624);
+const beta_1 = __nccwpck_require__(43418);
 Object.defineProperty(exports, "compute_beta", ({ enumerable: true, get: function () { return beta_1.compute_beta; } }));
-const v1_1 = __nccwpck_require__(89949);
+const v1_1 = __nccwpck_require__(3997);
 Object.defineProperty(exports, "compute_v1", ({ enumerable: true, get: function () { return v1_1.compute_v1; } }));
 exports.VERSIONS = {
     alpha: alpha_1.compute_alpha.Compute,
@@ -124822,13 +124821,13 @@ function compute(versionOrOptions) {
 exports.compute = compute;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 89949:
+/***/ 3997:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -124853,7 +124852,7 @@ exports.compute_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var compute_v1;
 (function (compute_v1) {
     /**
@@ -142672,7 +142671,7 @@ var compute_v1;
 
 /***/ }),
 
-/***/ 74751:
+/***/ 94308:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -142692,10 +142691,10 @@ var compute_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.container_v1beta1 = exports.container_v1 = exports.auth = exports.container = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(60208);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(53883);
 Object.defineProperty(exports, "container_v1", ({ enumerable: true, get: function () { return v1_1.container_v1; } }));
-const v1beta1_1 = __nccwpck_require__(34529);
+const v1beta1_1 = __nccwpck_require__(69230);
 Object.defineProperty(exports, "container_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.container_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.container_v1.Container,
@@ -142707,13 +142706,13 @@ function container(versionOrOptions) {
 exports.container = container;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 60208:
+/***/ 53883:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -142738,7 +142737,7 @@ exports.container_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var container_v1;
 (function (container_v1) {
     /**
@@ -144829,7 +144828,7 @@ var container_v1;
 
 /***/ }),
 
-/***/ 34529:
+/***/ 69230:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -144854,7 +144853,7 @@ exports.container_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var container_v1beta1;
 (function (container_v1beta1) {
     /**
@@ -146977,7 +146976,7 @@ var container_v1beta1;
 
 /***/ }),
 
-/***/ 12001:
+/***/ 37786:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -146997,10 +146996,10 @@ var container_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.containeranalysis_v1beta1 = exports.containeranalysis_v1alpha1 = exports.auth = exports.containeranalysis = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1alpha1_1 = __nccwpck_require__(7472);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1alpha1_1 = __nccwpck_require__(96410);
 Object.defineProperty(exports, "containeranalysis_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_1.containeranalysis_v1alpha1; } }));
-const v1beta1_1 = __nccwpck_require__(55363);
+const v1beta1_1 = __nccwpck_require__(30760);
 Object.defineProperty(exports, "containeranalysis_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.containeranalysis_v1beta1; } }));
 exports.VERSIONS = {
     v1alpha1: v1alpha1_1.containeranalysis_v1alpha1.Containeranalysis,
@@ -147012,13 +147011,13 @@ function containeranalysis(versionOrOptions) {
 exports.containeranalysis = containeranalysis;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 7472:
+/***/ 96410:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -147043,7 +147042,7 @@ exports.containeranalysis_v1alpha1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var containeranalysis_v1alpha1;
 (function (containeranalysis_v1alpha1) {
     /**
@@ -148157,7 +148156,7 @@ var containeranalysis_v1alpha1;
 
 /***/ }),
 
-/***/ 55363:
+/***/ 30760:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -148182,7 +148181,7 @@ exports.containeranalysis_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var containeranalysis_v1beta1;
 (function (containeranalysis_v1beta1) {
     /**
@@ -148989,7 +148988,7 @@ var containeranalysis_v1beta1;
 
 /***/ }),
 
-/***/ 98817:
+/***/ 21122:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -149009,10 +149008,10 @@ var containeranalysis_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.content_v2 = exports.content_v2_1 = exports.auth = exports.content = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1_1 = __nccwpck_require__(5021);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1_1 = __nccwpck_require__(91289);
 Object.defineProperty(exports, "content_v2_1", ({ enumerable: true, get: function () { return v2_1_1.content_v2_1; } }));
-const v2_1 = __nccwpck_require__(62523);
+const v2_1 = __nccwpck_require__(11404);
 Object.defineProperty(exports, "content_v2", ({ enumerable: true, get: function () { return v2_1.content_v2; } }));
 exports.VERSIONS = {
     'v2.1': v2_1_1.content_v2_1.Content,
@@ -149024,13 +149023,13 @@ function content(versionOrOptions) {
 exports.content = content;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 5021:
+/***/ 91289:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -149055,7 +149054,7 @@ exports.content_v2_1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var content_v2_1;
 (function (content_v2_1) {
     /**
@@ -153218,7 +153217,7 @@ var content_v2_1;
 
 /***/ }),
 
-/***/ 62523:
+/***/ 11404:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -153243,7 +153242,7 @@ exports.content_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var content_v2;
 (function (content_v2) {
     /**
@@ -156106,7 +156105,7 @@ var content_v2;
 
 /***/ }),
 
-/***/ 42938:
+/***/ 82790:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -156126,8 +156125,8 @@ var content_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.customsearch_v1 = exports.auth = exports.customsearch = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(97699);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(72209);
 Object.defineProperty(exports, "customsearch_v1", ({ enumerable: true, get: function () { return v1_1.customsearch_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.customsearch_v1.Customsearch,
@@ -156138,13 +156137,13 @@ function customsearch(versionOrOptions) {
 exports.customsearch = customsearch;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 97699:
+/***/ 72209:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -156169,7 +156168,7 @@ exports.customsearch_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var customsearch_v1;
 (function (customsearch_v1) {
     /**
@@ -156272,7 +156271,7 @@ var customsearch_v1;
 
 /***/ }),
 
-/***/ 62519:
+/***/ 73604:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -156292,8 +156291,8 @@ var customsearch_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.datacatalog_v1beta1 = exports.auth = exports.datacatalog = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(69793);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(24270);
 Object.defineProperty(exports, "datacatalog_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.datacatalog_v1beta1; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.datacatalog_v1beta1.Datacatalog,
@@ -156304,13 +156303,13 @@ function datacatalog(versionOrOptions) {
 exports.datacatalog = datacatalog;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 69793:
+/***/ 24270:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -156335,7 +156334,7 @@ exports.datacatalog_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var datacatalog_v1beta1;
 (function (datacatalog_v1beta1) {
     /**
@@ -158157,7 +158156,7 @@ var datacatalog_v1beta1;
 
 /***/ }),
 
-/***/ 65987:
+/***/ 22521:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -158177,8 +158176,8 @@ var datacatalog_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.dataflow_v1b3 = exports.auth = exports.dataflow = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1b3_1 = __nccwpck_require__(78925);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1b3_1 = __nccwpck_require__(3627);
 Object.defineProperty(exports, "dataflow_v1b3", ({ enumerable: true, get: function () { return v1b3_1.dataflow_v1b3; } }));
 exports.VERSIONS = {
     v1b3: v1b3_1.dataflow_v1b3.Dataflow,
@@ -158189,13 +158188,13 @@ function dataflow(versionOrOptions) {
 exports.dataflow = dataflow;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 78925:
+/***/ 3627:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -158220,7 +158219,7 @@ exports.dataflow_v1b3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var dataflow_v1b3;
 (function (dataflow_v1b3) {
     /**
@@ -159939,7 +159938,7 @@ var dataflow_v1b3;
 
 /***/ }),
 
-/***/ 46033:
+/***/ 84305:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -159959,10 +159958,10 @@ var dataflow_v1b3;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.datafusion_v1beta1 = exports.datafusion_v1 = exports.auth = exports.datafusion = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(20201);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(20780);
 Object.defineProperty(exports, "datafusion_v1", ({ enumerable: true, get: function () { return v1_1.datafusion_v1; } }));
-const v1beta1_1 = __nccwpck_require__(71332);
+const v1beta1_1 = __nccwpck_require__(85899);
 Object.defineProperty(exports, "datafusion_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.datafusion_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.datafusion_v1.Datafusion,
@@ -159974,13 +159973,13 @@ function datafusion(versionOrOptions) {
 exports.datafusion = datafusion;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 20201:
+/***/ 20780:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -160005,7 +160004,7 @@ exports.datafusion_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var datafusion_v1;
 (function (datafusion_v1) {
     /**
@@ -160564,7 +160563,7 @@ var datafusion_v1;
 
 /***/ }),
 
-/***/ 71332:
+/***/ 85899:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -160589,7 +160588,7 @@ exports.datafusion_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var datafusion_v1beta1;
 (function (datafusion_v1beta1) {
     /**
@@ -161179,7 +161178,7 @@ var datafusion_v1beta1;
 
 /***/ }),
 
-/***/ 49959:
+/***/ 94483:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -161199,8 +161198,8 @@ var datafusion_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.datalabeling_v1beta1 = exports.auth = exports.datalabeling = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(20476);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(90361);
 Object.defineProperty(exports, "datalabeling_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.datalabeling_v1beta1; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.datalabeling_v1beta1.Datalabeling,
@@ -161211,13 +161210,13 @@ function datalabeling(versionOrOptions) {
 exports.datalabeling = datalabeling;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 20476:
+/***/ 90361:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -161242,7 +161241,7 @@ exports.datalabeling_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var datalabeling_v1beta1;
 (function (datalabeling_v1beta1) {
     /**
@@ -162853,7 +162852,7 @@ var datalabeling_v1beta1;
 
 /***/ }),
 
-/***/ 5955:
+/***/ 40507:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -162873,8 +162872,8 @@ var datalabeling_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.datamigration_v1beta1 = exports.auth = exports.datamigration = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(11521);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(41329);
 Object.defineProperty(exports, "datamigration_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.datamigration_v1beta1; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.datamigration_v1beta1.Datamigration,
@@ -162885,13 +162884,13 @@ function datamigration(versionOrOptions) {
 exports.datamigration = datamigration;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 11521:
+/***/ 41329:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -162916,7 +162915,7 @@ exports.datamigration_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var datamigration_v1beta1;
 (function (datamigration_v1beta1) {
     /**
@@ -163878,7 +163877,7 @@ var datamigration_v1beta1;
 
 /***/ }),
 
-/***/ 4862:
+/***/ 26941:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -163898,10 +163897,10 @@ var datamigration_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.dataproc_v1beta2 = exports.dataproc_v1 = exports.auth = exports.dataproc = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(28519);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(60400);
 Object.defineProperty(exports, "dataproc_v1", ({ enumerable: true, get: function () { return v1_1.dataproc_v1; } }));
-const v1beta2_1 = __nccwpck_require__(3512);
+const v1beta2_1 = __nccwpck_require__(66890);
 Object.defineProperty(exports, "dataproc_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.dataproc_v1beta2; } }));
 exports.VERSIONS = {
     v1: v1_1.dataproc_v1.Dataproc,
@@ -163913,13 +163912,13 @@ function dataproc(versionOrOptions) {
 exports.dataproc = dataproc;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 28519:
+/***/ 60400:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -163944,7 +163943,7 @@ exports.dataproc_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var dataproc_v1;
 (function (dataproc_v1) {
     /**
@@ -165970,7 +165969,7 @@ var dataproc_v1;
 
 /***/ }),
 
-/***/ 3512:
+/***/ 66890:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -165995,7 +165994,7 @@ exports.dataproc_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var dataproc_v1beta2;
 (function (dataproc_v1beta2) {
     /**
@@ -168091,7 +168090,7 @@ var dataproc_v1beta2;
 
 /***/ }),
 
-/***/ 16341:
+/***/ 7622:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -168111,12 +168110,12 @@ var dataproc_v1beta2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.datastore_v1beta3 = exports.datastore_v1beta1 = exports.datastore_v1 = exports.auth = exports.datastore = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(73834);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(18417);
 Object.defineProperty(exports, "datastore_v1", ({ enumerable: true, get: function () { return v1_1.datastore_v1; } }));
-const v1beta1_1 = __nccwpck_require__(42039);
+const v1beta1_1 = __nccwpck_require__(43540);
 Object.defineProperty(exports, "datastore_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.datastore_v1beta1; } }));
-const v1beta3_1 = __nccwpck_require__(52586);
+const v1beta3_1 = __nccwpck_require__(45470);
 Object.defineProperty(exports, "datastore_v1beta3", ({ enumerable: true, get: function () { return v1beta3_1.datastore_v1beta3; } }));
 exports.VERSIONS = {
     v1: v1_1.datastore_v1.Datastore,
@@ -168129,13 +168128,13 @@ function datastore(versionOrOptions) {
 exports.datastore = datastore;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 73834:
+/***/ 18417:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -168160,7 +168159,7 @@ exports.datastore_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var datastore_v1;
 (function (datastore_v1) {
     /**
@@ -168732,7 +168731,7 @@ var datastore_v1;
 
 /***/ }),
 
-/***/ 42039:
+/***/ 43540:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -168757,7 +168756,7 @@ exports.datastore_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var datastore_v1beta1;
 (function (datastore_v1beta1) {
     /**
@@ -168852,7 +168851,7 @@ var datastore_v1beta1;
 
 /***/ }),
 
-/***/ 52586:
+/***/ 45470:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -168877,7 +168876,7 @@ exports.datastore_v1beta3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var datastore_v1beta3;
 (function (datastore_v1beta3) {
     /**
@@ -169127,7 +169126,7 @@ var datastore_v1beta3;
 
 /***/ }),
 
-/***/ 41147:
+/***/ 96381:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -169152,7 +169151,7 @@ exports.deploymentmanager_alpha = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var deploymentmanager_alpha;
 (function (deploymentmanager_alpha) {
     /**
@@ -170274,7 +170273,7 @@ var deploymentmanager_alpha;
 
 /***/ }),
 
-/***/ 97802:
+/***/ 79857:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -170294,12 +170293,12 @@ var deploymentmanager_alpha;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.deploymentmanager_v2beta = exports.deploymentmanager_v2 = exports.deploymentmanager_alpha = exports.auth = exports.deploymentmanager = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const alpha_1 = __nccwpck_require__(41147);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const alpha_1 = __nccwpck_require__(96381);
 Object.defineProperty(exports, "deploymentmanager_alpha", ({ enumerable: true, get: function () { return alpha_1.deploymentmanager_alpha; } }));
-const v2_1 = __nccwpck_require__(97525);
+const v2_1 = __nccwpck_require__(26261);
 Object.defineProperty(exports, "deploymentmanager_v2", ({ enumerable: true, get: function () { return v2_1.deploymentmanager_v2; } }));
-const v2beta_1 = __nccwpck_require__(28997);
+const v2beta_1 = __nccwpck_require__(87151);
 Object.defineProperty(exports, "deploymentmanager_v2beta", ({ enumerable: true, get: function () { return v2beta_1.deploymentmanager_v2beta; } }));
 exports.VERSIONS = {
     alpha: alpha_1.deploymentmanager_alpha.Deploymentmanager,
@@ -170312,13 +170311,13 @@ function deploymentmanager(versionOrOptions) {
 exports.deploymentmanager = deploymentmanager;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 97525:
+/***/ 26261:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -170343,7 +170342,7 @@ exports.deploymentmanager_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var deploymentmanager_v2;
 (function (deploymentmanager_v2) {
     /**
@@ -170971,7 +170970,7 @@ var deploymentmanager_v2;
 
 /***/ }),
 
-/***/ 28997:
+/***/ 87151:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -170996,7 +170995,7 @@ exports.deploymentmanager_v2beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var deploymentmanager_v2beta;
 (function (deploymentmanager_v2beta) {
     /**
@@ -172087,7 +172086,7 @@ var deploymentmanager_v2beta;
 
 /***/ }),
 
-/***/ 7833:
+/***/ 23812:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -172107,10 +172106,10 @@ var deploymentmanager_v2beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.dfareporting_v3_4 = exports.dfareporting_v3_3 = exports.auth = exports.dfareporting = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v3_3_1 = __nccwpck_require__(2186);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v3_3_1 = __nccwpck_require__(15190);
 Object.defineProperty(exports, "dfareporting_v3_3", ({ enumerable: true, get: function () { return v3_3_1.dfareporting_v3_3; } }));
-const v3_4_1 = __nccwpck_require__(70114);
+const v3_4_1 = __nccwpck_require__(24759);
 Object.defineProperty(exports, "dfareporting_v3_4", ({ enumerable: true, get: function () { return v3_4_1.dfareporting_v3_4; } }));
 exports.VERSIONS = {
     'v3.3': v3_3_1.dfareporting_v3_3.Dfareporting,
@@ -172122,13 +172121,13 @@ function dfareporting(versionOrOptions) {
 exports.dfareporting = dfareporting;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 2186:
+/***/ 15190:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -172153,7 +172152,7 @@ exports.dfareporting_v3_3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var dfareporting_v3_3;
 (function (dfareporting_v3_3) {
     /**
@@ -179020,7 +179019,7 @@ var dfareporting_v3_3;
 
 /***/ }),
 
-/***/ 70114:
+/***/ 24759:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -179045,7 +179044,7 @@ exports.dfareporting_v3_4 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var dfareporting_v3_4;
 (function (dfareporting_v3_4) {
     /**
@@ -185951,7 +185950,7 @@ var dfareporting_v3_4;
 
 /***/ }),
 
-/***/ 96656:
+/***/ 11701:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -185971,12 +185970,12 @@ var dfareporting_v3_4;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.dialogflow_v3beta1 = exports.dialogflow_v2beta1 = exports.dialogflow_v2 = exports.auth = exports.dialogflow = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(1463);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(96961);
 Object.defineProperty(exports, "dialogflow_v2", ({ enumerable: true, get: function () { return v2_1.dialogflow_v2; } }));
-const v2beta1_1 = __nccwpck_require__(94792);
+const v2beta1_1 = __nccwpck_require__(40644);
 Object.defineProperty(exports, "dialogflow_v2beta1", ({ enumerable: true, get: function () { return v2beta1_1.dialogflow_v2beta1; } }));
-const v3beta1_1 = __nccwpck_require__(90979);
+const v3beta1_1 = __nccwpck_require__(43985);
 Object.defineProperty(exports, "dialogflow_v3beta1", ({ enumerable: true, get: function () { return v3beta1_1.dialogflow_v3beta1; } }));
 exports.VERSIONS = {
     v2: v2_1.dialogflow_v2.Dialogflow,
@@ -185989,13 +185988,13 @@ function dialogflow(versionOrOptions) {
 exports.dialogflow = dialogflow;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 1463:
+/***/ 96961:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -186020,7 +186019,7 @@ exports.dialogflow_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var dialogflow_v2;
 (function (dialogflow_v2) {
     /**
@@ -187989,7 +187988,7 @@ var dialogflow_v2;
 
 /***/ }),
 
-/***/ 94792:
+/***/ 40644:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -188014,7 +188013,7 @@ exports.dialogflow_v2beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var dialogflow_v2beta1;
 (function (dialogflow_v2beta1) {
     /**
@@ -192775,7 +192774,7 @@ var dialogflow_v2beta1;
 
 /***/ }),
 
-/***/ 90979:
+/***/ 43985:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -192800,7 +192799,7 @@ exports.dialogflow_v3beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var dialogflow_v3beta1;
 (function (dialogflow_v3beta1) {
     /**
@@ -195179,7 +195178,7 @@ var dialogflow_v3beta1;
 
 /***/ }),
 
-/***/ 3378:
+/***/ 15854:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -195199,8 +195198,8 @@ var dialogflow_v3beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.digitalassetlinks_v1 = exports.auth = exports.digitalassetlinks = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(70406);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(22617);
 Object.defineProperty(exports, "digitalassetlinks_v1", ({ enumerable: true, get: function () { return v1_1.digitalassetlinks_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.digitalassetlinks_v1.Digitalassetlinks,
@@ -195211,13 +195210,13 @@ function digitalassetlinks(versionOrOptions) {
 exports.digitalassetlinks = digitalassetlinks;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 70406:
+/***/ 22617:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -195242,7 +195241,7 @@ exports.digitalassetlinks_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var digitalassetlinks_v1;
 (function (digitalassetlinks_v1) {
     /**
@@ -195344,7 +195343,7 @@ var digitalassetlinks_v1;
 
 /***/ }),
 
-/***/ 54595:
+/***/ 81817:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -195364,8 +195363,8 @@ var digitalassetlinks_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.discovery_v1 = exports.auth = exports.discovery = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(74191);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(91956);
 Object.defineProperty(exports, "discovery_v1", ({ enumerable: true, get: function () { return v1_1.discovery_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.discovery_v1.Discovery,
@@ -195376,13 +195375,13 @@ function discovery(versionOrOptions) {
 exports.discovery = discovery;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 74191:
+/***/ 91956:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -195407,7 +195406,7 @@ exports.discovery_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var discovery_v1;
 (function (discovery_v1) {
     /**
@@ -195502,7 +195501,7 @@ var discovery_v1;
 
 /***/ }),
 
-/***/ 24038:
+/***/ 54672:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -195522,14 +195521,14 @@ var discovery_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.displayvideo_v1dev = exports.displayvideo_v1beta2 = exports.displayvideo_v1beta = exports.displayvideo_v1 = exports.auth = exports.displayvideo = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(98838);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(56591);
 Object.defineProperty(exports, "displayvideo_v1", ({ enumerable: true, get: function () { return v1_1.displayvideo_v1; } }));
-const v1beta_1 = __nccwpck_require__(75118);
+const v1beta_1 = __nccwpck_require__(67429);
 Object.defineProperty(exports, "displayvideo_v1beta", ({ enumerable: true, get: function () { return v1beta_1.displayvideo_v1beta; } }));
-const v1beta2_1 = __nccwpck_require__(46110);
+const v1beta2_1 = __nccwpck_require__(49671);
 Object.defineProperty(exports, "displayvideo_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.displayvideo_v1beta2; } }));
-const v1dev_1 = __nccwpck_require__(25226);
+const v1dev_1 = __nccwpck_require__(27124);
 Object.defineProperty(exports, "displayvideo_v1dev", ({ enumerable: true, get: function () { return v1dev_1.displayvideo_v1dev; } }));
 exports.VERSIONS = {
     v1: v1_1.displayvideo_v1.Displayvideo,
@@ -195543,13 +195542,13 @@ function displayvideo(versionOrOptions) {
 exports.displayvideo = displayvideo;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 98838:
+/***/ 56591:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -195574,7 +195573,7 @@ exports.displayvideo_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var displayvideo_v1;
 (function (displayvideo_v1) {
     /**
@@ -199682,7 +199681,7 @@ var displayvideo_v1;
 
 /***/ }),
 
-/***/ 75118:
+/***/ 67429:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -199707,7 +199706,7 @@ exports.displayvideo_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var displayvideo_v1beta;
 (function (displayvideo_v1beta) {
     /**
@@ -199862,7 +199861,7 @@ var displayvideo_v1beta;
 
 /***/ }),
 
-/***/ 46110:
+/***/ 49671:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -199887,7 +199886,7 @@ exports.displayvideo_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var displayvideo_v1beta2;
 (function (displayvideo_v1beta2) {
     /**
@@ -199997,7 +199996,7 @@ var displayvideo_v1beta2;
 
 /***/ }),
 
-/***/ 25226:
+/***/ 27124:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -200022,7 +200021,7 @@ exports.displayvideo_v1dev = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var displayvideo_v1dev;
 (function (displayvideo_v1dev) {
     /**
@@ -200132,7 +200131,7 @@ var displayvideo_v1dev;
 
 /***/ }),
 
-/***/ 64485:
+/***/ 72447:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -200152,8 +200151,8 @@ var displayvideo_v1dev;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.dlp_v2 = exports.auth = exports.dlp = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(93360);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(31099);
 Object.defineProperty(exports, "dlp_v2", ({ enumerable: true, get: function () { return v2_1.dlp_v2; } }));
 exports.VERSIONS = {
     v2: v2_1.dlp_v2.Dlp,
@@ -200164,13 +200163,13 @@ function dlp(versionOrOptions) {
 exports.dlp = dlp;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 93360:
+/***/ 31099:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -200195,7 +200194,7 @@ exports.dlp_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var dlp_v2;
 (function (dlp_v2) {
     /**
@@ -203356,7 +203355,7 @@ var dlp_v2;
 
 /***/ }),
 
-/***/ 10468:
+/***/ 79616:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -203376,12 +203375,12 @@ var dlp_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.dns_v2beta1 = exports.dns_v1beta2 = exports.dns_v1 = exports.auth = exports.dns = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(68469);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(62399);
 Object.defineProperty(exports, "dns_v1", ({ enumerable: true, get: function () { return v1_1.dns_v1; } }));
-const v1beta2_1 = __nccwpck_require__(99517);
+const v1beta2_1 = __nccwpck_require__(99255);
 Object.defineProperty(exports, "dns_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.dns_v1beta2; } }));
-const v2beta1_1 = __nccwpck_require__(7207);
+const v2beta1_1 = __nccwpck_require__(14769);
 Object.defineProperty(exports, "dns_v2beta1", ({ enumerable: true, get: function () { return v2beta1_1.dns_v2beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.dns_v1.Dns,
@@ -203394,13 +203393,13 @@ function dns(versionOrOptions) {
 exports.dns = dns;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 68469:
+/***/ 62399:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -203425,7 +203424,7 @@ exports.dns_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var dns_v1;
 (function (dns_v1) {
     /**
@@ -204148,7 +204147,7 @@ var dns_v1;
 
 /***/ }),
 
-/***/ 99517:
+/***/ 99255:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -204173,7 +204172,7 @@ exports.dns_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var dns_v1beta2;
 (function (dns_v1beta2) {
     /**
@@ -205042,7 +205041,7 @@ var dns_v1beta2;
 
 /***/ }),
 
-/***/ 7207:
+/***/ 14769:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -205067,7 +205066,7 @@ exports.dns_v2beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var dns_v2beta1;
 (function (dns_v2beta1) {
     /**
@@ -205798,7 +205797,7 @@ var dns_v2beta1;
 
 /***/ }),
 
-/***/ 61000:
+/***/ 39106:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -205818,8 +205817,8 @@ var dns_v2beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.docs_v1 = exports.auth = exports.docs = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(98364);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(60597);
 Object.defineProperty(exports, "docs_v1", ({ enumerable: true, get: function () { return v1_1.docs_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.docs_v1.Docs,
@@ -205830,13 +205829,13 @@ function docs(versionOrOptions) {
 exports.docs = docs;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 98364:
+/***/ 60597:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -205861,7 +205860,7 @@ exports.docs_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var docs_v1;
 (function (docs_v1) {
     /**
@@ -205987,7 +205986,7 @@ var docs_v1;
 
 /***/ }),
 
-/***/ 87997:
+/***/ 24306:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -206007,10 +206006,10 @@ var docs_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.documentai_v1beta3 = exports.documentai_v1beta2 = exports.auth = exports.documentai = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta2_1 = __nccwpck_require__(82227);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta2_1 = __nccwpck_require__(67561);
 Object.defineProperty(exports, "documentai_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.documentai_v1beta2; } }));
-const v1beta3_1 = __nccwpck_require__(18492);
+const v1beta3_1 = __nccwpck_require__(20346);
 Object.defineProperty(exports, "documentai_v1beta3", ({ enumerable: true, get: function () { return v1beta3_1.documentai_v1beta3; } }));
 exports.VERSIONS = {
     v1beta2: v1beta2_1.documentai_v1beta2.Documentai,
@@ -206022,13 +206021,13 @@ function documentai(versionOrOptions) {
 exports.documentai = documentai;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 82227:
+/***/ 67561:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -206053,7 +206052,7 @@ exports.documentai_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var documentai_v1beta2;
 (function (documentai_v1beta2) {
     /**
@@ -206309,7 +206308,7 @@ var documentai_v1beta2;
 
 /***/ }),
 
-/***/ 18492:
+/***/ 20346:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -206334,7 +206333,7 @@ exports.documentai_v1beta3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var documentai_v1beta3;
 (function (documentai_v1beta3) {
     /**
@@ -206583,7 +206582,7 @@ var documentai_v1beta3;
 
 /***/ }),
 
-/***/ 82427:
+/***/ 66030:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -206603,10 +206602,10 @@ var documentai_v1beta3;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.domains_v1beta1 = exports.domains_v1alpha2 = exports.auth = exports.domains = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1alpha2_1 = __nccwpck_require__(42230);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1alpha2_1 = __nccwpck_require__(59035);
 Object.defineProperty(exports, "domains_v1alpha2", ({ enumerable: true, get: function () { return v1alpha2_1.domains_v1alpha2; } }));
-const v1beta1_1 = __nccwpck_require__(21449);
+const v1beta1_1 = __nccwpck_require__(38252);
 Object.defineProperty(exports, "domains_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.domains_v1beta1; } }));
 exports.VERSIONS = {
     v1alpha2: v1alpha2_1.domains_v1alpha2.Domains,
@@ -206618,13 +206617,13 @@ function domains(versionOrOptions) {
 exports.domains = domains;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 42230:
+/***/ 59035:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -206649,7 +206648,7 @@ exports.domains_v1alpha2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var domains_v1alpha2;
 (function (domains_v1alpha2) {
     /**
@@ -207326,7 +207325,7 @@ var domains_v1alpha2;
 
 /***/ }),
 
-/***/ 21449:
+/***/ 38252:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -207351,7 +207350,7 @@ exports.domains_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var domains_v1beta1;
 (function (domains_v1beta1) {
     /**
@@ -208028,7 +208027,7 @@ var domains_v1beta1;
 
 /***/ }),
 
-/***/ 42098:
+/***/ 34237:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -208048,8 +208047,8 @@ var domains_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.domainsrdap_v1 = exports.auth = exports.domainsrdap = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(16433);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(41328);
 Object.defineProperty(exports, "domainsrdap_v1", ({ enumerable: true, get: function () { return v1_1.domainsrdap_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.domainsrdap_v1.Domainsrdap,
@@ -208060,13 +208059,13 @@ function domainsrdap(versionOrOptions) {
 exports.domainsrdap = domainsrdap;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 16433:
+/***/ 41328:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -208091,7 +208090,7 @@ exports.domainsrdap_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var domainsrdap_v1;
 (function (domainsrdap_v1) {
     /**
@@ -208462,7 +208461,7 @@ var domainsrdap_v1;
 
 /***/ }),
 
-/***/ 52427:
+/***/ 41034:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -208482,10 +208481,10 @@ var domainsrdap_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.doubleclickbidmanager_v1 = exports.doubleclickbidmanager_v1_1 = exports.auth = exports.doubleclickbidmanager = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1_1 = __nccwpck_require__(61891);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1_1 = __nccwpck_require__(97356);
 Object.defineProperty(exports, "doubleclickbidmanager_v1_1", ({ enumerable: true, get: function () { return v1_1_1.doubleclickbidmanager_v1_1; } }));
-const v1_1 = __nccwpck_require__(42565);
+const v1_1 = __nccwpck_require__(40381);
 Object.defineProperty(exports, "doubleclickbidmanager_v1", ({ enumerable: true, get: function () { return v1_1.doubleclickbidmanager_v1; } }));
 exports.VERSIONS = {
     'v1.1': v1_1_1.doubleclickbidmanager_v1_1.Doubleclickbidmanager,
@@ -208497,13 +208496,13 @@ function doubleclickbidmanager(versionOrOptions) {
 exports.doubleclickbidmanager = doubleclickbidmanager;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 61891:
+/***/ 97356:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -208528,7 +208527,7 @@ exports.doubleclickbidmanager_v1_1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var doubleclickbidmanager_v1_1;
 (function (doubleclickbidmanager_v1_1) {
     /**
@@ -208861,7 +208860,7 @@ var doubleclickbidmanager_v1_1;
 
 /***/ }),
 
-/***/ 42565:
+/***/ 40381:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -208886,7 +208885,7 @@ exports.doubleclickbidmanager_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var doubleclickbidmanager_v1;
 (function (doubleclickbidmanager_v1) {
     /**
@@ -209218,7 +209217,7 @@ var doubleclickbidmanager_v1;
 
 /***/ }),
 
-/***/ 1340:
+/***/ 46032:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -209238,8 +209237,8 @@ var doubleclickbidmanager_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.doubleclicksearch_v2 = exports.auth = exports.doubleclicksearch = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(72660);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(33026);
 Object.defineProperty(exports, "doubleclicksearch_v2", ({ enumerable: true, get: function () { return v2_1.doubleclicksearch_v2; } }));
 exports.VERSIONS = {
     v2: v2_1.doubleclicksearch_v2.Doubleclicksearch,
@@ -209250,13 +209249,13 @@ function doubleclicksearch(versionOrOptions) {
 exports.doubleclicksearch = doubleclicksearch;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 72660:
+/***/ 33026:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -209281,7 +209280,7 @@ exports.doubleclicksearch_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var doubleclicksearch_v2;
 (function (doubleclicksearch_v2) {
     /**
@@ -209615,7 +209614,7 @@ var doubleclicksearch_v2;
 
 /***/ }),
 
-/***/ 21555:
+/***/ 77039:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -209635,10 +209634,10 @@ var doubleclicksearch_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.drive_v3 = exports.drive_v2 = exports.auth = exports.drive = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(22511);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(89771);
 Object.defineProperty(exports, "drive_v2", ({ enumerable: true, get: function () { return v2_1.drive_v2; } }));
-const v3_1 = __nccwpck_require__(23698);
+const v3_1 = __nccwpck_require__(74148);
 Object.defineProperty(exports, "drive_v3", ({ enumerable: true, get: function () { return v3_1.drive_v3; } }));
 exports.VERSIONS = {
     v2: v2_1.drive_v2.Drive,
@@ -209650,13 +209649,13 @@ function drive(versionOrOptions) {
 exports.drive = drive;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 22511:
+/***/ 89771:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -209681,7 +209680,7 @@ exports.drive_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var drive_v2;
 (function (drive_v2) {
     /**
@@ -211986,7 +211985,7 @@ var drive_v2;
 
 /***/ }),
 
-/***/ 23698:
+/***/ 74148:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -212011,7 +212010,7 @@ exports.drive_v3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var drive_v3;
 (function (drive_v3) {
     /**
@@ -213502,7 +213501,7 @@ var drive_v3;
 
 /***/ }),
 
-/***/ 75137:
+/***/ 47278:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -213522,8 +213521,8 @@ var drive_v3;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.driveactivity_v2 = exports.auth = exports.driveactivity = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(61742);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(59872);
 Object.defineProperty(exports, "driveactivity_v2", ({ enumerable: true, get: function () { return v2_1.driveactivity_v2; } }));
 exports.VERSIONS = {
     v2: v2_1.driveactivity_v2.Driveactivity,
@@ -213534,13 +213533,13 @@ function driveactivity(versionOrOptions) {
 exports.driveactivity = driveactivity;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 61742:
+/***/ 59872:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -213565,7 +213564,7 @@ exports.driveactivity_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var driveactivity_v2;
 (function (driveactivity_v2) {
     /**
@@ -213630,7 +213629,7 @@ var driveactivity_v2;
 
 /***/ }),
 
-/***/ 64620:
+/***/ 21501:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -213650,8 +213649,8 @@ var driveactivity_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.eventarc_v1beta1 = exports.auth = exports.eventarc = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(98551);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(31575);
 Object.defineProperty(exports, "eventarc_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.eventarc_v1beta1; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.eventarc_v1beta1.Eventarc,
@@ -213662,13 +213661,13 @@ function eventarc(versionOrOptions) {
 exports.eventarc = eventarc;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 98551:
+/***/ 31575:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -213693,7 +213692,7 @@ exports.eventarc_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var eventarc_v1beta1;
 (function (eventarc_v1beta1) {
     /**
@@ -214183,7 +214182,7 @@ var eventarc_v1beta1;
 
 /***/ }),
 
-/***/ 66057:
+/***/ 28428:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -214203,8 +214202,8 @@ var eventarc_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.factchecktools_v1alpha1 = exports.auth = exports.factchecktools = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1alpha1_1 = __nccwpck_require__(90706);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1alpha1_1 = __nccwpck_require__(58640);
 Object.defineProperty(exports, "factchecktools_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_1.factchecktools_v1alpha1; } }));
 exports.VERSIONS = {
     v1alpha1: v1alpha1_1.factchecktools_v1alpha1.Factchecktools,
@@ -214215,13 +214214,13 @@ function factchecktools(versionOrOptions) {
 exports.factchecktools = factchecktools;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 90706:
+/***/ 58640:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -214246,7 +214245,7 @@ exports.factchecktools_v1alpha1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var factchecktools_v1alpha1;
 (function (factchecktools_v1alpha1) {
     /**
@@ -214468,7 +214467,7 @@ var factchecktools_v1alpha1;
 
 /***/ }),
 
-/***/ 26287:
+/***/ 32357:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -214488,8 +214487,8 @@ var factchecktools_v1alpha1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fcm_v1 = exports.auth = exports.fcm = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(55943);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(13144);
 Object.defineProperty(exports, "fcm_v1", ({ enumerable: true, get: function () { return v1_1.fcm_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.fcm_v1.Fcm,
@@ -214500,13 +214499,13 @@ function fcm(versionOrOptions) {
 exports.fcm = fcm;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 55943:
+/***/ 13144:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -214531,7 +214530,7 @@ exports.fcm_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var fcm_v1;
 (function (fcm_v1) {
     /**
@@ -214604,7 +214603,7 @@ var fcm_v1;
 
 /***/ }),
 
-/***/ 22678:
+/***/ 56755:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -214624,10 +214623,10 @@ var fcm_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.file_v1beta1 = exports.file_v1 = exports.auth = exports.file = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(31816);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(48010);
 Object.defineProperty(exports, "file_v1", ({ enumerable: true, get: function () { return v1_1.file_v1; } }));
-const v1beta1_1 = __nccwpck_require__(74107);
+const v1beta1_1 = __nccwpck_require__(43033);
 Object.defineProperty(exports, "file_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.file_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.file_v1.File,
@@ -214639,13 +214638,13 @@ function file(versionOrOptions) {
 exports.file = file;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 31816:
+/***/ 48010:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -214670,7 +214669,7 @@ exports.file_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var file_v1;
 (function (file_v1) {
     /**
@@ -215260,7 +215259,7 @@ var file_v1;
 
 /***/ }),
 
-/***/ 74107:
+/***/ 43033:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -215285,7 +215284,7 @@ exports.file_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var file_v1beta1;
 (function (file_v1beta1) {
     /**
@@ -215875,7 +215874,7 @@ var file_v1beta1;
 
 /***/ }),
 
-/***/ 91087:
+/***/ 56248:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -215895,8 +215894,8 @@ var file_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.firebase_v1beta1 = exports.auth = exports.firebase = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(37418);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(83346);
 Object.defineProperty(exports, "firebase_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.firebase_v1beta1; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.firebase_v1beta1.Firebase,
@@ -215907,13 +215906,13 @@ function firebase(versionOrOptions) {
 exports.firebase = firebase;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 37418:
+/***/ 83346:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -215938,7 +215937,7 @@ exports.firebase_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var firebase_v1beta1;
 (function (firebase_v1beta1) {
     /**
@@ -216986,7 +216985,7 @@ var firebase_v1beta1;
 
 /***/ }),
 
-/***/ 34123:
+/***/ 50901:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -217006,8 +217005,8 @@ var firebase_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.firebasedatabase_v1beta = exports.auth = exports.firebasedatabase = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta_1 = __nccwpck_require__(47417);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta_1 = __nccwpck_require__(29890);
 Object.defineProperty(exports, "firebasedatabase_v1beta", ({ enumerable: true, get: function () { return v1beta_1.firebasedatabase_v1beta; } }));
 exports.VERSIONS = {
     v1beta: v1beta_1.firebasedatabase_v1beta.Firebasedatabase,
@@ -217018,13 +217017,13 @@ function firebasedatabase(versionOrOptions) {
 exports.firebasedatabase = firebasedatabase;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 47417:
+/***/ 29890:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -217049,7 +217048,7 @@ exports.firebasedatabase_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var firebasedatabase_v1beta;
 (function (firebasedatabase_v1beta) {
     /**
@@ -217284,7 +217283,7 @@ var firebasedatabase_v1beta;
 
 /***/ }),
 
-/***/ 67602:
+/***/ 89398:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -217304,8 +217303,8 @@ var firebasedatabase_v1beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.firebasedynamiclinks_v1 = exports.auth = exports.firebasedynamiclinks = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(5989);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(14849);
 Object.defineProperty(exports, "firebasedynamiclinks_v1", ({ enumerable: true, get: function () { return v1_1.firebasedynamiclinks_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.firebasedynamiclinks_v1.Firebasedynamiclinks,
@@ -217316,13 +217315,13 @@ function firebasedynamiclinks(versionOrOptions) {
 exports.firebasedynamiclinks = firebasedynamiclinks;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 5989:
+/***/ 14849:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -217347,7 +217346,7 @@ exports.firebasedynamiclinks_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var firebasedynamiclinks_v1;
 (function (firebasedynamiclinks_v1) {
     /**
@@ -217550,7 +217549,7 @@ var firebasedynamiclinks_v1;
 
 /***/ }),
 
-/***/ 47893:
+/***/ 74714:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -217570,10 +217569,10 @@ var firebasedynamiclinks_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.firebasehosting_v1beta1 = exports.firebasehosting_v1 = exports.auth = exports.firebasehosting = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(32949);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(93709);
 Object.defineProperty(exports, "firebasehosting_v1", ({ enumerable: true, get: function () { return v1_1.firebasehosting_v1; } }));
-const v1beta1_1 = __nccwpck_require__(75245);
+const v1beta1_1 = __nccwpck_require__(32136);
 Object.defineProperty(exports, "firebasehosting_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.firebasehosting_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.firebasehosting_v1.Firebasehosting,
@@ -217585,13 +217584,13 @@ function firebasehosting(versionOrOptions) {
 exports.firebasehosting = firebasehosting;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 32949:
+/***/ 93709:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -217616,7 +217615,7 @@ exports.firebasehosting_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var firebasehosting_v1;
 (function (firebasehosting_v1) {
     /**
@@ -217743,7 +217742,7 @@ var firebasehosting_v1;
 
 /***/ }),
 
-/***/ 75245:
+/***/ 32136:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -217768,7 +217767,7 @@ exports.firebasehosting_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var firebasehosting_v1beta1;
 (function (firebasehosting_v1beta1) {
     /**
@@ -219364,7 +219363,7 @@ var firebasehosting_v1beta1;
 
 /***/ }),
 
-/***/ 32744:
+/***/ 69158:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -219384,10 +219383,10 @@ var firebasehosting_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.firebaseml_v1beta2 = exports.firebaseml_v1 = exports.auth = exports.firebaseml = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(55984);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(90836);
 Object.defineProperty(exports, "firebaseml_v1", ({ enumerable: true, get: function () { return v1_1.firebaseml_v1; } }));
-const v1beta2_1 = __nccwpck_require__(64397);
+const v1beta2_1 = __nccwpck_require__(38374);
 Object.defineProperty(exports, "firebaseml_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.firebaseml_v1beta2; } }));
 exports.VERSIONS = {
     v1: v1_1.firebaseml_v1.Firebaseml,
@@ -219399,13 +219398,13 @@ function firebaseml(versionOrOptions) {
 exports.firebaseml = firebaseml;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 55984:
+/***/ 90836:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -219430,7 +219429,7 @@ exports.firebaseml_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var firebaseml_v1;
 (function (firebaseml_v1) {
     /**
@@ -219557,7 +219556,7 @@ var firebaseml_v1;
 
 /***/ }),
 
-/***/ 64397:
+/***/ 38374:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -219582,7 +219581,7 @@ exports.firebaseml_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var firebaseml_v1beta2;
 (function (firebaseml_v1beta2) {
     /**
@@ -219817,7 +219816,7 @@ var firebaseml_v1beta2;
 
 /***/ }),
 
-/***/ 46068:
+/***/ 28939:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -219837,8 +219836,8 @@ var firebaseml_v1beta2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.firebaserules_v1 = exports.auth = exports.firebaserules = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(79674);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(30818);
 Object.defineProperty(exports, "firebaserules_v1", ({ enumerable: true, get: function () { return v1_1.firebaserules_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.firebaserules_v1.Firebaserules,
@@ -219849,13 +219848,13 @@ function firebaserules(versionOrOptions) {
 exports.firebaserules = firebaserules;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 79674:
+/***/ 30818:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -219880,7 +219879,7 @@ exports.firebaserules_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var firebaserules_v1;
 (function (firebaserules_v1) {
     /**
@@ -220269,7 +220268,7 @@ var firebaserules_v1;
 
 /***/ }),
 
-/***/ 11015:
+/***/ 70338:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -220289,12 +220288,12 @@ var firebaserules_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.firestore_v1beta2 = exports.firestore_v1beta1 = exports.firestore_v1 = exports.auth = exports.firestore = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(78465);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(6453);
 Object.defineProperty(exports, "firestore_v1", ({ enumerable: true, get: function () { return v1_1.firestore_v1; } }));
-const v1beta1_1 = __nccwpck_require__(83092);
+const v1beta1_1 = __nccwpck_require__(77952);
 Object.defineProperty(exports, "firestore_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.firestore_v1beta1; } }));
-const v1beta2_1 = __nccwpck_require__(46490);
+const v1beta2_1 = __nccwpck_require__(98233);
 Object.defineProperty(exports, "firestore_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.firestore_v1beta2; } }));
 exports.VERSIONS = {
     v1: v1_1.firestore_v1.Firestore,
@@ -220307,13 +220306,13 @@ function firestore(versionOrOptions) {
 exports.firestore = firestore;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 78465:
+/***/ 6453:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -220338,7 +220337,7 @@ exports.firestore_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var firestore_v1;
 (function (firestore_v1) {
     /**
@@ -221352,7 +221351,7 @@ var firestore_v1;
 
 /***/ }),
 
-/***/ 83092:
+/***/ 77952:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -221377,7 +221376,7 @@ exports.firestore_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var firestore_v1beta1;
 (function (firestore_v1beta1) {
     /**
@@ -222084,7 +222083,7 @@ var firestore_v1beta1;
 
 /***/ }),
 
-/***/ 46490:
+/***/ 98233:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -222109,7 +222108,7 @@ exports.firestore_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var firestore_v1beta2;
 (function (firestore_v1beta2) {
     /**
@@ -222451,7 +222450,7 @@ var firestore_v1beta2;
 
 /***/ }),
 
-/***/ 2217:
+/***/ 96255:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -222471,8 +222470,8 @@ var firestore_v1beta2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fitness_v1 = exports.auth = exports.fitness = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(69094);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(6878);
 Object.defineProperty(exports, "fitness_v1", ({ enumerable: true, get: function () { return v1_1.fitness_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.fitness_v1.Fitness,
@@ -222483,13 +222482,13 @@ function fitness(versionOrOptions) {
 exports.fitness = fitness;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 69094:
+/***/ 6878:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -222514,7 +222513,7 @@ exports.fitness_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var fitness_v1;
 (function (fitness_v1) {
     /**
@@ -222991,7 +222990,1153 @@ var fitness_v1;
 
 /***/ }),
 
-/***/ 71511:
+/***/ 94974:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+// Copyright 2020 Google LLC
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.gamesConfiguration_v1configuration = exports.auth = exports.gamesConfiguration = exports.VERSIONS = void 0;
+/*! THIS FILE IS AUTO-GENERATED */
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1configuration_1 = __nccwpck_require__(85699);
+Object.defineProperty(exports, "gamesConfiguration_v1configuration", ({ enumerable: true, get: function () { return v1configuration_1.gamesConfiguration_v1configuration; } }));
+exports.VERSIONS = {
+    v1configuration: v1configuration_1.gamesConfiguration_v1configuration.Gamesconfiguration,
+};
+function gamesConfiguration(versionOrOptions) {
+    return googleapis_common_1.getAPI('gamesConfiguration', versionOrOptions, exports.VERSIONS, this);
+}
+exports.gamesConfiguration = gamesConfiguration;
+const auth = new googleapis_common_1.AuthPlus();
+exports.auth = auth;
+var googleapis_common_2 = __nccwpck_require__(16782);
+Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 85699:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+// Copyright 2020 Google LLC
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.gamesConfiguration_v1configuration = void 0;
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/class-name-casing */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-empty-interface */
+/* eslint-disable @typescript-eslint/no-namespace */
+/* eslint-disable no-irregular-whitespace */
+const googleapis_common_1 = __nccwpck_require__(16782);
+var gamesConfiguration_v1configuration;
+(function (gamesConfiguration_v1configuration) {
+    /**
+     * Google Play Game Services Publishing API
+     *
+     * The Google Play Game Services Publishing API allows developers to configure their games in Game Services.
+     *
+     * @example
+     * ```js
+     * const {google} = require('googleapis');
+     * const gamesConfiguration = google.gamesConfiguration('v1configuration');
+     * ```
+     */
+    class Gamesconfiguration {
+        constructor(options, google) {
+            this.context = {
+                _options: options || {},
+                google,
+            };
+            this.achievementConfigurations = new Resource$Achievementconfigurations(this.context);
+            this.imageConfigurations = new Resource$Imageconfigurations(this.context);
+            this.leaderboardConfigurations = new Resource$Leaderboardconfigurations(this.context);
+        }
+    }
+    gamesConfiguration_v1configuration.Gamesconfiguration = Gamesconfiguration;
+    class Resource$Achievementconfigurations {
+        constructor(context) {
+            this.context = context;
+        }
+        delete(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1configuration/achievements/{achievementId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'DELETE',
+                }, options),
+                params,
+                requiredParams: ['achievementId'],
+                pathParams: ['achievementId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1configuration/achievements/{achievementId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['achievementId'],
+                pathParams: ['achievementId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        insert(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/games/v1configuration/applications/{applicationId}/achievements').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['applicationId'],
+                pathParams: ['applicationId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/games/v1configuration/applications/{applicationId}/achievements').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['applicationId'],
+                pathParams: ['applicationId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        update(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1configuration/achievements/{achievementId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PUT',
+                }, options),
+                params,
+                requiredParams: ['achievementId'],
+                pathParams: ['achievementId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    gamesConfiguration_v1configuration.Resource$Achievementconfigurations = Resource$Achievementconfigurations;
+    class Resource$Imageconfigurations {
+        constructor(context) {
+            this.context = context;
+        }
+        upload(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/games/v1configuration/images/{resourceId}/imageType/{imageType}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                mediaUrl: (rootUrl +
+                    '/upload/games/v1configuration/images/{resourceId}/imageType/{imageType}').replace(/([^:]\/)\/+/g, '$1'),
+                requiredParams: ['resourceId', 'imageType'],
+                pathParams: ['imageType', 'resourceId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    gamesConfiguration_v1configuration.Resource$Imageconfigurations = Resource$Imageconfigurations;
+    class Resource$Leaderboardconfigurations {
+        constructor(context) {
+            this.context = context;
+        }
+        delete(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1configuration/leaderboards/{leaderboardId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'DELETE',
+                }, options),
+                params,
+                requiredParams: ['leaderboardId'],
+                pathParams: ['leaderboardId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        get(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1configuration/leaderboards/{leaderboardId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['leaderboardId'],
+                pathParams: ['leaderboardId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        insert(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/games/v1configuration/applications/{applicationId}/leaderboards').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['applicationId'],
+                pathParams: ['applicationId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/games/v1configuration/applications/{applicationId}/leaderboards').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['applicationId'],
+                pathParams: ['applicationId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        update(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1configuration/leaderboards/{leaderboardId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PUT',
+                }, options),
+                params,
+                requiredParams: ['leaderboardId'],
+                pathParams: ['leaderboardId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    gamesConfiguration_v1configuration.Resource$Leaderboardconfigurations = Resource$Leaderboardconfigurations;
+})(gamesConfiguration_v1configuration = exports.gamesConfiguration_v1configuration || (exports.gamesConfiguration_v1configuration = {}));
+//# sourceMappingURL=v1configuration.js.map
+
+/***/ }),
+
+/***/ 77663:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+// Copyright 2020 Google LLC
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.gamesManagement_v1management = exports.auth = exports.gamesManagement = exports.VERSIONS = void 0;
+/*! THIS FILE IS AUTO-GENERATED */
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1management_1 = __nccwpck_require__(61881);
+Object.defineProperty(exports, "gamesManagement_v1management", ({ enumerable: true, get: function () { return v1management_1.gamesManagement_v1management; } }));
+exports.VERSIONS = {
+    v1management: v1management_1.gamesManagement_v1management.Gamesmanagement,
+};
+function gamesManagement(versionOrOptions) {
+    return googleapis_common_1.getAPI('gamesManagement', versionOrOptions, exports.VERSIONS, this);
+}
+exports.gamesManagement = gamesManagement;
+const auth = new googleapis_common_1.AuthPlus();
+exports.auth = auth;
+var googleapis_common_2 = __nccwpck_require__(16782);
+Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 61881:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+// Copyright 2020 Google LLC
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.gamesManagement_v1management = void 0;
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/class-name-casing */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-empty-interface */
+/* eslint-disable @typescript-eslint/no-namespace */
+/* eslint-disable no-irregular-whitespace */
+const googleapis_common_1 = __nccwpck_require__(16782);
+var gamesManagement_v1management;
+(function (gamesManagement_v1management) {
+    /**
+     * Google Play Game Management
+     *
+     * The Google Play Game Management API allows developers to manage resources from the Google Play Game service.
+     *
+     * @example
+     * ```js
+     * const {google} = require('googleapis');
+     * const gamesManagement = google.gamesManagement('v1management');
+     * ```
+     */
+    class Gamesmanagement {
+        constructor(options, google) {
+            this.context = {
+                _options: options || {},
+                google,
+            };
+            this.achievements = new Resource$Achievements(this.context);
+            this.applications = new Resource$Applications(this.context);
+            this.events = new Resource$Events(this.context);
+            this.players = new Resource$Players(this.context);
+            this.scores = new Resource$Scores(this.context);
+        }
+    }
+    gamesManagement_v1management.Gamesmanagement = Gamesmanagement;
+    class Resource$Achievements {
+        constructor(context) {
+            this.context = context;
+        }
+        reset(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1management/achievements/{achievementId}/reset').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['achievementId'],
+                pathParams: ['achievementId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        resetAll(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1management/achievements/reset').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        resetAllForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1management/achievements/resetAllForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        resetForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/games/v1management/achievements/{achievementId}/resetForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['achievementId'],
+                pathParams: ['achievementId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        resetMultipleForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/games/v1management/achievements/resetMultipleForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    gamesManagement_v1management.Resource$Achievements = Resource$Achievements;
+    class Resource$Applications {
+        constructor(context) {
+            this.context = context;
+        }
+        listHidden(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/games/v1management/applications/{applicationId}/players/hidden').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: ['applicationId'],
+                pathParams: ['applicationId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    gamesManagement_v1management.Resource$Applications = Resource$Applications;
+    class Resource$Events {
+        constructor(context) {
+            this.context = context;
+        }
+        reset(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1management/events/{eventId}/reset').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['eventId'],
+                pathParams: ['eventId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        resetAll(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1management/events/reset').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        resetAllForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1management/events/resetAllForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        resetForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/games/v1management/events/{eventId}/resetForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['eventId'],
+                pathParams: ['eventId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        resetMultipleForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1management/events/resetMultipleForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    gamesManagement_v1management.Resource$Events = Resource$Events;
+    class Resource$Players {
+        constructor(context) {
+            this.context = context;
+        }
+        hide(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/games/v1management/applications/{applicationId}/players/hidden/{playerId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['applicationId', 'playerId'],
+                pathParams: ['applicationId', 'playerId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        unhide(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/games/v1management/applications/{applicationId}/players/hidden/{playerId}').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'DELETE',
+                }, options),
+                params,
+                requiredParams: ['applicationId', 'playerId'],
+                pathParams: ['applicationId', 'playerId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    gamesManagement_v1management.Resource$Players = Resource$Players;
+    class Resource$Scores {
+        constructor(context) {
+            this.context = context;
+        }
+        reset(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/games/v1management/leaderboards/{leaderboardId}/scores/reset').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['leaderboardId'],
+                pathParams: ['leaderboardId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        resetAll(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1management/scores/reset').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        resetAllForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1management/scores/resetAllForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        resetForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl +
+                        '/games/v1management/leaderboards/{leaderboardId}/scores/resetForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: ['leaderboardId'],
+                pathParams: ['leaderboardId'],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        resetMultipleForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/games/v1management/scores/resetMultipleForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    gamesManagement_v1management.Resource$Scores = Resource$Scores;
+})(gamesManagement_v1management = exports.gamesManagement_v1management || (exports.gamesManagement_v1management = {}));
+//# sourceMappingURL=v1management.js.map
+
+/***/ }),
+
+/***/ 52256:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -223011,8 +224156,8 @@ var fitness_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.games_v1 = exports.auth = exports.games = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(45973);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(17855);
 Object.defineProperty(exports, "games_v1", ({ enumerable: true, get: function () { return v1_1.games_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.games_v1.Games,
@@ -223023,13 +224168,13 @@ function games(versionOrOptions) {
 exports.games = games;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 45973:
+/***/ 17855:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -223054,7 +224199,7 @@ exports.games_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var games_v1;
 (function (games_v1) {
     /**
@@ -224087,1153 +225232,7 @@ var games_v1;
 
 /***/ }),
 
-/***/ 66481:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-// Copyright 2020 Google LLC
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//    http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.gamesConfiguration_v1configuration = exports.auth = exports.gamesConfiguration = exports.VERSIONS = void 0;
-/*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1configuration_1 = __nccwpck_require__(26550);
-Object.defineProperty(exports, "gamesConfiguration_v1configuration", ({ enumerable: true, get: function () { return v1configuration_1.gamesConfiguration_v1configuration; } }));
-exports.VERSIONS = {
-    v1configuration: v1configuration_1.gamesConfiguration_v1configuration.Gamesconfiguration,
-};
-function gamesConfiguration(versionOrOptions) {
-    return googleapis_common_1.getAPI('gamesConfiguration', versionOrOptions, exports.VERSIONS, this);
-}
-exports.gamesConfiguration = gamesConfiguration;
-const auth = new googleapis_common_1.AuthPlus();
-exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
-Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ 26550:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-// Copyright 2020 Google LLC
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//    http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.gamesConfiguration_v1configuration = void 0;
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/class-name-casing */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-empty-interface */
-/* eslint-disable @typescript-eslint/no-namespace */
-/* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
-var gamesConfiguration_v1configuration;
-(function (gamesConfiguration_v1configuration) {
-    /**
-     * Google Play Game Services Publishing API
-     *
-     * The Google Play Game Services Publishing API allows developers to configure their games in Game Services.
-     *
-     * @example
-     * ```js
-     * const {google} = require('googleapis');
-     * const gamesConfiguration = google.gamesConfiguration('v1configuration');
-     * ```
-     */
-    class Gamesconfiguration {
-        constructor(options, google) {
-            this.context = {
-                _options: options || {},
-                google,
-            };
-            this.achievementConfigurations = new Resource$Achievementconfigurations(this.context);
-            this.imageConfigurations = new Resource$Imageconfigurations(this.context);
-            this.leaderboardConfigurations = new Resource$Leaderboardconfigurations(this.context);
-        }
-    }
-    gamesConfiguration_v1configuration.Gamesconfiguration = Gamesconfiguration;
-    class Resource$Achievementconfigurations {
-        constructor(context) {
-            this.context = context;
-        }
-        delete(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1configuration/achievements/{achievementId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'DELETE',
-                }, options),
-                params,
-                requiredParams: ['achievementId'],
-                pathParams: ['achievementId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1configuration/achievements/{achievementId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['achievementId'],
-                pathParams: ['achievementId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        insert(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/games/v1configuration/applications/{applicationId}/achievements').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['applicationId'],
-                pathParams: ['applicationId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/games/v1configuration/applications/{applicationId}/achievements').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['applicationId'],
-                pathParams: ['applicationId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        update(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1configuration/achievements/{achievementId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PUT',
-                }, options),
-                params,
-                requiredParams: ['achievementId'],
-                pathParams: ['achievementId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    gamesConfiguration_v1configuration.Resource$Achievementconfigurations = Resource$Achievementconfigurations;
-    class Resource$Imageconfigurations {
-        constructor(context) {
-            this.context = context;
-        }
-        upload(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/games/v1configuration/images/{resourceId}/imageType/{imageType}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                mediaUrl: (rootUrl +
-                    '/upload/games/v1configuration/images/{resourceId}/imageType/{imageType}').replace(/([^:]\/)\/+/g, '$1'),
-                requiredParams: ['resourceId', 'imageType'],
-                pathParams: ['imageType', 'resourceId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    gamesConfiguration_v1configuration.Resource$Imageconfigurations = Resource$Imageconfigurations;
-    class Resource$Leaderboardconfigurations {
-        constructor(context) {
-            this.context = context;
-        }
-        delete(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1configuration/leaderboards/{leaderboardId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'DELETE',
-                }, options),
-                params,
-                requiredParams: ['leaderboardId'],
-                pathParams: ['leaderboardId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        get(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1configuration/leaderboards/{leaderboardId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['leaderboardId'],
-                pathParams: ['leaderboardId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        insert(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/games/v1configuration/applications/{applicationId}/leaderboards').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['applicationId'],
-                pathParams: ['applicationId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/games/v1configuration/applications/{applicationId}/leaderboards').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['applicationId'],
-                pathParams: ['applicationId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        update(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesconfiguration.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1configuration/leaderboards/{leaderboardId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PUT',
-                }, options),
-                params,
-                requiredParams: ['leaderboardId'],
-                pathParams: ['leaderboardId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    gamesConfiguration_v1configuration.Resource$Leaderboardconfigurations = Resource$Leaderboardconfigurations;
-})(gamesConfiguration_v1configuration = exports.gamesConfiguration_v1configuration || (exports.gamesConfiguration_v1configuration = {}));
-//# sourceMappingURL=v1configuration.js.map
-
-/***/ }),
-
-/***/ 4127:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-// Copyright 2020 Google LLC
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//    http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.gamesManagement_v1management = exports.auth = exports.gamesManagement = exports.VERSIONS = void 0;
-/*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1management_1 = __nccwpck_require__(55801);
-Object.defineProperty(exports, "gamesManagement_v1management", ({ enumerable: true, get: function () { return v1management_1.gamesManagement_v1management; } }));
-exports.VERSIONS = {
-    v1management: v1management_1.gamesManagement_v1management.Gamesmanagement,
-};
-function gamesManagement(versionOrOptions) {
-    return googleapis_common_1.getAPI('gamesManagement', versionOrOptions, exports.VERSIONS, this);
-}
-exports.gamesManagement = gamesManagement;
-const auth = new googleapis_common_1.AuthPlus();
-exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
-Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ 55801:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-// Copyright 2020 Google LLC
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//    http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.gamesManagement_v1management = void 0;
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/class-name-casing */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-empty-interface */
-/* eslint-disable @typescript-eslint/no-namespace */
-/* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
-var gamesManagement_v1management;
-(function (gamesManagement_v1management) {
-    /**
-     * Google Play Game Management
-     *
-     * The Google Play Game Management API allows developers to manage resources from the Google Play Game service.
-     *
-     * @example
-     * ```js
-     * const {google} = require('googleapis');
-     * const gamesManagement = google.gamesManagement('v1management');
-     * ```
-     */
-    class Gamesmanagement {
-        constructor(options, google) {
-            this.context = {
-                _options: options || {},
-                google,
-            };
-            this.achievements = new Resource$Achievements(this.context);
-            this.applications = new Resource$Applications(this.context);
-            this.events = new Resource$Events(this.context);
-            this.players = new Resource$Players(this.context);
-            this.scores = new Resource$Scores(this.context);
-        }
-    }
-    gamesManagement_v1management.Gamesmanagement = Gamesmanagement;
-    class Resource$Achievements {
-        constructor(context) {
-            this.context = context;
-        }
-        reset(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1management/achievements/{achievementId}/reset').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['achievementId'],
-                pathParams: ['achievementId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        resetAll(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1management/achievements/reset').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        resetAllForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1management/achievements/resetAllForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        resetForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/games/v1management/achievements/{achievementId}/resetForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['achievementId'],
-                pathParams: ['achievementId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        resetMultipleForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/games/v1management/achievements/resetMultipleForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    gamesManagement_v1management.Resource$Achievements = Resource$Achievements;
-    class Resource$Applications {
-        constructor(context) {
-            this.context = context;
-        }
-        listHidden(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/games/v1management/applications/{applicationId}/players/hidden').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: ['applicationId'],
-                pathParams: ['applicationId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    gamesManagement_v1management.Resource$Applications = Resource$Applications;
-    class Resource$Events {
-        constructor(context) {
-            this.context = context;
-        }
-        reset(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1management/events/{eventId}/reset').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['eventId'],
-                pathParams: ['eventId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        resetAll(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1management/events/reset').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        resetAllForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1management/events/resetAllForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        resetForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/games/v1management/events/{eventId}/resetForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['eventId'],
-                pathParams: ['eventId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        resetMultipleForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1management/events/resetMultipleForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    gamesManagement_v1management.Resource$Events = Resource$Events;
-    class Resource$Players {
-        constructor(context) {
-            this.context = context;
-        }
-        hide(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/games/v1management/applications/{applicationId}/players/hidden/{playerId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['applicationId', 'playerId'],
-                pathParams: ['applicationId', 'playerId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        unhide(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/games/v1management/applications/{applicationId}/players/hidden/{playerId}').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'DELETE',
-                }, options),
-                params,
-                requiredParams: ['applicationId', 'playerId'],
-                pathParams: ['applicationId', 'playerId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    gamesManagement_v1management.Resource$Players = Resource$Players;
-    class Resource$Scores {
-        constructor(context) {
-            this.context = context;
-        }
-        reset(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/games/v1management/leaderboards/{leaderboardId}/scores/reset').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['leaderboardId'],
-                pathParams: ['leaderboardId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        resetAll(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1management/scores/reset').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        resetAllForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1management/scores/resetAllForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        resetForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl +
-                        '/games/v1management/leaderboards/{leaderboardId}/scores/resetForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: ['leaderboardId'],
-                pathParams: ['leaderboardId'],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        resetMultipleForAllPlayers(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://gamesmanagement.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/games/v1management/scores/resetMultipleForAllPlayers').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    gamesManagement_v1management.Resource$Scores = Resource$Scores;
-})(gamesManagement_v1management = exports.gamesManagement_v1management || (exports.gamesManagement_v1management = {}));
-//# sourceMappingURL=v1management.js.map
-
-/***/ }),
-
-/***/ 16510:
+/***/ 93323:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -225253,10 +225252,10 @@ var gamesManagement_v1management;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.gameservices_v1beta = exports.gameservices_v1 = exports.auth = exports.gameservices = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(49108);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(89314);
 Object.defineProperty(exports, "gameservices_v1", ({ enumerable: true, get: function () { return v1_1.gameservices_v1; } }));
-const v1beta_1 = __nccwpck_require__(95283);
+const v1beta_1 = __nccwpck_require__(68832);
 Object.defineProperty(exports, "gameservices_v1beta", ({ enumerable: true, get: function () { return v1beta_1.gameservices_v1beta; } }));
 exports.VERSIONS = {
     v1: v1_1.gameservices_v1.Gameservices,
@@ -225268,13 +225267,13 @@ function gameservices(versionOrOptions) {
 exports.gameservices = gameservices;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 49108:
+/***/ 89314:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -225299,7 +225298,7 @@ exports.gameservices_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var gameservices_v1;
 (function (gameservices_v1) {
     /**
@@ -226492,7 +226491,7 @@ var gameservices_v1;
 
 /***/ }),
 
-/***/ 95283:
+/***/ 68832:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -226517,7 +226516,7 @@ exports.gameservices_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var gameservices_v1beta;
 (function (gameservices_v1beta) {
     /**
@@ -227710,7 +227709,7 @@ var gameservices_v1beta;
 
 /***/ }),
 
-/***/ 38033:
+/***/ 8422:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -227730,12 +227729,12 @@ var gameservices_v1beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.genomics_v2alpha1 = exports.genomics_v1alpha2 = exports.genomics_v1 = exports.auth = exports.genomics = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(11050);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(98929);
 Object.defineProperty(exports, "genomics_v1", ({ enumerable: true, get: function () { return v1_1.genomics_v1; } }));
-const v1alpha2_1 = __nccwpck_require__(41603);
+const v1alpha2_1 = __nccwpck_require__(5971);
 Object.defineProperty(exports, "genomics_v1alpha2", ({ enumerable: true, get: function () { return v1alpha2_1.genomics_v1alpha2; } }));
-const v2alpha1_1 = __nccwpck_require__(20128);
+const v2alpha1_1 = __nccwpck_require__(94267);
 Object.defineProperty(exports, "genomics_v2alpha1", ({ enumerable: true, get: function () { return v2alpha1_1.genomics_v2alpha1; } }));
 exports.VERSIONS = {
     v1: v1_1.genomics_v1.Genomics,
@@ -227748,13 +227747,13 @@ function genomics(versionOrOptions) {
 exports.genomics = genomics;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 11050:
+/***/ 98929:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -227779,7 +227778,7 @@ exports.genomics_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var genomics_v1;
 (function (genomics_v1) {
     /**
@@ -227905,7 +227904,7 @@ var genomics_v1;
 
 /***/ }),
 
-/***/ 41603:
+/***/ 5971:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -227930,7 +227929,7 @@ exports.genomics_v1alpha2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var genomics_v1alpha2;
 (function (genomics_v1alpha2) {
     /**
@@ -228275,7 +228274,7 @@ var genomics_v1alpha2;
 
 /***/ }),
 
-/***/ 20128:
+/***/ 94267:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -228300,7 +228299,7 @@ exports.genomics_v2alpha1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var genomics_v2alpha1;
 (function (genomics_v2alpha1) {
     /**
@@ -228547,7 +228546,7 @@ var genomics_v2alpha1;
 
 /***/ }),
 
-/***/ 52575:
+/***/ 6649:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -228567,8 +228566,8 @@ var genomics_v2alpha1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.gmail_v1 = exports.auth = exports.gmail = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(99303);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(32948);
 Object.defineProperty(exports, "gmail_v1", ({ enumerable: true, get: function () { return v1_1.gmail_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.gmail_v1.Gmail,
@@ -228579,13 +228578,13 @@ function gmail(versionOrOptions) {
 exports.gmail = gmail;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 99303:
+/***/ 32948:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -228610,7 +228609,7 @@ exports.gmail_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var gmail_v1;
 (function (gmail_v1) {
     /**
@@ -230849,7 +230848,7 @@ var gmail_v1;
 
 /***/ }),
 
-/***/ 196:
+/***/ 62280:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -230869,8 +230868,8 @@ var gmail_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.gmailpostmastertools_v1beta1 = exports.auth = exports.gmailpostmastertools = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(15566);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(770);
 Object.defineProperty(exports, "gmailpostmastertools_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.gmailpostmastertools_v1beta1; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.gmailpostmastertools_v1beta1.Gmailpostmastertools,
@@ -230881,13 +230880,13 @@ function gmailpostmastertools(versionOrOptions) {
 exports.gmailpostmastertools = gmailpostmastertools;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 15566:
+/***/ 770:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -230912,7 +230911,7 @@ exports.gmailpostmastertools_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var gmailpostmastertools_v1beta1;
 (function (gmailpostmastertools_v1beta1) {
     /**
@@ -231076,7 +231075,7 @@ var gmailpostmastertools_v1beta1;
 
 /***/ }),
 
-/***/ 28925:
+/***/ 48147:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -231096,8 +231095,8 @@ var gmailpostmastertools_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.groupsmigration_v1 = exports.auth = exports.groupsmigration = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(73377);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(714);
 Object.defineProperty(exports, "groupsmigration_v1", ({ enumerable: true, get: function () { return v1_1.groupsmigration_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.groupsmigration_v1.Groupsmigration,
@@ -231108,13 +231107,13 @@ function groupsmigration(versionOrOptions) {
 exports.groupsmigration = groupsmigration;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 73377:
+/***/ 714:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -231139,7 +231138,7 @@ exports.groupsmigration_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var groupsmigration_v1;
 (function (groupsmigration_v1) {
     /**
@@ -231205,7 +231204,7 @@ var groupsmigration_v1;
 
 /***/ }),
 
-/***/ 63054:
+/***/ 33916:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -231225,8 +231224,8 @@ var groupsmigration_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.groupssettings_v1 = exports.auth = exports.groupssettings = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(61508);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(84947);
 Object.defineProperty(exports, "groupssettings_v1", ({ enumerable: true, get: function () { return v1_1.groupssettings_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.groupssettings_v1.Groupssettings,
@@ -231237,13 +231236,13 @@ function groupssettings(versionOrOptions) {
 exports.groupssettings = groupssettings;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 61508:
+/***/ 84947:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -231268,7 +231267,7 @@ exports.groupssettings_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var groupssettings_v1;
 (function (groupssettings_v1) {
     /**
@@ -231393,7 +231392,7 @@ var groupssettings_v1;
 
 /***/ }),
 
-/***/ 38098:
+/***/ 75390:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -231413,10 +231412,10 @@ var groupssettings_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.healthcare_v1beta1 = exports.healthcare_v1 = exports.auth = exports.healthcare = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(57380);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(12233);
 Object.defineProperty(exports, "healthcare_v1", ({ enumerable: true, get: function () { return v1_1.healthcare_v1; } }));
-const v1beta1_1 = __nccwpck_require__(53850);
+const v1beta1_1 = __nccwpck_require__(31004);
 Object.defineProperty(exports, "healthcare_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.healthcare_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.healthcare_v1.Healthcare,
@@ -231428,13 +231427,13 @@ function healthcare(versionOrOptions) {
 exports.healthcare = healthcare;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 57380:
+/***/ 12233:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -231459,7 +231458,7 @@ exports.healthcare_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var healthcare_v1;
 (function (healthcare_v1) {
     /**
@@ -234120,7 +234119,7 @@ var healthcare_v1;
 
 /***/ }),
 
-/***/ 53850:
+/***/ 31004:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -234145,7 +234144,7 @@ exports.healthcare_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var healthcare_v1beta1;
 (function (healthcare_v1beta1) {
     /**
@@ -238760,7 +238759,7 @@ var healthcare_v1beta1;
 
 /***/ }),
 
-/***/ 91190:
+/***/ 87038:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -238780,8 +238779,8 @@ var healthcare_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.homegraph_v1 = exports.auth = exports.homegraph = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(20565);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(34217);
 Object.defineProperty(exports, "homegraph_v1", ({ enumerable: true, get: function () { return v1_1.homegraph_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.homegraph_v1.Homegraph,
@@ -238792,13 +238791,13 @@ function homegraph(versionOrOptions) {
 exports.homegraph = homegraph;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 20565:
+/***/ 34217:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -238823,7 +238822,7 @@ exports.homegraph_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var homegraph_v1;
 (function (homegraph_v1) {
     /**
@@ -239018,7 +239017,7 @@ var homegraph_v1;
 
 /***/ }),
 
-/***/ 11966:
+/***/ 72414:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -239038,8 +239037,8 @@ var homegraph_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.iam_v1 = exports.auth = exports.iam = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(88434);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(23273);
 Object.defineProperty(exports, "iam_v1", ({ enumerable: true, get: function () { return v1_1.iam_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.iam_v1.Iam,
@@ -239050,13 +239049,13 @@ function iam(versionOrOptions) {
 exports.iam = iam;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 88434:
+/***/ 23273:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -239081,7 +239080,7 @@ exports.iam_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var iam_v1;
 (function (iam_v1) {
     /**
@@ -240414,7 +240413,7 @@ var iam_v1;
 
 /***/ }),
 
-/***/ 60303:
+/***/ 90524:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -240434,8 +240433,8 @@ var iam_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.iamcredentials_v1 = exports.auth = exports.iamcredentials = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(13088);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(5043);
 Object.defineProperty(exports, "iamcredentials_v1", ({ enumerable: true, get: function () { return v1_1.iamcredentials_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.iamcredentials_v1.Iamcredentials,
@@ -240446,13 +240445,13 @@ function iamcredentials(versionOrOptions) {
 exports.iamcredentials = iamcredentials;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 13088:
+/***/ 5043:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -240477,7 +240476,7 @@ exports.iamcredentials_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var iamcredentials_v1;
 (function (iamcredentials_v1) {
     /**
@@ -240643,7 +240642,7 @@ var iamcredentials_v1;
 
 /***/ }),
 
-/***/ 47104:
+/***/ 88289:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -240663,10 +240662,10 @@ var iamcredentials_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.iap_v1beta1 = exports.iap_v1 = exports.auth = exports.iap = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(38351);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(34044);
 Object.defineProperty(exports, "iap_v1", ({ enumerable: true, get: function () { return v1_1.iap_v1; } }));
-const v1beta1_1 = __nccwpck_require__(89404);
+const v1beta1_1 = __nccwpck_require__(32859);
 Object.defineProperty(exports, "iap_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.iap_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.iap_v1.Iap,
@@ -240678,13 +240677,13 @@ function iap(versionOrOptions) {
 exports.iap = iap;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 38351:
+/***/ 34044:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -240709,7 +240708,7 @@ exports.iap_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var iap_v1;
 (function (iap_v1) {
     /**
@@ -241166,7 +241165,7 @@ var iap_v1;
 
 /***/ }),
 
-/***/ 89404:
+/***/ 32859:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -241191,7 +241190,7 @@ exports.iap_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var iap_v1beta1;
 (function (iap_v1beta1) {
     /**
@@ -241319,7 +241318,7 @@ var iap_v1beta1;
 
 /***/ }),
 
-/***/ 46373:
+/***/ 51775:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -241339,8 +241338,8 @@ var iap_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.identitytoolkit_v3 = exports.auth = exports.identitytoolkit = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v3_1 = __nccwpck_require__(13408);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v3_1 = __nccwpck_require__(78068);
 Object.defineProperty(exports, "identitytoolkit_v3", ({ enumerable: true, get: function () { return v3_1.identitytoolkit_v3; } }));
 exports.VERSIONS = {
     v3: v3_1.identitytoolkit_v3.Identitytoolkit,
@@ -241351,13 +241350,13 @@ function identitytoolkit(versionOrOptions) {
 exports.identitytoolkit = identitytoolkit;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 13408:
+/***/ 78068:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -241382,7 +241381,7 @@ exports.identitytoolkit_v3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var identitytoolkit_v3;
 (function (identitytoolkit_v3) {
     /**
@@ -242038,7 +242037,7 @@ var identitytoolkit_v3;
 
 /***/ }),
 
-/***/ 43146:
+/***/ 83812:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -242058,203 +242057,203 @@ var identitytoolkit_v3;
 /*! THIS FILE IS AUTO-GENERATED */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GeneratedAPIs = exports.APIS = void 0;
-const abusiveexperiencereport_1 = __nccwpck_require__(97913);
-const acceleratedmobilepageurl_1 = __nccwpck_require__(57234);
-const accessapproval_1 = __nccwpck_require__(11959);
-const accesscontextmanager_1 = __nccwpck_require__(1747);
-const adexchangebuyer_1 = __nccwpck_require__(67972);
-const adexchangebuyer2_1 = __nccwpck_require__(78913);
-const adexperiencereport_1 = __nccwpck_require__(83156);
-const admin_1 = __nccwpck_require__(40964);
-const admob_1 = __nccwpck_require__(59074);
-const adsense_1 = __nccwpck_require__(50185);
-const adsensehost_1 = __nccwpck_require__(82048);
-const alertcenter_1 = __nccwpck_require__(87901);
-const analytics_1 = __nccwpck_require__(252);
-const analyticsadmin_1 = __nccwpck_require__(91218);
-const analyticsdata_1 = __nccwpck_require__(12423);
-const analyticsreporting_1 = __nccwpck_require__(35568);
-const androiddeviceprovisioning_1 = __nccwpck_require__(30205);
-const androidenterprise_1 = __nccwpck_require__(1792);
-const androidmanagement_1 = __nccwpck_require__(27951);
-const androidpublisher_1 = __nccwpck_require__(64731);
-const apigateway_1 = __nccwpck_require__(70842);
-const appengine_1 = __nccwpck_require__(54467);
-const appsactivity_1 = __nccwpck_require__(21791);
-const area120tables_1 = __nccwpck_require__(20374);
-const artifactregistry_1 = __nccwpck_require__(68916);
-const assuredworkloads_1 = __nccwpck_require__(78437);
-const bigquery_1 = __nccwpck_require__(52358);
-const bigqueryconnection_1 = __nccwpck_require__(4879);
-const bigquerydatatransfer_1 = __nccwpck_require__(86653);
-const bigqueryreservation_1 = __nccwpck_require__(76594);
-const bigtableadmin_1 = __nccwpck_require__(46604);
-const billingbudgets_1 = __nccwpck_require__(81089);
-const binaryauthorization_1 = __nccwpck_require__(37245);
-const blogger_1 = __nccwpck_require__(43430);
-const books_1 = __nccwpck_require__(27911);
-const calendar_1 = __nccwpck_require__(2285);
-const chat_1 = __nccwpck_require__(32290);
-const chromeuxreport_1 = __nccwpck_require__(86553);
-const civicinfo_1 = __nccwpck_require__(14729);
-const classroom_1 = __nccwpck_require__(75054);
-const cloudasset_1 = __nccwpck_require__(35333);
-const cloudbilling_1 = __nccwpck_require__(12897);
-const cloudbuild_1 = __nccwpck_require__(69302);
-const clouddebugger_1 = __nccwpck_require__(70259);
-const clouderrorreporting_1 = __nccwpck_require__(32510);
-const cloudfunctions_1 = __nccwpck_require__(82277);
-const cloudidentity_1 = __nccwpck_require__(33523);
-const cloudiot_1 = __nccwpck_require__(78613);
-const cloudkms_1 = __nccwpck_require__(72034);
-const cloudprofiler_1 = __nccwpck_require__(35191);
-const cloudresourcemanager_1 = __nccwpck_require__(14621);
-const cloudscheduler_1 = __nccwpck_require__(69532);
-const cloudsearch_1 = __nccwpck_require__(56916);
-const cloudshell_1 = __nccwpck_require__(85465);
-const cloudtasks_1 = __nccwpck_require__(95235);
-const cloudtrace_1 = __nccwpck_require__(15559);
-const composer_1 = __nccwpck_require__(34999);
-const compute_1 = __nccwpck_require__(885);
-const container_1 = __nccwpck_require__(74751);
-const containeranalysis_1 = __nccwpck_require__(12001);
-const content_1 = __nccwpck_require__(98817);
-const customsearch_1 = __nccwpck_require__(42938);
-const datacatalog_1 = __nccwpck_require__(62519);
-const dataflow_1 = __nccwpck_require__(65987);
-const datafusion_1 = __nccwpck_require__(46033);
-const datalabeling_1 = __nccwpck_require__(49959);
-const datamigration_1 = __nccwpck_require__(5955);
-const dataproc_1 = __nccwpck_require__(4862);
-const datastore_1 = __nccwpck_require__(16341);
-const deploymentmanager_1 = __nccwpck_require__(97802);
-const dfareporting_1 = __nccwpck_require__(7833);
-const dialogflow_1 = __nccwpck_require__(96656);
-const digitalassetlinks_1 = __nccwpck_require__(3378);
-const discovery_1 = __nccwpck_require__(54595);
-const displayvideo_1 = __nccwpck_require__(24038);
-const dlp_1 = __nccwpck_require__(64485);
-const dns_1 = __nccwpck_require__(10468);
-const docs_1 = __nccwpck_require__(61000);
-const documentai_1 = __nccwpck_require__(87997);
-const domains_1 = __nccwpck_require__(82427);
-const domainsrdap_1 = __nccwpck_require__(42098);
-const doubleclickbidmanager_1 = __nccwpck_require__(52427);
-const doubleclicksearch_1 = __nccwpck_require__(1340);
-const drive_1 = __nccwpck_require__(21555);
-const driveactivity_1 = __nccwpck_require__(75137);
-const eventarc_1 = __nccwpck_require__(64620);
-const factchecktools_1 = __nccwpck_require__(66057);
-const fcm_1 = __nccwpck_require__(26287);
-const file_1 = __nccwpck_require__(22678);
-const firebase_1 = __nccwpck_require__(91087);
-const firebasedatabase_1 = __nccwpck_require__(34123);
-const firebasedynamiclinks_1 = __nccwpck_require__(67602);
-const firebasehosting_1 = __nccwpck_require__(47893);
-const firebaseml_1 = __nccwpck_require__(32744);
-const firebaserules_1 = __nccwpck_require__(46068);
-const firestore_1 = __nccwpck_require__(11015);
-const fitness_1 = __nccwpck_require__(2217);
-const games_1 = __nccwpck_require__(71511);
-const gamesConfiguration_1 = __nccwpck_require__(66481);
-const gamesManagement_1 = __nccwpck_require__(4127);
-const gameservices_1 = __nccwpck_require__(16510);
-const genomics_1 = __nccwpck_require__(38033);
-const gmail_1 = __nccwpck_require__(52575);
-const gmailpostmastertools_1 = __nccwpck_require__(196);
-const groupsmigration_1 = __nccwpck_require__(28925);
-const groupssettings_1 = __nccwpck_require__(63054);
-const healthcare_1 = __nccwpck_require__(38098);
-const homegraph_1 = __nccwpck_require__(91190);
-const iam_1 = __nccwpck_require__(11966);
-const iamcredentials_1 = __nccwpck_require__(60303);
-const iap_1 = __nccwpck_require__(47104);
-const identitytoolkit_1 = __nccwpck_require__(46373);
-const indexing_1 = __nccwpck_require__(87610);
-const jobs_1 = __nccwpck_require__(21528);
-const kgsearch_1 = __nccwpck_require__(96495);
-const language_1 = __nccwpck_require__(61944);
-const libraryagent_1 = __nccwpck_require__(4495);
-const licensing_1 = __nccwpck_require__(78579);
-const lifesciences_1 = __nccwpck_require__(90393);
-const localservices_1 = __nccwpck_require__(80524);
-const logging_1 = __nccwpck_require__(30512);
-const managedidentities_1 = __nccwpck_require__(68158);
-const manufacturers_1 = __nccwpck_require__(11327);
-const memcache_1 = __nccwpck_require__(50732);
-const ml_1 = __nccwpck_require__(44849);
-const monitoring_1 = __nccwpck_require__(79384);
-const networkmanagement_1 = __nccwpck_require__(58795);
-const notebooks_1 = __nccwpck_require__(73692);
-const oauth2_1 = __nccwpck_require__(65759);
-const osconfig_1 = __nccwpck_require__(74829);
-const oslogin_1 = __nccwpck_require__(38815);
-const pagespeedonline_1 = __nccwpck_require__(26825);
-const people_1 = __nccwpck_require__(93639);
-const playablelocations_1 = __nccwpck_require__(44553);
-const playcustomapp_1 = __nccwpck_require__(23016);
-const plus_1 = __nccwpck_require__(59788);
-const policytroubleshooter_1 = __nccwpck_require__(42168);
-const poly_1 = __nccwpck_require__(35488);
-const privateca_1 = __nccwpck_require__(67815);
-const prod_tt_sasportal_1 = __nccwpck_require__(64203);
-const pubsub_1 = __nccwpck_require__(52964);
-const pubsublite_1 = __nccwpck_require__(79554);
-const realtimebidding_1 = __nccwpck_require__(99073);
-const recommendationengine_1 = __nccwpck_require__(82425);
-const recommender_1 = __nccwpck_require__(10063);
-const redis_1 = __nccwpck_require__(12298);
-const remotebuildexecution_1 = __nccwpck_require__(18830);
-const reseller_1 = __nccwpck_require__(31812);
-const run_1 = __nccwpck_require__(63117);
-const runtimeconfig_1 = __nccwpck_require__(65465);
-const safebrowsing_1 = __nccwpck_require__(92428);
-const sasportal_1 = __nccwpck_require__(5085);
-const script_1 = __nccwpck_require__(6911);
-const searchconsole_1 = __nccwpck_require__(66349);
-const secretmanager_1 = __nccwpck_require__(92976);
-const securitycenter_1 = __nccwpck_require__(12813);
-const serviceconsumermanagement_1 = __nccwpck_require__(21296);
-const servicecontrol_1 = __nccwpck_require__(82);
-const servicedirectory_1 = __nccwpck_require__(24622);
-const servicemanagement_1 = __nccwpck_require__(8881);
-const servicenetworking_1 = __nccwpck_require__(72356);
-const serviceusage_1 = __nccwpck_require__(61110);
-const sheets_1 = __nccwpck_require__(84155);
-const siteVerification_1 = __nccwpck_require__(82450);
-const slides_1 = __nccwpck_require__(46702);
-const smartdevicemanagement_1 = __nccwpck_require__(66567);
-const sourcerepo_1 = __nccwpck_require__(29618);
-const spanner_1 = __nccwpck_require__(10887);
-const speech_1 = __nccwpck_require__(54392);
-const sql_1 = __nccwpck_require__(9266);
-const sqladmin_1 = __nccwpck_require__(24121);
-const storage_1 = __nccwpck_require__(82428);
-const storagetransfer_1 = __nccwpck_require__(3986);
-const streetviewpublish_1 = __nccwpck_require__(97709);
-const sts_1 = __nccwpck_require__(87674);
-const tagmanager_1 = __nccwpck_require__(50132);
-const tasks_1 = __nccwpck_require__(47354);
-const testing_1 = __nccwpck_require__(47527);
-const texttospeech_1 = __nccwpck_require__(47291);
-const toolresults_1 = __nccwpck_require__(19421);
-const tpu_1 = __nccwpck_require__(33390);
-const trafficdirector_1 = __nccwpck_require__(57485);
-const transcoder_1 = __nccwpck_require__(35427);
-const translate_1 = __nccwpck_require__(45537);
-const vault_1 = __nccwpck_require__(28107);
-const vectortile_1 = __nccwpck_require__(36212);
-const verifiedaccess_1 = __nccwpck_require__(85428);
-const videointelligence_1 = __nccwpck_require__(73075);
-const vision_1 = __nccwpck_require__(69992);
-const webfonts_1 = __nccwpck_require__(34225);
-const webmasters_1 = __nccwpck_require__(69867);
-const websecurityscanner_1 = __nccwpck_require__(25206);
-const workflowexecutions_1 = __nccwpck_require__(12706);
-const workflows_1 = __nccwpck_require__(61529);
-const youtube_1 = __nccwpck_require__(76524);
-const youtubeAnalytics_1 = __nccwpck_require__(78383);
-const youtubereporting_1 = __nccwpck_require__(12552);
+const abusiveexperiencereport_1 = __nccwpck_require__(70846);
+const acceleratedmobilepageurl_1 = __nccwpck_require__(65454);
+const accessapproval_1 = __nccwpck_require__(63884);
+const accesscontextmanager_1 = __nccwpck_require__(41829);
+const adexchangebuyer_1 = __nccwpck_require__(8564);
+const adexchangebuyer2_1 = __nccwpck_require__(31974);
+const adexperiencereport_1 = __nccwpck_require__(71966);
+const admin_1 = __nccwpck_require__(38712);
+const admob_1 = __nccwpck_require__(87630);
+const adsense_1 = __nccwpck_require__(14438);
+const adsensehost_1 = __nccwpck_require__(49492);
+const alertcenter_1 = __nccwpck_require__(84740);
+const analytics_1 = __nccwpck_require__(11883);
+const analyticsadmin_1 = __nccwpck_require__(8682);
+const analyticsdata_1 = __nccwpck_require__(71699);
+const analyticsreporting_1 = __nccwpck_require__(1579);
+const androiddeviceprovisioning_1 = __nccwpck_require__(55047);
+const androidenterprise_1 = __nccwpck_require__(26827);
+const androidmanagement_1 = __nccwpck_require__(8655);
+const androidpublisher_1 = __nccwpck_require__(28200);
+const apigateway_1 = __nccwpck_require__(48887);
+const appengine_1 = __nccwpck_require__(4158);
+const appsactivity_1 = __nccwpck_require__(12760);
+const area120tables_1 = __nccwpck_require__(83096);
+const artifactregistry_1 = __nccwpck_require__(18808);
+const assuredworkloads_1 = __nccwpck_require__(48410);
+const bigquery_1 = __nccwpck_require__(89927);
+const bigqueryconnection_1 = __nccwpck_require__(22188);
+const bigquerydatatransfer_1 = __nccwpck_require__(91872);
+const bigqueryreservation_1 = __nccwpck_require__(25279);
+const bigtableadmin_1 = __nccwpck_require__(82402);
+const billingbudgets_1 = __nccwpck_require__(74050);
+const binaryauthorization_1 = __nccwpck_require__(32865);
+const blogger_1 = __nccwpck_require__(68809);
+const books_1 = __nccwpck_require__(25565);
+const calendar_1 = __nccwpck_require__(14935);
+const chat_1 = __nccwpck_require__(16619);
+const chromeuxreport_1 = __nccwpck_require__(56192);
+const civicinfo_1 = __nccwpck_require__(98553);
+const classroom_1 = __nccwpck_require__(7524);
+const cloudasset_1 = __nccwpck_require__(30458);
+const cloudbilling_1 = __nccwpck_require__(27213);
+const cloudbuild_1 = __nccwpck_require__(85246);
+const clouddebugger_1 = __nccwpck_require__(34193);
+const clouderrorreporting_1 = __nccwpck_require__(33974);
+const cloudfunctions_1 = __nccwpck_require__(16995);
+const cloudidentity_1 = __nccwpck_require__(9392);
+const cloudiot_1 = __nccwpck_require__(50022);
+const cloudkms_1 = __nccwpck_require__(34247);
+const cloudprofiler_1 = __nccwpck_require__(25299);
+const cloudresourcemanager_1 = __nccwpck_require__(17241);
+const cloudscheduler_1 = __nccwpck_require__(24651);
+const cloudsearch_1 = __nccwpck_require__(45030);
+const cloudshell_1 = __nccwpck_require__(55452);
+const cloudtasks_1 = __nccwpck_require__(16924);
+const cloudtrace_1 = __nccwpck_require__(47123);
+const composer_1 = __nccwpck_require__(14995);
+const compute_1 = __nccwpck_require__(77898);
+const container_1 = __nccwpck_require__(94308);
+const containeranalysis_1 = __nccwpck_require__(37786);
+const content_1 = __nccwpck_require__(21122);
+const customsearch_1 = __nccwpck_require__(82790);
+const datacatalog_1 = __nccwpck_require__(73604);
+const dataflow_1 = __nccwpck_require__(22521);
+const datafusion_1 = __nccwpck_require__(84305);
+const datalabeling_1 = __nccwpck_require__(94483);
+const datamigration_1 = __nccwpck_require__(40507);
+const dataproc_1 = __nccwpck_require__(26941);
+const datastore_1 = __nccwpck_require__(7622);
+const deploymentmanager_1 = __nccwpck_require__(79857);
+const dfareporting_1 = __nccwpck_require__(23812);
+const dialogflow_1 = __nccwpck_require__(11701);
+const digitalassetlinks_1 = __nccwpck_require__(15854);
+const discovery_1 = __nccwpck_require__(81817);
+const displayvideo_1 = __nccwpck_require__(54672);
+const dlp_1 = __nccwpck_require__(72447);
+const dns_1 = __nccwpck_require__(79616);
+const docs_1 = __nccwpck_require__(39106);
+const documentai_1 = __nccwpck_require__(24306);
+const domains_1 = __nccwpck_require__(66030);
+const domainsrdap_1 = __nccwpck_require__(34237);
+const doubleclickbidmanager_1 = __nccwpck_require__(41034);
+const doubleclicksearch_1 = __nccwpck_require__(46032);
+const drive_1 = __nccwpck_require__(77039);
+const driveactivity_1 = __nccwpck_require__(47278);
+const eventarc_1 = __nccwpck_require__(21501);
+const factchecktools_1 = __nccwpck_require__(28428);
+const fcm_1 = __nccwpck_require__(32357);
+const file_1 = __nccwpck_require__(56755);
+const firebase_1 = __nccwpck_require__(56248);
+const firebasedatabase_1 = __nccwpck_require__(50901);
+const firebasedynamiclinks_1 = __nccwpck_require__(89398);
+const firebasehosting_1 = __nccwpck_require__(74714);
+const firebaseml_1 = __nccwpck_require__(69158);
+const firebaserules_1 = __nccwpck_require__(28939);
+const firestore_1 = __nccwpck_require__(70338);
+const fitness_1 = __nccwpck_require__(96255);
+const games_1 = __nccwpck_require__(52256);
+const gamesConfiguration_1 = __nccwpck_require__(94974);
+const gamesManagement_1 = __nccwpck_require__(77663);
+const gameservices_1 = __nccwpck_require__(93323);
+const genomics_1 = __nccwpck_require__(8422);
+const gmail_1 = __nccwpck_require__(6649);
+const gmailpostmastertools_1 = __nccwpck_require__(62280);
+const groupsmigration_1 = __nccwpck_require__(48147);
+const groupssettings_1 = __nccwpck_require__(33916);
+const healthcare_1 = __nccwpck_require__(75390);
+const homegraph_1 = __nccwpck_require__(87038);
+const iam_1 = __nccwpck_require__(72414);
+const iamcredentials_1 = __nccwpck_require__(90524);
+const iap_1 = __nccwpck_require__(88289);
+const identitytoolkit_1 = __nccwpck_require__(51775);
+const indexing_1 = __nccwpck_require__(4417);
+const jobs_1 = __nccwpck_require__(28193);
+const kgsearch_1 = __nccwpck_require__(76207);
+const language_1 = __nccwpck_require__(52267);
+const libraryagent_1 = __nccwpck_require__(70301);
+const licensing_1 = __nccwpck_require__(15343);
+const lifesciences_1 = __nccwpck_require__(15492);
+const localservices_1 = __nccwpck_require__(69156);
+const logging_1 = __nccwpck_require__(38982);
+const managedidentities_1 = __nccwpck_require__(96044);
+const manufacturers_1 = __nccwpck_require__(42133);
+const memcache_1 = __nccwpck_require__(95152);
+const ml_1 = __nccwpck_require__(95616);
+const monitoring_1 = __nccwpck_require__(17103);
+const networkmanagement_1 = __nccwpck_require__(46734);
+const notebooks_1 = __nccwpck_require__(78165);
+const oauth2_1 = __nccwpck_require__(24210);
+const osconfig_1 = __nccwpck_require__(79961);
+const oslogin_1 = __nccwpck_require__(10976);
+const pagespeedonline_1 = __nccwpck_require__(56094);
+const people_1 = __nccwpck_require__(34150);
+const playablelocations_1 = __nccwpck_require__(27757);
+const playcustomapp_1 = __nccwpck_require__(3515);
+const plus_1 = __nccwpck_require__(21257);
+const policytroubleshooter_1 = __nccwpck_require__(61346);
+const poly_1 = __nccwpck_require__(61679);
+const privateca_1 = __nccwpck_require__(82552);
+const prod_tt_sasportal_1 = __nccwpck_require__(38673);
+const pubsub_1 = __nccwpck_require__(6750);
+const pubsublite_1 = __nccwpck_require__(74306);
+const realtimebidding_1 = __nccwpck_require__(99935);
+const recommendationengine_1 = __nccwpck_require__(8112);
+const recommender_1 = __nccwpck_require__(5022);
+const redis_1 = __nccwpck_require__(82200);
+const remotebuildexecution_1 = __nccwpck_require__(32733);
+const reseller_1 = __nccwpck_require__(53355);
+const run_1 = __nccwpck_require__(90474);
+const runtimeconfig_1 = __nccwpck_require__(24565);
+const safebrowsing_1 = __nccwpck_require__(86153);
+const sasportal_1 = __nccwpck_require__(16160);
+const script_1 = __nccwpck_require__(38362);
+const searchconsole_1 = __nccwpck_require__(45270);
+const secretmanager_1 = __nccwpck_require__(70508);
+const securitycenter_1 = __nccwpck_require__(37302);
+const serviceconsumermanagement_1 = __nccwpck_require__(63139);
+const servicecontrol_1 = __nccwpck_require__(33045);
+const servicedirectory_1 = __nccwpck_require__(98887);
+const servicemanagement_1 = __nccwpck_require__(34951);
+const servicenetworking_1 = __nccwpck_require__(57902);
+const serviceusage_1 = __nccwpck_require__(57099);
+const sheets_1 = __nccwpck_require__(24061);
+const siteVerification_1 = __nccwpck_require__(63213);
+const slides_1 = __nccwpck_require__(57543);
+const smartdevicemanagement_1 = __nccwpck_require__(98919);
+const sourcerepo_1 = __nccwpck_require__(51944);
+const spanner_1 = __nccwpck_require__(25046);
+const speech_1 = __nccwpck_require__(88223);
+const sql_1 = __nccwpck_require__(97431);
+const sqladmin_1 = __nccwpck_require__(9158);
+const storage_1 = __nccwpck_require__(574);
+const storagetransfer_1 = __nccwpck_require__(15265);
+const streetviewpublish_1 = __nccwpck_require__(69966);
+const sts_1 = __nccwpck_require__(82275);
+const tagmanager_1 = __nccwpck_require__(15874);
+const tasks_1 = __nccwpck_require__(9201);
+const testing_1 = __nccwpck_require__(34619);
+const texttospeech_1 = __nccwpck_require__(53889);
+const toolresults_1 = __nccwpck_require__(23775);
+const tpu_1 = __nccwpck_require__(59272);
+const trafficdirector_1 = __nccwpck_require__(83070);
+const transcoder_1 = __nccwpck_require__(16342);
+const translate_1 = __nccwpck_require__(58153);
+const vault_1 = __nccwpck_require__(39559);
+const vectortile_1 = __nccwpck_require__(91374);
+const verifiedaccess_1 = __nccwpck_require__(50683);
+const videointelligence_1 = __nccwpck_require__(77939);
+const vision_1 = __nccwpck_require__(84821);
+const webfonts_1 = __nccwpck_require__(36737);
+const webmasters_1 = __nccwpck_require__(68000);
+const websecurityscanner_1 = __nccwpck_require__(80423);
+const workflowexecutions_1 = __nccwpck_require__(90815);
+const workflows_1 = __nccwpck_require__(83453);
+const youtube_1 = __nccwpck_require__(80870);
+const youtubeAnalytics_1 = __nccwpck_require__(94926);
+const youtubereporting_1 = __nccwpck_require__(75392);
 exports.APIS = {
     abusiveexperiencereport: abusiveexperiencereport_1.VERSIONS,
     acceleratedmobilepageurl: acceleratedmobilepageurl_1.VERSIONS,
@@ -242660,7 +242659,7 @@ exports.GeneratedAPIs = GeneratedAPIs;
 
 /***/ }),
 
-/***/ 87610:
+/***/ 4417:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -242680,8 +242679,8 @@ exports.GeneratedAPIs = GeneratedAPIs;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.indexing_v3 = exports.auth = exports.indexing = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v3_1 = __nccwpck_require__(32611);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v3_1 = __nccwpck_require__(18534);
 Object.defineProperty(exports, "indexing_v3", ({ enumerable: true, get: function () { return v3_1.indexing_v3; } }));
 exports.VERSIONS = {
     v3: v3_1.indexing_v3.Indexing,
@@ -242692,13 +242691,13 @@ function indexing(versionOrOptions) {
 exports.indexing = indexing;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 32611:
+/***/ 18534:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -242723,7 +242722,7 @@ exports.indexing_v3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var indexing_v3;
 (function (indexing_v3) {
     /**
@@ -242820,7 +242819,7 @@ var indexing_v3;
 
 /***/ }),
 
-/***/ 21528:
+/***/ 28193:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -242840,14 +242839,14 @@ var indexing_v3;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.jobs_v4 = exports.jobs_v3p1beta1 = exports.jobs_v3 = exports.jobs_v2 = exports.auth = exports.jobs = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(47273);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(57605);
 Object.defineProperty(exports, "jobs_v2", ({ enumerable: true, get: function () { return v2_1.jobs_v2; } }));
-const v3_1 = __nccwpck_require__(11918);
+const v3_1 = __nccwpck_require__(73510);
 Object.defineProperty(exports, "jobs_v3", ({ enumerable: true, get: function () { return v3_1.jobs_v3; } }));
-const v3p1beta1_1 = __nccwpck_require__(43890);
+const v3p1beta1_1 = __nccwpck_require__(90952);
 Object.defineProperty(exports, "jobs_v3p1beta1", ({ enumerable: true, get: function () { return v3p1beta1_1.jobs_v3p1beta1; } }));
-const v4_1 = __nccwpck_require__(29560);
+const v4_1 = __nccwpck_require__(93191);
 Object.defineProperty(exports, "jobs_v4", ({ enumerable: true, get: function () { return v4_1.jobs_v4; } }));
 exports.VERSIONS = {
     v2: v2_1.jobs_v2.Jobs,
@@ -242861,13 +242860,13 @@ function jobs(versionOrOptions) {
 exports.jobs = jobs;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 47273:
+/***/ 57605:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -242892,7 +242891,7 @@ exports.jobs_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var jobs_v2;
 (function (jobs_v2) {
     /**
@@ -243461,7 +243460,7 @@ var jobs_v2;
 
 /***/ }),
 
-/***/ 11918:
+/***/ 73510:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -243486,7 +243485,7 @@ exports.jobs_v3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var jobs_v3;
 (function (jobs_v3) {
     /**
@@ -244007,7 +244006,7 @@ var jobs_v3;
 
 /***/ }),
 
-/***/ 43890:
+/***/ 90952:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -244032,7 +244031,7 @@ exports.jobs_v3p1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var jobs_v3p1beta1;
 (function (jobs_v3p1beta1) {
     /**
@@ -244591,7 +244590,7 @@ var jobs_v3p1beta1;
 
 /***/ }),
 
-/***/ 29560:
+/***/ 93191:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -244616,7 +244615,7 @@ exports.jobs_v4 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var jobs_v4;
 (function (jobs_v4) {
     /**
@@ -245361,7 +245360,7 @@ var jobs_v4;
 
 /***/ }),
 
-/***/ 96495:
+/***/ 76207:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -245381,8 +245380,8 @@ var jobs_v4;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.kgsearch_v1 = exports.auth = exports.kgsearch = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(62560);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(51214);
 Object.defineProperty(exports, "kgsearch_v1", ({ enumerable: true, get: function () { return v1_1.kgsearch_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.kgsearch_v1.Kgsearch,
@@ -245393,13 +245392,13 @@ function kgsearch(versionOrOptions) {
 exports.kgsearch = kgsearch;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 62560:
+/***/ 51214:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -245424,7 +245423,7 @@ exports.kgsearch_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var kgsearch_v1;
 (function (kgsearch_v1) {
     /**
@@ -245489,7 +245488,7 @@ var kgsearch_v1;
 
 /***/ }),
 
-/***/ 61944:
+/***/ 52267:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -245509,12 +245508,12 @@ var kgsearch_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.language_v1beta2 = exports.language_v1beta1 = exports.language_v1 = exports.auth = exports.language = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(72875);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(7874);
 Object.defineProperty(exports, "language_v1", ({ enumerable: true, get: function () { return v1_1.language_v1; } }));
-const v1beta1_1 = __nccwpck_require__(8150);
+const v1beta1_1 = __nccwpck_require__(86209);
 Object.defineProperty(exports, "language_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.language_v1beta1; } }));
-const v1beta2_1 = __nccwpck_require__(23374);
+const v1beta2_1 = __nccwpck_require__(33288);
 Object.defineProperty(exports, "language_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.language_v1beta2; } }));
 exports.VERSIONS = {
     v1: v1_1.language_v1.Language,
@@ -245527,13 +245526,13 @@ function language(versionOrOptions) {
 exports.language = language;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 72875:
+/***/ 7874:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -245558,7 +245557,7 @@ exports.language_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var language_v1;
 (function (language_v1) {
     /**
@@ -245779,7 +245778,7 @@ var language_v1;
 
 /***/ }),
 
-/***/ 8150:
+/***/ 86209:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -245804,7 +245803,7 @@ exports.language_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var language_v1beta1;
 (function (language_v1beta1) {
     /**
@@ -245963,7 +245962,7 @@ var language_v1beta1;
 
 /***/ }),
 
-/***/ 23374:
+/***/ 33288:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -245988,7 +245987,7 @@ exports.language_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var language_v1beta2;
 (function (language_v1beta2) {
     /**
@@ -246209,7 +246208,7 @@ var language_v1beta2;
 
 /***/ }),
 
-/***/ 4495:
+/***/ 70301:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -246229,8 +246228,8 @@ var language_v1beta2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.libraryagent_v1 = exports.auth = exports.libraryagent = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(81393);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(15376);
 Object.defineProperty(exports, "libraryagent_v1", ({ enumerable: true, get: function () { return v1_1.libraryagent_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.libraryagent_v1.Libraryagent,
@@ -246241,13 +246240,13 @@ function libraryagent(versionOrOptions) {
 exports.libraryagent = libraryagent;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 81393:
+/***/ 15376:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -246272,7 +246271,7 @@ exports.libraryagent_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var libraryagent_v1;
 (function (libraryagent_v1) {
     /**
@@ -246498,7 +246497,7 @@ var libraryagent_v1;
 
 /***/ }),
 
-/***/ 78579:
+/***/ 15343:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -246518,8 +246517,8 @@ var libraryagent_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.licensing_v1 = exports.auth = exports.licensing = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(92735);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(76142);
 Object.defineProperty(exports, "licensing_v1", ({ enumerable: true, get: function () { return v1_1.licensing_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.licensing_v1.Licensing,
@@ -246530,13 +246529,13 @@ function licensing(versionOrOptions) {
 exports.licensing = licensing;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 92735:
+/***/ 76142:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -246561,7 +246560,7 @@ exports.licensing_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var licensing_v1;
 (function (licensing_v1) {
     /**
@@ -246819,7 +246818,7 @@ var licensing_v1;
 
 /***/ }),
 
-/***/ 90393:
+/***/ 15492:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -246839,8 +246838,8 @@ var licensing_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.lifesciences_v2beta = exports.auth = exports.lifesciences = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2beta_1 = __nccwpck_require__(51937);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2beta_1 = __nccwpck_require__(78111);
 Object.defineProperty(exports, "lifesciences_v2beta", ({ enumerable: true, get: function () { return v2beta_1.lifesciences_v2beta; } }));
 exports.VERSIONS = {
     v2beta: v2beta_1.lifesciences_v2beta.Lifesciences,
@@ -246851,13 +246850,13 @@ function lifesciences(versionOrOptions) {
 exports.lifesciences = lifesciences;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 51937:
+/***/ 78111:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -246882,7 +246881,7 @@ exports.lifesciences_v2beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var lifesciences_v2beta;
 (function (lifesciences_v2beta) {
     /**
@@ -247124,7 +247123,7 @@ var lifesciences_v2beta;
 
 /***/ }),
 
-/***/ 80524:
+/***/ 69156:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -247144,8 +247143,8 @@ var lifesciences_v2beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.localservices_v1 = exports.auth = exports.localservices = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(94437);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(44955);
 Object.defineProperty(exports, "localservices_v1", ({ enumerable: true, get: function () { return v1_1.localservices_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.localservices_v1.Localservices,
@@ -247156,13 +247155,13 @@ function localservices(versionOrOptions) {
 exports.localservices = localservices;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 94437:
+/***/ 44955:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -247187,7 +247186,7 @@ exports.localservices_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var localservices_v1;
 (function (localservices_v1) {
     /**
@@ -247291,7 +247290,7 @@ var localservices_v1;
 
 /***/ }),
 
-/***/ 30512:
+/***/ 38982:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -247311,8 +247310,8 @@ var localservices_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.logging_v2 = exports.auth = exports.logging = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(53912);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(58904);
 Object.defineProperty(exports, "logging_v2", ({ enumerable: true, get: function () { return v2_1.logging_v2; } }));
 exports.VERSIONS = {
     v2: v2_1.logging_v2.Logging,
@@ -247323,13 +247322,13 @@ function logging(versionOrOptions) {
 exports.logging = logging;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 53912:
+/***/ 58904:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -247354,7 +247353,7 @@ exports.logging_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var logging_v2;
 (function (logging_v2) {
     /**
@@ -252049,7 +252048,7 @@ var logging_v2;
 
 /***/ }),
 
-/***/ 68158:
+/***/ 96044:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -252069,12 +252068,12 @@ var logging_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.managedidentities_v1beta1 = exports.managedidentities_v1alpha1 = exports.managedidentities_v1 = exports.auth = exports.managedidentities = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(67834);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(33859);
 Object.defineProperty(exports, "managedidentities_v1", ({ enumerable: true, get: function () { return v1_1.managedidentities_v1; } }));
-const v1alpha1_1 = __nccwpck_require__(93488);
+const v1alpha1_1 = __nccwpck_require__(7824);
 Object.defineProperty(exports, "managedidentities_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_1.managedidentities_v1alpha1; } }));
-const v1beta1_1 = __nccwpck_require__(81188);
+const v1beta1_1 = __nccwpck_require__(38470);
 Object.defineProperty(exports, "managedidentities_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.managedidentities_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.managedidentities_v1.Managedidentities,
@@ -252087,13 +252086,13 @@ function managedidentities(versionOrOptions) {
 exports.managedidentities = managedidentities;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 67834:
+/***/ 33859:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -252118,7 +252117,7 @@ exports.managedidentities_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var managedidentities_v1;
 (function (managedidentities_v1) {
     /**
@@ -252770,7 +252769,7 @@ var managedidentities_v1;
 
 /***/ }),
 
-/***/ 93488:
+/***/ 7824:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -252795,7 +252794,7 @@ exports.managedidentities_v1alpha1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var managedidentities_v1alpha1;
 (function (managedidentities_v1alpha1) {
     /**
@@ -253516,7 +253515,7 @@ var managedidentities_v1alpha1;
 
 /***/ }),
 
-/***/ 81188:
+/***/ 38470:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -253541,7 +253540,7 @@ exports.managedidentities_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var managedidentities_v1beta1;
 (function (managedidentities_v1beta1) {
     /**
@@ -254262,7 +254261,7 @@ var managedidentities_v1beta1;
 
 /***/ }),
 
-/***/ 11327:
+/***/ 42133:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -254282,8 +254281,8 @@ var managedidentities_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.manufacturers_v1 = exports.auth = exports.manufacturers = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(21903);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(95752);
 Object.defineProperty(exports, "manufacturers_v1", ({ enumerable: true, get: function () { return v1_1.manufacturers_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.manufacturers_v1.Manufacturers,
@@ -254294,13 +254293,13 @@ function manufacturers(versionOrOptions) {
 exports.manufacturers = manufacturers;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 21903:
+/***/ 95752:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -254325,7 +254324,7 @@ exports.manufacturers_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var manufacturers_v1;
 (function (manufacturers_v1) {
     /**
@@ -254491,7 +254490,7 @@ var manufacturers_v1;
 
 /***/ }),
 
-/***/ 50732:
+/***/ 95152:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -254511,10 +254510,10 @@ var manufacturers_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.memcache_v1beta2 = exports.memcache_v1 = exports.auth = exports.memcache = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(76714);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(2607);
 Object.defineProperty(exports, "memcache_v1", ({ enumerable: true, get: function () { return v1_1.memcache_v1; } }));
-const v1beta2_1 = __nccwpck_require__(37146);
+const v1beta2_1 = __nccwpck_require__(43719);
 Object.defineProperty(exports, "memcache_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.memcache_v1beta2; } }));
 exports.VERSIONS = {
     v1: v1_1.memcache_v1.Memcache,
@@ -254526,13 +254525,13 @@ function memcache(versionOrOptions) {
 exports.memcache = memcache;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 76714:
+/***/ 2607:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -254557,7 +254556,7 @@ exports.memcache_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var memcache_v1;
 (function (memcache_v1) {
     /**
@@ -255020,7 +255019,7 @@ var memcache_v1;
 
 /***/ }),
 
-/***/ 37146:
+/***/ 43719:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -255045,7 +255044,7 @@ exports.memcache_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var memcache_v1beta2;
 (function (memcache_v1beta2) {
     /**
@@ -255504,7 +255503,7 @@ var memcache_v1beta2;
 
 /***/ }),
 
-/***/ 44849:
+/***/ 95616:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -255524,8 +255523,8 @@ var memcache_v1beta2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ml_v1 = exports.auth = exports.ml = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(3540);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(67327);
 Object.defineProperty(exports, "ml_v1", ({ enumerable: true, get: function () { return v1_1.ml_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.ml_v1.Ml,
@@ -255536,13 +255535,13 @@ function ml(versionOrOptions) {
 exports.ml = ml;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 3540:
+/***/ 67327:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -255567,7 +255566,7 @@ exports.ml_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var ml_v1;
 (function (ml_v1) {
     /**
@@ -257082,7 +257081,7 @@ var ml_v1;
 
 /***/ }),
 
-/***/ 79384:
+/***/ 17103:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -257102,10 +257101,10 @@ var ml_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.monitoring_v3 = exports.monitoring_v1 = exports.auth = exports.monitoring = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(84444);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(58606);
 Object.defineProperty(exports, "monitoring_v1", ({ enumerable: true, get: function () { return v1_1.monitoring_v1; } }));
-const v3_1 = __nccwpck_require__(44636);
+const v3_1 = __nccwpck_require__(86212);
 Object.defineProperty(exports, "monitoring_v3", ({ enumerable: true, get: function () { return v3_1.monitoring_v3; } }));
 exports.VERSIONS = {
     v1: v1_1.monitoring_v1.Monitoring,
@@ -257117,13 +257116,13 @@ function monitoring(versionOrOptions) {
 exports.monitoring = monitoring;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 84444:
+/***/ 58606:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -257148,7 +257147,7 @@ exports.monitoring_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var monitoring_v1;
 (function (monitoring_v1) {
     /**
@@ -257345,7 +257344,7 @@ var monitoring_v1;
 
 /***/ }),
 
-/***/ 44636:
+/***/ 86212:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -257370,7 +257369,7 @@ exports.monitoring_v3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var monitoring_v3;
 (function (monitoring_v3) {
     /**
@@ -258948,7 +258947,7 @@ var monitoring_v3;
 
 /***/ }),
 
-/***/ 58795:
+/***/ 46734:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -258968,10 +258967,10 @@ var monitoring_v3;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.networkmanagement_v1beta1 = exports.networkmanagement_v1 = exports.auth = exports.networkmanagement = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(81425);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(34649);
 Object.defineProperty(exports, "networkmanagement_v1", ({ enumerable: true, get: function () { return v1_1.networkmanagement_v1; } }));
-const v1beta1_1 = __nccwpck_require__(9915);
+const v1beta1_1 = __nccwpck_require__(92364);
 Object.defineProperty(exports, "networkmanagement_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.networkmanagement_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.networkmanagement_v1.Networkmanagement,
@@ -258983,13 +258982,13 @@ function networkmanagement(versionOrOptions) {
 exports.networkmanagement = networkmanagement;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 81425:
+/***/ 34649:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -259014,7 +259013,7 @@ exports.networkmanagement_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var networkmanagement_v1;
 (function (networkmanagement_v1) {
     /**
@@ -259542,7 +259541,7 @@ var networkmanagement_v1;
 
 /***/ }),
 
-/***/ 9915:
+/***/ 92364:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -259567,7 +259566,7 @@ exports.networkmanagement_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var networkmanagement_v1beta1;
 (function (networkmanagement_v1beta1) {
     /**
@@ -260095,7 +260094,7 @@ var networkmanagement_v1beta1;
 
 /***/ }),
 
-/***/ 73692:
+/***/ 78165:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -260115,8 +260114,8 @@ var networkmanagement_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.notebooks_v1 = exports.auth = exports.notebooks = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(61888);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(86344);
 Object.defineProperty(exports, "notebooks_v1", ({ enumerable: true, get: function () { return v1_1.notebooks_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.notebooks_v1.Notebooks,
@@ -260127,13 +260126,13 @@ function notebooks(versionOrOptions) {
 exports.notebooks = notebooks;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 61888:
+/***/ 86344:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -260158,7 +260157,7 @@ exports.notebooks_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var notebooks_v1;
 (function (notebooks_v1) {
     /**
@@ -261089,7 +261088,7 @@ var notebooks_v1;
 
 /***/ }),
 
-/***/ 65759:
+/***/ 24210:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -261109,8 +261108,8 @@ var notebooks_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.oauth2_v2 = exports.auth = exports.oauth2 = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(32241);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(41948);
 Object.defineProperty(exports, "oauth2_v2", ({ enumerable: true, get: function () { return v2_1.oauth2_v2; } }));
 exports.VERSIONS = {
     v2: v2_1.oauth2_v2.Oauth2,
@@ -261121,13 +261120,13 @@ function oauth2(versionOrOptions) {
 exports.oauth2 = oauth2;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 32241:
+/***/ 41948:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -261152,7 +261151,7 @@ exports.oauth2_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var oauth2_v2;
 (function (oauth2_v2) {
     /**
@@ -261292,7 +261291,7 @@ var oauth2_v2;
 
 /***/ }),
 
-/***/ 74829:
+/***/ 79961:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -261312,10 +261311,10 @@ var oauth2_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.osconfig_v1beta = exports.osconfig_v1 = exports.auth = exports.osconfig = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(60004);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(25844);
 Object.defineProperty(exports, "osconfig_v1", ({ enumerable: true, get: function () { return v1_1.osconfig_v1; } }));
-const v1beta_1 = __nccwpck_require__(99482);
+const v1beta_1 = __nccwpck_require__(89934);
 Object.defineProperty(exports, "osconfig_v1beta", ({ enumerable: true, get: function () { return v1beta_1.osconfig_v1beta; } }));
 exports.VERSIONS = {
     v1: v1_1.osconfig_v1.Osconfig,
@@ -261327,13 +261326,13 @@ function osconfig(versionOrOptions) {
 exports.osconfig = osconfig;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 60004:
+/***/ 25844:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -261358,7 +261357,7 @@ exports.osconfig_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var osconfig_v1;
 (function (osconfig_v1) {
     /**
@@ -261693,7 +261692,7 @@ var osconfig_v1;
 
 /***/ }),
 
-/***/ 99482:
+/***/ 89934:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -261718,7 +261717,7 @@ exports.osconfig_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var osconfig_v1beta;
 (function (osconfig_v1beta) {
     /**
@@ -262260,7 +262259,7 @@ var osconfig_v1beta;
 
 /***/ }),
 
-/***/ 38815:
+/***/ 10976:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -262280,12 +262279,12 @@ var osconfig_v1beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.oslogin_v1beta = exports.oslogin_v1alpha = exports.oslogin_v1 = exports.auth = exports.oslogin = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(14005);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(6175);
 Object.defineProperty(exports, "oslogin_v1", ({ enumerable: true, get: function () { return v1_1.oslogin_v1; } }));
-const v1alpha_1 = __nccwpck_require__(72152);
+const v1alpha_1 = __nccwpck_require__(89675);
 Object.defineProperty(exports, "oslogin_v1alpha", ({ enumerable: true, get: function () { return v1alpha_1.oslogin_v1alpha; } }));
-const v1beta_1 = __nccwpck_require__(50779);
+const v1beta_1 = __nccwpck_require__(53749);
 Object.defineProperty(exports, "oslogin_v1beta", ({ enumerable: true, get: function () { return v1beta_1.oslogin_v1beta; } }));
 exports.VERSIONS = {
     v1: v1_1.oslogin_v1.Oslogin,
@@ -262298,13 +262297,13 @@ function oslogin(versionOrOptions) {
 exports.oslogin = oslogin;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 14005:
+/***/ 6175:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -262329,7 +262328,7 @@ exports.oslogin_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var oslogin_v1;
 (function (oslogin_v1) {
     /**
@@ -262564,7 +262563,7 @@ var oslogin_v1;
 
 /***/ }),
 
-/***/ 72152:
+/***/ 89675:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -262589,7 +262588,7 @@ exports.oslogin_v1alpha = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var oslogin_v1alpha;
 (function (oslogin_v1alpha) {
     /**
@@ -262824,7 +262823,7 @@ var oslogin_v1alpha;
 
 /***/ }),
 
-/***/ 50779:
+/***/ 53749:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -262849,7 +262848,7 @@ exports.oslogin_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var oslogin_v1beta;
 (function (oslogin_v1beta) {
     /**
@@ -263084,7 +263083,7 @@ var oslogin_v1beta;
 
 /***/ }),
 
-/***/ 26825:
+/***/ 56094:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -263104,8 +263103,8 @@ var oslogin_v1beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.pagespeedonline_v5 = exports.auth = exports.pagespeedonline = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v5_1 = __nccwpck_require__(72258);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v5_1 = __nccwpck_require__(7941);
 Object.defineProperty(exports, "pagespeedonline_v5", ({ enumerable: true, get: function () { return v5_1.pagespeedonline_v5; } }));
 exports.VERSIONS = {
     v5: v5_1.pagespeedonline_v5.Pagespeedonline,
@@ -263116,13 +263115,13 @@ function pagespeedonline(versionOrOptions) {
 exports.pagespeedonline = pagespeedonline;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 72258:
+/***/ 7941:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -263147,7 +263146,7 @@ exports.pagespeedonline_v5 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var pagespeedonline_v5;
 (function (pagespeedonline_v5) {
     /**
@@ -263213,7 +263212,7 @@ var pagespeedonline_v5;
 
 /***/ }),
 
-/***/ 93639:
+/***/ 34150:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -263233,8 +263232,8 @@ var pagespeedonline_v5;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.people_v1 = exports.auth = exports.people = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(76850);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(45649);
 Object.defineProperty(exports, "people_v1", ({ enumerable: true, get: function () { return v1_1.people_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.people_v1.People,
@@ -263245,13 +263244,13 @@ function people(versionOrOptions) {
 exports.people = people;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 76850:
+/***/ 45649:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -263276,7 +263275,7 @@ exports.people_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var people_v1;
 (function (people_v1) {
     /**
@@ -263927,7 +263926,7 @@ var people_v1;
 
 /***/ }),
 
-/***/ 44553:
+/***/ 27757:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -263947,8 +263946,8 @@ var people_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.playablelocations_v3 = exports.auth = exports.playablelocations = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v3_1 = __nccwpck_require__(97278);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v3_1 = __nccwpck_require__(15882);
 Object.defineProperty(exports, "playablelocations_v3", ({ enumerable: true, get: function () { return v3_1.playablelocations_v3; } }));
 exports.VERSIONS = {
     v3: v3_1.playablelocations_v3.Playablelocations,
@@ -263959,13 +263958,13 @@ function playablelocations(versionOrOptions) {
 exports.playablelocations = playablelocations;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 97278:
+/***/ 15882:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -263990,7 +263989,7 @@ exports.playablelocations_v3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var playablelocations_v3;
 (function (playablelocations_v3) {
     /**
@@ -264118,7 +264117,7 @@ var playablelocations_v3;
 
 /***/ }),
 
-/***/ 23016:
+/***/ 3515:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -264138,8 +264137,8 @@ var playablelocations_v3;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.playcustomapp_v1 = exports.auth = exports.playcustomapp = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(68197);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(37618);
 Object.defineProperty(exports, "playcustomapp_v1", ({ enumerable: true, get: function () { return v1_1.playcustomapp_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.playcustomapp_v1.Playcustomapp,
@@ -264150,13 +264149,13 @@ function playcustomapp(versionOrOptions) {
 exports.playcustomapp = playcustomapp;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 68197:
+/***/ 37618:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -264181,7 +264180,7 @@ exports.playcustomapp_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var playcustomapp_v1;
 (function (playcustomapp_v1) {
     /**
@@ -264255,7 +264254,7 @@ var playcustomapp_v1;
 
 /***/ }),
 
-/***/ 59788:
+/***/ 21257:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -264275,8 +264274,8 @@ var playcustomapp_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.plus_v1 = exports.auth = exports.plus = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(66610);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(52964);
 Object.defineProperty(exports, "plus_v1", ({ enumerable: true, get: function () { return v1_1.plus_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.plus_v1.Plus,
@@ -264287,13 +264286,13 @@ function plus(versionOrOptions) {
 exports.plus = plus;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 66610:
+/***/ 52964:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -264318,7 +264317,7 @@ exports.plus_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var plus_v1;
 (function (plus_v1) {
     /**
@@ -264643,7 +264642,7 @@ var plus_v1;
 
 /***/ }),
 
-/***/ 42168:
+/***/ 61346:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -264663,10 +264662,10 @@ var plus_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.policytroubleshooter_v1beta = exports.policytroubleshooter_v1 = exports.auth = exports.policytroubleshooter = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(87309);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(87765);
 Object.defineProperty(exports, "policytroubleshooter_v1", ({ enumerable: true, get: function () { return v1_1.policytroubleshooter_v1; } }));
-const v1beta_1 = __nccwpck_require__(90694);
+const v1beta_1 = __nccwpck_require__(34927);
 Object.defineProperty(exports, "policytroubleshooter_v1beta", ({ enumerable: true, get: function () { return v1beta_1.policytroubleshooter_v1beta; } }));
 exports.VERSIONS = {
     v1: v1_1.policytroubleshooter_v1.Policytroubleshooter,
@@ -264678,13 +264677,13 @@ function policytroubleshooter(versionOrOptions) {
 exports.policytroubleshooter = policytroubleshooter;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 87309:
+/***/ 87765:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -264709,7 +264708,7 @@ exports.policytroubleshooter_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var policytroubleshooter_v1;
 (function (policytroubleshooter_v1) {
     /**
@@ -264774,7 +264773,7 @@ var policytroubleshooter_v1;
 
 /***/ }),
 
-/***/ 90694:
+/***/ 34927:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -264799,7 +264798,7 @@ exports.policytroubleshooter_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var policytroubleshooter_v1beta;
 (function (policytroubleshooter_v1beta) {
     /**
@@ -264864,7 +264863,7 @@ var policytroubleshooter_v1beta;
 
 /***/ }),
 
-/***/ 35488:
+/***/ 61679:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -264884,8 +264883,8 @@ var policytroubleshooter_v1beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.poly_v1 = exports.auth = exports.poly = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(54121);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(47406);
 Object.defineProperty(exports, "poly_v1", ({ enumerable: true, get: function () { return v1_1.poly_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.poly_v1.Poly,
@@ -264896,13 +264895,13 @@ function poly(versionOrOptions) {
 exports.poly = poly;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 54121:
+/***/ 47406:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -264927,7 +264926,7 @@ exports.poly_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var poly_v1;
 (function (poly_v1) {
     /**
@@ -265105,7 +265104,7 @@ var poly_v1;
 
 /***/ }),
 
-/***/ 67815:
+/***/ 82552:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -265125,8 +265124,8 @@ var poly_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.privateca_v1beta1 = exports.auth = exports.privateca = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(64639);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(83250);
 Object.defineProperty(exports, "privateca_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.privateca_v1beta1; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.privateca_v1beta1.Privateca,
@@ -265137,13 +265136,13 @@ function privateca(versionOrOptions) {
 exports.privateca = privateca;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 64639:
+/***/ 83250:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -265168,7 +265167,7 @@ exports.privateca_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var privateca_v1beta1;
 (function (privateca_v1beta1) {
     /**
@@ -266330,7 +266329,7 @@ var privateca_v1beta1;
 
 /***/ }),
 
-/***/ 64203:
+/***/ 38673:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -266350,8 +266349,8 @@ var privateca_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.prod_tt_sasportal_v1alpha1 = exports.auth = exports.prod_tt_sasportal = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1alpha1_1 = __nccwpck_require__(79181);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1alpha1_1 = __nccwpck_require__(25207);
 Object.defineProperty(exports, "prod_tt_sasportal_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_1.prod_tt_sasportal_v1alpha1; } }));
 exports.VERSIONS = {
     v1alpha1: v1alpha1_1.prod_tt_sasportal_v1alpha1.Prod_tt_sasportal,
@@ -266362,13 +266361,13 @@ function prod_tt_sasportal(versionOrOptions) {
 exports.prod_tt_sasportal = prod_tt_sasportal;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 79181:
+/***/ 25207:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -266393,7 +266392,7 @@ exports.prod_tt_sasportal_v1alpha1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var prod_tt_sasportal_v1alpha1;
 (function (prod_tt_sasportal_v1alpha1) {
     /**
@@ -268583,7 +268582,7 @@ var prod_tt_sasportal_v1alpha1;
 
 /***/ }),
 
-/***/ 52964:
+/***/ 6750:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -268603,12 +268602,12 @@ var prod_tt_sasportal_v1alpha1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.pubsub_v1beta2 = exports.pubsub_v1beta1a = exports.pubsub_v1 = exports.auth = exports.pubsub = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(4533);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(95945);
 Object.defineProperty(exports, "pubsub_v1", ({ enumerable: true, get: function () { return v1_1.pubsub_v1; } }));
-const v1beta1a_1 = __nccwpck_require__(12718);
+const v1beta1a_1 = __nccwpck_require__(97765);
 Object.defineProperty(exports, "pubsub_v1beta1a", ({ enumerable: true, get: function () { return v1beta1a_1.pubsub_v1beta1a; } }));
-const v1beta2_1 = __nccwpck_require__(84449);
+const v1beta2_1 = __nccwpck_require__(69445);
 Object.defineProperty(exports, "pubsub_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.pubsub_v1beta2; } }));
 exports.VERSIONS = {
     v1: v1_1.pubsub_v1.Pubsub,
@@ -268621,13 +268620,13 @@ function pubsub(versionOrOptions) {
 exports.pubsub = pubsub;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 4533:
+/***/ 95945:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -268652,7 +268651,7 @@ exports.pubsub_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var pubsub_v1;
 (function (pubsub_v1) {
     /**
@@ -269745,7 +269744,7 @@ var pubsub_v1;
 
 /***/ }),
 
-/***/ 12718:
+/***/ 97765:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -269770,7 +269769,7 @@ exports.pubsub_v1beta1a = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var pubsub_v1beta1a;
 (function (pubsub_v1beta1a) {
     /**
@@ -270272,7 +270271,7 @@ var pubsub_v1beta1a;
 
 /***/ }),
 
-/***/ 84449:
+/***/ 69445:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -270297,7 +270296,7 @@ exports.pubsub_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var pubsub_v1beta2;
 (function (pubsub_v1beta2) {
     /**
@@ -270973,7 +270972,7 @@ var pubsub_v1beta2;
 
 /***/ }),
 
-/***/ 79554:
+/***/ 74306:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -270993,8 +270992,8 @@ var pubsub_v1beta2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.pubsublite_v1 = exports.auth = exports.pubsublite = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(44713);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(59573);
 Object.defineProperty(exports, "pubsublite_v1", ({ enumerable: true, get: function () { return v1_1.pubsublite_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.pubsublite_v1.Pubsublite,
@@ -271005,13 +271004,13 @@ function pubsublite(versionOrOptions) {
 exports.pubsublite = pubsublite;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 44713:
+/***/ 59573:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -271036,7 +271035,7 @@ exports.pubsublite_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var pubsublite_v1;
 (function (pubsublite_v1) {
     /**
@@ -271603,7 +271602,7 @@ var pubsublite_v1;
 
 /***/ }),
 
-/***/ 99073:
+/***/ 99935:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -271623,8 +271622,8 @@ var pubsublite_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.realtimebidding_v1 = exports.auth = exports.realtimebidding = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(7185);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(17790);
 Object.defineProperty(exports, "realtimebidding_v1", ({ enumerable: true, get: function () { return v1_1.realtimebidding_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.realtimebidding_v1.Realtimebidding,
@@ -271635,13 +271634,13 @@ function realtimebidding(versionOrOptions) {
 exports.realtimebidding = realtimebidding;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 7185:
+/***/ 17790:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -271666,7 +271665,7 @@ exports.realtimebidding_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var realtimebidding_v1;
 (function (realtimebidding_v1) {
     /**
@@ -272573,7 +272572,7 @@ var realtimebidding_v1;
 
 /***/ }),
 
-/***/ 82425:
+/***/ 8112:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -272593,8 +272592,8 @@ var realtimebidding_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.recommendationengine_v1beta1 = exports.auth = exports.recommendationengine = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(40502);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(85338);
 Object.defineProperty(exports, "recommendationengine_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.recommendationengine_v1beta1; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.recommendationengine_v1beta1.Recommendationengine,
@@ -272605,13 +272604,13 @@ function recommendationengine(versionOrOptions) {
 exports.recommendationengine = recommendationengine;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 40502:
+/***/ 85338:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -272636,7 +272635,7 @@ exports.recommendationengine_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var recommendationengine_v1beta1;
 (function (recommendationengine_v1beta1) {
     /**
@@ -273416,7 +273415,7 @@ var recommendationengine_v1beta1;
 
 /***/ }),
 
-/***/ 10063:
+/***/ 5022:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -273436,10 +273435,10 @@ var recommendationengine_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.recommender_v1beta1 = exports.recommender_v1 = exports.auth = exports.recommender = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(88430);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(80617);
 Object.defineProperty(exports, "recommender_v1", ({ enumerable: true, get: function () { return v1_1.recommender_v1; } }));
-const v1beta1_1 = __nccwpck_require__(79215);
+const v1beta1_1 = __nccwpck_require__(17404);
 Object.defineProperty(exports, "recommender_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.recommender_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.recommender_v1.Recommender,
@@ -273451,13 +273450,13 @@ function recommender(versionOrOptions) {
 exports.recommender = recommender;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 88430:
+/***/ 80617:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -273482,7 +273481,7 @@ exports.recommender_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var recommender_v1;
 (function (recommender_v1) {
     /**
@@ -273800,7 +273799,7 @@ var recommender_v1;
 
 /***/ }),
 
-/***/ 79215:
+/***/ 17404:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -273825,7 +273824,7 @@ exports.recommender_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var recommender_v1beta1;
 (function (recommender_v1beta1) {
     /**
@@ -274143,7 +274142,7 @@ var recommender_v1beta1;
 
 /***/ }),
 
-/***/ 12298:
+/***/ 82200:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -274163,10 +274162,10 @@ var recommender_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.redis_v1beta1 = exports.redis_v1 = exports.auth = exports.redis = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(71982);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(85623);
 Object.defineProperty(exports, "redis_v1", ({ enumerable: true, get: function () { return v1_1.redis_v1; } }));
-const v1beta1_1 = __nccwpck_require__(58452);
+const v1beta1_1 = __nccwpck_require__(60882);
 Object.defineProperty(exports, "redis_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.redis_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.redis_v1.Redis,
@@ -274178,13 +274177,13 @@ function redis(versionOrOptions) {
 exports.redis = redis;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 71982:
+/***/ 85623:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -274209,7 +274208,7 @@ exports.redis_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var redis_v1;
 (function (redis_v1) {
     /**
@@ -274761,7 +274760,7 @@ var redis_v1;
 
 /***/ }),
 
-/***/ 58452:
+/***/ 60882:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -274786,7 +274785,7 @@ exports.redis_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var redis_v1beta1;
 (function (redis_v1beta1) {
     /**
@@ -275338,7 +275337,7 @@ var redis_v1beta1;
 
 /***/ }),
 
-/***/ 18830:
+/***/ 32733:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -275358,12 +275357,12 @@ var redis_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.remotebuildexecution_v2 = exports.remotebuildexecution_v1alpha = exports.remotebuildexecution_v1 = exports.auth = exports.remotebuildexecution = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(43035);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(41872);
 Object.defineProperty(exports, "remotebuildexecution_v1", ({ enumerable: true, get: function () { return v1_1.remotebuildexecution_v1; } }));
-const v1alpha_1 = __nccwpck_require__(66089);
+const v1alpha_1 = __nccwpck_require__(6814);
 Object.defineProperty(exports, "remotebuildexecution_v1alpha", ({ enumerable: true, get: function () { return v1alpha_1.remotebuildexecution_v1alpha; } }));
-const v2_1 = __nccwpck_require__(75314);
+const v2_1 = __nccwpck_require__(92233);
 Object.defineProperty(exports, "remotebuildexecution_v2", ({ enumerable: true, get: function () { return v2_1.remotebuildexecution_v2; } }));
 exports.VERSIONS = {
     v1: v1_1.remotebuildexecution_v1.Remotebuildexecution,
@@ -275376,13 +275375,13 @@ function remotebuildexecution(versionOrOptions) {
 exports.remotebuildexecution = remotebuildexecution;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 43035:
+/***/ 41872:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -275407,7 +275406,7 @@ exports.remotebuildexecution_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var remotebuildexecution_v1;
 (function (remotebuildexecution_v1) {
     /**
@@ -275647,7 +275646,7 @@ var remotebuildexecution_v1;
 
 /***/ }),
 
-/***/ 66089:
+/***/ 6814:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -275672,7 +275671,7 @@ exports.remotebuildexecution_v1alpha = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var remotebuildexecution_v1alpha;
 (function (remotebuildexecution_v1alpha) {
     /**
@@ -276069,7 +276068,7 @@ var remotebuildexecution_v1alpha;
 
 /***/ }),
 
-/***/ 75314:
+/***/ 92233:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -276094,7 +276093,7 @@ exports.remotebuildexecution_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var remotebuildexecution_v2;
 (function (remotebuildexecution_v2) {
     /**
@@ -276433,7 +276432,7 @@ var remotebuildexecution_v2;
 
 /***/ }),
 
-/***/ 31812:
+/***/ 53355:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -276453,8 +276452,8 @@ var remotebuildexecution_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.reseller_v1 = exports.auth = exports.reseller = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(41522);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(30050);
 Object.defineProperty(exports, "reseller_v1", ({ enumerable: true, get: function () { return v1_1.reseller_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.reseller_v1.Reseller,
@@ -276465,13 +276464,13 @@ function reseller(versionOrOptions) {
 exports.reseller = reseller;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 41522:
+/***/ 30050:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -276496,7 +276495,7 @@ exports.reseller_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var reseller_v1;
 (function (reseller_v1) {
     /**
@@ -277076,7 +277075,7 @@ var reseller_v1;
 
 /***/ }),
 
-/***/ 63117:
+/***/ 90474:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -277096,12 +277095,12 @@ var reseller_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.run_v1beta1 = exports.run_v1alpha1 = exports.run_v1 = exports.auth = exports.run = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(85630);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(34077);
 Object.defineProperty(exports, "run_v1", ({ enumerable: true, get: function () { return v1_1.run_v1; } }));
-const v1alpha1_1 = __nccwpck_require__(46968);
+const v1alpha1_1 = __nccwpck_require__(5706);
 Object.defineProperty(exports, "run_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_1.run_v1alpha1; } }));
-const v1beta1_1 = __nccwpck_require__(46461);
+const v1beta1_1 = __nccwpck_require__(66424);
 Object.defineProperty(exports, "run_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.run_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.run_v1.Run,
@@ -277114,13 +277113,13 @@ function run(versionOrOptions) {
 exports.run = run;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 85630:
+/***/ 34077:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -277145,7 +277144,7 @@ exports.run_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var run_v1;
 (function (run_v1) {
     /**
@@ -278495,7 +278494,7 @@ var run_v1;
 
 /***/ }),
 
-/***/ 46968:
+/***/ 5706:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -278520,7 +278519,7 @@ exports.run_v1alpha1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var run_v1alpha1;
 (function (run_v1alpha1) {
     /**
@@ -281277,7 +281276,7 @@ var run_v1alpha1;
 
 /***/ }),
 
-/***/ 46461:
+/***/ 66424:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -281302,7 +281301,7 @@ exports.run_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var run_v1beta1;
 (function (run_v1beta1) {
     /**
@@ -281497,7 +281496,7 @@ var run_v1beta1;
 
 /***/ }),
 
-/***/ 65465:
+/***/ 24565:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -281517,10 +281516,10 @@ var run_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.runtimeconfig_v1beta1 = exports.runtimeconfig_v1 = exports.auth = exports.runtimeconfig = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(87550);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(25096);
 Object.defineProperty(exports, "runtimeconfig_v1", ({ enumerable: true, get: function () { return v1_1.runtimeconfig_v1; } }));
-const v1beta1_1 = __nccwpck_require__(39534);
+const v1beta1_1 = __nccwpck_require__(77919);
 Object.defineProperty(exports, "runtimeconfig_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.runtimeconfig_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.runtimeconfig_v1.Runtimeconfig,
@@ -281532,13 +281531,13 @@ function runtimeconfig(versionOrOptions) {
 exports.runtimeconfig = runtimeconfig;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 87550:
+/***/ 25096:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -281563,7 +281562,7 @@ exports.runtimeconfig_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var runtimeconfig_v1;
 (function (runtimeconfig_v1) {
     /**
@@ -281690,7 +281689,7 @@ var runtimeconfig_v1;
 
 /***/ }),
 
-/***/ 39534:
+/***/ 77919:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -281715,7 +281714,7 @@ exports.runtimeconfig_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var runtimeconfig_v1beta1;
 (function (runtimeconfig_v1beta1) {
     /**
@@ -282460,7 +282459,7 @@ var runtimeconfig_v1beta1;
 
 /***/ }),
 
-/***/ 92428:
+/***/ 86153:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -282480,8 +282479,8 @@ var runtimeconfig_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.safebrowsing_v4 = exports.auth = exports.safebrowsing = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v4_1 = __nccwpck_require__(36301);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v4_1 = __nccwpck_require__(5647);
 Object.defineProperty(exports, "safebrowsing_v4", ({ enumerable: true, get: function () { return v4_1.safebrowsing_v4; } }));
 exports.VERSIONS = {
     v4: v4_1.safebrowsing_v4.Safebrowsing,
@@ -282492,13 +282491,13 @@ function safebrowsing(versionOrOptions) {
 exports.safebrowsing = safebrowsing;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 36301:
+/***/ 5647:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -282523,7 +282522,7 @@ exports.safebrowsing_v4 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var safebrowsing_v4;
 (function (safebrowsing_v4) {
     /**
@@ -282815,7 +282814,7 @@ var safebrowsing_v4;
 
 /***/ }),
 
-/***/ 5085:
+/***/ 16160:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -282835,8 +282834,8 @@ var safebrowsing_v4;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.sasportal_v1alpha1 = exports.auth = exports.sasportal = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1alpha1_1 = __nccwpck_require__(88668);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1alpha1_1 = __nccwpck_require__(87892);
 Object.defineProperty(exports, "sasportal_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_1.sasportal_v1alpha1; } }));
 exports.VERSIONS = {
     v1alpha1: v1alpha1_1.sasportal_v1alpha1.Sasportal,
@@ -282847,13 +282846,13 @@ function sasportal(versionOrOptions) {
 exports.sasportal = sasportal;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 88668:
+/***/ 87892:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -282878,7 +282877,7 @@ exports.sasportal_v1alpha1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var sasportal_v1alpha1;
 (function (sasportal_v1alpha1) {
     /**
@@ -285068,7 +285067,7 @@ var sasportal_v1alpha1;
 
 /***/ }),
 
-/***/ 6911:
+/***/ 38362:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -285088,8 +285087,8 @@ var sasportal_v1alpha1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.script_v1 = exports.auth = exports.script = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(51231);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(46893);
 Object.defineProperty(exports, "script_v1", ({ enumerable: true, get: function () { return v1_1.script_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.script_v1.Script,
@@ -285100,13 +285099,13 @@ function script(versionOrOptions) {
 exports.script = script;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 51231:
+/***/ 46893:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -285131,7 +285130,7 @@ exports.script_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var script_v1;
 (function (script_v1) {
     /**
@@ -285686,7 +285685,7 @@ var script_v1;
 
 /***/ }),
 
-/***/ 66349:
+/***/ 45270:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -285706,8 +285705,8 @@ var script_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.searchconsole_v1 = exports.auth = exports.searchconsole = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(90005);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(88673);
 Object.defineProperty(exports, "searchconsole_v1", ({ enumerable: true, get: function () { return v1_1.searchconsole_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.searchconsole_v1.Searchconsole,
@@ -285718,13 +285717,13 @@ function searchconsole(versionOrOptions) {
 exports.searchconsole = searchconsole;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 90005:
+/***/ 88673:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -285749,7 +285748,7 @@ exports.searchconsole_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var searchconsole_v1;
 (function (searchconsole_v1) {
     /**
@@ -286114,7 +286113,7 @@ var searchconsole_v1;
 
 /***/ }),
 
-/***/ 92976:
+/***/ 70508:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -286134,10 +286133,10 @@ var searchconsole_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.secretmanager_v1beta1 = exports.secretmanager_v1 = exports.auth = exports.secretmanager = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(57765);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(45219);
 Object.defineProperty(exports, "secretmanager_v1", ({ enumerable: true, get: function () { return v1_1.secretmanager_v1; } }));
-const v1beta1_1 = __nccwpck_require__(29588);
+const v1beta1_1 = __nccwpck_require__(84550);
 Object.defineProperty(exports, "secretmanager_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.secretmanager_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.secretmanager_v1.Secretmanager,
@@ -286149,13 +286148,13 @@ function secretmanager(versionOrOptions) {
 exports.secretmanager = secretmanager;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 57765:
+/***/ 45219:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -286180,7 +286179,7 @@ exports.secretmanager_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var secretmanager_v1;
 (function (secretmanager_v1) {
     /**
@@ -286763,7 +286762,7 @@ var secretmanager_v1;
 
 /***/ }),
 
-/***/ 29588:
+/***/ 84550:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -286788,7 +286787,7 @@ exports.secretmanager_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var secretmanager_v1beta1;
 (function (secretmanager_v1beta1) {
     /**
@@ -287371,7 +287370,7 @@ var secretmanager_v1beta1;
 
 /***/ }),
 
-/***/ 12813:
+/***/ 37302:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -287391,16 +287390,16 @@ var secretmanager_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.securitycenter_v1p1beta1 = exports.securitycenter_v1p1alpha1 = exports.securitycenter_v1beta2 = exports.securitycenter_v1beta1 = exports.securitycenter_v1 = exports.auth = exports.securitycenter = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(39556);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(3489);
 Object.defineProperty(exports, "securitycenter_v1", ({ enumerable: true, get: function () { return v1_1.securitycenter_v1; } }));
-const v1beta1_1 = __nccwpck_require__(89530);
+const v1beta1_1 = __nccwpck_require__(996);
 Object.defineProperty(exports, "securitycenter_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.securitycenter_v1beta1; } }));
-const v1beta2_1 = __nccwpck_require__(19802);
+const v1beta2_1 = __nccwpck_require__(9229);
 Object.defineProperty(exports, "securitycenter_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.securitycenter_v1beta2; } }));
-const v1p1alpha1_1 = __nccwpck_require__(84039);
+const v1p1alpha1_1 = __nccwpck_require__(94165);
 Object.defineProperty(exports, "securitycenter_v1p1alpha1", ({ enumerable: true, get: function () { return v1p1alpha1_1.securitycenter_v1p1alpha1; } }));
-const v1p1beta1_1 = __nccwpck_require__(87136);
+const v1p1beta1_1 = __nccwpck_require__(38049);
 Object.defineProperty(exports, "securitycenter_v1p1beta1", ({ enumerable: true, get: function () { return v1p1beta1_1.securitycenter_v1p1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.securitycenter_v1.Securitycenter,
@@ -287415,13 +287414,13 @@ function securitycenter(versionOrOptions) {
 exports.securitycenter = securitycenter;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 39556:
+/***/ 3489:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -287446,7 +287445,7 @@ exports.securitycenter_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var securitycenter_v1;
 (function (securitycenter_v1) {
     /**
@@ -288998,7 +288997,7 @@ var securitycenter_v1;
 
 /***/ }),
 
-/***/ 89530:
+/***/ 996:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -289023,7 +289022,7 @@ exports.securitycenter_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var securitycenter_v1beta1;
 (function (securitycenter_v1beta1) {
     /**
@@ -289799,7 +289798,7 @@ var securitycenter_v1beta1;
 
 /***/ }),
 
-/***/ 19802:
+/***/ 9229:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -289824,7 +289823,7 @@ exports.securitycenter_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var securitycenter_v1beta2;
 (function (securitycenter_v1beta2) {
     /**
@@ -291249,7 +291248,7 @@ var securitycenter_v1beta2;
 
 /***/ }),
 
-/***/ 84039:
+/***/ 94165:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -291274,7 +291273,7 @@ exports.securitycenter_v1p1alpha1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var securitycenter_v1p1alpha1;
 (function (securitycenter_v1p1alpha1) {
     /**
@@ -291444,7 +291443,7 @@ var securitycenter_v1p1alpha1;
 
 /***/ }),
 
-/***/ 87136:
+/***/ 38049:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -291469,7 +291468,7 @@ exports.securitycenter_v1p1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var securitycenter_v1p1beta1;
 (function (securitycenter_v1p1beta1) {
     /**
@@ -292411,7 +292410,7 @@ var securitycenter_v1p1beta1;
 
 /***/ }),
 
-/***/ 21296:
+/***/ 63139:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -292431,10 +292430,10 @@ var securitycenter_v1p1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.serviceconsumermanagement_v1beta1 = exports.serviceconsumermanagement_v1 = exports.auth = exports.serviceconsumermanagement = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(25943);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(68698);
 Object.defineProperty(exports, "serviceconsumermanagement_v1", ({ enumerable: true, get: function () { return v1_1.serviceconsumermanagement_v1; } }));
-const v1beta1_1 = __nccwpck_require__(65341);
+const v1beta1_1 = __nccwpck_require__(1161);
 Object.defineProperty(exports, "serviceconsumermanagement_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.serviceconsumermanagement_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.serviceconsumermanagement_v1.Serviceconsumermanagement,
@@ -292446,13 +292445,13 @@ function serviceconsumermanagement(versionOrOptions) {
 exports.serviceconsumermanagement = serviceconsumermanagement;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 25943:
+/***/ 68698:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -292477,7 +292476,7 @@ exports.serviceconsumermanagement_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var serviceconsumermanagement_v1;
 (function (serviceconsumermanagement_v1) {
     /**
@@ -292957,7 +292956,7 @@ var serviceconsumermanagement_v1;
 
 /***/ }),
 
-/***/ 65341:
+/***/ 1161:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -292982,7 +292981,7 @@ exports.serviceconsumermanagement_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var serviceconsumermanagement_v1beta1;
 (function (serviceconsumermanagement_v1beta1) {
     /**
@@ -293324,7 +293323,7 @@ var serviceconsumermanagement_v1beta1;
 
 /***/ }),
 
-/***/ 82:
+/***/ 33045:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -293344,10 +293343,10 @@ var serviceconsumermanagement_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.servicecontrol_v2 = exports.servicecontrol_v1 = exports.auth = exports.servicecontrol = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(8308);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(58664);
 Object.defineProperty(exports, "servicecontrol_v1", ({ enumerable: true, get: function () { return v1_1.servicecontrol_v1; } }));
-const v2_1 = __nccwpck_require__(65914);
+const v2_1 = __nccwpck_require__(77409);
 Object.defineProperty(exports, "servicecontrol_v2", ({ enumerable: true, get: function () { return v2_1.servicecontrol_v2; } }));
 exports.VERSIONS = {
     v1: v1_1.servicecontrol_v1.Servicecontrol,
@@ -293359,13 +293358,13 @@ function servicecontrol(versionOrOptions) {
 exports.servicecontrol = servicecontrol;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 8308:
+/***/ 58664:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -293390,7 +293389,7 @@ exports.servicecontrol_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var servicecontrol_v1;
 (function (servicecontrol_v1) {
     /**
@@ -293516,7 +293515,7 @@ var servicecontrol_v1;
 
 /***/ }),
 
-/***/ 65914:
+/***/ 77409:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -293541,7 +293540,7 @@ exports.servicecontrol_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var servicecontrol_v2;
 (function (servicecontrol_v2) {
     /**
@@ -293636,7 +293635,7 @@ var servicecontrol_v2;
 
 /***/ }),
 
-/***/ 24622:
+/***/ 98887:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -293656,8 +293655,8 @@ var servicecontrol_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.servicedirectory_v1beta1 = exports.auth = exports.servicedirectory = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(48288);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(45501);
 Object.defineProperty(exports, "servicedirectory_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.servicedirectory_v1beta1; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.servicedirectory_v1beta1.Servicedirectory,
@@ -293668,13 +293667,13 @@ function servicedirectory(versionOrOptions) {
 exports.servicedirectory = servicedirectory;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 48288:
+/***/ 45501:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -293699,7 +293698,7 @@ exports.servicedirectory_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var servicedirectory_v1beta1;
 (function (servicedirectory_v1beta1) {
     /**
@@ -294506,7 +294505,7 @@ var servicedirectory_v1beta1;
 
 /***/ }),
 
-/***/ 8881:
+/***/ 34951:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -294526,8 +294525,8 @@ var servicedirectory_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.servicemanagement_v1 = exports.auth = exports.servicemanagement = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(31646);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(91846);
 Object.defineProperty(exports, "servicemanagement_v1", ({ enumerable: true, get: function () { return v1_1.servicemanagement_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.servicemanagement_v1.Servicemanagement,
@@ -294538,13 +294537,13 @@ function servicemanagement(versionOrOptions) {
 exports.servicemanagement = servicemanagement;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 31646:
+/***/ 91846:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -294569,7 +294568,7 @@ exports.servicemanagement_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var servicemanagement_v1;
 (function (servicemanagement_v1) {
     /**
@@ -295338,7 +295337,7 @@ var servicemanagement_v1;
 
 /***/ }),
 
-/***/ 72356:
+/***/ 57902:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -295358,10 +295357,10 @@ var servicemanagement_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.servicenetworking_v1beta = exports.servicenetworking_v1 = exports.auth = exports.servicenetworking = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(4565);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(75769);
 Object.defineProperty(exports, "servicenetworking_v1", ({ enumerable: true, get: function () { return v1_1.servicenetworking_v1; } }));
-const v1beta_1 = __nccwpck_require__(36738);
+const v1beta_1 = __nccwpck_require__(4883);
 Object.defineProperty(exports, "servicenetworking_v1beta", ({ enumerable: true, get: function () { return v1beta_1.servicenetworking_v1beta; } }));
 exports.VERSIONS = {
     v1: v1_1.servicenetworking_v1.Servicenetworking,
@@ -295373,13 +295372,13 @@ function servicenetworking(versionOrOptions) {
 exports.servicenetworking = servicenetworking;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 4565:
+/***/ 75769:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -295404,7 +295403,7 @@ exports.servicenetworking_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var servicenetworking_v1;
 (function (servicenetworking_v1) {
     /**
@@ -296213,7 +296212,7 @@ var servicenetworking_v1;
 
 /***/ }),
 
-/***/ 36738:
+/***/ 4883:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -296238,7 +296237,7 @@ exports.servicenetworking_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var servicenetworking_v1beta;
 (function (servicenetworking_v1beta) {
     /**
@@ -296472,7 +296471,7 @@ var servicenetworking_v1beta;
 
 /***/ }),
 
-/***/ 61110:
+/***/ 57099:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -296492,10 +296491,10 @@ var servicenetworking_v1beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.serviceusage_v1beta1 = exports.serviceusage_v1 = exports.auth = exports.serviceusage = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(83581);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(76290);
 Object.defineProperty(exports, "serviceusage_v1", ({ enumerable: true, get: function () { return v1_1.serviceusage_v1; } }));
-const v1beta1_1 = __nccwpck_require__(82010);
+const v1beta1_1 = __nccwpck_require__(8257);
 Object.defineProperty(exports, "serviceusage_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.serviceusage_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.serviceusage_v1.Serviceusage,
@@ -296507,13 +296506,13 @@ function serviceusage(versionOrOptions) {
 exports.serviceusage = serviceusage;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 83581:
+/***/ 76290:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -296538,7 +296537,7 @@ exports.serviceusage_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var serviceusage_v1;
 (function (serviceusage_v1) {
     /**
@@ -296884,7 +296883,7 @@ var serviceusage_v1;
 
 /***/ }),
 
-/***/ 82010:
+/***/ 8257:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -296909,7 +296908,7 @@ exports.serviceusage_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var serviceusage_v1beta1;
 (function (serviceusage_v1beta1) {
     /**
@@ -297626,7 +297625,7 @@ var serviceusage_v1beta1;
 
 /***/ }),
 
-/***/ 84155:
+/***/ 24061:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -297646,8 +297645,8 @@ var serviceusage_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.sheets_v4 = exports.auth = exports.sheets = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v4_1 = __nccwpck_require__(99009);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v4_1 = __nccwpck_require__(65155);
 Object.defineProperty(exports, "sheets_v4", ({ enumerable: true, get: function () { return v4_1.sheets_v4; } }));
 exports.VERSIONS = {
     v4: v4_1.sheets_v4.Sheets,
@@ -297658,13 +297657,13 @@ function sheets(versionOrOptions) {
 exports.sheets = sheets;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 99009:
+/***/ 65155:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -297689,7 +297688,7 @@ exports.sheets_v4 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var sheets_v4;
 (function (sheets_v4) {
     /**
@@ -298277,7 +298276,7 @@ var sheets_v4;
 
 /***/ }),
 
-/***/ 82450:
+/***/ 63213:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -298297,8 +298296,8 @@ var sheets_v4;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.siteVerification_v1 = exports.auth = exports.siteVerification = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(54977);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(31808);
 Object.defineProperty(exports, "siteVerification_v1", ({ enumerable: true, get: function () { return v1_1.siteVerification_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.siteVerification_v1.Siteverification,
@@ -298309,13 +298308,13 @@ function siteVerification(versionOrOptions) {
 exports.siteVerification = siteVerification;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 54977:
+/***/ 31808:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -298340,7 +298339,7 @@ exports.siteVerification_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var siteVerification_v1;
 (function (siteVerification_v1) {
     /**
@@ -298590,7 +298589,7 @@ var siteVerification_v1;
 
 /***/ }),
 
-/***/ 46702:
+/***/ 57543:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -298610,8 +298609,8 @@ var siteVerification_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.slides_v1 = exports.auth = exports.slides = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(22984);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(48742);
 Object.defineProperty(exports, "slides_v1", ({ enumerable: true, get: function () { return v1_1.slides_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.slides_v1.Slides,
@@ -298622,13 +298621,13 @@ function slides(versionOrOptions) {
 exports.slides = slides;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 22984:
+/***/ 48742:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -298653,7 +298652,7 @@ exports.slides_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var slides_v1;
 (function (slides_v1) {
     /**
@@ -298852,7 +298851,7 @@ var slides_v1;
 
 /***/ }),
 
-/***/ 66567:
+/***/ 98919:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -298872,8 +298871,8 @@ var slides_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.smartdevicemanagement_v1 = exports.auth = exports.smartdevicemanagement = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(69971);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(19206);
 Object.defineProperty(exports, "smartdevicemanagement_v1", ({ enumerable: true, get: function () { return v1_1.smartdevicemanagement_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.smartdevicemanagement_v1.Smartdevicemanagement,
@@ -298884,13 +298883,13 @@ function smartdevicemanagement(versionOrOptions) {
 exports.smartdevicemanagement = smartdevicemanagement;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 69971:
+/***/ 19206:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -298915,7 +298914,7 @@ exports.smartdevicemanagement_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var smartdevicemanagement_v1;
 (function (smartdevicemanagement_v1) {
     /**
@@ -299188,7 +299187,7 @@ var smartdevicemanagement_v1;
 
 /***/ }),
 
-/***/ 29618:
+/***/ 51944:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -299208,8 +299207,8 @@ var smartdevicemanagement_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.sourcerepo_v1 = exports.auth = exports.sourcerepo = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(90330);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(39);
 Object.defineProperty(exports, "sourcerepo_v1", ({ enumerable: true, get: function () { return v1_1.sourcerepo_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.sourcerepo_v1.Sourcerepo,
@@ -299220,13 +299219,13 @@ function sourcerepo(versionOrOptions) {
 exports.sourcerepo = sourcerepo;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 90330:
+/***/ 39:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -299251,7 +299250,7 @@ exports.sourcerepo_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var sourcerepo_v1;
 (function (sourcerepo_v1) {
     /**
@@ -299634,7 +299633,7 @@ var sourcerepo_v1;
 
 /***/ }),
 
-/***/ 10887:
+/***/ 25046:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -299654,8 +299653,8 @@ var sourcerepo_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.spanner_v1 = exports.auth = exports.spanner = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(3757);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(58913);
 Object.defineProperty(exports, "spanner_v1", ({ enumerable: true, get: function () { return v1_1.spanner_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.spanner_v1.Spanner,
@@ -299666,13 +299665,13 @@ function spanner(versionOrOptions) {
 exports.spanner = spanner;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 3757:
+/***/ 58913:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -299697,7 +299696,7 @@ exports.spanner_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var spanner_v1;
 (function (spanner_v1) {
     /**
@@ -301569,7 +301568,7 @@ var spanner_v1;
 
 /***/ }),
 
-/***/ 54392:
+/***/ 88223:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -301589,12 +301588,12 @@ var spanner_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.speech_v2beta1 = exports.speech_v1p1beta1 = exports.speech_v1 = exports.auth = exports.speech = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(80865);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(49854);
 Object.defineProperty(exports, "speech_v1", ({ enumerable: true, get: function () { return v1_1.speech_v1; } }));
-const v1p1beta1_1 = __nccwpck_require__(45880);
+const v1p1beta1_1 = __nccwpck_require__(68240);
 Object.defineProperty(exports, "speech_v1p1beta1", ({ enumerable: true, get: function () { return v1p1beta1_1.speech_v1p1beta1; } }));
-const v2beta1_1 = __nccwpck_require__(38857);
+const v2beta1_1 = __nccwpck_require__(92078);
 Object.defineProperty(exports, "speech_v2beta1", ({ enumerable: true, get: function () { return v2beta1_1.speech_v2beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.speech_v1.Speech,
@@ -301607,13 +301606,13 @@ function speech(versionOrOptions) {
 exports.speech = speech;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 80865:
+/***/ 49854:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -301638,7 +301637,7 @@ exports.speech_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var speech_v1;
 (function (speech_v1) {
     /**
@@ -301884,7 +301883,7 @@ var speech_v1;
 
 /***/ }),
 
-/***/ 45880:
+/***/ 68240:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -301909,7 +301908,7 @@ exports.speech_v1p1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var speech_v1p1beta1;
 (function (speech_v1p1beta1) {
     /**
@@ -302155,7 +302154,7 @@ var speech_v1p1beta1;
 
 /***/ }),
 
-/***/ 38857:
+/***/ 92078:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -302180,7 +302179,7 @@ exports.speech_v2beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var speech_v2beta1;
 (function (speech_v2beta1) {
     /**
@@ -302291,7 +302290,7 @@ var speech_v2beta1;
 
 /***/ }),
 
-/***/ 9266:
+/***/ 97431:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -302311,8 +302310,8 @@ var speech_v2beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.sql_v1beta4 = exports.auth = exports.sql = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta4_1 = __nccwpck_require__(37655);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta4_1 = __nccwpck_require__(17314);
 Object.defineProperty(exports, "sql_v1beta4", ({ enumerable: true, get: function () { return v1beta4_1.sql_v1beta4; } }));
 exports.VERSIONS = {
     v1beta4: v1beta4_1.sql_v1beta4.Sql,
@@ -302323,13 +302322,13 @@ function sql(versionOrOptions) {
 exports.sql = sql;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 37655:
+/***/ 17314:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -302354,7 +302353,7 @@ exports.sql_v1beta4 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var sql_v1beta4;
 (function (sql_v1beta4) {
     /**
@@ -303921,7 +303920,7 @@ var sql_v1beta4;
 
 /***/ }),
 
-/***/ 24121:
+/***/ 9158:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -303941,8 +303940,8 @@ var sql_v1beta4;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.sqladmin_v1beta4 = exports.auth = exports.sqladmin = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta4_1 = __nccwpck_require__(10415);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta4_1 = __nccwpck_require__(96959);
 Object.defineProperty(exports, "sqladmin_v1beta4", ({ enumerable: true, get: function () { return v1beta4_1.sqladmin_v1beta4; } }));
 exports.VERSIONS = {
     v1beta4: v1beta4_1.sqladmin_v1beta4.Sqladmin,
@@ -303953,13 +303952,13 @@ function sqladmin(versionOrOptions) {
 exports.sqladmin = sqladmin;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 10415:
+/***/ 96959:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -303984,7 +303983,7 @@ exports.sqladmin_v1beta4 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var sqladmin_v1beta4;
 (function (sqladmin_v1beta4) {
     /**
@@ -305547,7 +305546,7 @@ var sqladmin_v1beta4;
 
 /***/ }),
 
-/***/ 82428:
+/***/ 574:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -305567,10 +305566,10 @@ var sqladmin_v1beta4;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.storage_v1beta2 = exports.storage_v1 = exports.auth = exports.storage = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(10088);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(98601);
 Object.defineProperty(exports, "storage_v1", ({ enumerable: true, get: function () { return v1_1.storage_v1; } }));
-const v1beta2_1 = __nccwpck_require__(7649);
+const v1beta2_1 = __nccwpck_require__(31941);
 Object.defineProperty(exports, "storage_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.storage_v1beta2; } }));
 exports.VERSIONS = {
     v1: v1_1.storage_v1.Storage,
@@ -305582,13 +305581,13 @@ function storage(versionOrOptions) {
 exports.storage = storage;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 10088:
+/***/ 98601:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -305613,7 +305612,7 @@ exports.storage_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var storage_v1;
 (function (storage_v1) {
     /**
@@ -307332,7 +307331,7 @@ var storage_v1;
 
 /***/ }),
 
-/***/ 7649:
+/***/ 31941:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -307357,7 +307356,7 @@ exports.storage_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var storage_v1beta2;
 (function (storage_v1beta2) {
     /**
@@ -308482,7 +308481,7 @@ var storage_v1beta2;
 
 /***/ }),
 
-/***/ 3986:
+/***/ 15265:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -308502,8 +308501,8 @@ var storage_v1beta2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.storagetransfer_v1 = exports.auth = exports.storagetransfer = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(65154);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(31580);
 Object.defineProperty(exports, "storagetransfer_v1", ({ enumerable: true, get: function () { return v1_1.storagetransfer_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.storagetransfer_v1.Storagetransfer,
@@ -308514,13 +308513,13 @@ function storagetransfer(versionOrOptions) {
 exports.storagetransfer = storagetransfer;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 65154:
+/***/ 31580:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -308545,7 +308544,7 @@ exports.storagetransfer_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var storagetransfer_v1;
 (function (storagetransfer_v1) {
     /**
@@ -308903,7 +308902,7 @@ var storagetransfer_v1;
 
 /***/ }),
 
-/***/ 97709:
+/***/ 69966:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -308923,8 +308922,8 @@ var storagetransfer_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.streetviewpublish_v1 = exports.auth = exports.streetviewpublish = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(23262);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(53657);
 Object.defineProperty(exports, "streetviewpublish_v1", ({ enumerable: true, get: function () { return v1_1.streetviewpublish_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.streetviewpublish_v1.Streetviewpublish,
@@ -308935,13 +308934,13 @@ function streetviewpublish(versionOrOptions) {
 exports.streetviewpublish = streetviewpublish;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 23262:
+/***/ 53657:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -308966,7 +308965,7 @@ exports.streetviewpublish_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var streetviewpublish_v1;
 (function (streetviewpublish_v1) {
     /**
@@ -309281,7 +309280,7 @@ var streetviewpublish_v1;
 
 /***/ }),
 
-/***/ 87674:
+/***/ 82275:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -309301,10 +309300,10 @@ var streetviewpublish_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.sts_v1beta = exports.sts_v1 = exports.auth = exports.sts = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(58438);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(56090);
 Object.defineProperty(exports, "sts_v1", ({ enumerable: true, get: function () { return v1_1.sts_v1; } }));
-const v1beta_1 = __nccwpck_require__(59817);
+const v1beta_1 = __nccwpck_require__(1048);
 Object.defineProperty(exports, "sts_v1beta", ({ enumerable: true, get: function () { return v1beta_1.sts_v1beta; } }));
 exports.VERSIONS = {
     v1: v1_1.sts_v1.Sts,
@@ -309316,13 +309315,13 @@ function sts(versionOrOptions) {
 exports.sts = sts;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 58438:
+/***/ 56090:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -309347,7 +309346,7 @@ exports.sts_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var sts_v1;
 (function (sts_v1) {
     /**
@@ -309412,7 +309411,7 @@ var sts_v1;
 
 /***/ }),
 
-/***/ 59817:
+/***/ 1048:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -309437,7 +309436,7 @@ exports.sts_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var sts_v1beta;
 (function (sts_v1beta) {
     /**
@@ -309502,7 +309501,7 @@ var sts_v1beta;
 
 /***/ }),
 
-/***/ 50132:
+/***/ 15874:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -309522,10 +309521,10 @@ var sts_v1beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.tagmanager_v2 = exports.tagmanager_v1 = exports.auth = exports.tagmanager = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(39612);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(27285);
 Object.defineProperty(exports, "tagmanager_v1", ({ enumerable: true, get: function () { return v1_1.tagmanager_v1; } }));
-const v2_1 = __nccwpck_require__(27835);
+const v2_1 = __nccwpck_require__(69004);
 Object.defineProperty(exports, "tagmanager_v2", ({ enumerable: true, get: function () { return v2_1.tagmanager_v2; } }));
 exports.VERSIONS = {
     v1: v1_1.tagmanager_v1.Tagmanager,
@@ -309537,13 +309536,13 @@ function tagmanager(versionOrOptions) {
 exports.tagmanager = tagmanager;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 39612:
+/***/ 27285:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -309568,7 +309567,7 @@ exports.tagmanager_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var tagmanager_v1;
 (function (tagmanager_v1) {
     /**
@@ -311238,7 +311237,7 @@ var tagmanager_v1;
 
 /***/ }),
 
-/***/ 27835:
+/***/ 69004:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -311263,7 +311262,7 @@ exports.tagmanager_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var tagmanager_v2;
 (function (tagmanager_v2) {
     /**
@@ -313866,7 +313865,7 @@ var tagmanager_v2;
 
 /***/ }),
 
-/***/ 47354:
+/***/ 9201:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -313886,8 +313885,8 @@ var tagmanager_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.tasks_v1 = exports.auth = exports.tasks = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(45809);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(90188);
 Object.defineProperty(exports, "tasks_v1", ({ enumerable: true, get: function () { return v1_1.tasks_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.tasks_v1.Tasks,
@@ -313898,13 +313897,13 @@ function tasks(versionOrOptions) {
 exports.tasks = tasks;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 45809:
+/***/ 90188:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -313929,7 +313928,7 @@ exports.tasks_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var tasks_v1;
 (function (tasks_v1) {
     /**
@@ -314391,7 +314390,7 @@ var tasks_v1;
 
 /***/ }),
 
-/***/ 47527:
+/***/ 34619:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -314411,8 +314410,8 @@ var tasks_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.testing_v1 = exports.auth = exports.testing = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(30906);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(58898);
 Object.defineProperty(exports, "testing_v1", ({ enumerable: true, get: function () { return v1_1.testing_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.testing_v1.Testing,
@@ -314423,13 +314422,13 @@ function testing(versionOrOptions) {
 exports.testing = testing;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 30906:
+/***/ 58898:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -314454,7 +314453,7 @@ exports.testing_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var testing_v1;
 (function (testing_v1) {
     /**
@@ -314666,7 +314665,7 @@ var testing_v1;
 
 /***/ }),
 
-/***/ 47291:
+/***/ 53889:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -314686,10 +314685,10 @@ var testing_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.texttospeech_v1beta1 = exports.texttospeech_v1 = exports.auth = exports.texttospeech = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(92584);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(43228);
 Object.defineProperty(exports, "texttospeech_v1", ({ enumerable: true, get: function () { return v1_1.texttospeech_v1; } }));
-const v1beta1_1 = __nccwpck_require__(83822);
+const v1beta1_1 = __nccwpck_require__(31259);
 Object.defineProperty(exports, "texttospeech_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.texttospeech_v1beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.texttospeech_v1.Texttospeech,
@@ -314701,13 +314700,13 @@ function texttospeech(versionOrOptions) {
 exports.texttospeech = texttospeech;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 92584:
+/***/ 43228:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -314732,7 +314731,7 @@ exports.texttospeech_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var texttospeech_v1;
 (function (texttospeech_v1) {
     /**
@@ -314834,7 +314833,7 @@ var texttospeech_v1;
 
 /***/ }),
 
-/***/ 83822:
+/***/ 31259:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -314859,7 +314858,7 @@ exports.texttospeech_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var texttospeech_v1beta1;
 (function (texttospeech_v1beta1) {
     /**
@@ -314961,7 +314960,7 @@ var texttospeech_v1beta1;
 
 /***/ }),
 
-/***/ 19421:
+/***/ 23775:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -314981,8 +314980,8 @@ var texttospeech_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.toolresults_v1beta3 = exports.auth = exports.toolresults = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta3_1 = __nccwpck_require__(14025);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta3_1 = __nccwpck_require__(57923);
 Object.defineProperty(exports, "toolresults_v1beta3", ({ enumerable: true, get: function () { return v1beta3_1.toolresults_v1beta3; } }));
 exports.VERSIONS = {
     v1beta3: v1beta3_1.toolresults_v1beta3.Toolresults,
@@ -314993,13 +314992,13 @@ function toolresults(versionOrOptions) {
 exports.toolresults = toolresults;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 14025:
+/***/ 57923:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -315024,7 +315023,7 @@ exports.toolresults_v1beta3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var toolresults_v1beta3;
 (function (toolresults_v1beta3) {
     /**
@@ -316106,7 +316105,7 @@ var toolresults_v1beta3;
 
 /***/ }),
 
-/***/ 33390:
+/***/ 59272:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -316126,10 +316125,10 @@ var toolresults_v1beta3;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.tpu_v1alpha1 = exports.tpu_v1 = exports.auth = exports.tpu = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(59537);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(49383);
 Object.defineProperty(exports, "tpu_v1", ({ enumerable: true, get: function () { return v1_1.tpu_v1; } }));
-const v1alpha1_1 = __nccwpck_require__(78767);
+const v1alpha1_1 = __nccwpck_require__(38044);
 Object.defineProperty(exports, "tpu_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_1.tpu_v1alpha1; } }));
 exports.VERSIONS = {
     v1: v1_1.tpu_v1.Tpu,
@@ -316141,13 +316140,13 @@ function tpu(versionOrOptions) {
 exports.tpu = tpu;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 59537:
+/***/ 49383:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -316172,7 +316171,7 @@ exports.tpu_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var tpu_v1;
 (function (tpu_v1) {
     /**
@@ -316769,7 +316768,7 @@ var tpu_v1;
 
 /***/ }),
 
-/***/ 78767:
+/***/ 38044:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -316794,7 +316793,7 @@ exports.tpu_v1alpha1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var tpu_v1alpha1;
 (function (tpu_v1alpha1) {
     /**
@@ -317391,7 +317390,7 @@ var tpu_v1alpha1;
 
 /***/ }),
 
-/***/ 57485:
+/***/ 83070:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -317411,8 +317410,8 @@ var tpu_v1alpha1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.trafficdirector_v2 = exports.auth = exports.trafficdirector = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(5596);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(83408);
 Object.defineProperty(exports, "trafficdirector_v2", ({ enumerable: true, get: function () { return v2_1.trafficdirector_v2; } }));
 exports.VERSIONS = {
     v2: v2_1.trafficdirector_v2.Trafficdirector,
@@ -317423,13 +317422,13 @@ function trafficdirector(versionOrOptions) {
 exports.trafficdirector = trafficdirector;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 5596:
+/***/ 83408:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -317454,7 +317453,7 @@ exports.trafficdirector_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var trafficdirector_v2;
 (function (trafficdirector_v2) {
     /**
@@ -317520,7 +317519,7 @@ var trafficdirector_v2;
 
 /***/ }),
 
-/***/ 35427:
+/***/ 16342:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -317540,8 +317539,8 @@ var trafficdirector_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.transcoder_v1beta1 = exports.auth = exports.transcoder = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta1_1 = __nccwpck_require__(85932);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta1_1 = __nccwpck_require__(81380);
 Object.defineProperty(exports, "transcoder_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.transcoder_v1beta1; } }));
 exports.VERSIONS = {
     v1beta1: v1beta1_1.transcoder_v1beta1.Transcoder,
@@ -317552,13 +317551,13 @@ function transcoder(versionOrOptions) {
 exports.transcoder = transcoder;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 85932:
+/***/ 81380:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -317583,7 +317582,7 @@ exports.transcoder_v1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var transcoder_v1beta1;
 (function (transcoder_v1beta1) {
     /**
@@ -317887,7 +317886,7 @@ var transcoder_v1beta1;
 
 /***/ }),
 
-/***/ 45537:
+/***/ 58153:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -317907,12 +317906,12 @@ var transcoder_v1beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.translate_v3beta1 = exports.translate_v3 = exports.translate_v2 = exports.auth = exports.translate = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v2_1 = __nccwpck_require__(80994);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v2_1 = __nccwpck_require__(90253);
 Object.defineProperty(exports, "translate_v2", ({ enumerable: true, get: function () { return v2_1.translate_v2; } }));
-const v3_1 = __nccwpck_require__(31165);
+const v3_1 = __nccwpck_require__(80078);
 Object.defineProperty(exports, "translate_v3", ({ enumerable: true, get: function () { return v3_1.translate_v3; } }));
-const v3beta1_1 = __nccwpck_require__(27445);
+const v3beta1_1 = __nccwpck_require__(67925);
 Object.defineProperty(exports, "translate_v3beta1", ({ enumerable: true, get: function () { return v3beta1_1.translate_v3beta1; } }));
 exports.VERSIONS = {
     v2: v2_1.translate_v2.Translate,
@@ -317925,13 +317924,13 @@ function translate(versionOrOptions) {
 exports.translate = translate;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 80994:
+/***/ 90253:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -317956,7 +317955,7 @@ exports.translate_v2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var translate_v2;
 (function (translate_v2) {
     /**
@@ -318159,7 +318158,7 @@ var translate_v2;
 
 /***/ }),
 
-/***/ 31165:
+/***/ 80078:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -318184,7 +318183,7 @@ exports.translate_v3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var translate_v3;
 (function (translate_v3) {
     /**
@@ -318798,7 +318797,7 @@ var translate_v3;
 
 /***/ }),
 
-/***/ 27445:
+/***/ 67925:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -318823,7 +318822,7 @@ exports.translate_v3beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var translate_v3beta1;
 (function (translate_v3beta1) {
     /**
@@ -319437,7 +319436,7 @@ var translate_v3beta1;
 
 /***/ }),
 
-/***/ 28107:
+/***/ 39559:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -319457,8 +319456,8 @@ var translate_v3beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.vault_v1 = exports.auth = exports.vault = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(91477);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(19526);
 Object.defineProperty(exports, "vault_v1", ({ enumerable: true, get: function () { return v1_1.vault_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.vault_v1.Vault,
@@ -319469,13 +319468,13 @@ function vault(versionOrOptions) {
 exports.vault = vault;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 91477:
+/***/ 19526:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -319500,7 +319499,7 @@ exports.vault_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var vault_v1;
 (function (vault_v1) {
     /**
@@ -320584,7 +320583,7 @@ var vault_v1;
 
 /***/ }),
 
-/***/ 36212:
+/***/ 91374:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -320604,8 +320603,8 @@ var vault_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.vectortile_v1 = exports.auth = exports.vectortile = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(80845);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(57465);
 Object.defineProperty(exports, "vectortile_v1", ({ enumerable: true, get: function () { return v1_1.vectortile_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.vectortile_v1.Vectortile,
@@ -320616,13 +320615,13 @@ function vectortile(versionOrOptions) {
 exports.vectortile = vectortile;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 80845:
+/***/ 57465:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -320647,7 +320646,7 @@ exports.vectortile_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var vectortile_v1;
 (function (vectortile_v1) {
     /**
@@ -320749,7 +320748,7 @@ var vectortile_v1;
 
 /***/ }),
 
-/***/ 85428:
+/***/ 50683:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -320769,8 +320768,8 @@ var vectortile_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.verifiedaccess_v1 = exports.auth = exports.verifiedaccess = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(67182);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(33330);
 Object.defineProperty(exports, "verifiedaccess_v1", ({ enumerable: true, get: function () { return v1_1.verifiedaccess_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.verifiedaccess_v1.Verifiedaccess,
@@ -320781,13 +320780,13 @@ function verifiedaccess(versionOrOptions) {
 exports.verifiedaccess = verifiedaccess;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 67182:
+/***/ 33330:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -320812,7 +320811,7 @@ exports.verifiedaccess_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var verifiedaccess_v1;
 (function (verifiedaccess_v1) {
     /**
@@ -320907,7 +320906,7 @@ var verifiedaccess_v1;
 
 /***/ }),
 
-/***/ 73075:
+/***/ 77939:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -320927,16 +320926,16 @@ var verifiedaccess_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.videointelligence_v1p3beta1 = exports.videointelligence_v1p2beta1 = exports.videointelligence_v1p1beta1 = exports.videointelligence_v1beta2 = exports.videointelligence_v1 = exports.auth = exports.videointelligence = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(97367);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(4298);
 Object.defineProperty(exports, "videointelligence_v1", ({ enumerable: true, get: function () { return v1_1.videointelligence_v1; } }));
-const v1beta2_1 = __nccwpck_require__(29793);
+const v1beta2_1 = __nccwpck_require__(54880);
 Object.defineProperty(exports, "videointelligence_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.videointelligence_v1beta2; } }));
-const v1p1beta1_1 = __nccwpck_require__(77651);
+const v1p1beta1_1 = __nccwpck_require__(61764);
 Object.defineProperty(exports, "videointelligence_v1p1beta1", ({ enumerable: true, get: function () { return v1p1beta1_1.videointelligence_v1p1beta1; } }));
-const v1p2beta1_1 = __nccwpck_require__(54284);
+const v1p2beta1_1 = __nccwpck_require__(38975);
 Object.defineProperty(exports, "videointelligence_v1p2beta1", ({ enumerable: true, get: function () { return v1p2beta1_1.videointelligence_v1p2beta1; } }));
-const v1p3beta1_1 = __nccwpck_require__(81917);
+const v1p3beta1_1 = __nccwpck_require__(64586);
 Object.defineProperty(exports, "videointelligence_v1p3beta1", ({ enumerable: true, get: function () { return v1p3beta1_1.videointelligence_v1p3beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.videointelligence_v1.Videointelligence,
@@ -320951,13 +320950,13 @@ function videointelligence(versionOrOptions) {
 exports.videointelligence = videointelligence;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 97367:
+/***/ 4298:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -320982,7 +320981,7 @@ exports.videointelligence_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var videointelligence_v1;
 (function (videointelligence_v1) {
     /**
@@ -321313,7 +321312,7 @@ var videointelligence_v1;
 
 /***/ }),
 
-/***/ 29793:
+/***/ 54880:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -321338,7 +321337,7 @@ exports.videointelligence_v1beta2 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var videointelligence_v1beta2;
 (function (videointelligence_v1beta2) {
     /**
@@ -321403,7 +321402,7 @@ var videointelligence_v1beta2;
 
 /***/ }),
 
-/***/ 77651:
+/***/ 61764:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -321428,7 +321427,7 @@ exports.videointelligence_v1p1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var videointelligence_v1p1beta1;
 (function (videointelligence_v1p1beta1) {
     /**
@@ -321493,7 +321492,7 @@ var videointelligence_v1p1beta1;
 
 /***/ }),
 
-/***/ 54284:
+/***/ 38975:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -321518,7 +321517,7 @@ exports.videointelligence_v1p2beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var videointelligence_v1p2beta1;
 (function (videointelligence_v1p2beta1) {
     /**
@@ -321583,7 +321582,7 @@ var videointelligence_v1p2beta1;
 
 /***/ }),
 
-/***/ 81917:
+/***/ 64586:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -321608,7 +321607,7 @@ exports.videointelligence_v1p3beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var videointelligence_v1p3beta1;
 (function (videointelligence_v1p3beta1) {
     /**
@@ -321673,7 +321672,7 @@ var videointelligence_v1p3beta1;
 
 /***/ }),
 
-/***/ 69992:
+/***/ 84821:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -321693,12 +321692,12 @@ var videointelligence_v1p3beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.vision_v1p2beta1 = exports.vision_v1p1beta1 = exports.vision_v1 = exports.auth = exports.vision = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(71004);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(99688);
 Object.defineProperty(exports, "vision_v1", ({ enumerable: true, get: function () { return v1_1.vision_v1; } }));
-const v1p1beta1_1 = __nccwpck_require__(38136);
+const v1p1beta1_1 = __nccwpck_require__(90546);
 Object.defineProperty(exports, "vision_v1p1beta1", ({ enumerable: true, get: function () { return v1p1beta1_1.vision_v1p1beta1; } }));
-const v1p2beta1_1 = __nccwpck_require__(34268);
+const v1p2beta1_1 = __nccwpck_require__(8633);
 Object.defineProperty(exports, "vision_v1p2beta1", ({ enumerable: true, get: function () { return v1p2beta1_1.vision_v1p2beta1; } }));
 exports.VERSIONS = {
     v1: v1_1.vision_v1.Vision,
@@ -321711,13 +321710,13 @@ function vision(versionOrOptions) {
 exports.vision = vision;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 71004:
+/***/ 99688:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -321742,7 +321741,7 @@ exports.vision_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var vision_v1;
 (function (vision_v1) {
     /**
@@ -323063,7 +323062,7 @@ var vision_v1;
 
 /***/ }),
 
-/***/ 38136:
+/***/ 90546:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -323088,7 +323087,7 @@ exports.vision_v1p1beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var vision_v1p1beta1;
 (function (vision_v1p1beta1) {
     /**
@@ -323542,7 +323541,7 @@ var vision_v1p1beta1;
 
 /***/ }),
 
-/***/ 34268:
+/***/ 8633:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -323567,7 +323566,7 @@ exports.vision_v1p2beta1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var vision_v1p2beta1;
 (function (vision_v1p2beta1) {
     /**
@@ -324021,7 +324020,7 @@ var vision_v1p2beta1;
 
 /***/ }),
 
-/***/ 34225:
+/***/ 36737:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -324041,8 +324040,8 @@ var vision_v1p2beta1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.webfonts_v1 = exports.auth = exports.webfonts = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(10796);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(18076);
 Object.defineProperty(exports, "webfonts_v1", ({ enumerable: true, get: function () { return v1_1.webfonts_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.webfonts_v1.Webfonts,
@@ -324053,13 +324052,13 @@ function webfonts(versionOrOptions) {
 exports.webfonts = webfonts;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 10796:
+/***/ 18076:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -324084,7 +324083,7 @@ exports.webfonts_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var webfonts_v1;
 (function (webfonts_v1) {
     /**
@@ -324149,7 +324148,7 @@ var webfonts_v1;
 
 /***/ }),
 
-/***/ 69867:
+/***/ 68000:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -324169,8 +324168,8 @@ var webfonts_v1;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.webmasters_v3 = exports.auth = exports.webmasters = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v3_1 = __nccwpck_require__(1972);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v3_1 = __nccwpck_require__(30913);
 Object.defineProperty(exports, "webmasters_v3", ({ enumerable: true, get: function () { return v3_1.webmasters_v3; } }));
 exports.VERSIONS = {
     v3: v3_1.webmasters_v3.Webmasters,
@@ -324181,13 +324180,13 @@ function webmasters(versionOrOptions) {
 exports.webmasters = webmasters;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 1972:
+/***/ 30913:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -324212,7 +324211,7 @@ exports.webmasters_v3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var webmasters_v3;
 (function (webmasters_v3) {
     /**
@@ -324532,7 +324531,7 @@ var webmasters_v3;
 
 /***/ }),
 
-/***/ 25206:
+/***/ 80423:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -324552,12 +324551,12 @@ var webmasters_v3;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.websecurityscanner_v1beta = exports.websecurityscanner_v1alpha = exports.websecurityscanner_v1 = exports.auth = exports.websecurityscanner = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(72412);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(93670);
 Object.defineProperty(exports, "websecurityscanner_v1", ({ enumerable: true, get: function () { return v1_1.websecurityscanner_v1; } }));
-const v1alpha_1 = __nccwpck_require__(66447);
+const v1alpha_1 = __nccwpck_require__(58576);
 Object.defineProperty(exports, "websecurityscanner_v1alpha", ({ enumerable: true, get: function () { return v1alpha_1.websecurityscanner_v1alpha; } }));
-const v1beta_1 = __nccwpck_require__(44298);
+const v1beta_1 = __nccwpck_require__(35796);
 Object.defineProperty(exports, "websecurityscanner_v1beta", ({ enumerable: true, get: function () { return v1beta_1.websecurityscanner_v1beta; } }));
 exports.VERSIONS = {
     v1: v1_1.websecurityscanner_v1.Websecurityscanner,
@@ -324570,13 +324569,13 @@ function websecurityscanner(versionOrOptions) {
 exports.websecurityscanner = websecurityscanner;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 72412:
+/***/ 93670:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -324601,7 +324600,7 @@ exports.websecurityscanner_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var websecurityscanner_v1;
 (function (websecurityscanner_v1) {
     /**
@@ -325074,7 +325073,7 @@ var websecurityscanner_v1;
 
 /***/ }),
 
-/***/ 66447:
+/***/ 58576:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -325099,7 +325098,7 @@ exports.websecurityscanner_v1alpha = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var websecurityscanner_v1alpha;
 (function (websecurityscanner_v1alpha) {
     /**
@@ -325572,7 +325571,7 @@ var websecurityscanner_v1alpha;
 
 /***/ }),
 
-/***/ 44298:
+/***/ 35796:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -325597,7 +325596,7 @@ exports.websecurityscanner_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var websecurityscanner_v1beta;
 (function (websecurityscanner_v1beta) {
     /**
@@ -326070,7 +326069,7 @@ var websecurityscanner_v1beta;
 
 /***/ }),
 
-/***/ 12706:
+/***/ 90815:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -326090,8 +326089,8 @@ var websecurityscanner_v1beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.workflowexecutions_v1beta = exports.auth = exports.workflowexecutions = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta_1 = __nccwpck_require__(50571);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta_1 = __nccwpck_require__(10668);
 Object.defineProperty(exports, "workflowexecutions_v1beta", ({ enumerable: true, get: function () { return v1beta_1.workflowexecutions_v1beta; } }));
 exports.VERSIONS = {
     v1beta: v1beta_1.workflowexecutions_v1beta.Workflowexecutions,
@@ -326102,13 +326101,13 @@ function workflowexecutions(versionOrOptions) {
 exports.workflowexecutions = workflowexecutions;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 50571:
+/***/ 10668:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -326133,7 +326132,7 @@ exports.workflowexecutions_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var workflowexecutions_v1beta;
 (function (workflowexecutions_v1beta) {
     /**
@@ -326313,7 +326312,7 @@ var workflowexecutions_v1beta;
 
 /***/ }),
 
-/***/ 61529:
+/***/ 83453:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -326333,8 +326332,8 @@ var workflowexecutions_v1beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.workflows_v1beta = exports.auth = exports.workflows = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1beta_1 = __nccwpck_require__(63971);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1beta_1 = __nccwpck_require__(65386);
 Object.defineProperty(exports, "workflows_v1beta", ({ enumerable: true, get: function () { return v1beta_1.workflows_v1beta; } }));
 exports.VERSIONS = {
     v1beta: v1beta_1.workflows_v1beta.Workflows,
@@ -326345,13 +326344,13 @@ function workflows(versionOrOptions) {
 exports.workflows = workflows;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 63971:
+/***/ 65386:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -326376,7 +326375,7 @@ exports.workflows_v1beta = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var workflows_v1beta;
 (function (workflows_v1beta) {
     /**
@@ -326742,7 +326741,410 @@ var workflows_v1beta;
 
 /***/ }),
 
-/***/ 76524:
+/***/ 94926:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+// Copyright 2020 Google LLC
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.youtubeAnalytics_v2 = exports.youtubeAnalytics_v1 = exports.auth = exports.youtubeAnalytics = exports.VERSIONS = void 0;
+/*! THIS FILE IS AUTO-GENERATED */
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(40537);
+Object.defineProperty(exports, "youtubeAnalytics_v1", ({ enumerable: true, get: function () { return v1_1.youtubeAnalytics_v1; } }));
+const v2_1 = __nccwpck_require__(29536);
+Object.defineProperty(exports, "youtubeAnalytics_v2", ({ enumerable: true, get: function () { return v2_1.youtubeAnalytics_v2; } }));
+exports.VERSIONS = {
+    v1: v1_1.youtubeAnalytics_v1.Youtubeanalytics,
+    v2: v2_1.youtubeAnalytics_v2.Youtubeanalytics,
+};
+function youtubeAnalytics(versionOrOptions) {
+    return googleapis_common_1.getAPI('youtubeAnalytics', versionOrOptions, exports.VERSIONS, this);
+}
+exports.youtubeAnalytics = youtubeAnalytics;
+const auth = new googleapis_common_1.AuthPlus();
+exports.auth = auth;
+var googleapis_common_2 = __nccwpck_require__(16782);
+Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 40537:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+// Copyright 2020 Google LLC
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.youtubeAnalytics_v1 = void 0;
+var youtubeAnalytics_v1;
+(function (youtubeAnalytics_v1) {
+    /**
+     * YouTube Analytics API
+     *
+     * Retrieves your YouTube Analytics data.
+     *
+     * @example
+     * ```js
+     * const {google} = require('googleapis');
+     * const youtubeAnalytics = google.youtubeAnalytics('v1');
+     * ```
+     */
+    class Youtubeanalytics {
+        constructor(options, google) {
+            this.context = {
+                _options: options || {},
+                google,
+            };
+        }
+    }
+    youtubeAnalytics_v1.Youtubeanalytics = Youtubeanalytics;
+})(youtubeAnalytics_v1 = exports.youtubeAnalytics_v1 || (exports.youtubeAnalytics_v1 = {}));
+//# sourceMappingURL=v1.js.map
+
+/***/ }),
+
+/***/ 29536:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+// Copyright 2020 Google LLC
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.youtubeAnalytics_v2 = void 0;
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/class-name-casing */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-empty-interface */
+/* eslint-disable @typescript-eslint/no-namespace */
+/* eslint-disable no-irregular-whitespace */
+const googleapis_common_1 = __nccwpck_require__(16782);
+var youtubeAnalytics_v2;
+(function (youtubeAnalytics_v2) {
+    /**
+     * YouTube Analytics API
+     *
+     * Retrieves your YouTube Analytics data.
+     *
+     * @example
+     * ```js
+     * const {google} = require('googleapis');
+     * const youtubeAnalytics = google.youtubeAnalytics('v2');
+     * ```
+     */
+    class Youtubeanalytics {
+        constructor(options, google) {
+            this.context = {
+                _options: options || {},
+                google,
+            };
+            this.groupItems = new Resource$Groupitems(this.context);
+            this.groups = new Resource$Groups(this.context);
+            this.reports = new Resource$Reports(this.context);
+        }
+    }
+    youtubeAnalytics_v2.Youtubeanalytics = Youtubeanalytics;
+    class Resource$Groupitems {
+        constructor(context) {
+            this.context = context;
+        }
+        delete(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/v2/groupItems').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'DELETE',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        insert(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback ||
+                {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/v2/groupItems').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/v2/groupItems').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    youtubeAnalytics_v2.Resource$Groupitems = Resource$Groupitems;
+    class Resource$Groups {
+        constructor(context) {
+            this.context = context;
+        }
+        delete(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/v2/groups').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'DELETE',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        insert(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/v2/groups').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'POST',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        list(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/v2/groups').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+        update(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/v2/groups').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'PUT',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    youtubeAnalytics_v2.Resource$Groups = Resource$Groups;
+    class Resource$Reports {
+        constructor(context) {
+            this.context = context;
+        }
+        query(paramsOrCallback, optionsOrCallback, callback) {
+            let params = (paramsOrCallback || {});
+            let options = (optionsOrCallback || {});
+            if (typeof paramsOrCallback === 'function') {
+                callback = paramsOrCallback;
+                params = {};
+                options = {};
+            }
+            if (typeof optionsOrCallback === 'function') {
+                callback = optionsOrCallback;
+                options = {};
+            }
+            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
+            const parameters = {
+                options: Object.assign({
+                    url: (rootUrl + '/v2/reports').replace(/([^:]\/)\/+/g, '$1'),
+                    method: 'GET',
+                }, options),
+                params,
+                requiredParams: [],
+                pathParams: [],
+                context: this.context,
+            };
+            if (callback) {
+                googleapis_common_1.createAPIRequest(parameters, callback);
+            }
+            else {
+                return googleapis_common_1.createAPIRequest(parameters);
+            }
+        }
+    }
+    youtubeAnalytics_v2.Resource$Reports = Resource$Reports;
+})(youtubeAnalytics_v2 = exports.youtubeAnalytics_v2 || (exports.youtubeAnalytics_v2 = {}));
+//# sourceMappingURL=v2.js.map
+
+/***/ }),
+
+/***/ 80870:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -326762,8 +327164,8 @@ var workflows_v1beta;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.youtube_v3 = exports.auth = exports.youtube = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v3_1 = __nccwpck_require__(45084);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v3_1 = __nccwpck_require__(95951);
 Object.defineProperty(exports, "youtube_v3", ({ enumerable: true, get: function () { return v3_1.youtube_v3; } }));
 exports.VERSIONS = {
     v3: v3_1.youtube_v3.Youtube,
@@ -326774,13 +327176,13 @@ function youtube(versionOrOptions) {
 exports.youtube = youtube;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 45084:
+/***/ 95951:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -326805,7 +327207,7 @@ exports.youtube_v3 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var youtube_v3;
 (function (youtube_v3) {
     /**
@@ -329242,410 +329644,7 @@ var youtube_v3;
 
 /***/ }),
 
-/***/ 78383:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-// Copyright 2020 Google LLC
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//    http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.youtubeAnalytics_v2 = exports.youtubeAnalytics_v1 = exports.auth = exports.youtubeAnalytics = exports.VERSIONS = void 0;
-/*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(86348);
-Object.defineProperty(exports, "youtubeAnalytics_v1", ({ enumerable: true, get: function () { return v1_1.youtubeAnalytics_v1; } }));
-const v2_1 = __nccwpck_require__(7604);
-Object.defineProperty(exports, "youtubeAnalytics_v2", ({ enumerable: true, get: function () { return v2_1.youtubeAnalytics_v2; } }));
-exports.VERSIONS = {
-    v1: v1_1.youtubeAnalytics_v1.Youtubeanalytics,
-    v2: v2_1.youtubeAnalytics_v2.Youtubeanalytics,
-};
-function youtubeAnalytics(versionOrOptions) {
-    return googleapis_common_1.getAPI('youtubeAnalytics', versionOrOptions, exports.VERSIONS, this);
-}
-exports.youtubeAnalytics = youtubeAnalytics;
-const auth = new googleapis_common_1.AuthPlus();
-exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
-Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ 86348:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-// Copyright 2020 Google LLC
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//    http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.youtubeAnalytics_v1 = void 0;
-var youtubeAnalytics_v1;
-(function (youtubeAnalytics_v1) {
-    /**
-     * YouTube Analytics API
-     *
-     * Retrieves your YouTube Analytics data.
-     *
-     * @example
-     * ```js
-     * const {google} = require('googleapis');
-     * const youtubeAnalytics = google.youtubeAnalytics('v1');
-     * ```
-     */
-    class Youtubeanalytics {
-        constructor(options, google) {
-            this.context = {
-                _options: options || {},
-                google,
-            };
-        }
-    }
-    youtubeAnalytics_v1.Youtubeanalytics = Youtubeanalytics;
-})(youtubeAnalytics_v1 = exports.youtubeAnalytics_v1 || (exports.youtubeAnalytics_v1 = {}));
-//# sourceMappingURL=v1.js.map
-
-/***/ }),
-
-/***/ 7604:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-// Copyright 2020 Google LLC
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//    http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.youtubeAnalytics_v2 = void 0;
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/class-name-casing */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-empty-interface */
-/* eslint-disable @typescript-eslint/no-namespace */
-/* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
-var youtubeAnalytics_v2;
-(function (youtubeAnalytics_v2) {
-    /**
-     * YouTube Analytics API
-     *
-     * Retrieves your YouTube Analytics data.
-     *
-     * @example
-     * ```js
-     * const {google} = require('googleapis');
-     * const youtubeAnalytics = google.youtubeAnalytics('v2');
-     * ```
-     */
-    class Youtubeanalytics {
-        constructor(options, google) {
-            this.context = {
-                _options: options || {},
-                google,
-            };
-            this.groupItems = new Resource$Groupitems(this.context);
-            this.groups = new Resource$Groups(this.context);
-            this.reports = new Resource$Reports(this.context);
-        }
-    }
-    youtubeAnalytics_v2.Youtubeanalytics = Youtubeanalytics;
-    class Resource$Groupitems {
-        constructor(context) {
-            this.context = context;
-        }
-        delete(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/v2/groupItems').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'DELETE',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        insert(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback ||
-                {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/v2/groupItems').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/v2/groupItems').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    youtubeAnalytics_v2.Resource$Groupitems = Resource$Groupitems;
-    class Resource$Groups {
-        constructor(context) {
-            this.context = context;
-        }
-        delete(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/v2/groups').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'DELETE',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        insert(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/v2/groups').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'POST',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        list(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/v2/groups').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-        update(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/v2/groups').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'PUT',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    youtubeAnalytics_v2.Resource$Groups = Resource$Groups;
-    class Resource$Reports {
-        constructor(context) {
-            this.context = context;
-        }
-        query(paramsOrCallback, optionsOrCallback, callback) {
-            let params = (paramsOrCallback || {});
-            let options = (optionsOrCallback || {});
-            if (typeof paramsOrCallback === 'function') {
-                callback = paramsOrCallback;
-                params = {};
-                options = {};
-            }
-            if (typeof optionsOrCallback === 'function') {
-                callback = optionsOrCallback;
-                options = {};
-            }
-            const rootUrl = options.rootUrl || 'https://youtubeanalytics.googleapis.com/';
-            const parameters = {
-                options: Object.assign({
-                    url: (rootUrl + '/v2/reports').replace(/([^:]\/)\/+/g, '$1'),
-                    method: 'GET',
-                }, options),
-                params,
-                requiredParams: [],
-                pathParams: [],
-                context: this.context,
-            };
-            if (callback) {
-                googleapis_common_1.createAPIRequest(parameters, callback);
-            }
-            else {
-                return googleapis_common_1.createAPIRequest(parameters);
-            }
-        }
-    }
-    youtubeAnalytics_v2.Resource$Reports = Resource$Reports;
-})(youtubeAnalytics_v2 = exports.youtubeAnalytics_v2 || (exports.youtubeAnalytics_v2 = {}));
-//# sourceMappingURL=v2.js.map
-
-/***/ }),
-
-/***/ 12552:
+/***/ 75392:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -329665,8 +329664,8 @@ var youtubeAnalytics_v2;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.youtubereporting_v1 = exports.auth = exports.youtubereporting = exports.VERSIONS = void 0;
 /*! THIS FILE IS AUTO-GENERATED */
-const googleapis_common_1 = __nccwpck_require__(40524);
-const v1_1 = __nccwpck_require__(45787);
+const googleapis_common_1 = __nccwpck_require__(16782);
+const v1_1 = __nccwpck_require__(45855);
 Object.defineProperty(exports, "youtubereporting_v1", ({ enumerable: true, get: function () { return v1_1.youtubereporting_v1; } }));
 exports.VERSIONS = {
     v1: v1_1.youtubereporting_v1.Youtubereporting,
@@ -329677,13 +329676,13 @@ function youtubereporting(versionOrOptions) {
 exports.youtubereporting = youtubereporting;
 const auth = new googleapis_common_1.AuthPlus();
 exports.auth = auth;
-var googleapis_common_2 = __nccwpck_require__(40524);
+var googleapis_common_2 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_2.AuthPlus; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 45787:
+/***/ 45855:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -329708,7 +329707,7 @@ exports.youtubereporting_v1 = void 0;
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable no-irregular-whitespace */
-const googleapis_common_1 = __nccwpck_require__(40524);
+const googleapis_common_1 = __nccwpck_require__(16782);
 var youtubereporting_v1;
 (function (youtubereporting_v1) {
     /**
@@ -330005,7 +330004,7 @@ var youtubereporting_v1;
 
 /***/ }),
 
-/***/ 37842:
+/***/ 19376:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -330024,8 +330023,8 @@ var youtubereporting_v1;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GoogleApis = exports.AuthPlus = void 0;
-const apis_1 = __nccwpck_require__(43146);
-const googleapis_common_1 = __nccwpck_require__(40524);
+const apis_1 = __nccwpck_require__(83812);
+const googleapis_common_1 = __nccwpck_require__(16782);
 Object.defineProperty(exports, "AuthPlus", ({ enumerable: true, get: function () { return googleapis_common_1.AuthPlus; } }));
 class GoogleApis extends apis_1.GeneratedAPIs {
     /**
@@ -330112,7 +330111,7 @@ exports.GoogleApis = GoogleApis;
 
 /***/ }),
 
-/***/ 44913:
+/***/ 88056:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -330132,653 +330131,653 @@ exports.GoogleApis = GoogleApis;
 /*! THIS FILE IS AUTO-GENERATED */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GoogleApis = exports.google = void 0;
-const googleapis_1 = __nccwpck_require__(37842);
+const googleapis_1 = __nccwpck_require__(19376);
 Object.defineProperty(exports, "GoogleApis", ({ enumerable: true, get: function () { return googleapis_1.GoogleApis; } }));
 const google = new googleapis_1.GoogleApis();
 exports.google = google;
-exports.Common = __nccwpck_require__(40524);
-exports.Auth = __nccwpck_require__(20810);
-var v1_1 = __nccwpck_require__(52957);
+exports.Common = __nccwpck_require__(16782);
+exports.Auth = __nccwpck_require__(492);
+var v1_1 = __nccwpck_require__(44649);
 Object.defineProperty(exports, "abusiveexperiencereport_v1", ({ enumerable: true, get: function () { return v1_1.abusiveexperiencereport_v1; } }));
-var v1_2 = __nccwpck_require__(16214);
+var v1_2 = __nccwpck_require__(61369);
 Object.defineProperty(exports, "acceleratedmobilepageurl_v1", ({ enumerable: true, get: function () { return v1_2.acceleratedmobilepageurl_v1; } }));
-var v1_3 = __nccwpck_require__(10167);
+var v1_3 = __nccwpck_require__(35779);
 Object.defineProperty(exports, "accessapproval_v1", ({ enumerable: true, get: function () { return v1_3.accessapproval_v1; } }));
-var v1beta1_1 = __nccwpck_require__(28967);
+var v1beta1_1 = __nccwpck_require__(13606);
 Object.defineProperty(exports, "accessapproval_v1beta1", ({ enumerable: true, get: function () { return v1beta1_1.accessapproval_v1beta1; } }));
-var v1_4 = __nccwpck_require__(94531);
+var v1_4 = __nccwpck_require__(27576);
 Object.defineProperty(exports, "accesscontextmanager_v1", ({ enumerable: true, get: function () { return v1_4.accesscontextmanager_v1; } }));
-var v1beta_1 = __nccwpck_require__(68224);
+var v1beta_1 = __nccwpck_require__(63378);
 Object.defineProperty(exports, "accesscontextmanager_v1beta", ({ enumerable: true, get: function () { return v1beta_1.accesscontextmanager_v1beta; } }));
-var v1_2_1 = __nccwpck_require__(73080);
+var v1_2_1 = __nccwpck_require__(39987);
 Object.defineProperty(exports, "adexchangebuyer_v1_2", ({ enumerable: true, get: function () { return v1_2_1.adexchangebuyer_v1_2; } }));
-var v1_3_1 = __nccwpck_require__(57099);
+var v1_3_1 = __nccwpck_require__(39724);
 Object.defineProperty(exports, "adexchangebuyer_v1_3", ({ enumerable: true, get: function () { return v1_3_1.adexchangebuyer_v1_3; } }));
-var v1_4_1 = __nccwpck_require__(46288);
+var v1_4_1 = __nccwpck_require__(75257);
 Object.defineProperty(exports, "adexchangebuyer_v1_4", ({ enumerable: true, get: function () { return v1_4_1.adexchangebuyer_v1_4; } }));
-var v2beta1_1 = __nccwpck_require__(49104);
+var v2beta1_1 = __nccwpck_require__(97327);
 Object.defineProperty(exports, "adexchangebuyer2_v2beta1", ({ enumerable: true, get: function () { return v2beta1_1.adexchangebuyer2_v2beta1; } }));
-var v1_5 = __nccwpck_require__(34181);
+var v1_5 = __nccwpck_require__(8777);
 Object.defineProperty(exports, "adexperiencereport_v1", ({ enumerable: true, get: function () { return v1_5.adexperiencereport_v1; } }));
-var datatransfer_v1_1 = __nccwpck_require__(42718);
+var datatransfer_v1_1 = __nccwpck_require__(20565);
 Object.defineProperty(exports, "admin_datatransfer_v1", ({ enumerable: true, get: function () { return datatransfer_v1_1.admin_datatransfer_v1; } }));
-var directory_v1_1 = __nccwpck_require__(63505);
+var directory_v1_1 = __nccwpck_require__(16975);
 Object.defineProperty(exports, "admin_directory_v1", ({ enumerable: true, get: function () { return directory_v1_1.admin_directory_v1; } }));
-var reports_v1_1 = __nccwpck_require__(83699);
+var reports_v1_1 = __nccwpck_require__(49959);
 Object.defineProperty(exports, "admin_reports_v1", ({ enumerable: true, get: function () { return reports_v1_1.admin_reports_v1; } }));
-var v1_6 = __nccwpck_require__(72134);
+var v1_6 = __nccwpck_require__(79321);
 Object.defineProperty(exports, "admob_v1", ({ enumerable: true, get: function () { return v1_6.admob_v1; } }));
-var v1beta_2 = __nccwpck_require__(74789);
+var v1beta_2 = __nccwpck_require__(84051);
 Object.defineProperty(exports, "admob_v1beta", ({ enumerable: true, get: function () { return v1beta_2.admob_v1beta; } }));
-var v1_4_2 = __nccwpck_require__(18750);
+var v1_4_2 = __nccwpck_require__(80203);
 Object.defineProperty(exports, "adsense_v1_4", ({ enumerable: true, get: function () { return v1_4_2.adsense_v1_4; } }));
-var v4_1_1 = __nccwpck_require__(33691);
+var v4_1_1 = __nccwpck_require__(47741);
 Object.defineProperty(exports, "adsensehost_v4_1", ({ enumerable: true, get: function () { return v4_1_1.adsensehost_v4_1; } }));
-var v1beta1_2 = __nccwpck_require__(25151);
+var v1beta1_2 = __nccwpck_require__(80718);
 Object.defineProperty(exports, "alertcenter_v1beta1", ({ enumerable: true, get: function () { return v1beta1_2.alertcenter_v1beta1; } }));
-var v3_1 = __nccwpck_require__(8074);
+var v3_1 = __nccwpck_require__(52536);
 Object.defineProperty(exports, "analytics_v3", ({ enumerable: true, get: function () { return v3_1.analytics_v3; } }));
-var v1alpha_1 = __nccwpck_require__(25791);
+var v1alpha_1 = __nccwpck_require__(16693);
 Object.defineProperty(exports, "analyticsadmin_v1alpha", ({ enumerable: true, get: function () { return v1alpha_1.analyticsadmin_v1alpha; } }));
-var v1alpha_2 = __nccwpck_require__(82093);
+var v1alpha_2 = __nccwpck_require__(33524);
 Object.defineProperty(exports, "analyticsdata_v1alpha", ({ enumerable: true, get: function () { return v1alpha_2.analyticsdata_v1alpha; } }));
-var v4_1 = __nccwpck_require__(82755);
+var v4_1 = __nccwpck_require__(30669);
 Object.defineProperty(exports, "analyticsreporting_v4", ({ enumerable: true, get: function () { return v4_1.analyticsreporting_v4; } }));
-var v1_7 = __nccwpck_require__(94747);
+var v1_7 = __nccwpck_require__(66950);
 Object.defineProperty(exports, "androiddeviceprovisioning_v1", ({ enumerable: true, get: function () { return v1_7.androiddeviceprovisioning_v1; } }));
-var v1_8 = __nccwpck_require__(57455);
+var v1_8 = __nccwpck_require__(61410);
 Object.defineProperty(exports, "androidenterprise_v1", ({ enumerable: true, get: function () { return v1_8.androidenterprise_v1; } }));
-var v1_9 = __nccwpck_require__(3849);
+var v1_9 = __nccwpck_require__(38062);
 Object.defineProperty(exports, "androidmanagement_v1", ({ enumerable: true, get: function () { return v1_9.androidmanagement_v1; } }));
-var v1_1_1 = __nccwpck_require__(81885);
+var v1_1_1 = __nccwpck_require__(84506);
 Object.defineProperty(exports, "androidpublisher_v1_1", ({ enumerable: true, get: function () { return v1_1_1.androidpublisher_v1_1; } }));
-var v1_10 = __nccwpck_require__(28172);
+var v1_10 = __nccwpck_require__(24903);
 Object.defineProperty(exports, "androidpublisher_v1", ({ enumerable: true, get: function () { return v1_10.androidpublisher_v1; } }));
-var v2_1 = __nccwpck_require__(66988);
+var v2_1 = __nccwpck_require__(21178);
 Object.defineProperty(exports, "androidpublisher_v2", ({ enumerable: true, get: function () { return v2_1.androidpublisher_v2; } }));
-var v3_2 = __nccwpck_require__(12460);
+var v3_2 = __nccwpck_require__(33705);
 Object.defineProperty(exports, "androidpublisher_v3", ({ enumerable: true, get: function () { return v3_2.androidpublisher_v3; } }));
-var v1beta_3 = __nccwpck_require__(91791);
+var v1beta_3 = __nccwpck_require__(24644);
 Object.defineProperty(exports, "apigateway_v1beta", ({ enumerable: true, get: function () { return v1beta_3.apigateway_v1beta; } }));
-var v1_11 = __nccwpck_require__(86030);
+var v1_11 = __nccwpck_require__(45257);
 Object.defineProperty(exports, "appengine_v1", ({ enumerable: true, get: function () { return v1_11.appengine_v1; } }));
-var v1alpha_3 = __nccwpck_require__(80039);
+var v1alpha_3 = __nccwpck_require__(29361);
 Object.defineProperty(exports, "appengine_v1alpha", ({ enumerable: true, get: function () { return v1alpha_3.appengine_v1alpha; } }));
-var v1beta_4 = __nccwpck_require__(23506);
+var v1beta_4 = __nccwpck_require__(44259);
 Object.defineProperty(exports, "appengine_v1beta", ({ enumerable: true, get: function () { return v1beta_4.appengine_v1beta; } }));
-var v1_12 = __nccwpck_require__(65455);
+var v1_12 = __nccwpck_require__(86903);
 Object.defineProperty(exports, "appsactivity_v1", ({ enumerable: true, get: function () { return v1_12.appsactivity_v1; } }));
-var v1alpha1_1 = __nccwpck_require__(74414);
+var v1alpha1_1 = __nccwpck_require__(83180);
 Object.defineProperty(exports, "area120tables_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_1.area120tables_v1alpha1; } }));
-var v1beta1_3 = __nccwpck_require__(52896);
+var v1beta1_3 = __nccwpck_require__(24946);
 Object.defineProperty(exports, "artifactregistry_v1beta1", ({ enumerable: true, get: function () { return v1beta1_3.artifactregistry_v1beta1; } }));
-var v1beta2_1 = __nccwpck_require__(46839);
+var v1beta2_1 = __nccwpck_require__(83327);
 Object.defineProperty(exports, "artifactregistry_v1beta2", ({ enumerable: true, get: function () { return v1beta2_1.artifactregistry_v1beta2; } }));
-var v1_13 = __nccwpck_require__(26913);
+var v1_13 = __nccwpck_require__(43213);
 Object.defineProperty(exports, "assuredworkloads_v1", ({ enumerable: true, get: function () { return v1_13.assuredworkloads_v1; } }));
-var v1beta1_4 = __nccwpck_require__(61883);
+var v1beta1_4 = __nccwpck_require__(5928);
 Object.defineProperty(exports, "assuredworkloads_v1beta1", ({ enumerable: true, get: function () { return v1beta1_4.assuredworkloads_v1beta1; } }));
-var v2_2 = __nccwpck_require__(39349);
+var v2_2 = __nccwpck_require__(57763);
 Object.defineProperty(exports, "bigquery_v2", ({ enumerable: true, get: function () { return v2_2.bigquery_v2; } }));
-var v1beta1_5 = __nccwpck_require__(97250);
+var v1beta1_5 = __nccwpck_require__(21765);
 Object.defineProperty(exports, "bigqueryconnection_v1beta1", ({ enumerable: true, get: function () { return v1beta1_5.bigqueryconnection_v1beta1; } }));
-var v1_14 = __nccwpck_require__(73515);
+var v1_14 = __nccwpck_require__(11679);
 Object.defineProperty(exports, "bigquerydatatransfer_v1", ({ enumerable: true, get: function () { return v1_14.bigquerydatatransfer_v1; } }));
-var v1_15 = __nccwpck_require__(91307);
+var v1_15 = __nccwpck_require__(6654);
 Object.defineProperty(exports, "bigqueryreservation_v1", ({ enumerable: true, get: function () { return v1_15.bigqueryreservation_v1; } }));
-var v1alpha2_1 = __nccwpck_require__(74332);
+var v1alpha2_1 = __nccwpck_require__(71440);
 Object.defineProperty(exports, "bigqueryreservation_v1alpha2", ({ enumerable: true, get: function () { return v1alpha2_1.bigqueryreservation_v1alpha2; } }));
-var v1beta1_6 = __nccwpck_require__(65051);
+var v1beta1_6 = __nccwpck_require__(26917);
 Object.defineProperty(exports, "bigqueryreservation_v1beta1", ({ enumerable: true, get: function () { return v1beta1_6.bigqueryreservation_v1beta1; } }));
-var v1_16 = __nccwpck_require__(12678);
+var v1_16 = __nccwpck_require__(54869);
 Object.defineProperty(exports, "bigtableadmin_v1", ({ enumerable: true, get: function () { return v1_16.bigtableadmin_v1; } }));
-var v2_3 = __nccwpck_require__(27248);
+var v2_3 = __nccwpck_require__(67404);
 Object.defineProperty(exports, "bigtableadmin_v2", ({ enumerable: true, get: function () { return v2_3.bigtableadmin_v2; } }));
-var v1_17 = __nccwpck_require__(39284);
+var v1_17 = __nccwpck_require__(33141);
 Object.defineProperty(exports, "billingbudgets_v1", ({ enumerable: true, get: function () { return v1_17.billingbudgets_v1; } }));
-var v1beta1_7 = __nccwpck_require__(32169);
+var v1beta1_7 = __nccwpck_require__(16704);
 Object.defineProperty(exports, "billingbudgets_v1beta1", ({ enumerable: true, get: function () { return v1beta1_7.billingbudgets_v1beta1; } }));
-var v1_18 = __nccwpck_require__(15425);
+var v1_18 = __nccwpck_require__(61148);
 Object.defineProperty(exports, "binaryauthorization_v1", ({ enumerable: true, get: function () { return v1_18.binaryauthorization_v1; } }));
-var v1beta1_8 = __nccwpck_require__(99826);
+var v1beta1_8 = __nccwpck_require__(42203);
 Object.defineProperty(exports, "binaryauthorization_v1beta1", ({ enumerable: true, get: function () { return v1beta1_8.binaryauthorization_v1beta1; } }));
-var v2_4 = __nccwpck_require__(79743);
+var v2_4 = __nccwpck_require__(89837);
 Object.defineProperty(exports, "blogger_v2", ({ enumerable: true, get: function () { return v2_4.blogger_v2; } }));
-var v3_3 = __nccwpck_require__(38264);
+var v3_3 = __nccwpck_require__(80174);
 Object.defineProperty(exports, "blogger_v3", ({ enumerable: true, get: function () { return v3_3.blogger_v3; } }));
-var v1_19 = __nccwpck_require__(14836);
+var v1_19 = __nccwpck_require__(59152);
 Object.defineProperty(exports, "books_v1", ({ enumerable: true, get: function () { return v1_19.books_v1; } }));
-var v3_4 = __nccwpck_require__(19829);
+var v3_4 = __nccwpck_require__(21708);
 Object.defineProperty(exports, "calendar_v3", ({ enumerable: true, get: function () { return v3_4.calendar_v3; } }));
-var v1_20 = __nccwpck_require__(57677);
+var v1_20 = __nccwpck_require__(69826);
 Object.defineProperty(exports, "chat_v1", ({ enumerable: true, get: function () { return v1_20.chat_v1; } }));
-var v1_21 = __nccwpck_require__(2880);
+var v1_21 = __nccwpck_require__(99327);
 Object.defineProperty(exports, "chromeuxreport_v1", ({ enumerable: true, get: function () { return v1_21.chromeuxreport_v1; } }));
-var v2_5 = __nccwpck_require__(57955);
+var v2_5 = __nccwpck_require__(80093);
 Object.defineProperty(exports, "civicinfo_v2", ({ enumerable: true, get: function () { return v2_5.civicinfo_v2; } }));
-var v1_22 = __nccwpck_require__(52619);
+var v1_22 = __nccwpck_require__(23579);
 Object.defineProperty(exports, "classroom_v1", ({ enumerable: true, get: function () { return v1_22.classroom_v1; } }));
-var v1_23 = __nccwpck_require__(97135);
+var v1_23 = __nccwpck_require__(58573);
 Object.defineProperty(exports, "cloudasset_v1", ({ enumerable: true, get: function () { return v1_23.cloudasset_v1; } }));
-var v1beta1_9 = __nccwpck_require__(171);
+var v1beta1_9 = __nccwpck_require__(79432);
 Object.defineProperty(exports, "cloudasset_v1beta1", ({ enumerable: true, get: function () { return v1beta1_9.cloudasset_v1beta1; } }));
-var v1p1beta1_1 = __nccwpck_require__(26486);
+var v1p1beta1_1 = __nccwpck_require__(97797);
 Object.defineProperty(exports, "cloudasset_v1p1beta1", ({ enumerable: true, get: function () { return v1p1beta1_1.cloudasset_v1p1beta1; } }));
-var v1p4beta1_1 = __nccwpck_require__(96369);
+var v1p4beta1_1 = __nccwpck_require__(50692);
 Object.defineProperty(exports, "cloudasset_v1p4beta1", ({ enumerable: true, get: function () { return v1p4beta1_1.cloudasset_v1p4beta1; } }));
-var v1p5beta1_1 = __nccwpck_require__(7685);
+var v1p5beta1_1 = __nccwpck_require__(72273);
 Object.defineProperty(exports, "cloudasset_v1p5beta1", ({ enumerable: true, get: function () { return v1p5beta1_1.cloudasset_v1p5beta1; } }));
-var v1_24 = __nccwpck_require__(72384);
+var v1_24 = __nccwpck_require__(38720);
 Object.defineProperty(exports, "cloudbilling_v1", ({ enumerable: true, get: function () { return v1_24.cloudbilling_v1; } }));
-var v1_25 = __nccwpck_require__(88354);
+var v1_25 = __nccwpck_require__(68489);
 Object.defineProperty(exports, "cloudbuild_v1", ({ enumerable: true, get: function () { return v1_25.cloudbuild_v1; } }));
-var v1alpha1_2 = __nccwpck_require__(88904);
+var v1alpha1_2 = __nccwpck_require__(78062);
 Object.defineProperty(exports, "cloudbuild_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_2.cloudbuild_v1alpha1; } }));
-var v1alpha2_2 = __nccwpck_require__(88105);
+var v1alpha2_2 = __nccwpck_require__(62923);
 Object.defineProperty(exports, "cloudbuild_v1alpha2", ({ enumerable: true, get: function () { return v1alpha2_2.cloudbuild_v1alpha2; } }));
-var v2_6 = __nccwpck_require__(15660);
+var v2_6 = __nccwpck_require__(79637);
 Object.defineProperty(exports, "clouddebugger_v2", ({ enumerable: true, get: function () { return v2_6.clouddebugger_v2; } }));
-var v1beta1_10 = __nccwpck_require__(37343);
+var v1beta1_10 = __nccwpck_require__(86788);
 Object.defineProperty(exports, "clouderrorreporting_v1beta1", ({ enumerable: true, get: function () { return v1beta1_10.clouderrorreporting_v1beta1; } }));
-var v1_26 = __nccwpck_require__(34746);
+var v1_26 = __nccwpck_require__(56794);
 Object.defineProperty(exports, "cloudfunctions_v1", ({ enumerable: true, get: function () { return v1_26.cloudfunctions_v1; } }));
-var v1beta2_2 = __nccwpck_require__(81442);
+var v1beta2_2 = __nccwpck_require__(11344);
 Object.defineProperty(exports, "cloudfunctions_v1beta2", ({ enumerable: true, get: function () { return v1beta2_2.cloudfunctions_v1beta2; } }));
-var v1_27 = __nccwpck_require__(89044);
+var v1_27 = __nccwpck_require__(64463);
 Object.defineProperty(exports, "cloudidentity_v1", ({ enumerable: true, get: function () { return v1_27.cloudidentity_v1; } }));
-var v1beta1_11 = __nccwpck_require__(36269);
+var v1beta1_11 = __nccwpck_require__(27994);
 Object.defineProperty(exports, "cloudidentity_v1beta1", ({ enumerable: true, get: function () { return v1beta1_11.cloudidentity_v1beta1; } }));
-var v1_28 = __nccwpck_require__(64753);
+var v1_28 = __nccwpck_require__(13105);
 Object.defineProperty(exports, "cloudiot_v1", ({ enumerable: true, get: function () { return v1_28.cloudiot_v1; } }));
-var v1_29 = __nccwpck_require__(37661);
+var v1_29 = __nccwpck_require__(75622);
 Object.defineProperty(exports, "cloudkms_v1", ({ enumerable: true, get: function () { return v1_29.cloudkms_v1; } }));
-var v2_7 = __nccwpck_require__(31415);
+var v2_7 = __nccwpck_require__(20023);
 Object.defineProperty(exports, "cloudprofiler_v2", ({ enumerable: true, get: function () { return v2_7.cloudprofiler_v2; } }));
-var v1_30 = __nccwpck_require__(70958);
+var v1_30 = __nccwpck_require__(96564);
 Object.defineProperty(exports, "cloudresourcemanager_v1", ({ enumerable: true, get: function () { return v1_30.cloudresourcemanager_v1; } }));
-var v1beta1_12 = __nccwpck_require__(14478);
+var v1beta1_12 = __nccwpck_require__(77123);
 Object.defineProperty(exports, "cloudresourcemanager_v1beta1", ({ enumerable: true, get: function () { return v1beta1_12.cloudresourcemanager_v1beta1; } }));
-var v2_8 = __nccwpck_require__(24355);
+var v2_8 = __nccwpck_require__(11037);
 Object.defineProperty(exports, "cloudresourcemanager_v2", ({ enumerable: true, get: function () { return v2_8.cloudresourcemanager_v2; } }));
-var v2beta1_2 = __nccwpck_require__(33945);
+var v2beta1_2 = __nccwpck_require__(55672);
 Object.defineProperty(exports, "cloudresourcemanager_v2beta1", ({ enumerable: true, get: function () { return v2beta1_2.cloudresourcemanager_v2beta1; } }));
-var v1_31 = __nccwpck_require__(89994);
+var v1_31 = __nccwpck_require__(45026);
 Object.defineProperty(exports, "cloudscheduler_v1", ({ enumerable: true, get: function () { return v1_31.cloudscheduler_v1; } }));
-var v1beta1_13 = __nccwpck_require__(63522);
+var v1beta1_13 = __nccwpck_require__(82657);
 Object.defineProperty(exports, "cloudscheduler_v1beta1", ({ enumerable: true, get: function () { return v1beta1_13.cloudscheduler_v1beta1; } }));
-var v1_32 = __nccwpck_require__(85314);
+var v1_32 = __nccwpck_require__(93969);
 Object.defineProperty(exports, "cloudsearch_v1", ({ enumerable: true, get: function () { return v1_32.cloudsearch_v1; } }));
-var v1_33 = __nccwpck_require__(5748);
+var v1_33 = __nccwpck_require__(56691);
 Object.defineProperty(exports, "cloudshell_v1", ({ enumerable: true, get: function () { return v1_33.cloudshell_v1; } }));
-var v1alpha1_3 = __nccwpck_require__(70457);
+var v1alpha1_3 = __nccwpck_require__(17952);
 Object.defineProperty(exports, "cloudshell_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_3.cloudshell_v1alpha1; } }));
-var v2_9 = __nccwpck_require__(21294);
+var v2_9 = __nccwpck_require__(24822);
 Object.defineProperty(exports, "cloudtasks_v2", ({ enumerable: true, get: function () { return v2_9.cloudtasks_v2; } }));
-var v2beta2_1 = __nccwpck_require__(19041);
+var v2beta2_1 = __nccwpck_require__(42564);
 Object.defineProperty(exports, "cloudtasks_v2beta2", ({ enumerable: true, get: function () { return v2beta2_1.cloudtasks_v2beta2; } }));
-var v2beta3_1 = __nccwpck_require__(61800);
+var v2beta3_1 = __nccwpck_require__(24011);
 Object.defineProperty(exports, "cloudtasks_v2beta3", ({ enumerable: true, get: function () { return v2beta3_1.cloudtasks_v2beta3; } }));
-var v1_34 = __nccwpck_require__(26029);
+var v1_34 = __nccwpck_require__(10);
 Object.defineProperty(exports, "cloudtrace_v1", ({ enumerable: true, get: function () { return v1_34.cloudtrace_v1; } }));
-var v2_10 = __nccwpck_require__(86349);
+var v2_10 = __nccwpck_require__(58935);
 Object.defineProperty(exports, "cloudtrace_v2", ({ enumerable: true, get: function () { return v2_10.cloudtrace_v2; } }));
-var v2beta1_3 = __nccwpck_require__(4268);
+var v2beta1_3 = __nccwpck_require__(6450);
 Object.defineProperty(exports, "cloudtrace_v2beta1", ({ enumerable: true, get: function () { return v2beta1_3.cloudtrace_v2beta1; } }));
-var v1_35 = __nccwpck_require__(29383);
+var v1_35 = __nccwpck_require__(65034);
 Object.defineProperty(exports, "composer_v1", ({ enumerable: true, get: function () { return v1_35.composer_v1; } }));
-var v1beta1_14 = __nccwpck_require__(47216);
+var v1beta1_14 = __nccwpck_require__(82841);
 Object.defineProperty(exports, "composer_v1beta1", ({ enumerable: true, get: function () { return v1beta1_14.composer_v1beta1; } }));
-var alpha_1 = __nccwpck_require__(88951);
+var alpha_1 = __nccwpck_require__(26382);
 Object.defineProperty(exports, "compute_alpha", ({ enumerable: true, get: function () { return alpha_1.compute_alpha; } }));
-var beta_1 = __nccwpck_require__(66624);
+var beta_1 = __nccwpck_require__(43418);
 Object.defineProperty(exports, "compute_beta", ({ enumerable: true, get: function () { return beta_1.compute_beta; } }));
-var v1_36 = __nccwpck_require__(89949);
+var v1_36 = __nccwpck_require__(3997);
 Object.defineProperty(exports, "compute_v1", ({ enumerable: true, get: function () { return v1_36.compute_v1; } }));
-var v1_37 = __nccwpck_require__(60208);
+var v1_37 = __nccwpck_require__(53883);
 Object.defineProperty(exports, "container_v1", ({ enumerable: true, get: function () { return v1_37.container_v1; } }));
-var v1beta1_15 = __nccwpck_require__(34529);
+var v1beta1_15 = __nccwpck_require__(69230);
 Object.defineProperty(exports, "container_v1beta1", ({ enumerable: true, get: function () { return v1beta1_15.container_v1beta1; } }));
-var v1alpha1_4 = __nccwpck_require__(7472);
+var v1alpha1_4 = __nccwpck_require__(96410);
 Object.defineProperty(exports, "containeranalysis_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_4.containeranalysis_v1alpha1; } }));
-var v1beta1_16 = __nccwpck_require__(55363);
+var v1beta1_16 = __nccwpck_require__(30760);
 Object.defineProperty(exports, "containeranalysis_v1beta1", ({ enumerable: true, get: function () { return v1beta1_16.containeranalysis_v1beta1; } }));
-var v2_1_1 = __nccwpck_require__(5021);
+var v2_1_1 = __nccwpck_require__(91289);
 Object.defineProperty(exports, "content_v2_1", ({ enumerable: true, get: function () { return v2_1_1.content_v2_1; } }));
-var v2_11 = __nccwpck_require__(62523);
+var v2_11 = __nccwpck_require__(11404);
 Object.defineProperty(exports, "content_v2", ({ enumerable: true, get: function () { return v2_11.content_v2; } }));
-var v1_38 = __nccwpck_require__(97699);
+var v1_38 = __nccwpck_require__(72209);
 Object.defineProperty(exports, "customsearch_v1", ({ enumerable: true, get: function () { return v1_38.customsearch_v1; } }));
-var v1beta1_17 = __nccwpck_require__(69793);
+var v1beta1_17 = __nccwpck_require__(24270);
 Object.defineProperty(exports, "datacatalog_v1beta1", ({ enumerable: true, get: function () { return v1beta1_17.datacatalog_v1beta1; } }));
-var v1b3_1 = __nccwpck_require__(78925);
+var v1b3_1 = __nccwpck_require__(3627);
 Object.defineProperty(exports, "dataflow_v1b3", ({ enumerable: true, get: function () { return v1b3_1.dataflow_v1b3; } }));
-var v1_39 = __nccwpck_require__(20201);
+var v1_39 = __nccwpck_require__(20780);
 Object.defineProperty(exports, "datafusion_v1", ({ enumerable: true, get: function () { return v1_39.datafusion_v1; } }));
-var v1beta1_18 = __nccwpck_require__(71332);
+var v1beta1_18 = __nccwpck_require__(85899);
 Object.defineProperty(exports, "datafusion_v1beta1", ({ enumerable: true, get: function () { return v1beta1_18.datafusion_v1beta1; } }));
-var v1beta1_19 = __nccwpck_require__(20476);
+var v1beta1_19 = __nccwpck_require__(90361);
 Object.defineProperty(exports, "datalabeling_v1beta1", ({ enumerable: true, get: function () { return v1beta1_19.datalabeling_v1beta1; } }));
-var v1beta1_20 = __nccwpck_require__(11521);
+var v1beta1_20 = __nccwpck_require__(41329);
 Object.defineProperty(exports, "datamigration_v1beta1", ({ enumerable: true, get: function () { return v1beta1_20.datamigration_v1beta1; } }));
-var v1_40 = __nccwpck_require__(28519);
+var v1_40 = __nccwpck_require__(60400);
 Object.defineProperty(exports, "dataproc_v1", ({ enumerable: true, get: function () { return v1_40.dataproc_v1; } }));
-var v1beta2_3 = __nccwpck_require__(3512);
+var v1beta2_3 = __nccwpck_require__(66890);
 Object.defineProperty(exports, "dataproc_v1beta2", ({ enumerable: true, get: function () { return v1beta2_3.dataproc_v1beta2; } }));
-var v1_41 = __nccwpck_require__(73834);
+var v1_41 = __nccwpck_require__(18417);
 Object.defineProperty(exports, "datastore_v1", ({ enumerable: true, get: function () { return v1_41.datastore_v1; } }));
-var v1beta1_21 = __nccwpck_require__(42039);
+var v1beta1_21 = __nccwpck_require__(43540);
 Object.defineProperty(exports, "datastore_v1beta1", ({ enumerable: true, get: function () { return v1beta1_21.datastore_v1beta1; } }));
-var v1beta3_1 = __nccwpck_require__(52586);
+var v1beta3_1 = __nccwpck_require__(45470);
 Object.defineProperty(exports, "datastore_v1beta3", ({ enumerable: true, get: function () { return v1beta3_1.datastore_v1beta3; } }));
-var alpha_2 = __nccwpck_require__(41147);
+var alpha_2 = __nccwpck_require__(96381);
 Object.defineProperty(exports, "deploymentmanager_alpha", ({ enumerable: true, get: function () { return alpha_2.deploymentmanager_alpha; } }));
-var v2_12 = __nccwpck_require__(97525);
+var v2_12 = __nccwpck_require__(26261);
 Object.defineProperty(exports, "deploymentmanager_v2", ({ enumerable: true, get: function () { return v2_12.deploymentmanager_v2; } }));
-var v2beta_1 = __nccwpck_require__(28997);
+var v2beta_1 = __nccwpck_require__(87151);
 Object.defineProperty(exports, "deploymentmanager_v2beta", ({ enumerable: true, get: function () { return v2beta_1.deploymentmanager_v2beta; } }));
-var v3_3_1 = __nccwpck_require__(2186);
+var v3_3_1 = __nccwpck_require__(15190);
 Object.defineProperty(exports, "dfareporting_v3_3", ({ enumerable: true, get: function () { return v3_3_1.dfareporting_v3_3; } }));
-var v3_4_1 = __nccwpck_require__(70114);
+var v3_4_1 = __nccwpck_require__(24759);
 Object.defineProperty(exports, "dfareporting_v3_4", ({ enumerable: true, get: function () { return v3_4_1.dfareporting_v3_4; } }));
-var v2_13 = __nccwpck_require__(1463);
+var v2_13 = __nccwpck_require__(96961);
 Object.defineProperty(exports, "dialogflow_v2", ({ enumerable: true, get: function () { return v2_13.dialogflow_v2; } }));
-var v2beta1_4 = __nccwpck_require__(94792);
+var v2beta1_4 = __nccwpck_require__(40644);
 Object.defineProperty(exports, "dialogflow_v2beta1", ({ enumerable: true, get: function () { return v2beta1_4.dialogflow_v2beta1; } }));
-var v3beta1_1 = __nccwpck_require__(90979);
+var v3beta1_1 = __nccwpck_require__(43985);
 Object.defineProperty(exports, "dialogflow_v3beta1", ({ enumerable: true, get: function () { return v3beta1_1.dialogflow_v3beta1; } }));
-var v1_42 = __nccwpck_require__(70406);
+var v1_42 = __nccwpck_require__(22617);
 Object.defineProperty(exports, "digitalassetlinks_v1", ({ enumerable: true, get: function () { return v1_42.digitalassetlinks_v1; } }));
-var v1_43 = __nccwpck_require__(74191);
+var v1_43 = __nccwpck_require__(91956);
 Object.defineProperty(exports, "discovery_v1", ({ enumerable: true, get: function () { return v1_43.discovery_v1; } }));
-var v1_44 = __nccwpck_require__(98838);
+var v1_44 = __nccwpck_require__(56591);
 Object.defineProperty(exports, "displayvideo_v1", ({ enumerable: true, get: function () { return v1_44.displayvideo_v1; } }));
-var v1beta_5 = __nccwpck_require__(75118);
+var v1beta_5 = __nccwpck_require__(67429);
 Object.defineProperty(exports, "displayvideo_v1beta", ({ enumerable: true, get: function () { return v1beta_5.displayvideo_v1beta; } }));
-var v1beta2_4 = __nccwpck_require__(46110);
+var v1beta2_4 = __nccwpck_require__(49671);
 Object.defineProperty(exports, "displayvideo_v1beta2", ({ enumerable: true, get: function () { return v1beta2_4.displayvideo_v1beta2; } }));
-var v1dev_1 = __nccwpck_require__(25226);
+var v1dev_1 = __nccwpck_require__(27124);
 Object.defineProperty(exports, "displayvideo_v1dev", ({ enumerable: true, get: function () { return v1dev_1.displayvideo_v1dev; } }));
-var v2_14 = __nccwpck_require__(93360);
+var v2_14 = __nccwpck_require__(31099);
 Object.defineProperty(exports, "dlp_v2", ({ enumerable: true, get: function () { return v2_14.dlp_v2; } }));
-var v1_45 = __nccwpck_require__(68469);
+var v1_45 = __nccwpck_require__(62399);
 Object.defineProperty(exports, "dns_v1", ({ enumerable: true, get: function () { return v1_45.dns_v1; } }));
-var v1beta2_5 = __nccwpck_require__(99517);
+var v1beta2_5 = __nccwpck_require__(99255);
 Object.defineProperty(exports, "dns_v1beta2", ({ enumerable: true, get: function () { return v1beta2_5.dns_v1beta2; } }));
-var v2beta1_5 = __nccwpck_require__(7207);
+var v2beta1_5 = __nccwpck_require__(14769);
 Object.defineProperty(exports, "dns_v2beta1", ({ enumerable: true, get: function () { return v2beta1_5.dns_v2beta1; } }));
-var v1_46 = __nccwpck_require__(98364);
+var v1_46 = __nccwpck_require__(60597);
 Object.defineProperty(exports, "docs_v1", ({ enumerable: true, get: function () { return v1_46.docs_v1; } }));
-var v1beta2_6 = __nccwpck_require__(82227);
+var v1beta2_6 = __nccwpck_require__(67561);
 Object.defineProperty(exports, "documentai_v1beta2", ({ enumerable: true, get: function () { return v1beta2_6.documentai_v1beta2; } }));
-var v1beta3_2 = __nccwpck_require__(18492);
+var v1beta3_2 = __nccwpck_require__(20346);
 Object.defineProperty(exports, "documentai_v1beta3", ({ enumerable: true, get: function () { return v1beta3_2.documentai_v1beta3; } }));
-var v1alpha2_3 = __nccwpck_require__(42230);
+var v1alpha2_3 = __nccwpck_require__(59035);
 Object.defineProperty(exports, "domains_v1alpha2", ({ enumerable: true, get: function () { return v1alpha2_3.domains_v1alpha2; } }));
-var v1beta1_22 = __nccwpck_require__(21449);
+var v1beta1_22 = __nccwpck_require__(38252);
 Object.defineProperty(exports, "domains_v1beta1", ({ enumerable: true, get: function () { return v1beta1_22.domains_v1beta1; } }));
-var v1_47 = __nccwpck_require__(16433);
+var v1_47 = __nccwpck_require__(41328);
 Object.defineProperty(exports, "domainsrdap_v1", ({ enumerable: true, get: function () { return v1_47.domainsrdap_v1; } }));
-var v1_1_2 = __nccwpck_require__(61891);
+var v1_1_2 = __nccwpck_require__(97356);
 Object.defineProperty(exports, "doubleclickbidmanager_v1_1", ({ enumerable: true, get: function () { return v1_1_2.doubleclickbidmanager_v1_1; } }));
-var v1_48 = __nccwpck_require__(42565);
+var v1_48 = __nccwpck_require__(40381);
 Object.defineProperty(exports, "doubleclickbidmanager_v1", ({ enumerable: true, get: function () { return v1_48.doubleclickbidmanager_v1; } }));
-var v2_15 = __nccwpck_require__(72660);
+var v2_15 = __nccwpck_require__(33026);
 Object.defineProperty(exports, "doubleclicksearch_v2", ({ enumerable: true, get: function () { return v2_15.doubleclicksearch_v2; } }));
-var v2_16 = __nccwpck_require__(22511);
+var v2_16 = __nccwpck_require__(89771);
 Object.defineProperty(exports, "drive_v2", ({ enumerable: true, get: function () { return v2_16.drive_v2; } }));
-var v3_5 = __nccwpck_require__(23698);
+var v3_5 = __nccwpck_require__(74148);
 Object.defineProperty(exports, "drive_v3", ({ enumerable: true, get: function () { return v3_5.drive_v3; } }));
-var v2_17 = __nccwpck_require__(61742);
+var v2_17 = __nccwpck_require__(59872);
 Object.defineProperty(exports, "driveactivity_v2", ({ enumerable: true, get: function () { return v2_17.driveactivity_v2; } }));
-var v1beta1_23 = __nccwpck_require__(98551);
+var v1beta1_23 = __nccwpck_require__(31575);
 Object.defineProperty(exports, "eventarc_v1beta1", ({ enumerable: true, get: function () { return v1beta1_23.eventarc_v1beta1; } }));
-var v1alpha1_5 = __nccwpck_require__(90706);
+var v1alpha1_5 = __nccwpck_require__(58640);
 Object.defineProperty(exports, "factchecktools_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_5.factchecktools_v1alpha1; } }));
-var v1_49 = __nccwpck_require__(55943);
+var v1_49 = __nccwpck_require__(13144);
 Object.defineProperty(exports, "fcm_v1", ({ enumerable: true, get: function () { return v1_49.fcm_v1; } }));
-var v1_50 = __nccwpck_require__(31816);
+var v1_50 = __nccwpck_require__(48010);
 Object.defineProperty(exports, "file_v1", ({ enumerable: true, get: function () { return v1_50.file_v1; } }));
-var v1beta1_24 = __nccwpck_require__(74107);
+var v1beta1_24 = __nccwpck_require__(43033);
 Object.defineProperty(exports, "file_v1beta1", ({ enumerable: true, get: function () { return v1beta1_24.file_v1beta1; } }));
-var v1beta1_25 = __nccwpck_require__(37418);
+var v1beta1_25 = __nccwpck_require__(83346);
 Object.defineProperty(exports, "firebase_v1beta1", ({ enumerable: true, get: function () { return v1beta1_25.firebase_v1beta1; } }));
-var v1beta_6 = __nccwpck_require__(47417);
+var v1beta_6 = __nccwpck_require__(29890);
 Object.defineProperty(exports, "firebasedatabase_v1beta", ({ enumerable: true, get: function () { return v1beta_6.firebasedatabase_v1beta; } }));
-var v1_51 = __nccwpck_require__(5989);
+var v1_51 = __nccwpck_require__(14849);
 Object.defineProperty(exports, "firebasedynamiclinks_v1", ({ enumerable: true, get: function () { return v1_51.firebasedynamiclinks_v1; } }));
-var v1_52 = __nccwpck_require__(32949);
+var v1_52 = __nccwpck_require__(93709);
 Object.defineProperty(exports, "firebasehosting_v1", ({ enumerable: true, get: function () { return v1_52.firebasehosting_v1; } }));
-var v1beta1_26 = __nccwpck_require__(75245);
+var v1beta1_26 = __nccwpck_require__(32136);
 Object.defineProperty(exports, "firebasehosting_v1beta1", ({ enumerable: true, get: function () { return v1beta1_26.firebasehosting_v1beta1; } }));
-var v1_53 = __nccwpck_require__(55984);
+var v1_53 = __nccwpck_require__(90836);
 Object.defineProperty(exports, "firebaseml_v1", ({ enumerable: true, get: function () { return v1_53.firebaseml_v1; } }));
-var v1beta2_7 = __nccwpck_require__(64397);
+var v1beta2_7 = __nccwpck_require__(38374);
 Object.defineProperty(exports, "firebaseml_v1beta2", ({ enumerable: true, get: function () { return v1beta2_7.firebaseml_v1beta2; } }));
-var v1_54 = __nccwpck_require__(79674);
+var v1_54 = __nccwpck_require__(30818);
 Object.defineProperty(exports, "firebaserules_v1", ({ enumerable: true, get: function () { return v1_54.firebaserules_v1; } }));
-var v1_55 = __nccwpck_require__(78465);
+var v1_55 = __nccwpck_require__(6453);
 Object.defineProperty(exports, "firestore_v1", ({ enumerable: true, get: function () { return v1_55.firestore_v1; } }));
-var v1beta1_27 = __nccwpck_require__(83092);
+var v1beta1_27 = __nccwpck_require__(77952);
 Object.defineProperty(exports, "firestore_v1beta1", ({ enumerable: true, get: function () { return v1beta1_27.firestore_v1beta1; } }));
-var v1beta2_8 = __nccwpck_require__(46490);
+var v1beta2_8 = __nccwpck_require__(98233);
 Object.defineProperty(exports, "firestore_v1beta2", ({ enumerable: true, get: function () { return v1beta2_8.firestore_v1beta2; } }));
-var v1_56 = __nccwpck_require__(69094);
+var v1_56 = __nccwpck_require__(6878);
 Object.defineProperty(exports, "fitness_v1", ({ enumerable: true, get: function () { return v1_56.fitness_v1; } }));
-var v1_57 = __nccwpck_require__(45973);
+var v1_57 = __nccwpck_require__(17855);
 Object.defineProperty(exports, "games_v1", ({ enumerable: true, get: function () { return v1_57.games_v1; } }));
-var v1configuration_1 = __nccwpck_require__(26550);
+var v1configuration_1 = __nccwpck_require__(85699);
 Object.defineProperty(exports, "gamesConfiguration_v1configuration", ({ enumerable: true, get: function () { return v1configuration_1.gamesConfiguration_v1configuration; } }));
-var v1management_1 = __nccwpck_require__(55801);
+var v1management_1 = __nccwpck_require__(61881);
 Object.defineProperty(exports, "gamesManagement_v1management", ({ enumerable: true, get: function () { return v1management_1.gamesManagement_v1management; } }));
-var v1_58 = __nccwpck_require__(49108);
+var v1_58 = __nccwpck_require__(89314);
 Object.defineProperty(exports, "gameservices_v1", ({ enumerable: true, get: function () { return v1_58.gameservices_v1; } }));
-var v1beta_7 = __nccwpck_require__(95283);
+var v1beta_7 = __nccwpck_require__(68832);
 Object.defineProperty(exports, "gameservices_v1beta", ({ enumerable: true, get: function () { return v1beta_7.gameservices_v1beta; } }));
-var v1_59 = __nccwpck_require__(11050);
+var v1_59 = __nccwpck_require__(98929);
 Object.defineProperty(exports, "genomics_v1", ({ enumerable: true, get: function () { return v1_59.genomics_v1; } }));
-var v1alpha2_4 = __nccwpck_require__(41603);
+var v1alpha2_4 = __nccwpck_require__(5971);
 Object.defineProperty(exports, "genomics_v1alpha2", ({ enumerable: true, get: function () { return v1alpha2_4.genomics_v1alpha2; } }));
-var v2alpha1_1 = __nccwpck_require__(20128);
+var v2alpha1_1 = __nccwpck_require__(94267);
 Object.defineProperty(exports, "genomics_v2alpha1", ({ enumerable: true, get: function () { return v2alpha1_1.genomics_v2alpha1; } }));
-var v1_60 = __nccwpck_require__(99303);
+var v1_60 = __nccwpck_require__(32948);
 Object.defineProperty(exports, "gmail_v1", ({ enumerable: true, get: function () { return v1_60.gmail_v1; } }));
-var v1beta1_28 = __nccwpck_require__(15566);
+var v1beta1_28 = __nccwpck_require__(770);
 Object.defineProperty(exports, "gmailpostmastertools_v1beta1", ({ enumerable: true, get: function () { return v1beta1_28.gmailpostmastertools_v1beta1; } }));
-var v1_61 = __nccwpck_require__(73377);
+var v1_61 = __nccwpck_require__(714);
 Object.defineProperty(exports, "groupsmigration_v1", ({ enumerable: true, get: function () { return v1_61.groupsmigration_v1; } }));
-var v1_62 = __nccwpck_require__(61508);
+var v1_62 = __nccwpck_require__(84947);
 Object.defineProperty(exports, "groupssettings_v1", ({ enumerable: true, get: function () { return v1_62.groupssettings_v1; } }));
-var v1_63 = __nccwpck_require__(57380);
+var v1_63 = __nccwpck_require__(12233);
 Object.defineProperty(exports, "healthcare_v1", ({ enumerable: true, get: function () { return v1_63.healthcare_v1; } }));
-var v1beta1_29 = __nccwpck_require__(53850);
+var v1beta1_29 = __nccwpck_require__(31004);
 Object.defineProperty(exports, "healthcare_v1beta1", ({ enumerable: true, get: function () { return v1beta1_29.healthcare_v1beta1; } }));
-var v1_64 = __nccwpck_require__(20565);
+var v1_64 = __nccwpck_require__(34217);
 Object.defineProperty(exports, "homegraph_v1", ({ enumerable: true, get: function () { return v1_64.homegraph_v1; } }));
-var v1_65 = __nccwpck_require__(88434);
+var v1_65 = __nccwpck_require__(23273);
 Object.defineProperty(exports, "iam_v1", ({ enumerable: true, get: function () { return v1_65.iam_v1; } }));
-var v1_66 = __nccwpck_require__(13088);
+var v1_66 = __nccwpck_require__(5043);
 Object.defineProperty(exports, "iamcredentials_v1", ({ enumerable: true, get: function () { return v1_66.iamcredentials_v1; } }));
-var v1_67 = __nccwpck_require__(38351);
+var v1_67 = __nccwpck_require__(34044);
 Object.defineProperty(exports, "iap_v1", ({ enumerable: true, get: function () { return v1_67.iap_v1; } }));
-var v1beta1_30 = __nccwpck_require__(89404);
+var v1beta1_30 = __nccwpck_require__(32859);
 Object.defineProperty(exports, "iap_v1beta1", ({ enumerable: true, get: function () { return v1beta1_30.iap_v1beta1; } }));
-var v3_6 = __nccwpck_require__(13408);
+var v3_6 = __nccwpck_require__(78068);
 Object.defineProperty(exports, "identitytoolkit_v3", ({ enumerable: true, get: function () { return v3_6.identitytoolkit_v3; } }));
-var v3_7 = __nccwpck_require__(32611);
+var v3_7 = __nccwpck_require__(18534);
 Object.defineProperty(exports, "indexing_v3", ({ enumerable: true, get: function () { return v3_7.indexing_v3; } }));
-var v2_18 = __nccwpck_require__(47273);
+var v2_18 = __nccwpck_require__(57605);
 Object.defineProperty(exports, "jobs_v2", ({ enumerable: true, get: function () { return v2_18.jobs_v2; } }));
-var v3_8 = __nccwpck_require__(11918);
+var v3_8 = __nccwpck_require__(73510);
 Object.defineProperty(exports, "jobs_v3", ({ enumerable: true, get: function () { return v3_8.jobs_v3; } }));
-var v3p1beta1_1 = __nccwpck_require__(43890);
+var v3p1beta1_1 = __nccwpck_require__(90952);
 Object.defineProperty(exports, "jobs_v3p1beta1", ({ enumerable: true, get: function () { return v3p1beta1_1.jobs_v3p1beta1; } }));
-var v4_2 = __nccwpck_require__(29560);
+var v4_2 = __nccwpck_require__(93191);
 Object.defineProperty(exports, "jobs_v4", ({ enumerable: true, get: function () { return v4_2.jobs_v4; } }));
-var v1_68 = __nccwpck_require__(62560);
+var v1_68 = __nccwpck_require__(51214);
 Object.defineProperty(exports, "kgsearch_v1", ({ enumerable: true, get: function () { return v1_68.kgsearch_v1; } }));
-var v1_69 = __nccwpck_require__(72875);
+var v1_69 = __nccwpck_require__(7874);
 Object.defineProperty(exports, "language_v1", ({ enumerable: true, get: function () { return v1_69.language_v1; } }));
-var v1beta1_31 = __nccwpck_require__(8150);
+var v1beta1_31 = __nccwpck_require__(86209);
 Object.defineProperty(exports, "language_v1beta1", ({ enumerable: true, get: function () { return v1beta1_31.language_v1beta1; } }));
-var v1beta2_9 = __nccwpck_require__(23374);
+var v1beta2_9 = __nccwpck_require__(33288);
 Object.defineProperty(exports, "language_v1beta2", ({ enumerable: true, get: function () { return v1beta2_9.language_v1beta2; } }));
-var v1_70 = __nccwpck_require__(81393);
+var v1_70 = __nccwpck_require__(15376);
 Object.defineProperty(exports, "libraryagent_v1", ({ enumerable: true, get: function () { return v1_70.libraryagent_v1; } }));
-var v1_71 = __nccwpck_require__(92735);
+var v1_71 = __nccwpck_require__(76142);
 Object.defineProperty(exports, "licensing_v1", ({ enumerable: true, get: function () { return v1_71.licensing_v1; } }));
-var v2beta_2 = __nccwpck_require__(51937);
+var v2beta_2 = __nccwpck_require__(78111);
 Object.defineProperty(exports, "lifesciences_v2beta", ({ enumerable: true, get: function () { return v2beta_2.lifesciences_v2beta; } }));
-var v1_72 = __nccwpck_require__(94437);
+var v1_72 = __nccwpck_require__(44955);
 Object.defineProperty(exports, "localservices_v1", ({ enumerable: true, get: function () { return v1_72.localservices_v1; } }));
-var v2_19 = __nccwpck_require__(53912);
+var v2_19 = __nccwpck_require__(58904);
 Object.defineProperty(exports, "logging_v2", ({ enumerable: true, get: function () { return v2_19.logging_v2; } }));
-var v1_73 = __nccwpck_require__(67834);
+var v1_73 = __nccwpck_require__(33859);
 Object.defineProperty(exports, "managedidentities_v1", ({ enumerable: true, get: function () { return v1_73.managedidentities_v1; } }));
-var v1alpha1_6 = __nccwpck_require__(93488);
+var v1alpha1_6 = __nccwpck_require__(7824);
 Object.defineProperty(exports, "managedidentities_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_6.managedidentities_v1alpha1; } }));
-var v1beta1_32 = __nccwpck_require__(81188);
+var v1beta1_32 = __nccwpck_require__(38470);
 Object.defineProperty(exports, "managedidentities_v1beta1", ({ enumerable: true, get: function () { return v1beta1_32.managedidentities_v1beta1; } }));
-var v1_74 = __nccwpck_require__(21903);
+var v1_74 = __nccwpck_require__(95752);
 Object.defineProperty(exports, "manufacturers_v1", ({ enumerable: true, get: function () { return v1_74.manufacturers_v1; } }));
-var v1_75 = __nccwpck_require__(76714);
+var v1_75 = __nccwpck_require__(2607);
 Object.defineProperty(exports, "memcache_v1", ({ enumerable: true, get: function () { return v1_75.memcache_v1; } }));
-var v1beta2_10 = __nccwpck_require__(37146);
+var v1beta2_10 = __nccwpck_require__(43719);
 Object.defineProperty(exports, "memcache_v1beta2", ({ enumerable: true, get: function () { return v1beta2_10.memcache_v1beta2; } }));
-var v1_76 = __nccwpck_require__(3540);
+var v1_76 = __nccwpck_require__(67327);
 Object.defineProperty(exports, "ml_v1", ({ enumerable: true, get: function () { return v1_76.ml_v1; } }));
-var v1_77 = __nccwpck_require__(84444);
+var v1_77 = __nccwpck_require__(58606);
 Object.defineProperty(exports, "monitoring_v1", ({ enumerable: true, get: function () { return v1_77.monitoring_v1; } }));
-var v3_9 = __nccwpck_require__(44636);
+var v3_9 = __nccwpck_require__(86212);
 Object.defineProperty(exports, "monitoring_v3", ({ enumerable: true, get: function () { return v3_9.monitoring_v3; } }));
-var v1_78 = __nccwpck_require__(81425);
+var v1_78 = __nccwpck_require__(34649);
 Object.defineProperty(exports, "networkmanagement_v1", ({ enumerable: true, get: function () { return v1_78.networkmanagement_v1; } }));
-var v1beta1_33 = __nccwpck_require__(9915);
+var v1beta1_33 = __nccwpck_require__(92364);
 Object.defineProperty(exports, "networkmanagement_v1beta1", ({ enumerable: true, get: function () { return v1beta1_33.networkmanagement_v1beta1; } }));
-var v1_79 = __nccwpck_require__(61888);
+var v1_79 = __nccwpck_require__(86344);
 Object.defineProperty(exports, "notebooks_v1", ({ enumerable: true, get: function () { return v1_79.notebooks_v1; } }));
-var v2_20 = __nccwpck_require__(32241);
+var v2_20 = __nccwpck_require__(41948);
 Object.defineProperty(exports, "oauth2_v2", ({ enumerable: true, get: function () { return v2_20.oauth2_v2; } }));
-var v1_80 = __nccwpck_require__(60004);
+var v1_80 = __nccwpck_require__(25844);
 Object.defineProperty(exports, "osconfig_v1", ({ enumerable: true, get: function () { return v1_80.osconfig_v1; } }));
-var v1beta_8 = __nccwpck_require__(99482);
+var v1beta_8 = __nccwpck_require__(89934);
 Object.defineProperty(exports, "osconfig_v1beta", ({ enumerable: true, get: function () { return v1beta_8.osconfig_v1beta; } }));
-var v1_81 = __nccwpck_require__(14005);
+var v1_81 = __nccwpck_require__(6175);
 Object.defineProperty(exports, "oslogin_v1", ({ enumerable: true, get: function () { return v1_81.oslogin_v1; } }));
-var v1alpha_4 = __nccwpck_require__(72152);
+var v1alpha_4 = __nccwpck_require__(89675);
 Object.defineProperty(exports, "oslogin_v1alpha", ({ enumerable: true, get: function () { return v1alpha_4.oslogin_v1alpha; } }));
-var v1beta_9 = __nccwpck_require__(50779);
+var v1beta_9 = __nccwpck_require__(53749);
 Object.defineProperty(exports, "oslogin_v1beta", ({ enumerable: true, get: function () { return v1beta_9.oslogin_v1beta; } }));
-var v5_1 = __nccwpck_require__(72258);
+var v5_1 = __nccwpck_require__(7941);
 Object.defineProperty(exports, "pagespeedonline_v5", ({ enumerable: true, get: function () { return v5_1.pagespeedonline_v5; } }));
-var v1_82 = __nccwpck_require__(76850);
+var v1_82 = __nccwpck_require__(45649);
 Object.defineProperty(exports, "people_v1", ({ enumerable: true, get: function () { return v1_82.people_v1; } }));
-var v3_10 = __nccwpck_require__(97278);
+var v3_10 = __nccwpck_require__(15882);
 Object.defineProperty(exports, "playablelocations_v3", ({ enumerable: true, get: function () { return v3_10.playablelocations_v3; } }));
-var v1_83 = __nccwpck_require__(68197);
+var v1_83 = __nccwpck_require__(37618);
 Object.defineProperty(exports, "playcustomapp_v1", ({ enumerable: true, get: function () { return v1_83.playcustomapp_v1; } }));
-var v1_84 = __nccwpck_require__(66610);
+var v1_84 = __nccwpck_require__(52964);
 Object.defineProperty(exports, "plus_v1", ({ enumerable: true, get: function () { return v1_84.plus_v1; } }));
-var v1_85 = __nccwpck_require__(87309);
+var v1_85 = __nccwpck_require__(87765);
 Object.defineProperty(exports, "policytroubleshooter_v1", ({ enumerable: true, get: function () { return v1_85.policytroubleshooter_v1; } }));
-var v1beta_10 = __nccwpck_require__(90694);
+var v1beta_10 = __nccwpck_require__(34927);
 Object.defineProperty(exports, "policytroubleshooter_v1beta", ({ enumerable: true, get: function () { return v1beta_10.policytroubleshooter_v1beta; } }));
-var v1_86 = __nccwpck_require__(54121);
+var v1_86 = __nccwpck_require__(47406);
 Object.defineProperty(exports, "poly_v1", ({ enumerable: true, get: function () { return v1_86.poly_v1; } }));
-var v1beta1_34 = __nccwpck_require__(64639);
+var v1beta1_34 = __nccwpck_require__(83250);
 Object.defineProperty(exports, "privateca_v1beta1", ({ enumerable: true, get: function () { return v1beta1_34.privateca_v1beta1; } }));
-var v1alpha1_7 = __nccwpck_require__(79181);
+var v1alpha1_7 = __nccwpck_require__(25207);
 Object.defineProperty(exports, "prod_tt_sasportal_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_7.prod_tt_sasportal_v1alpha1; } }));
-var v1_87 = __nccwpck_require__(4533);
+var v1_87 = __nccwpck_require__(95945);
 Object.defineProperty(exports, "pubsub_v1", ({ enumerable: true, get: function () { return v1_87.pubsub_v1; } }));
-var v1beta1a_1 = __nccwpck_require__(12718);
+var v1beta1a_1 = __nccwpck_require__(97765);
 Object.defineProperty(exports, "pubsub_v1beta1a", ({ enumerable: true, get: function () { return v1beta1a_1.pubsub_v1beta1a; } }));
-var v1beta2_11 = __nccwpck_require__(84449);
+var v1beta2_11 = __nccwpck_require__(69445);
 Object.defineProperty(exports, "pubsub_v1beta2", ({ enumerable: true, get: function () { return v1beta2_11.pubsub_v1beta2; } }));
-var v1_88 = __nccwpck_require__(44713);
+var v1_88 = __nccwpck_require__(59573);
 Object.defineProperty(exports, "pubsublite_v1", ({ enumerable: true, get: function () { return v1_88.pubsublite_v1; } }));
-var v1_89 = __nccwpck_require__(7185);
+var v1_89 = __nccwpck_require__(17790);
 Object.defineProperty(exports, "realtimebidding_v1", ({ enumerable: true, get: function () { return v1_89.realtimebidding_v1; } }));
-var v1beta1_35 = __nccwpck_require__(40502);
+var v1beta1_35 = __nccwpck_require__(85338);
 Object.defineProperty(exports, "recommendationengine_v1beta1", ({ enumerable: true, get: function () { return v1beta1_35.recommendationengine_v1beta1; } }));
-var v1_90 = __nccwpck_require__(88430);
+var v1_90 = __nccwpck_require__(80617);
 Object.defineProperty(exports, "recommender_v1", ({ enumerable: true, get: function () { return v1_90.recommender_v1; } }));
-var v1beta1_36 = __nccwpck_require__(79215);
+var v1beta1_36 = __nccwpck_require__(17404);
 Object.defineProperty(exports, "recommender_v1beta1", ({ enumerable: true, get: function () { return v1beta1_36.recommender_v1beta1; } }));
-var v1_91 = __nccwpck_require__(71982);
+var v1_91 = __nccwpck_require__(85623);
 Object.defineProperty(exports, "redis_v1", ({ enumerable: true, get: function () { return v1_91.redis_v1; } }));
-var v1beta1_37 = __nccwpck_require__(58452);
+var v1beta1_37 = __nccwpck_require__(60882);
 Object.defineProperty(exports, "redis_v1beta1", ({ enumerable: true, get: function () { return v1beta1_37.redis_v1beta1; } }));
-var v1_92 = __nccwpck_require__(43035);
+var v1_92 = __nccwpck_require__(41872);
 Object.defineProperty(exports, "remotebuildexecution_v1", ({ enumerable: true, get: function () { return v1_92.remotebuildexecution_v1; } }));
-var v1alpha_5 = __nccwpck_require__(66089);
+var v1alpha_5 = __nccwpck_require__(6814);
 Object.defineProperty(exports, "remotebuildexecution_v1alpha", ({ enumerable: true, get: function () { return v1alpha_5.remotebuildexecution_v1alpha; } }));
-var v2_21 = __nccwpck_require__(75314);
+var v2_21 = __nccwpck_require__(92233);
 Object.defineProperty(exports, "remotebuildexecution_v2", ({ enumerable: true, get: function () { return v2_21.remotebuildexecution_v2; } }));
-var v1_93 = __nccwpck_require__(41522);
+var v1_93 = __nccwpck_require__(30050);
 Object.defineProperty(exports, "reseller_v1", ({ enumerable: true, get: function () { return v1_93.reseller_v1; } }));
-var v1_94 = __nccwpck_require__(85630);
+var v1_94 = __nccwpck_require__(34077);
 Object.defineProperty(exports, "run_v1", ({ enumerable: true, get: function () { return v1_94.run_v1; } }));
-var v1alpha1_8 = __nccwpck_require__(46968);
+var v1alpha1_8 = __nccwpck_require__(5706);
 Object.defineProperty(exports, "run_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_8.run_v1alpha1; } }));
-var v1beta1_38 = __nccwpck_require__(46461);
+var v1beta1_38 = __nccwpck_require__(66424);
 Object.defineProperty(exports, "run_v1beta1", ({ enumerable: true, get: function () { return v1beta1_38.run_v1beta1; } }));
-var v1_95 = __nccwpck_require__(87550);
+var v1_95 = __nccwpck_require__(25096);
 Object.defineProperty(exports, "runtimeconfig_v1", ({ enumerable: true, get: function () { return v1_95.runtimeconfig_v1; } }));
-var v1beta1_39 = __nccwpck_require__(39534);
+var v1beta1_39 = __nccwpck_require__(77919);
 Object.defineProperty(exports, "runtimeconfig_v1beta1", ({ enumerable: true, get: function () { return v1beta1_39.runtimeconfig_v1beta1; } }));
-var v4_3 = __nccwpck_require__(36301);
+var v4_3 = __nccwpck_require__(5647);
 Object.defineProperty(exports, "safebrowsing_v4", ({ enumerable: true, get: function () { return v4_3.safebrowsing_v4; } }));
-var v1alpha1_9 = __nccwpck_require__(88668);
+var v1alpha1_9 = __nccwpck_require__(87892);
 Object.defineProperty(exports, "sasportal_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_9.sasportal_v1alpha1; } }));
-var v1_96 = __nccwpck_require__(51231);
+var v1_96 = __nccwpck_require__(46893);
 Object.defineProperty(exports, "script_v1", ({ enumerable: true, get: function () { return v1_96.script_v1; } }));
-var v1_97 = __nccwpck_require__(90005);
+var v1_97 = __nccwpck_require__(88673);
 Object.defineProperty(exports, "searchconsole_v1", ({ enumerable: true, get: function () { return v1_97.searchconsole_v1; } }));
-var v1_98 = __nccwpck_require__(57765);
+var v1_98 = __nccwpck_require__(45219);
 Object.defineProperty(exports, "secretmanager_v1", ({ enumerable: true, get: function () { return v1_98.secretmanager_v1; } }));
-var v1beta1_40 = __nccwpck_require__(29588);
+var v1beta1_40 = __nccwpck_require__(84550);
 Object.defineProperty(exports, "secretmanager_v1beta1", ({ enumerable: true, get: function () { return v1beta1_40.secretmanager_v1beta1; } }));
-var v1_99 = __nccwpck_require__(39556);
+var v1_99 = __nccwpck_require__(3489);
 Object.defineProperty(exports, "securitycenter_v1", ({ enumerable: true, get: function () { return v1_99.securitycenter_v1; } }));
-var v1beta1_41 = __nccwpck_require__(89530);
+var v1beta1_41 = __nccwpck_require__(996);
 Object.defineProperty(exports, "securitycenter_v1beta1", ({ enumerable: true, get: function () { return v1beta1_41.securitycenter_v1beta1; } }));
-var v1beta2_12 = __nccwpck_require__(19802);
+var v1beta2_12 = __nccwpck_require__(9229);
 Object.defineProperty(exports, "securitycenter_v1beta2", ({ enumerable: true, get: function () { return v1beta2_12.securitycenter_v1beta2; } }));
-var v1p1alpha1_1 = __nccwpck_require__(84039);
+var v1p1alpha1_1 = __nccwpck_require__(94165);
 Object.defineProperty(exports, "securitycenter_v1p1alpha1", ({ enumerable: true, get: function () { return v1p1alpha1_1.securitycenter_v1p1alpha1; } }));
-var v1p1beta1_2 = __nccwpck_require__(87136);
+var v1p1beta1_2 = __nccwpck_require__(38049);
 Object.defineProperty(exports, "securitycenter_v1p1beta1", ({ enumerable: true, get: function () { return v1p1beta1_2.securitycenter_v1p1beta1; } }));
-var v1_100 = __nccwpck_require__(25943);
+var v1_100 = __nccwpck_require__(68698);
 Object.defineProperty(exports, "serviceconsumermanagement_v1", ({ enumerable: true, get: function () { return v1_100.serviceconsumermanagement_v1; } }));
-var v1beta1_42 = __nccwpck_require__(65341);
+var v1beta1_42 = __nccwpck_require__(1161);
 Object.defineProperty(exports, "serviceconsumermanagement_v1beta1", ({ enumerable: true, get: function () { return v1beta1_42.serviceconsumermanagement_v1beta1; } }));
-var v1_101 = __nccwpck_require__(8308);
+var v1_101 = __nccwpck_require__(58664);
 Object.defineProperty(exports, "servicecontrol_v1", ({ enumerable: true, get: function () { return v1_101.servicecontrol_v1; } }));
-var v2_22 = __nccwpck_require__(65914);
+var v2_22 = __nccwpck_require__(77409);
 Object.defineProperty(exports, "servicecontrol_v2", ({ enumerable: true, get: function () { return v2_22.servicecontrol_v2; } }));
-var v1beta1_43 = __nccwpck_require__(48288);
+var v1beta1_43 = __nccwpck_require__(45501);
 Object.defineProperty(exports, "servicedirectory_v1beta1", ({ enumerable: true, get: function () { return v1beta1_43.servicedirectory_v1beta1; } }));
-var v1_102 = __nccwpck_require__(31646);
+var v1_102 = __nccwpck_require__(91846);
 Object.defineProperty(exports, "servicemanagement_v1", ({ enumerable: true, get: function () { return v1_102.servicemanagement_v1; } }));
-var v1_103 = __nccwpck_require__(4565);
+var v1_103 = __nccwpck_require__(75769);
 Object.defineProperty(exports, "servicenetworking_v1", ({ enumerable: true, get: function () { return v1_103.servicenetworking_v1; } }));
-var v1beta_11 = __nccwpck_require__(36738);
+var v1beta_11 = __nccwpck_require__(4883);
 Object.defineProperty(exports, "servicenetworking_v1beta", ({ enumerable: true, get: function () { return v1beta_11.servicenetworking_v1beta; } }));
-var v1_104 = __nccwpck_require__(83581);
+var v1_104 = __nccwpck_require__(76290);
 Object.defineProperty(exports, "serviceusage_v1", ({ enumerable: true, get: function () { return v1_104.serviceusage_v1; } }));
-var v1beta1_44 = __nccwpck_require__(82010);
+var v1beta1_44 = __nccwpck_require__(8257);
 Object.defineProperty(exports, "serviceusage_v1beta1", ({ enumerable: true, get: function () { return v1beta1_44.serviceusage_v1beta1; } }));
-var v4_4 = __nccwpck_require__(99009);
+var v4_4 = __nccwpck_require__(65155);
 Object.defineProperty(exports, "sheets_v4", ({ enumerable: true, get: function () { return v4_4.sheets_v4; } }));
-var v1_105 = __nccwpck_require__(54977);
+var v1_105 = __nccwpck_require__(31808);
 Object.defineProperty(exports, "siteVerification_v1", ({ enumerable: true, get: function () { return v1_105.siteVerification_v1; } }));
-var v1_106 = __nccwpck_require__(22984);
+var v1_106 = __nccwpck_require__(48742);
 Object.defineProperty(exports, "slides_v1", ({ enumerable: true, get: function () { return v1_106.slides_v1; } }));
-var v1_107 = __nccwpck_require__(69971);
+var v1_107 = __nccwpck_require__(19206);
 Object.defineProperty(exports, "smartdevicemanagement_v1", ({ enumerable: true, get: function () { return v1_107.smartdevicemanagement_v1; } }));
-var v1_108 = __nccwpck_require__(90330);
+var v1_108 = __nccwpck_require__(39);
 Object.defineProperty(exports, "sourcerepo_v1", ({ enumerable: true, get: function () { return v1_108.sourcerepo_v1; } }));
-var v1_109 = __nccwpck_require__(3757);
+var v1_109 = __nccwpck_require__(58913);
 Object.defineProperty(exports, "spanner_v1", ({ enumerable: true, get: function () { return v1_109.spanner_v1; } }));
-var v1_110 = __nccwpck_require__(80865);
+var v1_110 = __nccwpck_require__(49854);
 Object.defineProperty(exports, "speech_v1", ({ enumerable: true, get: function () { return v1_110.speech_v1; } }));
-var v1p1beta1_3 = __nccwpck_require__(45880);
+var v1p1beta1_3 = __nccwpck_require__(68240);
 Object.defineProperty(exports, "speech_v1p1beta1", ({ enumerable: true, get: function () { return v1p1beta1_3.speech_v1p1beta1; } }));
-var v2beta1_6 = __nccwpck_require__(38857);
+var v2beta1_6 = __nccwpck_require__(92078);
 Object.defineProperty(exports, "speech_v2beta1", ({ enumerable: true, get: function () { return v2beta1_6.speech_v2beta1; } }));
-var v1beta4_1 = __nccwpck_require__(37655);
+var v1beta4_1 = __nccwpck_require__(17314);
 Object.defineProperty(exports, "sql_v1beta4", ({ enumerable: true, get: function () { return v1beta4_1.sql_v1beta4; } }));
-var v1beta4_2 = __nccwpck_require__(10415);
+var v1beta4_2 = __nccwpck_require__(96959);
 Object.defineProperty(exports, "sqladmin_v1beta4", ({ enumerable: true, get: function () { return v1beta4_2.sqladmin_v1beta4; } }));
-var v1_111 = __nccwpck_require__(10088);
+var v1_111 = __nccwpck_require__(98601);
 Object.defineProperty(exports, "storage_v1", ({ enumerable: true, get: function () { return v1_111.storage_v1; } }));
-var v1beta2_13 = __nccwpck_require__(7649);
+var v1beta2_13 = __nccwpck_require__(31941);
 Object.defineProperty(exports, "storage_v1beta2", ({ enumerable: true, get: function () { return v1beta2_13.storage_v1beta2; } }));
-var v1_112 = __nccwpck_require__(65154);
+var v1_112 = __nccwpck_require__(31580);
 Object.defineProperty(exports, "storagetransfer_v1", ({ enumerable: true, get: function () { return v1_112.storagetransfer_v1; } }));
-var v1_113 = __nccwpck_require__(23262);
+var v1_113 = __nccwpck_require__(53657);
 Object.defineProperty(exports, "streetviewpublish_v1", ({ enumerable: true, get: function () { return v1_113.streetviewpublish_v1; } }));
-var v1_114 = __nccwpck_require__(58438);
+var v1_114 = __nccwpck_require__(56090);
 Object.defineProperty(exports, "sts_v1", ({ enumerable: true, get: function () { return v1_114.sts_v1; } }));
-var v1beta_12 = __nccwpck_require__(59817);
+var v1beta_12 = __nccwpck_require__(1048);
 Object.defineProperty(exports, "sts_v1beta", ({ enumerable: true, get: function () { return v1beta_12.sts_v1beta; } }));
-var v1_115 = __nccwpck_require__(39612);
+var v1_115 = __nccwpck_require__(27285);
 Object.defineProperty(exports, "tagmanager_v1", ({ enumerable: true, get: function () { return v1_115.tagmanager_v1; } }));
-var v2_23 = __nccwpck_require__(27835);
+var v2_23 = __nccwpck_require__(69004);
 Object.defineProperty(exports, "tagmanager_v2", ({ enumerable: true, get: function () { return v2_23.tagmanager_v2; } }));
-var v1_116 = __nccwpck_require__(45809);
+var v1_116 = __nccwpck_require__(90188);
 Object.defineProperty(exports, "tasks_v1", ({ enumerable: true, get: function () { return v1_116.tasks_v1; } }));
-var v1_117 = __nccwpck_require__(30906);
+var v1_117 = __nccwpck_require__(58898);
 Object.defineProperty(exports, "testing_v1", ({ enumerable: true, get: function () { return v1_117.testing_v1; } }));
-var v1_118 = __nccwpck_require__(92584);
+var v1_118 = __nccwpck_require__(43228);
 Object.defineProperty(exports, "texttospeech_v1", ({ enumerable: true, get: function () { return v1_118.texttospeech_v1; } }));
-var v1beta1_45 = __nccwpck_require__(83822);
+var v1beta1_45 = __nccwpck_require__(31259);
 Object.defineProperty(exports, "texttospeech_v1beta1", ({ enumerable: true, get: function () { return v1beta1_45.texttospeech_v1beta1; } }));
-var v1beta3_3 = __nccwpck_require__(14025);
+var v1beta3_3 = __nccwpck_require__(57923);
 Object.defineProperty(exports, "toolresults_v1beta3", ({ enumerable: true, get: function () { return v1beta3_3.toolresults_v1beta3; } }));
-var v1_119 = __nccwpck_require__(59537);
+var v1_119 = __nccwpck_require__(49383);
 Object.defineProperty(exports, "tpu_v1", ({ enumerable: true, get: function () { return v1_119.tpu_v1; } }));
-var v1alpha1_10 = __nccwpck_require__(78767);
+var v1alpha1_10 = __nccwpck_require__(38044);
 Object.defineProperty(exports, "tpu_v1alpha1", ({ enumerable: true, get: function () { return v1alpha1_10.tpu_v1alpha1; } }));
-var v2_24 = __nccwpck_require__(5596);
+var v2_24 = __nccwpck_require__(83408);
 Object.defineProperty(exports, "trafficdirector_v2", ({ enumerable: true, get: function () { return v2_24.trafficdirector_v2; } }));
-var v1beta1_46 = __nccwpck_require__(85932);
+var v1beta1_46 = __nccwpck_require__(81380);
 Object.defineProperty(exports, "transcoder_v1beta1", ({ enumerable: true, get: function () { return v1beta1_46.transcoder_v1beta1; } }));
-var v2_25 = __nccwpck_require__(80994);
+var v2_25 = __nccwpck_require__(90253);
 Object.defineProperty(exports, "translate_v2", ({ enumerable: true, get: function () { return v2_25.translate_v2; } }));
-var v3_11 = __nccwpck_require__(31165);
+var v3_11 = __nccwpck_require__(80078);
 Object.defineProperty(exports, "translate_v3", ({ enumerable: true, get: function () { return v3_11.translate_v3; } }));
-var v3beta1_2 = __nccwpck_require__(27445);
+var v3beta1_2 = __nccwpck_require__(67925);
 Object.defineProperty(exports, "translate_v3beta1", ({ enumerable: true, get: function () { return v3beta1_2.translate_v3beta1; } }));
-var v1_120 = __nccwpck_require__(91477);
+var v1_120 = __nccwpck_require__(19526);
 Object.defineProperty(exports, "vault_v1", ({ enumerable: true, get: function () { return v1_120.vault_v1; } }));
-var v1_121 = __nccwpck_require__(80845);
+var v1_121 = __nccwpck_require__(57465);
 Object.defineProperty(exports, "vectortile_v1", ({ enumerable: true, get: function () { return v1_121.vectortile_v1; } }));
-var v1_122 = __nccwpck_require__(67182);
+var v1_122 = __nccwpck_require__(33330);
 Object.defineProperty(exports, "verifiedaccess_v1", ({ enumerable: true, get: function () { return v1_122.verifiedaccess_v1; } }));
-var v1_123 = __nccwpck_require__(97367);
+var v1_123 = __nccwpck_require__(4298);
 Object.defineProperty(exports, "videointelligence_v1", ({ enumerable: true, get: function () { return v1_123.videointelligence_v1; } }));
-var v1beta2_14 = __nccwpck_require__(29793);
+var v1beta2_14 = __nccwpck_require__(54880);
 Object.defineProperty(exports, "videointelligence_v1beta2", ({ enumerable: true, get: function () { return v1beta2_14.videointelligence_v1beta2; } }));
-var v1p1beta1_4 = __nccwpck_require__(77651);
+var v1p1beta1_4 = __nccwpck_require__(61764);
 Object.defineProperty(exports, "videointelligence_v1p1beta1", ({ enumerable: true, get: function () { return v1p1beta1_4.videointelligence_v1p1beta1; } }));
-var v1p2beta1_1 = __nccwpck_require__(54284);
+var v1p2beta1_1 = __nccwpck_require__(38975);
 Object.defineProperty(exports, "videointelligence_v1p2beta1", ({ enumerable: true, get: function () { return v1p2beta1_1.videointelligence_v1p2beta1; } }));
-var v1p3beta1_1 = __nccwpck_require__(81917);
+var v1p3beta1_1 = __nccwpck_require__(64586);
 Object.defineProperty(exports, "videointelligence_v1p3beta1", ({ enumerable: true, get: function () { return v1p3beta1_1.videointelligence_v1p3beta1; } }));
-var v1_124 = __nccwpck_require__(71004);
+var v1_124 = __nccwpck_require__(99688);
 Object.defineProperty(exports, "vision_v1", ({ enumerable: true, get: function () { return v1_124.vision_v1; } }));
-var v1p1beta1_5 = __nccwpck_require__(38136);
+var v1p1beta1_5 = __nccwpck_require__(90546);
 Object.defineProperty(exports, "vision_v1p1beta1", ({ enumerable: true, get: function () { return v1p1beta1_5.vision_v1p1beta1; } }));
-var v1p2beta1_2 = __nccwpck_require__(34268);
+var v1p2beta1_2 = __nccwpck_require__(8633);
 Object.defineProperty(exports, "vision_v1p2beta1", ({ enumerable: true, get: function () { return v1p2beta1_2.vision_v1p2beta1; } }));
-var v1_125 = __nccwpck_require__(10796);
+var v1_125 = __nccwpck_require__(18076);
 Object.defineProperty(exports, "webfonts_v1", ({ enumerable: true, get: function () { return v1_125.webfonts_v1; } }));
-var v3_12 = __nccwpck_require__(1972);
+var v3_12 = __nccwpck_require__(30913);
 Object.defineProperty(exports, "webmasters_v3", ({ enumerable: true, get: function () { return v3_12.webmasters_v3; } }));
-var v1_126 = __nccwpck_require__(72412);
+var v1_126 = __nccwpck_require__(93670);
 Object.defineProperty(exports, "websecurityscanner_v1", ({ enumerable: true, get: function () { return v1_126.websecurityscanner_v1; } }));
-var v1alpha_6 = __nccwpck_require__(66447);
+var v1alpha_6 = __nccwpck_require__(58576);
 Object.defineProperty(exports, "websecurityscanner_v1alpha", ({ enumerable: true, get: function () { return v1alpha_6.websecurityscanner_v1alpha; } }));
-var v1beta_13 = __nccwpck_require__(44298);
+var v1beta_13 = __nccwpck_require__(35796);
 Object.defineProperty(exports, "websecurityscanner_v1beta", ({ enumerable: true, get: function () { return v1beta_13.websecurityscanner_v1beta; } }));
-var v1beta_14 = __nccwpck_require__(50571);
+var v1beta_14 = __nccwpck_require__(10668);
 Object.defineProperty(exports, "workflowexecutions_v1beta", ({ enumerable: true, get: function () { return v1beta_14.workflowexecutions_v1beta; } }));
-var v1beta_15 = __nccwpck_require__(63971);
+var v1beta_15 = __nccwpck_require__(65386);
 Object.defineProperty(exports, "workflows_v1beta", ({ enumerable: true, get: function () { return v1beta_15.workflows_v1beta; } }));
-var v3_13 = __nccwpck_require__(45084);
+var v3_13 = __nccwpck_require__(95951);
 Object.defineProperty(exports, "youtube_v3", ({ enumerable: true, get: function () { return v3_13.youtube_v3; } }));
-var v1_127 = __nccwpck_require__(86348);
+var v1_127 = __nccwpck_require__(40537);
 Object.defineProperty(exports, "youtubeAnalytics_v1", ({ enumerable: true, get: function () { return v1_127.youtubeAnalytics_v1; } }));
-var v2_26 = __nccwpck_require__(7604);
+var v2_26 = __nccwpck_require__(29536);
 Object.defineProperty(exports, "youtubeAnalytics_v2", ({ enumerable: true, get: function () { return v2_26.youtubeAnalytics_v2; } }));
-var v1_128 = __nccwpck_require__(45787);
+var v1_128 = __nccwpck_require__(45855);
 Object.defineProperty(exports, "youtubereporting_v1", ({ enumerable: true, get: function () { return v1_128.youtubereporting_v1; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 76031:
+/***/ 28568:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -330791,11 +330790,11 @@ Object.defineProperty(exports, "youtubereporting_v1", ({ enumerable: true, get: 
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GoogleToken = void 0;
-const fs = __nccwpck_require__(35747);
-const gaxios_1 = __nccwpck_require__(59555);
-const jws = __nccwpck_require__(4636);
-const path = __nccwpck_require__(85622);
-const util_1 = __nccwpck_require__(31669);
+const fs = __nccwpck_require__(79896);
+const gaxios_1 = __nccwpck_require__(97003);
+const jws = __nccwpck_require__(33324);
+const path = __nccwpck_require__(16928);
+const util_1 = __nccwpck_require__(39023);
 const readFile = fs.readFile
     ? util_1.promisify(fs.readFile)
     : async () => {
@@ -330908,7 +330907,7 @@ class GoogleToken {
                 // bit time to overall module loading, and is likely not frequently
                 // used.  In a future release, p12 support will be entirely removed.
                 if (!getPem) {
-                    getPem = (await Promise.resolve().then(() => __nccwpck_require__(92098))).getPem;
+                    getPem = (await Promise.resolve().then(() => __nccwpck_require__(3064))).getPem;
                 }
                 const privateKey = await getPem(keyFile);
                 return { privateKey };
@@ -331048,7 +331047,7 @@ exports.GoogleToken = GoogleToken;
 
 /***/ }),
 
-/***/ 31621:
+/***/ 83813:
 /***/ ((module) => {
 
 "use strict";
@@ -331064,7 +331063,7 @@ module.exports = (flag, argv = process.argv) => {
 
 /***/ }),
 
-/***/ 15098:
+/***/ 96904:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -331082,13 +331081,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const net_1 = __importDefault(__nccwpck_require__(11631));
-const tls_1 = __importDefault(__nccwpck_require__(4016));
-const url_1 = __importDefault(__nccwpck_require__(78835));
-const assert_1 = __importDefault(__nccwpck_require__(42357));
-const debug_1 = __importDefault(__nccwpck_require__(38237));
-const agent_base_1 = __nccwpck_require__(49690);
-const parse_proxy_response_1 = __importDefault(__nccwpck_require__(595));
+const net_1 = __importDefault(__nccwpck_require__(69278));
+const tls_1 = __importDefault(__nccwpck_require__(64756));
+const url_1 = __importDefault(__nccwpck_require__(87016));
+const assert_1 = __importDefault(__nccwpck_require__(42613));
+const debug_1 = __importDefault(__nccwpck_require__(2830));
+const agent_base_1 = __nccwpck_require__(8207);
+const parse_proxy_response_1 = __importDefault(__nccwpck_require__(37943));
 const debug = debug_1.default('https-proxy-agent:agent');
 /**
  * The `HttpsProxyAgent` implements an HTTP Agent subclass that connects to
@@ -331227,7 +331226,7 @@ class HttpsProxyAgent extends agent_base_1.Agent {
         });
     }
 }
-exports.default = HttpsProxyAgent;
+exports["default"] = HttpsProxyAgent;
 function resume(socket) {
     socket.resume();
 }
@@ -331251,7 +331250,7 @@ function omit(obj, ...keys) {
 
 /***/ }),
 
-/***/ 77219:
+/***/ 3669:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 "use strict";
@@ -331259,7 +331258,7 @@ function omit(obj, ...keys) {
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-const agent_1 = __importDefault(__nccwpck_require__(15098));
+const agent_1 = __importDefault(__nccwpck_require__(96904));
 function createHttpsProxyAgent(opts) {
     return new agent_1.default(opts);
 }
@@ -331272,7 +331271,7 @@ module.exports = createHttpsProxyAgent;
 
 /***/ }),
 
-/***/ 595:
+/***/ 37943:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -331281,7 +331280,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const debug_1 = __importDefault(__nccwpck_require__(38237));
+const debug_1 = __importDefault(__nccwpck_require__(2830));
 const debug = debug_1.default('https-proxy-agent:parse-proxy-response');
 function parseProxyResponse(socket) {
     return new Promise((resolve, reject) => {
@@ -331340,12 +331339,12 @@ function parseProxyResponse(socket) {
         read();
     });
 }
-exports.default = parseProxyResponse;
+exports["default"] = parseProxyResponse;
 //# sourceMappingURL=parse-proxy-response.js.map
 
 /***/ }),
 
-/***/ 41554:
+/***/ 96543:
 /***/ ((module) => {
 
 "use strict";
@@ -331382,11 +331381,11 @@ module.exports = isStream;
 
 /***/ }),
 
-/***/ 55031:
+/***/ 14826:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var json_stringify = __nccwpck_require__(78574).stringify;
-var json_parse     = __nccwpck_require__(89099);
+var json_stringify = (__nccwpck_require__(93651).stringify);
+var json_parse     = __nccwpck_require__(3197);
 
 module.exports = function(options) {
     return  {
@@ -331401,7 +331400,7 @@ module.exports.stringify = json_stringify;
 
 /***/ }),
 
-/***/ 89099:
+/***/ 3197:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var BigNumber = null;
@@ -331611,7 +331610,7 @@ var json_parse = function (options) {
       if (!isFinite(number)) {
         error('Bad number');
       } else {
-        if (BigNumber == null) BigNumber = __nccwpck_require__(87558);
+        if (BigNumber == null) BigNumber = __nccwpck_require__(51259);
         //if (number > 9007199254740992 || number < -9007199254740992)
         // Bignumber has stricter check: everything with length > 15 digits disallowed
         if (string.length > 15)
@@ -331851,10 +331850,10 @@ module.exports = json_parse;
 
 /***/ }),
 
-/***/ 78574:
+/***/ 93651:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var BigNumber = __nccwpck_require__(87558);
+var BigNumber = __nccwpck_require__(51259);
 
 /*
     json2.js
@@ -332242,14 +332241,14 @@ var JSON = module.exports;
 
 /***/ }),
 
-/***/ 96010:
+/***/ 38622:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var bufferEqual = __nccwpck_require__(9239);
-var Buffer = __nccwpck_require__(21867).Buffer;
-var crypto = __nccwpck_require__(76417);
-var formatEcdsa = __nccwpck_require__(11728);
-var util = __nccwpck_require__(31669);
+var bufferEqual = __nccwpck_require__(39732);
+var Buffer = (__nccwpck_require__(93058).Buffer);
+var crypto = __nccwpck_require__(76982);
+var formatEcdsa = __nccwpck_require__(325);
+var util = __nccwpck_require__(39023);
 
 var MSG_INVALID_ALGORITHM = '"%s" is not a valid algorithm.\n  Supported algorithms are:\n  "HS256", "HS384", "HS512", "RS256", "RS384", "RS512", "PS256", "PS384", "PS512", "ES256", "ES384", "ES512" and "none".'
 var MSG_INVALID_SECRET = 'secret must be a string or buffer';
@@ -332501,12 +332500,12 @@ module.exports = function jwa(algorithm) {
 
 /***/ }),
 
-/***/ 4636:
+/***/ 33324:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 /*global exports*/
-var SignStream = __nccwpck_require__(73334);
-var VerifyStream = __nccwpck_require__(5522);
+var SignStream = __nccwpck_require__(78600);
+var VerifyStream = __nccwpck_require__(4368);
 
 var ALGORITHMS = [
   'HS256', 'HS384', 'HS512',
@@ -332530,13 +332529,13 @@ exports.createVerify = function createVerify(opts) {
 
 /***/ }),
 
-/***/ 61868:
+/***/ 41831:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /*global module, process*/
-var Buffer = __nccwpck_require__(21867).Buffer;
-var Stream = __nccwpck_require__(92413);
-var util = __nccwpck_require__(31669);
+var Buffer = (__nccwpck_require__(93058).Buffer);
+var Stream = __nccwpck_require__(2203);
+var util = __nccwpck_require__(39023);
 
 function DataStream(data) {
   this.buffer = null;
@@ -332592,16 +332591,16 @@ module.exports = DataStream;
 
 /***/ }),
 
-/***/ 73334:
+/***/ 78600:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /*global module*/
-var Buffer = __nccwpck_require__(21867).Buffer;
-var DataStream = __nccwpck_require__(61868);
-var jwa = __nccwpck_require__(96010);
-var Stream = __nccwpck_require__(92413);
-var toString = __nccwpck_require__(65292);
-var util = __nccwpck_require__(31669);
+var Buffer = (__nccwpck_require__(93058).Buffer);
+var DataStream = __nccwpck_require__(41831);
+var jwa = __nccwpck_require__(38622);
+var Stream = __nccwpck_require__(2203);
+var toString = __nccwpck_require__(95126);
+var util = __nccwpck_require__(39023);
 
 function base64url(string, encoding) {
   return Buffer
@@ -332677,11 +332676,11 @@ module.exports = SignStream;
 
 /***/ }),
 
-/***/ 65292:
+/***/ 95126:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /*global module*/
-var Buffer = __nccwpck_require__(64293).Buffer;
+var Buffer = (__nccwpck_require__(20181).Buffer);
 
 module.exports = function toString(obj) {
   if (typeof obj === 'string')
@@ -332694,16 +332693,16 @@ module.exports = function toString(obj) {
 
 /***/ }),
 
-/***/ 5522:
+/***/ 4368:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /*global module*/
-var Buffer = __nccwpck_require__(21867).Buffer;
-var DataStream = __nccwpck_require__(61868);
-var jwa = __nccwpck_require__(96010);
-var Stream = __nccwpck_require__(92413);
-var toString = __nccwpck_require__(65292);
-var util = __nccwpck_require__(31669);
+var Buffer = (__nccwpck_require__(93058).Buffer);
+var DataStream = __nccwpck_require__(41831);
+var jwa = __nccwpck_require__(38622);
+var Stream = __nccwpck_require__(2203);
+var toString = __nccwpck_require__(95126);
+var util = __nccwpck_require__(39023);
 var JWS_REGEX = /^[a-zA-Z0-9\-_]+?\.[a-zA-Z0-9\-_]+?\.([a-zA-Z0-9\-_]+)?$/;
 
 function isObject(thing) {
@@ -332821,14 +332820,14 @@ module.exports = VerifyStream;
 
 /***/ }),
 
-/***/ 7129:
+/***/ 42762:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
 // A linked list to keep track of recently-used-ness
-const Yallist = __nccwpck_require__(40665)
+const Yallist = __nccwpck_require__(17864)
 
 const MAX = Symbol('max')
 const LENGTH = Symbol('length')
@@ -333163,7 +333162,7 @@ module.exports = LRUCache
 
 /***/ }),
 
-/***/ 80900:
+/***/ 70744:
 /***/ ((module) => {
 
 /**
@@ -333332,7 +333331,7 @@ function plural(ms, msAbs, n, name) {
 
 /***/ }),
 
-/***/ 80467:
+/***/ 26705:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -333342,11 +333341,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-var Stream = _interopDefault(__nccwpck_require__(92413));
-var http = _interopDefault(__nccwpck_require__(98605));
-var Url = _interopDefault(__nccwpck_require__(78835));
-var https = _interopDefault(__nccwpck_require__(57211));
-var zlib = _interopDefault(__nccwpck_require__(78761));
+var Stream = _interopDefault(__nccwpck_require__(2203));
+var http = _interopDefault(__nccwpck_require__(58611));
+var Url = _interopDefault(__nccwpck_require__(87016));
+var https = _interopDefault(__nccwpck_require__(65692));
+var zlib = _interopDefault(__nccwpck_require__(43106));
 
 // Based on https://github.com/tmpvar/jsdom/blob/aa85b2abf07766ff7bf5c1f6daafb3726f2f2db5/lib/jsdom/living/blob.js
 
@@ -333497,7 +333496,7 @@ FetchError.prototype.name = 'FetchError';
 
 let convert;
 try {
-	convert = __nccwpck_require__(22877).convert;
+	convert = (__nccwpck_require__(42078).convert);
 } catch (e) {}
 
 const INTERNALS = Symbol('Body internals');
@@ -334980,7 +334979,7 @@ fetch.Promise = global.Promise;
 
 module.exports = exports = fetch;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.default = exports;
+exports["default"] = exports;
 exports.Headers = Headers;
 exports.Request = Request;
 exports.Response = Response;
@@ -334989,7 +334988,7 @@ exports.FetchError = FetchError;
 
 /***/ }),
 
-/***/ 87994:
+/***/ 39445:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -335009,10 +335008,10 @@ exports.FetchError = FetchError;
  *
  * Copyright (c) 2010-2014 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(7088);
-__nccwpck_require__(10873);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(14723);
+__nccwpck_require__(61203);
+__nccwpck_require__(97456);
 
 /* AES API */
 module.exports = forge.aes = forge.aes || {};
@@ -336087,7 +336086,7 @@ function _createCipher(options) {
 
 /***/ }),
 
-/***/ 81449:
+/***/ 56087:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -336098,9 +336097,9 @@ function _createCipher(options) {
  * Copyright (c) 2009-2015 Digital Bazaar, Inc.
  *
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(87994);
-__nccwpck_require__(79167);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(39445);
+__nccwpck_require__(84275);
 
 var tls = module.exports = forge.tls;
 
@@ -336376,15 +336375,15 @@ function compareMacs(key, mac1, mac2) {
 
 /***/ }),
 
-/***/ 29414:
+/***/ 20938:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 /**
  * Copyright (c) 2019 Digital Bazaar, Inc.
  */
 
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(39549);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(27357);
 var asn1 = forge.asn1;
 
 exports.privateKeyValidator = {
@@ -336474,7 +336473,7 @@ exports.publicKeyValidator = {
 
 /***/ }),
 
-/***/ 39549:
+/***/ 27357:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -336612,9 +336611,9 @@ exports.publicKeyValidator = {
  * The full OID (including ASN.1 tag and length of 6 bytes) is:
  * 0x06062A864886F70D
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(28339);
-__nccwpck_require__(81925);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(97456);
+__nccwpck_require__(10245);
 
 /* ASN.1 API */
 var asn1 = module.exports = forge.asn1 = forge.asn1 || {};
@@ -337889,7 +337888,7 @@ asn1.prettyPrint = function(obj, level, indentation) {
 
 /***/ }),
 
-/***/ 72300:
+/***/ 60763:
 /***/ ((module) => {
 
 /**
@@ -338082,7 +338081,7 @@ function _encodeWithByteBuffer(input, alphabet) {
 
 /***/ }),
 
-/***/ 7088:
+/***/ 14723:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -338092,8 +338091,8 @@ function _encodeWithByteBuffer(input, alphabet) {
  *
  * Copyright (c) 2010-2014 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(97456);
 
 module.exports = forge.cipher = forge.cipher || {};
 
@@ -338319,7 +338318,7 @@ BlockCipher.prototype.finish = function(pad) {
 
 /***/ }),
 
-/***/ 10873:
+/***/ 61203:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -338329,8 +338328,8 @@ BlockCipher.prototype.finish = function(pad) {
  *
  * Copyright (c) 2010-2014 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(97456);
 
 forge.cipher = forge.cipher || {};
 
@@ -339325,7 +339324,7 @@ function from64To32(num) {
 
 /***/ }),
 
-/***/ 52923:
+/***/ 76665:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -339335,7 +339334,7 @@ function from64To32(num) {
  *
  * Copyright 2008-2013 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
+var forge = __nccwpck_require__(88561);
 
 /* DEBUG API */
 module.exports = forge.debug = forge.debug || {};
@@ -339410,7 +339409,7 @@ forge.debug.clear = function(cat, name) {
 
 /***/ }),
 
-/***/ 97157:
+/***/ 15918:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -339444,10 +339443,10 @@ forge.debug.clear = function(cat, name) {
  * Copyright (c) 2012 Stefan Siegl <stesie@brokenpipe.de>
  * Copyright (c) 2012-2014 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(7088);
-__nccwpck_require__(10873);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(14723);
+__nccwpck_require__(61203);
+__nccwpck_require__(97456);
 
 /* DES API */
 module.exports = forge.des = forge.des || {};
@@ -339913,7 +339912,7 @@ function _createCipher(options) {
 
 /***/ }),
 
-/***/ 90000:
+/***/ 56735:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -339926,12 +339925,12 @@ function _createCipher(options) {
  *
  * https://github.com/dchest/tweetnacl-js
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(27052);
-__nccwpck_require__(57821);
-__nccwpck_require__(59542);
-__nccwpck_require__(28339);
-var asn1Validator = __nccwpck_require__(29414);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(27211);
+__nccwpck_require__(32055);
+__nccwpck_require__(12734);
+__nccwpck_require__(97456);
+var asn1Validator = __nccwpck_require__(20938);
 var publicKeyValidator = asn1Validator.publicKeyValidator;
 var privateKeyValidator = asn1Validator.privateKeyValidator;
 
@@ -340992,7 +340991,7 @@ function M(o, a, b) {
 
 /***/ }),
 
-/***/ 89177:
+/***/ 88561:
 /***/ ((module) => {
 
 /**
@@ -341012,7 +341011,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 95104:
+/***/ 42007:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -341024,9 +341023,9 @@ module.exports = {
  *
  * Copyright (c) 2010-2012 Digital Bazaar, Inc. All rights reserved.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(86231);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(46777);
+__nccwpck_require__(97456);
 
 /* HMAC API */
 var hmac = module.exports = forge.hmac = forge.hmac || {};
@@ -341165,7 +341164,7 @@ hmac.create = function() {
 
 /***/ }),
 
-/***/ 57655:
+/***/ 8542:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -341175,39 +341174,39 @@ hmac.create = function() {
  *
  * Copyright 2011-2016 Digital Bazaar, Inc.
  */
-module.exports = __nccwpck_require__(89177);
-__nccwpck_require__(87994);
-__nccwpck_require__(81449);
-__nccwpck_require__(39549);
-__nccwpck_require__(7088);
-__nccwpck_require__(52923);
-__nccwpck_require__(97157);
-__nccwpck_require__(90000);
-__nccwpck_require__(95104);
-__nccwpck_require__(45173);
-__nccwpck_require__(49994);
-__nccwpck_require__(51145);
-__nccwpck_require__(73339);
-__nccwpck_require__(31611);
-__nccwpck_require__(70154);
-__nccwpck_require__(57014);
-__nccwpck_require__(30466);
-__nccwpck_require__(94829);
-__nccwpck_require__(6924);
-__nccwpck_require__(6861);
-__nccwpck_require__(94467);
-__nccwpck_require__(4376);
-__nccwpck_require__(57821);
-__nccwpck_require__(39965);
-__nccwpck_require__(94280);
-__nccwpck_require__(19563);
-__nccwpck_require__(79167);
-__nccwpck_require__(28339);
+module.exports = __nccwpck_require__(88561);
+__nccwpck_require__(39445);
+__nccwpck_require__(56087);
+__nccwpck_require__(27357);
+__nccwpck_require__(14723);
+__nccwpck_require__(76665);
+__nccwpck_require__(15918);
+__nccwpck_require__(56735);
+__nccwpck_require__(42007);
+__nccwpck_require__(59477);
+__nccwpck_require__(68388);
+__nccwpck_require__(85472);
+__nccwpck_require__(2893);
+__nccwpck_require__(39429);
+__nccwpck_require__(60492);
+__nccwpck_require__(51608);
+__nccwpck_require__(1296);
+__nccwpck_require__(34382);
+__nccwpck_require__(84874);
+__nccwpck_require__(57013);
+__nccwpck_require__(65189);
+__nccwpck_require__(6736);
+__nccwpck_require__(32055);
+__nccwpck_require__(86893);
+__nccwpck_require__(43140);
+__nccwpck_require__(15729);
+__nccwpck_require__(84275);
+__nccwpck_require__(97456);
 
 
 /***/ }),
 
-/***/ 27052:
+/***/ 27211:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 // Copyright (c) 2005  Tom Wu
@@ -341258,7 +341257,7 @@ Address all questions regarding this license to:
   Tom Wu
   tjw@cs.Stanford.EDU
 */
-var forge = __nccwpck_require__(89177);
+var forge = __nccwpck_require__(88561);
 
 module.exports = forge.jsbn = forge.jsbn || {};
 
@@ -342478,7 +342477,7 @@ BigInteger.prototype.isProbablePrime = bnIsProbablePrime;
 
 /***/ }),
 
-/***/ 45173:
+/***/ 59477:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -342490,10 +342489,10 @@ BigInteger.prototype.isProbablePrime = bnIsProbablePrime;
  * Copyright (c) 2014 Lautaro Cozzani <lautaro.cozzani@scytl.com>
  * Copyright (c) 2014 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(28339);
-__nccwpck_require__(57821);
-__nccwpck_require__(27052);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(97456);
+__nccwpck_require__(32055);
+__nccwpck_require__(27211);
 
 module.exports = forge.kem = forge.kem || {};
 
@@ -342653,7 +342652,7 @@ function _createKDF(kdf, md, counterStart, digestLength) {
 
 /***/ }),
 
-/***/ 49994:
+/***/ 68388:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -342663,8 +342662,8 @@ function _createKDF(kdf, md, counterStart, digestLength) {
  *
  * Copyright (c) 2008-2013 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(97456);
 
 /* LOG API */
 module.exports = forge.log = forge.log || {};
@@ -342977,7 +342976,7 @@ forge.log.consoleLogger = sConsoleLogger;
 
 /***/ }),
 
-/***/ 51145:
+/***/ 85472:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -342987,17 +342986,17 @@ forge.log.consoleLogger = sConsoleLogger;
  *
  * Copyright 2011-2017 Digital Bazaar, Inc.
  */
-module.exports = __nccwpck_require__(86231);
+module.exports = __nccwpck_require__(46777);
 
-__nccwpck_require__(86594);
-__nccwpck_require__(90279);
-__nccwpck_require__(44086);
-__nccwpck_require__(59542);
+__nccwpck_require__(86138);
+__nccwpck_require__(96485);
+__nccwpck_require__(70855);
+__nccwpck_require__(12734);
 
 
 /***/ }),
 
-/***/ 86231:
+/***/ 46777:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -343007,7 +343006,7 @@ __nccwpck_require__(59542);
  *
  * Copyright 2011-2017 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
+var forge = __nccwpck_require__(88561);
 
 module.exports = forge.md = forge.md || {};
 forge.md.algorithms = forge.md.algorithms || {};
@@ -343015,7 +343014,7 @@ forge.md.algorithms = forge.md.algorithms || {};
 
 /***/ }),
 
-/***/ 86594:
+/***/ 86138:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -343025,9 +343024,9 @@ forge.md.algorithms = forge.md.algorithms || {};
  *
  * Copyright (c) 2010-2014 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(86231);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(46777);
+__nccwpck_require__(97456);
 
 var md5 = module.exports = forge.md5 = forge.md5 || {};
 forge.md.md5 = forge.md.algorithms.md5 = md5;
@@ -343311,7 +343310,7 @@ function _update(s, w, bytes) {
 
 /***/ }),
 
-/***/ 27973:
+/***/ 57220:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -343321,8 +343320,8 @@ function _update(s, w, bytes) {
  *
  * Copyright 2012 Stefan Siegl <stesie@brokenpipe.de>
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(73339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(2893);
 
 module.exports = forge.mgf = forge.mgf || {};
 forge.mgf.mgf1 = forge.mgf1;
@@ -343330,7 +343329,7 @@ forge.mgf.mgf1 = forge.mgf1;
 
 /***/ }),
 
-/***/ 73339:
+/***/ 2893:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -343342,8 +343341,8 @@ forge.mgf.mgf1 = forge.mgf1;
  * Copyright (c) 2012 Stefan Siegl <stesie@brokenpipe.de>
  * Copyright (c) 2014 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(97456);
 
 forge.mgf = forge.mgf || {};
 var mgf1 = module.exports = forge.mgf.mgf1 = forge.mgf1 = forge.mgf1 || {};
@@ -343394,7 +343393,7 @@ mgf1.create = function(md) {
 
 /***/ }),
 
-/***/ 81925:
+/***/ 10245:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -343404,7 +343403,7 @@ mgf1.create = function(md) {
  *
  * Copyright (c) 2010-2013 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
+var forge = __nccwpck_require__(88561);
 
 forge.pki = forge.pki || {};
 var oids = module.exports = forge.pki.oids = forge.oids = forge.oids || {};
@@ -343571,7 +343570,7 @@ _IN('1.3.6.1.5.5.7.3.8', 'timeStamping');
 
 /***/ }),
 
-/***/ 21281:
+/***/ 6959:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -343593,18 +343592,18 @@ _IN('1.3.6.1.5.5.7.3.8', 'timeStamping');
  *
  * EncryptedData ::= OCTET STRING
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(87994);
-__nccwpck_require__(39549);
-__nccwpck_require__(97157);
-__nccwpck_require__(86231);
-__nccwpck_require__(81925);
-__nccwpck_require__(31611);
-__nccwpck_require__(70154);
-__nccwpck_require__(57821);
-__nccwpck_require__(39965);
-__nccwpck_require__(53921);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(39445);
+__nccwpck_require__(27357);
+__nccwpck_require__(15918);
+__nccwpck_require__(46777);
+__nccwpck_require__(10245);
+__nccwpck_require__(39429);
+__nccwpck_require__(60492);
+__nccwpck_require__(32055);
+__nccwpck_require__(86893);
+__nccwpck_require__(52804);
+__nccwpck_require__(97456);
 
 if(typeof BigInteger === 'undefined') {
   var BigInteger = forge.jsbn.BigInteger;
@@ -344601,7 +344600,7 @@ function createPbkdf2Params(salt, countBytes, dkLen, prfAlgorithm) {
 
 /***/ }),
 
-/***/ 31611:
+/***/ 39429:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -344613,16 +344612,16 @@ function createPbkdf2Params(salt, countBytes, dkLen, prfAlgorithm) {
  *
  * Copyright (c) 2010-2013 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(95104);
-__nccwpck_require__(86231);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(42007);
+__nccwpck_require__(46777);
+__nccwpck_require__(97456);
 
 var pkcs5 = forge.pkcs5 = forge.pkcs5 || {};
 
 var crypto;
 if(forge.util.isNodejs && !forge.options.usePureJavaScript) {
-  crypto = __nccwpck_require__(76417);
+  crypto = __nccwpck_require__(76982);
 }
 
 /**
@@ -344819,7 +344818,7 @@ module.exports = forge.pbkdf2 = pkcs5.pbkdf2 = function(
 
 /***/ }),
 
-/***/ 70154:
+/***/ 60492:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -344850,8 +344849,8 @@ module.exports = forge.pbkdf2 = pkcs5.pbkdf2 = function(
  *
  * body: the binary-encoded body.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(97456);
 
 // shortcut for pem API
 var pem = module.exports = forge.pem = forge.pem || {};
@@ -345056,7 +345055,7 @@ function ltrim(str) {
 
 /***/ }),
 
-/***/ 57014:
+/***/ 51608:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -345104,10 +345103,10 @@ function ltrim(str) {
  *
  * Copyright (c) 2013-2014 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(28339);
-__nccwpck_require__(57821);
-__nccwpck_require__(90279);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(97456);
+__nccwpck_require__(32055);
+__nccwpck_require__(96485);
 
 // shortcut for PKCS#1 API
 var pkcs1 = module.exports = forge.pkcs1 = forge.pkcs1 || {};
@@ -345339,7 +345338,7 @@ function rsa_mgf1(seed, maskLength, hash) {
 
 /***/ }),
 
-/***/ 30466:
+/***/ 1296:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -345437,17 +345436,17 @@ function rsa_mgf1(seed, maskLength, hash) {
  *   ... -- For future extensions
  * }
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(39549);
-__nccwpck_require__(95104);
-__nccwpck_require__(81925);
-__nccwpck_require__(70266);
-__nccwpck_require__(21281);
-__nccwpck_require__(57821);
-__nccwpck_require__(53921);
-__nccwpck_require__(90279);
-__nccwpck_require__(28339);
-__nccwpck_require__(8180);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(27357);
+__nccwpck_require__(42007);
+__nccwpck_require__(10245);
+__nccwpck_require__(40999);
+__nccwpck_require__(6959);
+__nccwpck_require__(32055);
+__nccwpck_require__(52804);
+__nccwpck_require__(96485);
+__nccwpck_require__(97456);
+__nccwpck_require__(15184);
 
 // shortcut for asn.1 & PKI API
 var asn1 = forge.asn1;
@@ -346420,7 +346419,7 @@ p12.generateKey = forge.pbe.generatePkcs12Key;
 
 /***/ }),
 
-/***/ 94829:
+/***/ 34382:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -346441,16 +346440,16 @@ p12.generateKey = forge.pbe.generatePkcs12Key;
  * a separate file pkcs7asn1.js, since those are referenced from other
  * PKCS standards like PKCS #12.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(87994);
-__nccwpck_require__(39549);
-__nccwpck_require__(97157);
-__nccwpck_require__(81925);
-__nccwpck_require__(70154);
-__nccwpck_require__(70266);
-__nccwpck_require__(57821);
-__nccwpck_require__(28339);
-__nccwpck_require__(8180);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(39445);
+__nccwpck_require__(27357);
+__nccwpck_require__(15918);
+__nccwpck_require__(10245);
+__nccwpck_require__(60492);
+__nccwpck_require__(40999);
+__nccwpck_require__(32055);
+__nccwpck_require__(97456);
+__nccwpck_require__(15184);
 
 // shortcut for ASN.1 API
 var asn1 = forge.asn1;
@@ -347684,7 +347683,7 @@ function _decryptContent(msg) {
 
 /***/ }),
 
-/***/ 70266:
+/***/ 40999:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -347796,9 +347795,9 @@ function _decryptContent(msg) {
  *
  * EncryptedKey ::= OCTET STRING
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(39549);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(27357);
+__nccwpck_require__(97456);
 
 // shortcut for ASN.1 API
 var asn1 = forge.asn1;
@@ -348100,7 +348099,7 @@ p7v.recipientInfoValidator = {
 
 /***/ }),
 
-/***/ 6924:
+/***/ 84874:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -348111,17 +348110,17 @@ p7v.recipientInfoValidator = {
  *
  * Copyright (c) 2010-2013 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(39549);
-__nccwpck_require__(81925);
-__nccwpck_require__(21281);
-__nccwpck_require__(70154);
-__nccwpck_require__(31611);
-__nccwpck_require__(30466);
-__nccwpck_require__(4376);
-__nccwpck_require__(53921);
-__nccwpck_require__(28339);
-__nccwpck_require__(8180);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(27357);
+__nccwpck_require__(10245);
+__nccwpck_require__(6959);
+__nccwpck_require__(60492);
+__nccwpck_require__(39429);
+__nccwpck_require__(1296);
+__nccwpck_require__(6736);
+__nccwpck_require__(52804);
+__nccwpck_require__(97456);
+__nccwpck_require__(15184);
 
 // shortcut for asn.1 API
 var asn1 = forge.asn1;
@@ -348209,7 +348208,7 @@ pki.privateKeyInfoToPem = function(pki, maxline) {
 
 /***/ }),
 
-/***/ 6861:
+/***/ 57013:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -348219,10 +348218,10 @@ pki.privateKeyInfoToPem = function(pki, maxline) {
  *
  * Copyright (c) 2014 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(28339);
-__nccwpck_require__(27052);
-__nccwpck_require__(57821);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(97456);
+__nccwpck_require__(27211);
+__nccwpck_require__(32055);
 
 (function() {
 
@@ -348513,7 +348512,7 @@ function getMillerRabinTests(bits) {
 
 /***/ }),
 
-/***/ 94467:
+/***/ 65189:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -348527,13 +348526,13 @@ function getMillerRabinTests(bits) {
  *
  * Copyright (c) 2010-2014 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(97456);
 
 var _crypto = null;
 if(forge.util.isNodejs && !forge.options.usePureJavaScript &&
   !process.versions['node-webkit']) {
-  _crypto = __nccwpck_require__(76417);
+  _crypto = __nccwpck_require__(76982);
 }
 
 /* PRNG API */
@@ -348939,7 +348938,7 @@ prng.create = function(plugin) {
 
 /***/ }),
 
-/***/ 4376:
+/***/ 6736:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -348949,9 +348948,9 @@ prng.create = function(plugin) {
  *
  * Copyright (c) 2012 Stefan Siegl <stesie@brokenpipe.de>
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(57821);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(32055);
+__nccwpck_require__(97456);
 
 // shortcut for PSS API
 var pss = module.exports = forge.pss = forge.pss || {};
@@ -349187,7 +349186,7 @@ pss.create = function(options) {
 
 /***/ }),
 
-/***/ 57821:
+/***/ 32055:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -349205,11 +349204,11 @@ pss.create = function(options) {
  *
  * Copyright (c) 2009-2014 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(87994);
-__nccwpck_require__(44086);
-__nccwpck_require__(94467);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(39445);
+__nccwpck_require__(70855);
+__nccwpck_require__(65189);
+__nccwpck_require__(97456);
 
 (function() {
 
@@ -349385,7 +349384,7 @@ module.exports = forge.random;
 
 /***/ }),
 
-/***/ 39965:
+/***/ 86893:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -349398,8 +349397,8 @@ module.exports = forge.random;
  * Information on the RC2 cipher is available from RFC #2268,
  * http://www.ietf.org/rfc/rfc2268.txt
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(97456);
 
 var piTable = [
   0xd9, 0x78, 0xf9, 0xc4, 0x19, 0xdd, 0xb5, 0xed, 0x28, 0xe9, 0xfd, 0x79, 0x4a, 0xa0, 0xd8, 0x9d,
@@ -349802,7 +349801,7 @@ forge.rc2.createDecryptionCipher = function(key, bits) {
 
 /***/ }),
 
-/***/ 53921:
+/***/ 52804:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -349868,20 +349867,20 @@ forge.rc2.createDecryptionCipher = function(key, bits) {
  *
  * The OID for the RSA key algorithm is: 1.2.840.113549.1.1.1
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(39549);
-__nccwpck_require__(27052);
-__nccwpck_require__(81925);
-__nccwpck_require__(57014);
-__nccwpck_require__(6861);
-__nccwpck_require__(57821);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(27357);
+__nccwpck_require__(27211);
+__nccwpck_require__(10245);
+__nccwpck_require__(51608);
+__nccwpck_require__(57013);
+__nccwpck_require__(32055);
+__nccwpck_require__(97456);
 
 if(typeof BigInteger === 'undefined') {
   var BigInteger = forge.jsbn.BigInteger;
 }
 
-var _crypto = forge.util.isNodejs ? __nccwpck_require__(76417) : null;
+var _crypto = forge.util.isNodejs ? __nccwpck_require__(76982) : null;
 
 // shortcut for asn.1 API
 var asn1 = forge.asn1;
@@ -351667,7 +351666,7 @@ function _base64ToBigInt(b64) {
 
 /***/ }),
 
-/***/ 90279:
+/***/ 96485:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -351677,9 +351676,9 @@ function _base64ToBigInt(b64) {
  *
  * Copyright (c) 2010-2015 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(86231);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(46777);
+__nccwpck_require__(97456);
 
 var sha1 = module.exports = forge.sha1 = forge.sha1 || {};
 forge.md.sha1 = forge.md.algorithms.sha1 = sha1;
@@ -351993,7 +351992,7 @@ function _update(s, w, bytes) {
 
 /***/ }),
 
-/***/ 44086:
+/***/ 70855:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -352005,9 +352004,9 @@ function _update(s, w, bytes) {
  *
  * Copyright (c) 2010-2015 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(86231);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(46777);
+__nccwpck_require__(97456);
 
 var sha256 = module.exports = forge.sha256 = forge.sha256 || {};
 forge.md.sha256 = forge.md.algorithms.sha256 = sha256;
@@ -352327,7 +352326,7 @@ function _update(s, w, bytes) {
 
 /***/ }),
 
-/***/ 59542:
+/***/ 12734:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -352342,9 +352341,9 @@ function _update(s, w, bytes) {
  *
  * Copyright (c) 2014-2015 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(86231);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(46777);
+__nccwpck_require__(97456);
 
 var sha512 = module.exports = forge.sha512 = forge.sha512 || {};
 
@@ -352895,7 +352894,7 @@ function _update(s, w, bytes) {
 
 /***/ }),
 
-/***/ 94280:
+/***/ 43140:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -352908,12 +352907,12 @@ function _update(s, w, bytes) {
  *
  * @author https://github.com/shellac
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(87994);
-__nccwpck_require__(95104);
-__nccwpck_require__(86594);
-__nccwpck_require__(90279);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(39445);
+__nccwpck_require__(42007);
+__nccwpck_require__(86138);
+__nccwpck_require__(96485);
+__nccwpck_require__(97456);
 
 var ssh = module.exports = forge.ssh = forge.ssh || {};
 
@@ -353138,7 +353137,7 @@ function _sha1() {
 
 /***/ }),
 
-/***/ 19563:
+/***/ 15729:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -353150,10 +353149,10 @@ function _sha1() {
  *
  * Copyright (c) 2009-2013 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(52923);
-__nccwpck_require__(49994);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(76665);
+__nccwpck_require__(68388);
+__nccwpck_require__(97456);
 
 // logging category
 var cat = 'forge.task';
@@ -353870,7 +353869,7 @@ forge.task.createCondition = function() {
 
 /***/ }),
 
-/***/ 79167:
+/***/ 84275:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -354105,15 +354104,15 @@ forge.task.createCondition = function() {
  * due to the large block size of existing MACs and the small size of the
  * timing signal.
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(39549);
-__nccwpck_require__(95104);
-__nccwpck_require__(86594);
-__nccwpck_require__(70154);
-__nccwpck_require__(6924);
-__nccwpck_require__(57821);
-__nccwpck_require__(90279);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(27357);
+__nccwpck_require__(42007);
+__nccwpck_require__(86138);
+__nccwpck_require__(60492);
+__nccwpck_require__(84874);
+__nccwpck_require__(32055);
+__nccwpck_require__(96485);
+__nccwpck_require__(97456);
 
 /**
  * Generates pseudo random bytes by mixing the result of two hash functions,
@@ -358159,7 +358158,7 @@ forge.tls.createConnection = tls.createConnection;
 
 /***/ }),
 
-/***/ 28339:
+/***/ 97456:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -358169,8 +358168,8 @@ forge.tls.createConnection = tls.createConnection;
  *
  * Copyright (c) 2010-2018 Digital Bazaar, Inc.
  */
-var forge = __nccwpck_require__(89177);
-var baseN = __nccwpck_require__(72300);
+var forge = __nccwpck_require__(88561);
+var baseN = __nccwpck_require__(60763);
 
 /* Utilities API */
 var util = module.exports = forge.util = forge.util || {};
@@ -361073,7 +361072,7 @@ util.estimateCores = function(options, callback) {
 
 /***/ }),
 
-/***/ 8180:
+/***/ 15184:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -361185,17 +361184,17 @@ util.estimateCores = function(options, callback) {
  *   signature          BIT STRING
  * }
  */
-var forge = __nccwpck_require__(89177);
-__nccwpck_require__(87994);
-__nccwpck_require__(39549);
-__nccwpck_require__(97157);
-__nccwpck_require__(86231);
-__nccwpck_require__(27973);
-__nccwpck_require__(81925);
-__nccwpck_require__(70154);
-__nccwpck_require__(4376);
-__nccwpck_require__(53921);
-__nccwpck_require__(28339);
+var forge = __nccwpck_require__(88561);
+__nccwpck_require__(39445);
+__nccwpck_require__(27357);
+__nccwpck_require__(15918);
+__nccwpck_require__(46777);
+__nccwpck_require__(57220);
+__nccwpck_require__(10245);
+__nccwpck_require__(60492);
+__nccwpck_require__(6736);
+__nccwpck_require__(52804);
+__nccwpck_require__(97456);
 
 // shortcut for asn.1 API
 var asn1 = forge.asn1;
@@ -364413,7 +364412,7 @@ pki.verifyCertificateChain = function(caStore, chain, options) {
 
 /***/ }),
 
-/***/ 74907:
+/***/ 86032:
 /***/ ((module) => {
 
 "use strict";
@@ -364444,15 +364443,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ 22760:
+/***/ 40240:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var stringify = __nccwpck_require__(79954);
-var parse = __nccwpck_require__(33912);
-var formats = __nccwpck_require__(74907);
+var stringify = __nccwpck_require__(71293);
+var parse = __nccwpck_require__(79091);
+var formats = __nccwpck_require__(86032);
 
 module.exports = {
     formats: formats,
@@ -364463,13 +364462,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 33912:
+/***/ 79091:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var utils = __nccwpck_require__(72360);
+var utils = __nccwpck_require__(25225);
 
 var has = Object.prototype.hasOwnProperty;
 var isArray = Array.isArray;
@@ -364728,14 +364727,14 @@ module.exports = function (str, opts) {
 
 /***/ }),
 
-/***/ 79954:
+/***/ 71293:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var utils = __nccwpck_require__(72360);
-var formats = __nccwpck_require__(74907);
+var utils = __nccwpck_require__(25225);
+var formats = __nccwpck_require__(86032);
 var has = Object.prototype.hasOwnProperty;
 
 var arrayPrefixGenerators = {
@@ -365014,13 +365013,13 @@ module.exports = function (object, opts) {
 
 /***/ }),
 
-/***/ 72360:
+/***/ 25225:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var formats = __nccwpck_require__(74907);
+var formats = __nccwpck_require__(86032);
 
 var has = Object.prototype.hasOwnProperty;
 var isArray = Array.isArray;
@@ -365273,12 +365272,12 @@ module.exports = {
 
 /***/ }),
 
-/***/ 21867:
+/***/ 93058:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 /*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 /* eslint-disable node/no-deprecated-api */
-var buffer = __nccwpck_require__(64293)
+var buffer = __nccwpck_require__(20181)
 var Buffer = buffer.Buffer
 
 // alternative to using Object.keys for old browsers
@@ -365345,14 +365344,14 @@ SafeBuffer.allocUnsafeSlow = function (size) {
 
 /***/ }),
 
-/***/ 59318:
+/***/ 21450:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
-const os = __nccwpck_require__(12087);
-const tty = __nccwpck_require__(33867);
-const hasFlag = __nccwpck_require__(31621);
+const os = __nccwpck_require__(70857);
+const tty = __nccwpck_require__(52018);
+const hasFlag = __nccwpck_require__(83813);
 
 const {env} = process;
 
@@ -365488,7 +365487,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 30464:
+/***/ 94058:
 /***/ (function(module) {
 
 (function (root, factory) {
@@ -365683,60 +365682,284 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4552:
-/***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
+/***/ 12048:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
-__nccwpck_require__.r(__webpack_exports__);
 
-// EXPORTS
-__nccwpck_require__.d(__webpack_exports__, {
-  "NIL": () => /* reexport */ nil,
-  "parse": () => /* reexport */ esm_node_parse,
-  "stringify": () => /* reexport */ esm_node_stringify,
-  "v1": () => /* reexport */ esm_node_v1,
-  "v3": () => /* reexport */ esm_node_v3,
-  "v4": () => /* reexport */ esm_node_v4,
-  "v5": () => /* reexport */ esm_node_v5,
-  "validate": () => /* reexport */ esm_node_validate,
-  "version": () => /* reexport */ esm_node_version
-});
 
-// EXTERNAL MODULE: external "crypto"
-var external_crypto_ = __nccwpck_require__(76417);
-var external_crypto_default = /*#__PURE__*/__nccwpck_require__.n(external_crypto_);
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+Object.defineProperty(exports, "v1", ({
+  enumerable: true,
+  get: function () {
+    return _v.default;
+  }
+}));
+Object.defineProperty(exports, "v3", ({
+  enumerable: true,
+  get: function () {
+    return _v2.default;
+  }
+}));
+Object.defineProperty(exports, "v4", ({
+  enumerable: true,
+  get: function () {
+    return _v3.default;
+  }
+}));
+Object.defineProperty(exports, "v5", ({
+  enumerable: true,
+  get: function () {
+    return _v4.default;
+  }
+}));
+Object.defineProperty(exports, "NIL", ({
+  enumerable: true,
+  get: function () {
+    return _nil.default;
+  }
+}));
+Object.defineProperty(exports, "version", ({
+  enumerable: true,
+  get: function () {
+    return _version.default;
+  }
+}));
+Object.defineProperty(exports, "validate", ({
+  enumerable: true,
+  get: function () {
+    return _validate.default;
+  }
+}));
+Object.defineProperty(exports, "stringify", ({
+  enumerable: true,
+  get: function () {
+    return _stringify.default;
+  }
+}));
+Object.defineProperty(exports, "parse", ({
+  enumerable: true,
+  get: function () {
+    return _parse.default;
+  }
+}));
 
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/rng.js
+var _v = _interopRequireDefault(__nccwpck_require__(6415));
+
+var _v2 = _interopRequireDefault(__nccwpck_require__(51697));
+
+var _v3 = _interopRequireDefault(__nccwpck_require__(4676));
+
+var _v4 = _interopRequireDefault(__nccwpck_require__(69771));
+
+var _nil = _interopRequireDefault(__nccwpck_require__(37723));
+
+var _version = _interopRequireDefault(__nccwpck_require__(15868));
+
+var _validate = _interopRequireDefault(__nccwpck_require__(36200));
+
+var _stringify = _interopRequireDefault(__nccwpck_require__(37597));
+
+var _parse = _interopRequireDefault(__nccwpck_require__(17267));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+
+/***/ 10216:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _crypto = _interopRequireDefault(__nccwpck_require__(76982));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function md5(bytes) {
+  if (Array.isArray(bytes)) {
+    bytes = Buffer.from(bytes);
+  } else if (typeof bytes === 'string') {
+    bytes = Buffer.from(bytes, 'utf8');
+  }
+
+  return _crypto.default.createHash('md5').update(bytes).digest();
+}
+
+var _default = md5;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 37723:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _default = '00000000-0000-0000-0000-000000000000';
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 17267:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _validate = _interopRequireDefault(__nccwpck_require__(36200));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function parse(uuid) {
+  if (!(0, _validate.default)(uuid)) {
+    throw TypeError('Invalid UUID');
+  }
+
+  let v;
+  const arr = new Uint8Array(16); // Parse ########-....-....-....-............
+
+  arr[0] = (v = parseInt(uuid.slice(0, 8), 16)) >>> 24;
+  arr[1] = v >>> 16 & 0xff;
+  arr[2] = v >>> 8 & 0xff;
+  arr[3] = v & 0xff; // Parse ........-####-....-....-............
+
+  arr[4] = (v = parseInt(uuid.slice(9, 13), 16)) >>> 8;
+  arr[5] = v & 0xff; // Parse ........-....-####-....-............
+
+  arr[6] = (v = parseInt(uuid.slice(14, 18), 16)) >>> 8;
+  arr[7] = v & 0xff; // Parse ........-....-....-####-............
+
+  arr[8] = (v = parseInt(uuid.slice(19, 23), 16)) >>> 8;
+  arr[9] = v & 0xff; // Parse ........-....-....-....-############
+  // (Use "/" to avoid 32-bit truncation when bit-shifting high-order bytes)
+
+  arr[10] = (v = parseInt(uuid.slice(24, 36), 16)) / 0x10000000000 & 0xff;
+  arr[11] = v / 0x100000000 & 0xff;
+  arr[12] = v >>> 24 & 0xff;
+  arr[13] = v >>> 16 & 0xff;
+  arr[14] = v >>> 8 & 0xff;
+  arr[15] = v & 0xff;
+  return arr;
+}
+
+var _default = parse;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 67879:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _default = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 12973:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = rng;
+
+var _crypto = _interopRequireDefault(__nccwpck_require__(76982));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const rnds8Pool = new Uint8Array(256); // # of random values to pre-allocate
 
 let poolPtr = rnds8Pool.length;
+
 function rng() {
   if (poolPtr > rnds8Pool.length - 16) {
-    external_crypto_default().randomFillSync(rnds8Pool);
+    _crypto.default.randomFillSync(rnds8Pool);
+
     poolPtr = 0;
   }
 
   return rnds8Pool.slice(poolPtr, poolPtr += 16);
 }
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/regex.js
-/* harmony default export */ const regex = (/^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i);
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/validate.js
+
+/***/ }),
+
+/***/ 507:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
 
 
-function validate(uuid) {
-  return typeof uuid === 'string' && regex.test(uuid);
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _crypto = _interopRequireDefault(__nccwpck_require__(76982));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function sha1(bytes) {
+  if (Array.isArray(bytes)) {
+    bytes = Buffer.from(bytes);
+  } else if (typeof bytes === 'string') {
+    bytes = Buffer.from(bytes, 'utf8');
+  }
+
+  return _crypto.default.createHash('sha1').update(bytes).digest();
 }
 
-/* harmony default export */ const esm_node_validate = (validate);
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/stringify.js
+var _default = sha1;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 37597:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _validate = _interopRequireDefault(__nccwpck_require__(36200));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * Convert array of 16 byte values to UUID string format of the form:
  * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
  */
-
 const byteToHex = [];
 
 for (let i = 0; i < 256; ++i) {
@@ -365752,21 +365975,39 @@ function stringify(arr, offset = 0) {
   // "undefined" in the uuid)
   // - Invalid input values for the RFC `version` or `variant` fields
 
-  if (!esm_node_validate(uuid)) {
+  if (!(0, _validate.default)(uuid)) {
     throw TypeError('Stringified UUID is invalid');
   }
 
   return uuid;
 }
 
-/* harmony default export */ const esm_node_stringify = (stringify);
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/v1.js
+var _default = stringify;
+exports["default"] = _default;
 
- // **`v1()` - Generate time-based UUID**
+/***/ }),
+
+/***/ 6415:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _rng = _interopRequireDefault(__nccwpck_require__(12973));
+
+var _stringify = _interopRequireDefault(__nccwpck_require__(37597));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// **`v1()` - Generate time-based UUID**
 //
 // Inspired by https://github.com/LiosK/UUID.js
 // and http://docs.python.org/library/uuid.html
-
 let _nodeId;
 
 let _clockseq; // Previous uuid creation time
@@ -365785,7 +366026,7 @@ function v1(options, buf, offset) {
   // system entropy.  See #189
 
   if (node == null || clockseq == null) {
-    const seedBytes = options.random || (options.rng || rng)();
+    const seedBytes = options.random || (options.rng || _rng.default)();
 
     if (node == null) {
       // Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
@@ -365852,49 +366093,54 @@ function v1(options, buf, offset) {
     b[i + n] = node[n];
   }
 
-  return buf || esm_node_stringify(b);
+  return buf || (0, _stringify.default)(b);
 }
 
-/* harmony default export */ const esm_node_v1 = (v1);
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/parse.js
+var _default = v1;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 51697:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
 
 
-function parse(uuid) {
-  if (!esm_node_validate(uuid)) {
-    throw TypeError('Invalid UUID');
-  }
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
 
-  let v;
-  const arr = new Uint8Array(16); // Parse ########-....-....-....-............
+var _v = _interopRequireDefault(__nccwpck_require__(92930));
 
-  arr[0] = (v = parseInt(uuid.slice(0, 8), 16)) >>> 24;
-  arr[1] = v >>> 16 & 0xff;
-  arr[2] = v >>> 8 & 0xff;
-  arr[3] = v & 0xff; // Parse ........-####-....-....-............
+var _md = _interopRequireDefault(__nccwpck_require__(10216));
 
-  arr[4] = (v = parseInt(uuid.slice(9, 13), 16)) >>> 8;
-  arr[5] = v & 0xff; // Parse ........-....-####-....-............
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  arr[6] = (v = parseInt(uuid.slice(14, 18), 16)) >>> 8;
-  arr[7] = v & 0xff; // Parse ........-....-....-####-............
+const v3 = (0, _v.default)('v3', 0x30, _md.default);
+var _default = v3;
+exports["default"] = _default;
 
-  arr[8] = (v = parseInt(uuid.slice(19, 23), 16)) >>> 8;
-  arr[9] = v & 0xff; // Parse ........-....-....-....-############
-  // (Use "/" to avoid 32-bit truncation when bit-shifting high-order bytes)
+/***/ }),
 
-  arr[10] = (v = parseInt(uuid.slice(24, 36), 16)) / 0x10000000000 & 0xff;
-  arr[11] = v / 0x100000000 & 0xff;
-  arr[12] = v >>> 24 & 0xff;
-  arr[13] = v >>> 16 & 0xff;
-  arr[14] = v >>> 8 & 0xff;
-  arr[15] = v & 0xff;
-  return arr;
-}
+/***/ 92930:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
-/* harmony default export */ const esm_node_parse = (parse);
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/v35.js
+"use strict";
 
 
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = _default;
+exports.URL = exports.DNS = void 0;
+
+var _stringify = _interopRequireDefault(__nccwpck_require__(37597));
+
+var _parse = _interopRequireDefault(__nccwpck_require__(17267));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function stringToBytes(str) {
   str = unescape(encodeURIComponent(str)); // UTF8 escape
@@ -365909,15 +366155,18 @@ function stringToBytes(str) {
 }
 
 const DNS = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
+exports.DNS = DNS;
 const URL = '6ba7b811-9dad-11d1-80b4-00c04fd430c8';
-/* harmony default export */ function v35(name, version, hashfunc) {
+exports.URL = URL;
+
+function _default(name, version, hashfunc) {
   function generateUUID(value, namespace, buf, offset) {
     if (typeof value === 'string') {
       value = stringToBytes(value);
     }
 
     if (typeof namespace === 'string') {
-      namespace = esm_node_parse(namespace);
+      namespace = (0, _parse.default)(namespace);
     }
 
     if (namespace.length !== 16) {
@@ -365944,7 +366193,7 @@ const URL = '6ba7b811-9dad-11d1-80b4-00c04fd430c8';
       return buf;
     }
 
-    return esm_node_stringify(bytes);
+    return (0, _stringify.default)(bytes);
   } // Function#name is not settable on some platforms (#270)
 
 
@@ -365957,32 +366206,31 @@ const URL = '6ba7b811-9dad-11d1-80b4-00c04fd430c8';
   generateUUID.URL = URL;
   return generateUUID;
 }
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/md5.js
+
+/***/ }),
+
+/***/ 4676:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
 
 
-function md5(bytes) {
-  if (Array.isArray(bytes)) {
-    bytes = Buffer.from(bytes);
-  } else if (typeof bytes === 'string') {
-    bytes = Buffer.from(bytes, 'utf8');
-  }
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
 
-  return external_crypto_default().createHash('md5').update(bytes).digest();
-}
+var _rng = _interopRequireDefault(__nccwpck_require__(12973));
 
-/* harmony default export */ const esm_node_md5 = (md5);
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/v3.js
+var _stringify = _interopRequireDefault(__nccwpck_require__(37597));
 
-
-const v3 = v35('v3', 0x30, esm_node_md5);
-/* harmony default export */ const esm_node_v3 = (v3);
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/v4.js
-
-
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function v4(options, buf, offset) {
   options = options || {};
-  const rnds = options.random || (options.rng || rng)(); // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+
+  const rnds = options.random || (options.rng || _rng.default)(); // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+
 
   rnds[6] = rnds[6] & 0x0f | 0x40;
   rnds[8] = rnds[8] & 0x3f | 0x80; // Copy bytes to buffer, if provided
@@ -365997,57 +366245,90 @@ function v4(options, buf, offset) {
     return buf;
   }
 
-  return esm_node_stringify(rnds);
+  return (0, _stringify.default)(rnds);
 }
 
-/* harmony default export */ const esm_node_v4 = (v4);
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/sha1.js
+var _default = v4;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 69771:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
 
 
-function sha1(bytes) {
-  if (Array.isArray(bytes)) {
-    bytes = Buffer.from(bytes);
-  } else if (typeof bytes === 'string') {
-    bytes = Buffer.from(bytes, 'utf8');
-  }
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
 
-  return external_crypto_default().createHash('sha1').update(bytes).digest();
+var _v = _interopRequireDefault(__nccwpck_require__(92930));
+
+var _sha = _interopRequireDefault(__nccwpck_require__(507));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const v5 = (0, _v.default)('v5', 0x50, _sha.default);
+var _default = v5;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 36200:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _regex = _interopRequireDefault(__nccwpck_require__(67879));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function validate(uuid) {
+  return typeof uuid === 'string' && _regex.default.test(uuid);
 }
 
-/* harmony default export */ const esm_node_sha1 = (sha1);
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/v5.js
+var _default = validate;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 15868:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
 
 
-const v5 = v35('v5', 0x50, esm_node_sha1);
-/* harmony default export */ const esm_node_v5 = (v5);
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/nil.js
-/* harmony default export */ const nil = ('00000000-0000-0000-0000-000000000000');
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/version.js
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
 
+var _validate = _interopRequireDefault(__nccwpck_require__(36200));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function version(uuid) {
-  if (!esm_node_validate(uuid)) {
+  if (!(0, _validate.default)(uuid)) {
     throw TypeError('Invalid UUID');
   }
 
   return parseInt(uuid.substr(14, 1), 16);
 }
 
-/* harmony default export */ const esm_node_version = (version);
-// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-node/index.js
-
-
-
-
-
-
-
-
-
+var _default = version;
+exports["default"] = _default;
 
 /***/ }),
 
-/***/ 4091:
+/***/ 39962:
 /***/ ((module) => {
 
 "use strict";
@@ -366063,7 +366344,7 @@ module.exports = function (Yallist) {
 
 /***/ }),
 
-/***/ 40665:
+/***/ 17864:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -366491,96 +366772,274 @@ function Node (value, prev, next, list) {
 
 try {
   // add if support for Symbol.iterator is present
-  __nccwpck_require__(4091)(Yallist)
+  __nccwpck_require__(39962)(Yallist)
 } catch (er) {}
 
 
 /***/ }),
 
-/***/ 4351:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
+/***/ 42078:
+/***/ ((module) => {
 
+module.exports = eval("require")("encoding");
+
+
+/***/ }),
+
+/***/ 42613:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("assert");
+
+/***/ }),
+
+/***/ 20181:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("buffer");
+
+/***/ }),
+
+/***/ 35317:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("child_process");
+
+/***/ }),
+
+/***/ 76982:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("crypto");
+
+/***/ }),
+
+/***/ 24434:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("events");
+
+/***/ }),
+
+/***/ 79896:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fs");
+
+/***/ }),
+
+/***/ 58611:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("http");
+
+/***/ }),
+
+/***/ 85675:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("http2");
+
+/***/ }),
+
+/***/ 65692:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("https");
+
+/***/ }),
+
+/***/ 69278:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("net");
+
+/***/ }),
+
+/***/ 70857:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("os");
+
+/***/ }),
+
+/***/ 16928:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("path");
+
+/***/ }),
+
+/***/ 932:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("process");
+
+/***/ }),
+
+/***/ 83480:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("querystring");
+
+/***/ }),
+
+/***/ 2203:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("stream");
+
+/***/ }),
+
+/***/ 64756:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("tls");
+
+/***/ }),
+
+/***/ 52018:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("tty");
+
+/***/ }),
+
+/***/ 87016:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("url");
+
+/***/ }),
+
+/***/ 39023:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("util");
+
+/***/ }),
+
+/***/ 43106:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("zlib");
+
+/***/ }),
+
+/***/ 96066:
+/***/ ((module) => {
+
+"use strict";
+module.exports = /*#__PURE__*/JSON.parse('{"name":"google-auth-library","version":"7.0.2","author":"Google Inc.","description":"Google APIs Authentication Client Library for Node.js","engines":{"node":">=10"},"main":"./build/src/index.js","types":"./build/src/index.d.ts","repository":"googleapis/google-auth-library-nodejs.git","keywords":["google","api","google apis","client","client library"],"dependencies":{"arrify":"^2.0.0","base64-js":"^1.3.0","ecdsa-sig-formatter":"^1.0.11","fast-text-encoding":"^1.0.0","gaxios":"^4.0.0","gcp-metadata":"^4.2.0","gtoken":"^5.0.4","jws":"^4.0.0","lru-cache":"^6.0.0"},"devDependencies":{"@compodoc/compodoc":"^1.1.7","@microsoft/api-documenter":"^7.8.10","@microsoft/api-extractor":"^7.8.10","@types/base64-js":"^1.2.5","@types/chai":"^4.1.7","@types/jws":"^3.1.0","@types/lru-cache":"^5.0.0","@types/mocha":"^8.0.0","@types/mv":"^2.1.0","@types/ncp":"^2.0.1","@types/node":"^10.5.1","@types/sinon":"^9.0.0","@types/tmp":"^0.2.0","assert-rejects":"^1.0.0","c8":"^7.0.0","chai":"^4.2.0","codecov":"^3.0.2","execa":"^5.0.0","gts":"^2.0.0","is-docker":"^2.0.0","karma":"^6.0.0","karma-chrome-launcher":"^3.0.0","karma-coverage":"^2.0.0","karma-firefox-launcher":"^2.0.0","karma-mocha":"^2.0.0","karma-remap-coverage":"^0.1.5","karma-sourcemap-loader":"^0.3.7","karma-webpack":"^5.0.0","keypair":"^1.0.1","linkinator":"^2.0.0","mocha":"^8.0.0","mv":"^2.1.1","ncp":"^2.0.0","nock":"^13.0.0","null-loader":"^4.0.0","puppeteer":"^7.0.0","sinon":"^9.0.0","tmp":"^0.2.0","ts-loader":"^8.0.0","typescript":"^3.8.3","webpack":"^5.21.2","webpack-cli":"^4.0.0"},"files":["build/src","!build/src/**/*.map"],"scripts":{"test":"c8 mocha build/test","clean":"gts clean","prepare":"npm run compile","lint":"gts check","compile":"tsc -p .","fix":"gts fix","pretest":"npm run compile","docs":"compodoc src/","samples-setup":"cd samples/ && npm link ../ && npm run setup && cd ../","samples-test":"cd samples/ && npm link ../ && npm test && cd ../","system-test":"mocha build/system-test --timeout 60000","presystem-test":"npm run compile","webpack":"webpack","browser-test":"karma start","docs-test":"linkinator docs","predocs-test":"npm run docs","prelint":"cd samples; npm link ../; npm install","precompile":"gts clean","api-extractor":"api-extractor run --local","api-documenter":"api-documenter yaml --input-folder=temp"},"license":"Apache-2.0"}');
+
+/***/ }),
+
+/***/ 11540:
+/***/ ((module) => {
+
+"use strict";
+module.exports = /*#__PURE__*/JSON.parse('{"name":"googleapis-common","version":"5.0.1","description":"A common tooling library used by the googleapis npm module. You probably don\'t want to use this directly.","repository":"googleapis/nodejs-googleapis-common","main":"build/src/index.js","types":"build/src/index.d.ts","files":["build/src","!build/src/**/*.map"],"scripts":{"prebenchmark":"npm run compile","benchmark":"node build/benchmark/bench.js","compile":"tsc -p .","test":"c8 mocha build/test","system-test":"c8 mocha build/system-test --timeout 600000","presystem-test":"npm run compile","fix":"gts fix","prepare":"npm run compile","pretest":"npm run compile","lint":"gts check","samples-test":"mocha build/samples-test","docs":"compodoc src/","webpack":"webpack","browser-test":"karma start","docs-test":"linkinator docs","predocs-test":"npm run docs","prelint":"cd samples; npm link ../; npm install","clean":"gts clean","precompile":"gts clean","api-extractor":"api-extractor run --local","api-documenter":"api-documenter yaml --input-folder=temp"},"keywords":[],"author":"Google LLC","license":"Apache-2.0","dependencies":{"extend":"^3.0.2","gaxios":"^4.0.0","google-auth-library":"^7.0.2","qs":"^6.7.0","url-template":"^2.0.8","uuid":"^8.0.0"},"devDependencies":{"@compodoc/compodoc":"^1.1.9","@microsoft/api-documenter":"^7.8.10","@microsoft/api-extractor":"^7.8.10","@types/execa":"^0.9.0","@types/extend":"^3.0.1","@types/mocha":"^8.0.0","@types/mv":"^2.1.0","@types/ncp":"^2.0.1","@types/nock":"^10.0.3","@types/proxyquire":"^1.3.28","@types/qs":"^6.5.3","@types/sinon":"^9.0.4","@types/tmp":"0.2.0","@types/url-template":"^2.0.28","@types/uuid":"^8.0.0","c8":"^7.0.0","codecov":"^3.5.0","execa":"^5.0.0","gts":"^2.0.0","http2spy":"^2.0.0","is-docker":"^2.0.0","karma":"^6.0.0","karma-chrome-launcher":"^3.0.0","karma-coverage":"^2.0.0","karma-firefox-launcher":"^2.0.0","karma-mocha":"^2.0.0","karma-remap-coverage":"^0.1.5","karma-sourcemap-loader":"^0.3.7","karma-webpack":"^4.0.2","linkinator":"^2.0.0","mocha":"^8.0.0","mv":"^2.1.1","ncp":"^2.0.0","nock":"^13.0.0","null-loader":"^4.0.0","proxyquire":"^2.1.3","puppeteer":"^7.0.0","sinon":"^9.0.2","tmp":"^0.2.0","ts-loader":"^8.0.0","typescript":"^3.8.3","webpack":"^4.35.0","webpack-cli":"^4.0.0"},"engines":{"node":">=10.10.0"}}');
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __nccwpck_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		var threw = true;
+/******/ 		try {
+/******/ 			__webpack_modules__[moduleId].call(module.exports, module, module.exports, __nccwpck_require__);
+/******/ 			threw = false;
+/******/ 		} finally {
+/******/ 			if(threw) delete __webpack_module_cache__[moduleId];
+/******/ 		}
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat */
+/******/ 	
+/******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
 /* eslint-disable no-console */
-const fs = __nccwpck_require__(35747);
+const fs = __nccwpck_require__(79896);
 
-const actions = __nccwpck_require__(42186);
-const { google } = __nccwpck_require__(44913);
+const actions = __nccwpck_require__(37484);
+const { google } = __nccwpck_require__(88056);
 
 const credentials = actions.getInput('credentials', { required: true });
 const parentFolderId = actions.getInput('parent_folder_id', { required: true });
 const target = actions.getInput('target', { required: true });
 const owner = actions.getInput('owner', { required: false });
 const childFolder = actions.getInput('child_folder', { required: false });
-const childFolder2 = actions.getInput('child_folder2', { required: false });
 const overwrite = actions.getInput('overwrite', { required: false }) === 'true';
 const convert = actions.getInput('convert', { required: false }) === 'true';
 let filename = actions.getInput('name', { required: false });
 
 const credentialsJSON = JSON.parse(Buffer.from(credentials, 'base64').toString());
-const scopes = ['https://www.googleapis.com/auth/drive'];
+const scopes = ['https://www.googleapis.com/auth/drive.file'];
 const auth = new google.auth
     .JWT(credentialsJSON.client_email, null, credentialsJSON.private_key, scopes, owner);
 const drive = google.drive({ version: 'v3', auth });
 
 async function getUploadFolderId() {
-//    if (!childFolder) {
-//        return parentFolderId;
-//    }
+    if (!childFolder) {
+        return parentFolderId;
+    }
 
     // Check if child folder already exists and is unique
-    let { data: { files } } = await drive.files.list({
+    const { data: { files } } = await drive.files.list({
         q: `name='${childFolder}' and '${parentFolderId}' in parents`,
-        fields: 'files(id, name)',
+        fields: 'files(id)',
         supportsAllDrives: true,
         includeItemsFromAllDrives: true,
-        corpora: 'allDrives'
     });
-    console.log(files);
 
     if (files.length > 1) {
         throw new Error('More than one entry match the child folder name');
     }
     if (files.length === 1) {
-        
-        const childFolderMetadata = {
-            name: childFolder,
-            mimeType: 'application/vnd.google-apps.folder',
-            parents: [parentFolderId],
-        };
-        const childFolderId = files[0].id;
-    //
-    //    if (!childFolder2) {
-    //        return childFolderId;
-    //    }
-        
-        // Check if child folder already exists and is unique
-        ({ data: { files } } = await drive.files.list({
-            q: `name='${childFolder2}' and '${childFolderId}' in parents`,
-            fields: 'files(id)',
-            supportsAllDrives: true,
-            includeItemsFromAllDrives: true,
-            corpora: 'allDrives'
-        }));
-
-        if (files.length > 1) {
-            throw new Error('More than one entry match the child folder2 name');
-        }
-        if (files.length === 1) {
-            return files[0].id;
-        }
-
-        const childFolder2Metadata = {
-            name: childFolder2,
-            mimeType: 'application/vnd.google-apps.folder',
-            parents: [childFolderId],
-        };
-        const { data: { id: childFolder2Id } } = await drive.files.create({
-            resource: childFolder2Metadata,
-            fields: 'id',
-        });
-        
-        return childFolder2Id;
-       
+        return files[0].id;
     }
 
     const childFolderMetadata = {
@@ -366591,39 +367050,10 @@ async function getUploadFolderId() {
     const { data: { id: childFolderId } } = await drive.files.create({
         resource: childFolderMetadata,
         fields: 'id',
-    });
-//
-//    if (!childFolder2) {
-//        return childFolderId;
-//    }
-    
-    // Check if child folder already exists and is unique
-    ({ data: { files } } = await drive.files.list({
-        q: `name='${childFolder2}' and '${childFolderId}' in parents`,
-        fields: 'files(id)',
         supportsAllDrives: true,
-        includeItemsFromAllDrives: true,
-        corpora: 'allDrives'
-    }));
-
-    if (files.length > 1) {
-        throw new Error('More than one entry match the child folder2 name');
-    }
-    if (files.length === 1) {
-        return files[0].id;
-    }
-
-    const childFolder2Metadata = {
-        name: childFolder2,
-        mimeType: 'application/vnd.google-apps.folder',
-        parents: [childFolderId],
-    };
-    const { data: { id: childFolder2Id } } = await drive.files.create({
-        resource: childFolder2Metadata,
-        fields: 'id',
     });
-    
-    return childFolder2Id;
+
+    return childFolderId;
 }
 
 async function getFileId(targetFilename, folderId) {
@@ -366632,7 +367062,6 @@ async function getFileId(targetFilename, folderId) {
         fields: 'files(id)',
         supportsAllDrives: true,
         includeItemsFromAllDrives: true,
-        corpora: 'allDrives'
     });
 
     if (files.length > 1) {
@@ -366700,283 +367129,20 @@ async function main() {
             media: fileData,
             uploadType: 'multipart',
             fields: 'id',
+            supportsAllDrives: true,
         });
     } else {
         actions.info(`File ${filename} already exists. Updating it.`);
         drive.files.update({
             fileId,
             media: fileData,
+            supportsAllDrives: true,
         });
     }
 }
 
 main().catch((error) => actions.setFailed(error));
 
-
-/***/ }),
-
-/***/ 22877:
-/***/ ((module) => {
-
-module.exports = eval("require")("encoding");
-
-
-/***/ }),
-
-/***/ 85477:
-/***/ ((module) => {
-
-"use strict";
-module.exports = JSON.parse("{\"name\":\"google-auth-library\",\"version\":\"7.0.2\",\"author\":\"Google Inc.\",\"description\":\"Google APIs Authentication Client Library for Node.js\",\"engines\":{\"node\":\">=10\"},\"main\":\"./build/src/index.js\",\"types\":\"./build/src/index.d.ts\",\"repository\":\"googleapis/google-auth-library-nodejs.git\",\"keywords\":[\"google\",\"api\",\"google apis\",\"client\",\"client library\"],\"dependencies\":{\"arrify\":\"^2.0.0\",\"base64-js\":\"^1.3.0\",\"ecdsa-sig-formatter\":\"^1.0.11\",\"fast-text-encoding\":\"^1.0.0\",\"gaxios\":\"^4.0.0\",\"gcp-metadata\":\"^4.2.0\",\"gtoken\":\"^5.0.4\",\"jws\":\"^4.0.0\",\"lru-cache\":\"^6.0.0\"},\"devDependencies\":{\"@compodoc/compodoc\":\"^1.1.7\",\"@microsoft/api-documenter\":\"^7.8.10\",\"@microsoft/api-extractor\":\"^7.8.10\",\"@types/base64-js\":\"^1.2.5\",\"@types/chai\":\"^4.1.7\",\"@types/jws\":\"^3.1.0\",\"@types/lru-cache\":\"^5.0.0\",\"@types/mocha\":\"^8.0.0\",\"@types/mv\":\"^2.1.0\",\"@types/ncp\":\"^2.0.1\",\"@types/node\":\"^10.5.1\",\"@types/sinon\":\"^9.0.0\",\"@types/tmp\":\"^0.2.0\",\"assert-rejects\":\"^1.0.0\",\"c8\":\"^7.0.0\",\"chai\":\"^4.2.0\",\"codecov\":\"^3.0.2\",\"execa\":\"^5.0.0\",\"gts\":\"^2.0.0\",\"is-docker\":\"^2.0.0\",\"karma\":\"^6.0.0\",\"karma-chrome-launcher\":\"^3.0.0\",\"karma-coverage\":\"^2.0.0\",\"karma-firefox-launcher\":\"^2.0.0\",\"karma-mocha\":\"^2.0.0\",\"karma-remap-coverage\":\"^0.1.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^5.0.0\",\"keypair\":\"^1.0.1\",\"linkinator\":\"^2.0.0\",\"mocha\":\"^8.0.0\",\"mv\":\"^2.1.1\",\"ncp\":\"^2.0.0\",\"nock\":\"^13.0.0\",\"null-loader\":\"^4.0.0\",\"puppeteer\":\"^7.0.0\",\"sinon\":\"^9.0.0\",\"tmp\":\"^0.2.0\",\"ts-loader\":\"^8.0.0\",\"typescript\":\"^3.8.3\",\"webpack\":\"^5.21.2\",\"webpack-cli\":\"^4.0.0\"},\"files\":[\"build/src\",\"!build/src/**/*.map\"],\"scripts\":{\"test\":\"c8 mocha build/test\",\"clean\":\"gts clean\",\"prepare\":\"npm run compile\",\"lint\":\"gts check\",\"compile\":\"tsc -p .\",\"fix\":\"gts fix\",\"pretest\":\"npm run compile\",\"docs\":\"compodoc src/\",\"samples-setup\":\"cd samples/ && npm link ../ && npm run setup && cd ../\",\"samples-test\":\"cd samples/ && npm link ../ && npm test && cd ../\",\"system-test\":\"mocha build/system-test --timeout 60000\",\"presystem-test\":\"npm run compile\",\"webpack\":\"webpack\",\"browser-test\":\"karma start\",\"docs-test\":\"linkinator docs\",\"predocs-test\":\"npm run docs\",\"prelint\":\"cd samples; npm link ../; npm install\",\"precompile\":\"gts clean\",\"api-extractor\":\"api-extractor run --local\",\"api-documenter\":\"api-documenter yaml --input-folder=temp\"},\"license\":\"Apache-2.0\"}");
-
-/***/ }),
-
-/***/ 86370:
-/***/ ((module) => {
-
-"use strict";
-module.exports = JSON.parse("{\"name\":\"googleapis-common\",\"version\":\"5.0.1\",\"description\":\"A common tooling library used by the googleapis npm module. You probably don't want to use this directly.\",\"repository\":\"googleapis/nodejs-googleapis-common\",\"main\":\"build/src/index.js\",\"types\":\"build/src/index.d.ts\",\"files\":[\"build/src\",\"!build/src/**/*.map\"],\"scripts\":{\"prebenchmark\":\"npm run compile\",\"benchmark\":\"node build/benchmark/bench.js\",\"compile\":\"tsc -p .\",\"test\":\"c8 mocha build/test\",\"system-test\":\"c8 mocha build/system-test --timeout 600000\",\"presystem-test\":\"npm run compile\",\"fix\":\"gts fix\",\"prepare\":\"npm run compile\",\"pretest\":\"npm run compile\",\"lint\":\"gts check\",\"samples-test\":\"mocha build/samples-test\",\"docs\":\"compodoc src/\",\"webpack\":\"webpack\",\"browser-test\":\"karma start\",\"docs-test\":\"linkinator docs\",\"predocs-test\":\"npm run docs\",\"prelint\":\"cd samples; npm link ../; npm install\",\"clean\":\"gts clean\",\"precompile\":\"gts clean\",\"api-extractor\":\"api-extractor run --local\",\"api-documenter\":\"api-documenter yaml --input-folder=temp\"},\"keywords\":[],\"author\":\"Google LLC\",\"license\":\"Apache-2.0\",\"dependencies\":{\"extend\":\"^3.0.2\",\"gaxios\":\"^4.0.0\",\"google-auth-library\":\"^7.0.2\",\"qs\":\"^6.7.0\",\"url-template\":\"^2.0.8\",\"uuid\":\"^8.0.0\"},\"devDependencies\":{\"@compodoc/compodoc\":\"^1.1.9\",\"@microsoft/api-documenter\":\"^7.8.10\",\"@microsoft/api-extractor\":\"^7.8.10\",\"@types/execa\":\"^0.9.0\",\"@types/extend\":\"^3.0.1\",\"@types/mocha\":\"^8.0.0\",\"@types/mv\":\"^2.1.0\",\"@types/ncp\":\"^2.0.1\",\"@types/nock\":\"^10.0.3\",\"@types/proxyquire\":\"^1.3.28\",\"@types/qs\":\"^6.5.3\",\"@types/sinon\":\"^9.0.4\",\"@types/tmp\":\"0.2.0\",\"@types/url-template\":\"^2.0.28\",\"@types/uuid\":\"^8.0.0\",\"c8\":\"^7.0.0\",\"codecov\":\"^3.5.0\",\"execa\":\"^5.0.0\",\"gts\":\"^2.0.0\",\"http2spy\":\"^2.0.0\",\"is-docker\":\"^2.0.0\",\"karma\":\"^6.0.0\",\"karma-chrome-launcher\":\"^3.0.0\",\"karma-coverage\":\"^2.0.0\",\"karma-firefox-launcher\":\"^2.0.0\",\"karma-mocha\":\"^2.0.0\",\"karma-remap-coverage\":\"^0.1.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^4.0.2\",\"linkinator\":\"^2.0.0\",\"mocha\":\"^8.0.0\",\"mv\":\"^2.1.1\",\"ncp\":\"^2.0.0\",\"nock\":\"^13.0.0\",\"null-loader\":\"^4.0.0\",\"proxyquire\":\"^2.1.3\",\"puppeteer\":\"^7.0.0\",\"sinon\":\"^9.0.2\",\"tmp\":\"^0.2.0\",\"ts-loader\":\"^8.0.0\",\"typescript\":\"^3.8.3\",\"webpack\":\"^4.35.0\",\"webpack-cli\":\"^4.0.0\"},\"engines\":{\"node\":\">=10.10.0\"}}");
-
-/***/ }),
-
-/***/ 42357:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("assert");;
-
-/***/ }),
-
-/***/ 64293:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("buffer");;
-
-/***/ }),
-
-/***/ 63129:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("child_process");;
-
-/***/ }),
-
-/***/ 76417:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("crypto");;
-
-/***/ }),
-
-/***/ 28614:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("events");;
-
-/***/ }),
-
-/***/ 35747:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("fs");;
-
-/***/ }),
-
-/***/ 98605:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("http");;
-
-/***/ }),
-
-/***/ 97565:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("http2");;
-
-/***/ }),
-
-/***/ 57211:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("https");;
-
-/***/ }),
-
-/***/ 11631:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("net");;
-
-/***/ }),
-
-/***/ 12087:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("os");;
-
-/***/ }),
-
-/***/ 85622:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("path");;
-
-/***/ }),
-
-/***/ 61765:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("process");;
-
-/***/ }),
-
-/***/ 71191:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("querystring");;
-
-/***/ }),
-
-/***/ 92413:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("stream");;
-
-/***/ }),
-
-/***/ 4016:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("tls");;
-
-/***/ }),
-
-/***/ 33867:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("tty");;
-
-/***/ }),
-
-/***/ 78835:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("url");;
-
-/***/ }),
-
-/***/ 31669:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("util");;
-
-/***/ }),
-
-/***/ 78761:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("zlib");;
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __nccwpck_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		if(__webpack_module_cache__[moduleId]) {
-/******/ 			return __webpack_module_cache__[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		var threw = true;
-/******/ 		try {
-/******/ 			__webpack_modules__[moduleId].call(module.exports, module, module.exports, __nccwpck_require__);
-/******/ 			threw = false;
-/******/ 		} finally {
-/******/ 			if(threw) delete __webpack_module_cache__[moduleId];
-/******/ 		}
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__nccwpck_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => module['default'] :
-/******/ 				() => module;
-/******/ 			__nccwpck_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__nccwpck_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__nccwpck_require__.o(definition, key) && !__nccwpck_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__nccwpck_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__nccwpck_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/compat */
-/******/ 	
-/******/ 	__nccwpck_require__.ab = __dirname + "/";/************************************************************************/
-/******/ 	// module exports must be returned from runtime so entry inlining is disabled
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	return __nccwpck_require__(4351);
+module.exports = __webpack_exports__;
 /******/ })()
 ;

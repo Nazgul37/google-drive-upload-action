@@ -28,6 +28,8 @@ async function getUploadFolderId() {
     const { data: { files } } = await drive.files.list({
         q: `name='${childFolder}' and '${parentFolderId}' in parents`,
         fields: 'files(id)',
+        supportsAllDrives: true,
+        includeItemsFromAllDrives: true,
     });
 
     if (files.length > 1) {
@@ -45,6 +47,7 @@ async function getUploadFolderId() {
     const { data: { id: childFolderId } } = await drive.files.create({
         resource: childFolderMetadata,
         fields: 'id',
+        supportsAllDrives: true,
     });
 
     return childFolderId;
@@ -54,6 +57,8 @@ async function getFileId(targetFilename, folderId) {
     const { data: { files } } = await drive.files.list({
         q: `name='${targetFilename}' and '${folderId}' in parents`,
         fields: 'files(id)',
+        supportsAllDrives: true,
+        includeItemsFromAllDrives: true,
     });
 
     if (files.length > 1) {
@@ -121,12 +126,14 @@ async function main() {
             media: fileData,
             uploadType: 'multipart',
             fields: 'id',
+            supportsAllDrives: true,
         });
     } else {
         actions.info(`File ${filename} already exists. Updating it.`);
         drive.files.update({
             fileId,
             media: fileData,
+            supportsAllDrives: true,
         });
     }
 }
