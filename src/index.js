@@ -9,48 +9,57 @@ const parentFolderId = actions.getInput('parent_folder_id', { required: true });
 const target = actions.getInput('target', { required: true });
 const owner = actions.getInput('owner', { required: false });
 const childFolder = actions.getInput('child_folder', { required: false });
+const childFolder2 = actions.getInput('child_folder2', { required: false });
 const overwrite = actions.getInput('overwrite', { required: false }) === 'true';
 const convert = actions.getInput('convert', { required: false }) === 'true';
 let filename = actions.getInput('name', { required: false });
 
 const credentialsJSON = JSON.parse(Buffer.from(credentials, 'base64').toString());
-const scopes = ['https://www.googleapis.com/auth/drive.file'];
+const scopes = ['https://www.googleapis.com/auth/drive'];
 const auth = new google.auth
     .JWT(credentialsJSON.client_email, null, credentialsJSON.private_key, scopes, owner);
 const drive = google.drive({ version: 'v3', auth });
 
-async function getUploadFolderId() {
-    if (!childFolder) {
-        return parentFolderId;
-    }
-
-    // Check if child folder already exists and is unique
+async function getOrCreateFolder(folderName, parentId) {
     const { data: { files } } = await drive.files.list({
-        q: `name='${childFolder}' and '${parentFolderId}' in parents`,
+        q: `name='${folderName}' and '${parentId}' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false`,
         fields: 'files(id)',
         supportsAllDrives: true,
         includeItemsFromAllDrives: true,
     });
 
     if (files.length > 1) {
-        throw new Error('More than one entry match the child folder name');
+        throw new Error(`More than one folder matches the name '${folderName}'`);
     }
     if (files.length === 1) {
         return files[0].id;
     }
 
-    const childFolderMetadata = {
-        name: childFolder,
-        mimeType: 'application/vnd.google-apps.folder',
-        parents: [parentFolderId],
-    };
-    const { data: { id: childFolderId } } = await drive.files.create({
-        resource: childFolderMetadata,
+    const { data: { id } } = await drive.files.create({
+        resource: {
+            name: folderName,
+            mimeType: 'application/vnd.google-apps.folder',
+            parents: [parentId],
+        },
         fields: 'id',
         supportsAllDrives: true,
     });
 
-    return childFolderId;
+    return id;
+}
+
+async function getUploadFolderId() {
+    if (!childFolder) {
+        return parentFolderId;
+    }
+
+    const childFolderId = await getOrCreateFolder(childFolder, parentFolderId);
+
+    if (!childFolder2) {
+        return childFolderId;
+    }
+
+    return getOrCreateFolder(childFolder2, childFolderId);
 }
 
 async function getFileId(targetFilename, folderId) {
